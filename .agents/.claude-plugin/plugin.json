@@ -1,0 +1,18 @@
+{
+  "name": "go-polar",
+  "description": "Unofficial Go client for the Polar API: products, customers, subscriptions, checkouts, orders, benefits and usage billing, generated from the public OpenAPI spec.",
+  "author": {
+    "name": "psyb0t",
+    "url": "https://github.com/psyb0t"
+  },
+  "homepage": "https://github.com/psyb0t/go-polar",
+  "license": "MIT",
+  "keywords": [
+    "polar",
+    "billing",
+    "payments",
+    "api-client",
+    "go-library",
+    "openapi"
+  ]
+}
