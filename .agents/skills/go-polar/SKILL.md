@@ -1,6 +1,7 @@
 ---
 name: go-polar
-description: Unofficial Go client for the Polar API, generated with oapi-codegen from Polar's published OpenAPI document. Package `polar` (`github.com/psyb0t/go-polar`) provides typed REST methods for products, customers, subscriptions, checkouts, orders, payments, benefits, usage events, meters, refunds and webhook management. Use when Go code needs the Polar API or already imports go-polar.
+description: Unofficial Go client for the Polar API, generated with oapi-codegen from Polar's published OpenAPI document. Package polar (github.com/psyb0t/go-polar) provides typed REST methods for products, customers, subscriptions, checkouts, orders, payments, benefits, usage events, meters, refunds and webhook management. Use when Go code needs the Polar API or already imports go-polar.
+license: MIT
 homepage: https://github.com/psyb0t/go-polar
 user-invocable: true
 metadata:
@@ -9,8 +10,6 @@ metadata:
     requires:
       bins:
         - go
-      env:
-        - POLAR_ACCESS_TOKEN
 permissions:
   filesystem: "Guides edits to the Go source of the current project. The library reads and writes no files."
   shell: "The Go toolchain (`go get`, `go build`, `go test`) to add and compile the dependency."
@@ -41,6 +40,20 @@ For install, operation examples, pagination and response fields, see [references
 - The code is not Go. This module ships only a Go package.
 - You need a client maintained by Polar. This one is unofficial and not affiliated with Polar.
 - You want to change the generated client itself. See `AGENTS.md` in the repo.
+
+## Finding endpoints and types
+
+The examples below cover a few calls. Every operation in the spec has a generated method, and the spec's descriptions are on them as Go doc comments. Look names and fields up instead of guessing. After `go get github.com/psyb0t/go-polar`, from inside your module:
+
+```bash
+go doc github.com/psyb0t/go-polar ClientWithResponsesInterface  # every endpoint method
+go doc github.com/psyb0t/go-polar ProductsListParams            # one method, params type or model
+go doc -all github.com/psyb0t/go-polar                          # the whole package
+```
+
+The same documentation is at https://pkg.go.dev/github.com/psyb0t/go-polar.
+
+Method names come from the spec's operation IDs. `<OperationId>WithResponse` takes the context, then the path parameters in order, then `*<OperationId>Params` when the operation has query or header parameters, then the request body when it has one. The `JSON200` field (or `JSON201` and so on, per declared status) holds the decoded body; it is nil for any other status.
 
 ## Usage
 

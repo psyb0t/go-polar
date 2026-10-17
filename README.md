@@ -65,6 +65,8 @@ func main() {
 
 The same code is in `example_test.go`, so `make test` checks that it compiles. Check the response status and success field before using the decoded body. HTTP error statuses do not automatically become Go errors.
 
+The full API is in the [Go reference](https://pkg.go.dev/github.com/psyb0t/go-polar); from inside your module, `go doc github.com/psyb0t/go-polar` prints the same.
+
 Method names come from operation IDs: `products:list` becomes `ProductsListWithResponse`, and `customers:create` becomes `CustomersCreateWithResponse`.
 
 ## Auth
@@ -98,7 +100,7 @@ Empty JSON response schemas map to `json.RawMessage`, preserving their bytes wit
 
 ## Agent integrations
 
-The [skill](.agents/skills/go-polar) teaches a coding agent how to use go-polar when it writes Go. Agents that read `.agents/skills/` can use it directly from a checkout. The commands below describe the planned marketplace and release channels; they become available after publication.
+The [skill](.agents/skills/go-polar) teaches a coding agent how to use go-polar when it writes Go. It works in any agent that reads `.agents/skills/`, and installs natively in the clients below.
 
 ### Claude Code
 
@@ -118,7 +120,7 @@ Codex also picks the skill up with no install in any checkout of this repo.
 
 ### OpenClaw
 
-Release automation is configured to publish the skill to ClawHub:
+The skill is published to ClawHub on every release:
 
 ```bash
 openclaw skills install @psyb0t/go-polar
