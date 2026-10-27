@@ -1,6 +1,6 @@
 {
   "name": "go-polar",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Unofficial Go client for the Polar API: products, customers, subscriptions, checkouts, orders, benefits and usage billing, generated from the public OpenAPI spec.",
   "author": {
     "name": "psyb0t",

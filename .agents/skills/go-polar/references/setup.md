@@ -4,7 +4,7 @@ This module is unofficial and not affiliated with Polar.
 
 ## Requirements
 
-- Go 1.26.9 or newer, per the module's `go.mod`.
+- Go 1.26.10 or newer, per the module's `go.mod`.
 - A Polar organization access token, personal access token or OAuth access token with the operation's required scopes, exported as `POLAR_ACCESS_TOKEN`.
 
 ## Install
