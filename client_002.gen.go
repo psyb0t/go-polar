@@ -7393,7 +7393,7 @@ type DiscountCreate struct {
 // DiscountDuration defines model for DiscountDuration.
 type DiscountDuration string
 
-// DiscountFixedCreate Schema to create a fixed amount discount.
+// DiscountFixedCreate defines model for DiscountFixedCreate.
 type DiscountFixedCreate struct {
 	// Deprecated: this property has been marked as deprecated upstream, but no `x-deprecated-reason` was set
 	Amount  *int            `json:"amount,omitempty"`
@@ -8039,7 +8039,7 @@ type DiscountSortProperty string
 // DiscountType defines model for DiscountType.
 type DiscountType string
 
-// DiscountUpdate Schema to update a discount.
+// DiscountUpdate defines model for DiscountUpdate.
 type DiscountUpdate struct {
 	// Deprecated: this property has been marked as deprecated upstream, but no `x-deprecated-reason` was set
 	Amount      *int            `json:"amount,omitempty"`

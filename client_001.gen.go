@@ -10620,13 +10620,15 @@ func (e RefundCreateReason) Valid() bool {
 
 // Defines values for RefundReason.
 const (
-	RefundReasonCustomerRequest       RefundReason = "customer_request"
-	RefundReasonDisputePrevention     RefundReason = "dispute_prevention"
-	RefundReasonDuplicate             RefundReason = "duplicate"
-	RefundReasonFraudulent            RefundReason = "fraudulent"
-	RefundReasonOther                 RefundReason = "other"
-	RefundReasonSatisfactionGuarantee RefundReason = "satisfaction_guarantee"
-	RefundReasonServiceDisruption     RefundReason = "service_disruption"
+	RefundReasonCustomerRequest            RefundReason = "customer_request"
+	RefundReasonDisputePrevention          RefundReason = "dispute_prevention"
+	RefundReasonDuplicate                  RefundReason = "duplicate"
+	RefundReasonFraudulent                 RefundReason = "fraudulent"
+	RefundReasonOther                      RefundReason = "other"
+	RefundReasonSatisfactionGuarantee      RefundReason = "satisfaction_guarantee"
+	RefundReasonServiceDisruption          RefundReason = "service_disruption"
+	RefundReasonTaxRefund                  RefundReason = "tax_refund"
+	RefundReasonVatReverseChargeCorrection RefundReason = "vat_reverse_charge_correction"
 )
 
 // Valid indicates whether the value is a known member of the RefundReason enum.
@@ -10645,6 +10647,10 @@ func (e RefundReason) Valid() bool {
 	case RefundReasonSatisfactionGuarantee:
 		return true
 	case RefundReasonServiceDisruption:
+		return true
+	case RefundReasonTaxRefund:
+		return true
+	case RefundReasonVatReverseChargeCorrection:
 		return true
 	default:
 		return false

@@ -2,6 +2,11 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.1.4, 2026-11-02
+
+- Added the `RefundReason` constants `RefundReasonTaxRefund` ("tax_refund") and `RefundReasonVatReverseChargeCorrection` ("vat_reverse_charge_correction"). `RefundReason.Valid` returns true for both.
+- The doc comments on `DiscountFixedCreate` and `DiscountUpdate` now read "defines model for ...", because the spec dropped their descriptions.
+
 ## v0.1.3, 2026-10-28
 
 - Updated Semgrep in the development image to 1.182.1 and refreshed its locked dependencies. certifi 2026.10.23 drops the emSign root CAs whose intermediate keys were compromised (GHSA-6q48-6c7w-9gw2).
