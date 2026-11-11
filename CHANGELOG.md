@@ -2,6 +2,11 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.1.5, 2026-11-11
+
+- The generator now orders the `EventsListParams` fields `OrganizationId` and `Query` differently, and `NewEventsListRequest` writes the query parameters in the matching order. No field was added, removed or retyped, and the set of parameters sent is unchanged.
+- Raised the minimum Go version in `go.mod` from 1.26.10 to 1.26.11, which fixes the `net/http` vulnerability GO-2026-6859 found by govulncheck. The development image uses `golang:1.26.11-trixie`, and the setup reference in the agent skill names the new version.
+
 ## v0.1.4, 2026-11-02
 
 - Added the `RefundReason` constants `RefundReasonTaxRefund` ("tax_refund") and `RefundReasonVatReverseChargeCorrection` ("vat_reverse_charge_correction"). `RefundReason.Valid` returns true for both.

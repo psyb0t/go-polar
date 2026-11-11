@@ -18414,6 +18414,12 @@ type EventTypesListParams struct {
 
 // EventsListParams defines parameters for EventsList.
 type EventsListParams struct {
+	// OrganizationId Filter by organization ID.
+	OrganizationId *[]string `form:"organization_id,omitempty" json:"organization_id,omitempty"`
+
+	// Query Query to filter events.
+	Query *string `form:"query,omitempty" json:"query,omitempty"`
+
 	// Filter Filter events following filter clauses. JSON string following the same schema a meter filter clause.
 	Filter *string `form:"filter,omitempty" json:"filter,omitempty"`
 
@@ -18422,9 +18428,6 @@ type EventsListParams struct {
 
 	// EndTimestamp Filter events before this timestamp.
 	EndTimestamp *time.Time `form:"end_timestamp,omitempty" json:"end_timestamp,omitempty"`
-
-	// OrganizationId Filter by organization ID.
-	OrganizationId *[]string `form:"organization_id,omitempty" json:"organization_id,omitempty"`
 
 	// CustomerId Filter by customer ID.
 	CustomerId *[]string `form:"customer_id,omitempty" json:"customer_id,omitempty"`
@@ -18440,9 +18443,6 @@ type EventsListParams struct {
 
 	// Source Filter by event source.
 	Source *[]EventSource `form:"source,omitempty" json:"source,omitempty"`
-
-	// Query Query to filter events.
-	Query *string `form:"query,omitempty" json:"query,omitempty"`
 
 	// ParentId When combined with depth, use this event as the anchor instead of root events.
 	ParentId *string `form:"parent_id,omitempty" json:"parent_id,omitempty"`
