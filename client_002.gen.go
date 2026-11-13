@@ -13,6 +13,67 @@ import (
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
 
+// BenefitDownloadablesUpdateMetadata0 defines model for BenefitDownloadablesUpdate.Metadata.0.
+type BenefitDownloadablesUpdateMetadata0 = string
+
+// BenefitDownloadablesUpdateMetadata1 defines model for BenefitDownloadablesUpdate.Metadata.1.
+type BenefitDownloadablesUpdateMetadata1 = int
+
+// BenefitDownloadablesUpdateMetadata2 defines model for BenefitDownloadablesUpdate.Metadata.2.
+type BenefitDownloadablesUpdateMetadata2 = float64
+
+// BenefitDownloadablesUpdateMetadata3 defines model for BenefitDownloadablesUpdate.Metadata.3.
+type BenefitDownloadablesUpdateMetadata3 = bool
+
+// BenefitDownloadablesUpdate_Metadata_AdditionalProperties defines model for BenefitDownloadablesUpdate.metadata.AdditionalProperties.
+type BenefitDownloadablesUpdate_Metadata_AdditionalProperties struct {
+	union json.RawMessage
+}
+
+// BenefitDownloadablesUpdateType defines model for BenefitDownloadablesUpdate.Type.
+type BenefitDownloadablesUpdateType string
+
+// BenefitFeatureFlag A benefit of type `feature_flag`.
+//
+// Use it to grant feature flags with key-value metadata
+// that can be queried via the API and webhooks.
+type BenefitFeatureFlag struct {
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+
+	// Deletable Whether the benefit is deletable.
+	Deletable bool `json:"deletable"`
+
+	// Description The description of the benefit.
+	Description string `json:"description"`
+
+	// Id The ID of the benefit.
+	Id string `json:"id"`
+
+	// IsDeleted Whether the benefit is deleted.
+	IsDeleted bool               `json:"is_deleted"`
+	Metadata  MetadataOutputType `json:"metadata"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrganizationId The ID of the organization owning the benefit.
+	OrganizationId string `json:"organization_id"`
+
+	// Properties Properties for a benefit of type `feature_flag`.
+	Properties BenefitFeatureFlagProperties `json:"properties"`
+
+	// Selectable Whether the benefit is selectable when creating a product.
+	Selectable bool                   `json:"selectable"`
+	Type       BenefitFeatureFlagType `json:"type"`
+
+	// Visibility The visibility of the benefit in the customer portal.
+	Visibility             BenefitVisibility `json:"visibility"`
+	VisibilityConfigurable *bool             `json:"visibility_configurable,omitempty"`
+}
+
 // BenefitFeatureFlagType defines model for BenefitFeatureFlag.Type.
 type BenefitFeatureFlagType string
 
@@ -17316,7 +17377,7 @@ type WebhookEndpointCreate struct {
 	Events []WebhookEventType `json:"events"`
 
 	// Format The format of the webhook payload.
-	Format WebhookFormat `json:"format"`
+	Format WebhookEndpointCreateFormat `json:"format"`
 
 	// Name An optional name for the webhook endpoint to help organize and identify it.
 	Name *string `json:"name,omitempty"`
@@ -17333,15 +17394,18 @@ type WebhookEndpointCreate struct {
 // WebhookEndpointCreateApiVersion The API version that'll be used in event payloads.
 type WebhookEndpointCreateApiVersion string
 
+// WebhookEndpointCreateFormat The format of the webhook payload.
+type WebhookEndpointCreateFormat string
+
 // WebhookEndpointUpdate Schema to update a webhook endpoint.
 type WebhookEndpointUpdate struct {
 	// ApiVersion The API version that'll be used in event payloads.
 	ApiVersion *WebhookEndpointUpdateApiVersion `json:"api_version,omitempty"`
 
 	// Enabled Whether the webhook endpoint is enabled.
-	Enabled *bool               `json:"enabled,omitempty"`
-	Events  *[]WebhookEventType `json:"events,omitempty"`
-	Format  *WebhookFormat      `json:"format,omitempty"`
+	Enabled *bool                        `json:"enabled,omitempty"`
+	Events  *[]WebhookEventType          `json:"events,omitempty"`
+	Format  *WebhookEndpointUpdateFormat `json:"format,omitempty"`
 
 	// Name An optional name for the webhook endpoint to help organize and identify it.
 	Name *string `json:"name,omitempty"`
@@ -17350,6 +17414,9 @@ type WebhookEndpointUpdate struct {
 
 // WebhookEndpointUpdateApiVersion defines model for WebhookEndpointUpdate.ApiVersion.
 type WebhookEndpointUpdateApiVersion string
+
+// WebhookEndpointUpdateFormat The format of the webhook payload.
+type WebhookEndpointUpdateFormat string
 
 // WebhookEvent A webhook event.
 //
@@ -19949,74 +20016,6 @@ func (t *BenefitCreate) FromBenefitDownloadablesCreate(v BenefitDownloadablesCre
 		return err
 	}
 	b, err = runtime.JSONMerge(b, []byte(`{"type":"downloadables"}`))
-	t.union = b
-	return err
-}
-
-// MergeBenefitDownloadablesCreate performs a merge with any union data inside the BenefitCreate, using the provided BenefitDownloadablesCreate
-func (t *BenefitCreate) MergeBenefitDownloadablesCreate(v BenefitDownloadablesCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"type":"downloadables"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitLicenseKeysCreate returns the union data inside the BenefitCreate as a BenefitLicenseKeysCreate
-func (t BenefitCreate) AsBenefitLicenseKeysCreate() (BenefitLicenseKeysCreate, error) {
-	var body BenefitLicenseKeysCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitLicenseKeysCreate overwrites any union data inside the BenefitCreate as the provided BenefitLicenseKeysCreate
-func (t *BenefitCreate) FromBenefitLicenseKeysCreate(v BenefitLicenseKeysCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"type":"license_keys"}`))
-	t.union = b
-	return err
-}
-
-// MergeBenefitLicenseKeysCreate performs a merge with any union data inside the BenefitCreate, using the provided BenefitLicenseKeysCreate
-func (t *BenefitCreate) MergeBenefitLicenseKeysCreate(v BenefitLicenseKeysCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"type":"license_keys"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitMeterCreditCreate returns the union data inside the BenefitCreate as a BenefitMeterCreditCreate
-func (t BenefitCreate) AsBenefitMeterCreditCreate() (BenefitMeterCreditCreate, error) {
-	var body BenefitMeterCreditCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitMeterCreditCreate overwrites any union data inside the BenefitCreate as the provided BenefitMeterCreditCreate
-func (t *BenefitCreate) FromBenefitMeterCreditCreate(v BenefitMeterCreditCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"type":"meter_credit"}`))
 	t.union = b
 	return err
 }

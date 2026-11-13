@@ -12718,6 +12718,27 @@ func (e WebhookEndpointCreateApiVersion) Valid() bool {
 	}
 }
 
+// Defines values for WebhookEndpointCreateFormat.
+const (
+	WebhookEndpointCreateFormatDiscord WebhookEndpointCreateFormat = "discord"
+	WebhookEndpointCreateFormatRaw     WebhookEndpointCreateFormat = "raw"
+	WebhookEndpointCreateFormatSlack   WebhookEndpointCreateFormat = "slack"
+)
+
+// Valid indicates whether the value is a known member of the WebhookEndpointCreateFormat enum.
+func (e WebhookEndpointCreateFormat) Valid() bool {
+	switch e {
+	case WebhookEndpointCreateFormatDiscord:
+		return true
+	case WebhookEndpointCreateFormatRaw:
+		return true
+	case WebhookEndpointCreateFormatSlack:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for WebhookEndpointUpdateApiVersion.
 const (
 	WebhookEndpointUpdateApiVersionN202604 WebhookEndpointUpdateApiVersion = "2026-04"
@@ -12730,6 +12751,27 @@ func (e WebhookEndpointUpdateApiVersion) Valid() bool {
 	case WebhookEndpointUpdateApiVersionN202604:
 		return true
 	case WebhookEndpointUpdateApiVersionN202610:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for WebhookEndpointUpdateFormat.
+const (
+	WebhookEndpointUpdateFormatDiscord WebhookEndpointUpdateFormat = "discord"
+	WebhookEndpointUpdateFormatRaw     WebhookEndpointUpdateFormat = "raw"
+	WebhookEndpointUpdateFormatSlack   WebhookEndpointUpdateFormat = "slack"
+)
+
+// Valid indicates whether the value is a known member of the WebhookEndpointUpdateFormat enum.
+func (e WebhookEndpointUpdateFormat) Valid() bool {
+	switch e {
+	case WebhookEndpointUpdateFormatDiscord:
+		return true
+	case WebhookEndpointUpdateFormatRaw:
+		return true
+	case WebhookEndpointUpdateFormatSlack:
 		return true
 	default:
 		return false
@@ -12877,6 +12919,7 @@ func (e WebhookEventType) Valid() bool {
 // Defines values for WebhookFormat.
 const (
 	WebhookFormatDiscord WebhookFormat = "discord"
+	WebhookFormatMcp     WebhookFormat = "mcp"
 	WebhookFormatRaw     WebhookFormat = "raw"
 	WebhookFormatSlack   WebhookFormat = "slack"
 )
@@ -12885,6 +12928,8 @@ const (
 func (e WebhookFormat) Valid() bool {
 	switch e {
 	case WebhookFormatDiscord:
+		return true
+	case WebhookFormatMcp:
 		return true
 	case WebhookFormatRaw:
 		return true
@@ -19971,65 +20016,4 @@ type BenefitDownloadablesUpdate struct {
 	Metadata   *map[string]BenefitDownloadablesUpdate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
 	Properties *BenefitDownloadablesCreateProperties                                `json:"properties,omitempty"`
 	Type       BenefitDownloadablesUpdateType                                       `json:"type"`
-}
-
-// BenefitDownloadablesUpdateMetadata0 defines model for BenefitDownloadablesUpdate.Metadata.0.
-type BenefitDownloadablesUpdateMetadata0 = string
-
-// BenefitDownloadablesUpdateMetadata1 defines model for BenefitDownloadablesUpdate.Metadata.1.
-type BenefitDownloadablesUpdateMetadata1 = int
-
-// BenefitDownloadablesUpdateMetadata2 defines model for BenefitDownloadablesUpdate.Metadata.2.
-type BenefitDownloadablesUpdateMetadata2 = float64
-
-// BenefitDownloadablesUpdateMetadata3 defines model for BenefitDownloadablesUpdate.Metadata.3.
-type BenefitDownloadablesUpdateMetadata3 = bool
-
-// BenefitDownloadablesUpdate_Metadata_AdditionalProperties defines model for BenefitDownloadablesUpdate.metadata.AdditionalProperties.
-type BenefitDownloadablesUpdate_Metadata_AdditionalProperties struct {
-	union json.RawMessage
-}
-
-// BenefitDownloadablesUpdateType defines model for BenefitDownloadablesUpdate.Type.
-type BenefitDownloadablesUpdateType string
-
-// BenefitFeatureFlag A benefit of type `feature_flag`.
-//
-// Use it to grant feature flags with key-value metadata
-// that can be queried via the API and webhooks.
-type BenefitFeatureFlag struct {
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-
-	// Deletable Whether the benefit is deletable.
-	Deletable bool `json:"deletable"`
-
-	// Description The description of the benefit.
-	Description string `json:"description"`
-
-	// Id The ID of the benefit.
-	Id string `json:"id"`
-
-	// IsDeleted Whether the benefit is deleted.
-	IsDeleted bool               `json:"is_deleted"`
-	Metadata  MetadataOutputType `json:"metadata"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrganizationId The ID of the organization owning the benefit.
-	OrganizationId string `json:"organization_id"`
-
-	// Properties Properties for a benefit of type `feature_flag`.
-	Properties BenefitFeatureFlagProperties `json:"properties"`
-
-	// Selectable Whether the benefit is selectable when creating a product.
-	Selectable bool                   `json:"selectable"`
-	Type       BenefitFeatureFlagType `json:"type"`
-
-	// Visibility The visibility of the benefit in the customer portal.
-	Visibility             BenefitVisibility `json:"visibility"`
-	VisibilityConfigurable *bool             `json:"visibility_configurable,omitempty"`
 }

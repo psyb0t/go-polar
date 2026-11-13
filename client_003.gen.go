@@ -10,6 +10,74 @@ import (
 	"github.com/oapi-codegen/runtime"
 )
 
+// MergeBenefitDownloadablesCreate performs a merge with any union data inside the BenefitCreate, using the provided BenefitDownloadablesCreate
+func (t *BenefitCreate) MergeBenefitDownloadablesCreate(v BenefitDownloadablesCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"downloadables"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitLicenseKeysCreate returns the union data inside the BenefitCreate as a BenefitLicenseKeysCreate
+func (t BenefitCreate) AsBenefitLicenseKeysCreate() (BenefitLicenseKeysCreate, error) {
+	var body BenefitLicenseKeysCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitLicenseKeysCreate overwrites any union data inside the BenefitCreate as the provided BenefitLicenseKeysCreate
+func (t *BenefitCreate) FromBenefitLicenseKeysCreate(v BenefitLicenseKeysCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"license_keys"}`))
+	t.union = b
+	return err
+}
+
+// MergeBenefitLicenseKeysCreate performs a merge with any union data inside the BenefitCreate, using the provided BenefitLicenseKeysCreate
+func (t *BenefitCreate) MergeBenefitLicenseKeysCreate(v BenefitLicenseKeysCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"license_keys"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitMeterCreditCreate returns the union data inside the BenefitCreate as a BenefitMeterCreditCreate
+func (t BenefitCreate) AsBenefitMeterCreditCreate() (BenefitMeterCreditCreate, error) {
+	var body BenefitMeterCreditCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitMeterCreditCreate overwrites any union data inside the BenefitCreate as the provided BenefitMeterCreditCreate
+func (t *BenefitCreate) FromBenefitMeterCreditCreate(v BenefitMeterCreditCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"meter_credit"}`))
+	t.union = b
+	return err
+}
+
 // MergeBenefitMeterCreditCreate performs a merge with any union data inside the BenefitCreate, using the provided BenefitMeterCreditCreate
 func (t *BenefitCreate) MergeBenefitMeterCreditCreate(v BenefitMeterCreditCreate) error {
 	b, err := json.Marshal(v)
@@ -19940,73 +20008,4 @@ func (t Order_CustomFieldData_AdditionalProperties) AsOrderCustomFieldData2() (O
 	var body OrderCustomFieldData2
 	err := json.Unmarshal(t.union, &body)
 	return body, err
-}
-
-// FromOrderCustomFieldData2 overwrites any union data inside the Order_CustomFieldData_AdditionalProperties as the provided OrderCustomFieldData2
-func (t *Order_CustomFieldData_AdditionalProperties) FromOrderCustomFieldData2(v OrderCustomFieldData2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeOrderCustomFieldData2 performs a merge with any union data inside the Order_CustomFieldData_AdditionalProperties, using the provided OrderCustomFieldData2
-func (t *Order_CustomFieldData_AdditionalProperties) MergeOrderCustomFieldData2(v OrderCustomFieldData2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsOrderCustomFieldData3 returns the union data inside the Order_CustomFieldData_AdditionalProperties as a OrderCustomFieldData3
-func (t Order_CustomFieldData_AdditionalProperties) AsOrderCustomFieldData3() (OrderCustomFieldData3, error) {
-	var body OrderCustomFieldData3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromOrderCustomFieldData3 overwrites any union data inside the Order_CustomFieldData_AdditionalProperties as the provided OrderCustomFieldData3
-func (t *Order_CustomFieldData_AdditionalProperties) FromOrderCustomFieldData3(v OrderCustomFieldData3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeOrderCustomFieldData3 performs a merge with any union data inside the Order_CustomFieldData_AdditionalProperties, using the provided OrderCustomFieldData3
-func (t *Order_CustomFieldData_AdditionalProperties) MergeOrderCustomFieldData3(v OrderCustomFieldData3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t Order_CustomFieldData_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *Order_CustomFieldData_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsOrderCreateCustomFieldData0 returns the union data inside the OrderCreate_CustomFieldData_AdditionalProperties as a OrderCreateCustomFieldData0
-func (t OrderCreate_CustomFieldData_AdditionalProperties) AsOrderCreateCustomFieldData0() (OrderCreateCustomFieldData0, error) {
-	var body OrderCreateCustomFieldData0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromOrderCreateCustomFieldData0 overwrites any union data inside the OrderCreate_CustomFieldData_AdditionalProperties as the provided OrderCreateCustomFieldData0
-func (t *OrderCreate_CustomFieldData_AdditionalProperties) FromOrderCreateCustomFieldData0(v OrderCreateCustomFieldData0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
 }

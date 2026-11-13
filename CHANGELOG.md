@@ -2,6 +2,14 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.2.0, 2026-11-13
+
+- Breaking: `WebhookEndpointCreate.Format` now has the new type `WebhookEndpointCreateFormat` instead of `WebhookFormat`, and `WebhookEndpointUpdate.Format` is now `*WebhookEndpointUpdateFormat` instead of `*WebhookFormat`. Code that assigns a `WebhookFormat` value to either field must convert it, for example `WebhookEndpointCreateFormat(f)`. Untyped constants and the new constants below still work.
+- Added `WebhookEndpointCreateFormatDiscord`, `WebhookEndpointCreateFormatRaw` and `WebhookEndpointCreateFormatSlack`, with `WebhookEndpointCreateFormat.Valid`. The create type has no `mcp` value.
+- Added `WebhookEndpointUpdateFormatDiscord`, `WebhookEndpointUpdateFormatRaw` and `WebhookEndpointUpdateFormatSlack`, with `WebhookEndpointUpdateFormat.Valid`.
+- Added the `WebhookFormatMcp` constant ("mcp"). `WebhookFormat.Valid` returns true for it. `WebhookEndpoint.Format` still uses `WebhookFormat`, so webhook endpoints returned by the API can have this format.
+- The generator moved some union helper methods and types, such as those of `BenefitCreate` and `Order_CustomFieldData_AdditionalProperties`, to other generated files. Their names and signatures are unchanged.
+
 ## v0.1.5, 2026-11-11
 
 - The generator now orders the `EventsListParams` fields `OrganizationId` and `Query` differently, and `NewEventsListRequest` writes the query parameters in the matching order. No field was added, removed or retyped, and the set of parameters sent is unchanged.
