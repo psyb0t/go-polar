@@ -18,2201 +18,6 @@ import (
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
 
-// FromOrderCustomFieldData2 overwrites any union data inside the Order_CustomFieldData_AdditionalProperties as the provided OrderCustomFieldData2
-func (t *Order_CustomFieldData_AdditionalProperties) FromOrderCustomFieldData2(v OrderCustomFieldData2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeOrderCustomFieldData2 performs a merge with any union data inside the Order_CustomFieldData_AdditionalProperties, using the provided OrderCustomFieldData2
-func (t *Order_CustomFieldData_AdditionalProperties) MergeOrderCustomFieldData2(v OrderCustomFieldData2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsOrderCustomFieldData3 returns the union data inside the Order_CustomFieldData_AdditionalProperties as a OrderCustomFieldData3
-func (t Order_CustomFieldData_AdditionalProperties) AsOrderCustomFieldData3() (OrderCustomFieldData3, error) {
-	var body OrderCustomFieldData3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromOrderCustomFieldData3 overwrites any union data inside the Order_CustomFieldData_AdditionalProperties as the provided OrderCustomFieldData3
-func (t *Order_CustomFieldData_AdditionalProperties) FromOrderCustomFieldData3(v OrderCustomFieldData3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeOrderCustomFieldData3 performs a merge with any union data inside the Order_CustomFieldData_AdditionalProperties, using the provided OrderCustomFieldData3
-func (t *Order_CustomFieldData_AdditionalProperties) MergeOrderCustomFieldData3(v OrderCustomFieldData3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t Order_CustomFieldData_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *Order_CustomFieldData_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsOrderCreateCustomFieldData0 returns the union data inside the OrderCreate_CustomFieldData_AdditionalProperties as a OrderCreateCustomFieldData0
-func (t OrderCreate_CustomFieldData_AdditionalProperties) AsOrderCreateCustomFieldData0() (OrderCreateCustomFieldData0, error) {
-	var body OrderCreateCustomFieldData0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromOrderCreateCustomFieldData0 overwrites any union data inside the OrderCreate_CustomFieldData_AdditionalProperties as the provided OrderCreateCustomFieldData0
-func (t *OrderCreate_CustomFieldData_AdditionalProperties) FromOrderCreateCustomFieldData0(v OrderCreateCustomFieldData0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeOrderCreateCustomFieldData0 performs a merge with any union data inside the OrderCreate_CustomFieldData_AdditionalProperties, using the provided OrderCreateCustomFieldData0
-func (t *OrderCreate_CustomFieldData_AdditionalProperties) MergeOrderCreateCustomFieldData0(v OrderCreateCustomFieldData0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsOrderCreateCustomFieldData1 returns the union data inside the OrderCreate_CustomFieldData_AdditionalProperties as a OrderCreateCustomFieldData1
-func (t OrderCreate_CustomFieldData_AdditionalProperties) AsOrderCreateCustomFieldData1() (OrderCreateCustomFieldData1, error) {
-	var body OrderCreateCustomFieldData1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromOrderCreateCustomFieldData1 overwrites any union data inside the OrderCreate_CustomFieldData_AdditionalProperties as the provided OrderCreateCustomFieldData1
-func (t *OrderCreate_CustomFieldData_AdditionalProperties) FromOrderCreateCustomFieldData1(v OrderCreateCustomFieldData1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeOrderCreateCustomFieldData1 performs a merge with any union data inside the OrderCreate_CustomFieldData_AdditionalProperties, using the provided OrderCreateCustomFieldData1
-func (t *OrderCreate_CustomFieldData_AdditionalProperties) MergeOrderCreateCustomFieldData1(v OrderCreateCustomFieldData1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsOrderCreateCustomFieldData2 returns the union data inside the OrderCreate_CustomFieldData_AdditionalProperties as a OrderCreateCustomFieldData2
-func (t OrderCreate_CustomFieldData_AdditionalProperties) AsOrderCreateCustomFieldData2() (OrderCreateCustomFieldData2, error) {
-	var body OrderCreateCustomFieldData2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromOrderCreateCustomFieldData2 overwrites any union data inside the OrderCreate_CustomFieldData_AdditionalProperties as the provided OrderCreateCustomFieldData2
-func (t *OrderCreate_CustomFieldData_AdditionalProperties) FromOrderCreateCustomFieldData2(v OrderCreateCustomFieldData2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeOrderCreateCustomFieldData2 performs a merge with any union data inside the OrderCreate_CustomFieldData_AdditionalProperties, using the provided OrderCreateCustomFieldData2
-func (t *OrderCreate_CustomFieldData_AdditionalProperties) MergeOrderCreateCustomFieldData2(v OrderCreateCustomFieldData2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsOrderCreateCustomFieldData3 returns the union data inside the OrderCreate_CustomFieldData_AdditionalProperties as a OrderCreateCustomFieldData3
-func (t OrderCreate_CustomFieldData_AdditionalProperties) AsOrderCreateCustomFieldData3() (OrderCreateCustomFieldData3, error) {
-	var body OrderCreateCustomFieldData3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromOrderCreateCustomFieldData3 overwrites any union data inside the OrderCreate_CustomFieldData_AdditionalProperties as the provided OrderCreateCustomFieldData3
-func (t *OrderCreate_CustomFieldData_AdditionalProperties) FromOrderCreateCustomFieldData3(v OrderCreateCustomFieldData3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeOrderCreateCustomFieldData3 performs a merge with any union data inside the OrderCreate_CustomFieldData_AdditionalProperties, using the provided OrderCreateCustomFieldData3
-func (t *OrderCreate_CustomFieldData_AdditionalProperties) MergeOrderCreateCustomFieldData3(v OrderCreateCustomFieldData3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t OrderCreate_CustomFieldData_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *OrderCreate_CustomFieldData_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsOrderCreateMetadata0 returns the union data inside the OrderCreate_Metadata_AdditionalProperties as a OrderCreateMetadata0
-func (t OrderCreate_Metadata_AdditionalProperties) AsOrderCreateMetadata0() (OrderCreateMetadata0, error) {
-	var body OrderCreateMetadata0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromOrderCreateMetadata0 overwrites any union data inside the OrderCreate_Metadata_AdditionalProperties as the provided OrderCreateMetadata0
-func (t *OrderCreate_Metadata_AdditionalProperties) FromOrderCreateMetadata0(v OrderCreateMetadata0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeOrderCreateMetadata0 performs a merge with any union data inside the OrderCreate_Metadata_AdditionalProperties, using the provided OrderCreateMetadata0
-func (t *OrderCreate_Metadata_AdditionalProperties) MergeOrderCreateMetadata0(v OrderCreateMetadata0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsOrderCreateMetadata1 returns the union data inside the OrderCreate_Metadata_AdditionalProperties as a OrderCreateMetadata1
-func (t OrderCreate_Metadata_AdditionalProperties) AsOrderCreateMetadata1() (OrderCreateMetadata1, error) {
-	var body OrderCreateMetadata1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromOrderCreateMetadata1 overwrites any union data inside the OrderCreate_Metadata_AdditionalProperties as the provided OrderCreateMetadata1
-func (t *OrderCreate_Metadata_AdditionalProperties) FromOrderCreateMetadata1(v OrderCreateMetadata1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeOrderCreateMetadata1 performs a merge with any union data inside the OrderCreate_Metadata_AdditionalProperties, using the provided OrderCreateMetadata1
-func (t *OrderCreate_Metadata_AdditionalProperties) MergeOrderCreateMetadata1(v OrderCreateMetadata1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsOrderCreateMetadata2 returns the union data inside the OrderCreate_Metadata_AdditionalProperties as a OrderCreateMetadata2
-func (t OrderCreate_Metadata_AdditionalProperties) AsOrderCreateMetadata2() (OrderCreateMetadata2, error) {
-	var body OrderCreateMetadata2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromOrderCreateMetadata2 overwrites any union data inside the OrderCreate_Metadata_AdditionalProperties as the provided OrderCreateMetadata2
-func (t *OrderCreate_Metadata_AdditionalProperties) FromOrderCreateMetadata2(v OrderCreateMetadata2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeOrderCreateMetadata2 performs a merge with any union data inside the OrderCreate_Metadata_AdditionalProperties, using the provided OrderCreateMetadata2
-func (t *OrderCreate_Metadata_AdditionalProperties) MergeOrderCreateMetadata2(v OrderCreateMetadata2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsOrderCreateMetadata3 returns the union data inside the OrderCreate_Metadata_AdditionalProperties as a OrderCreateMetadata3
-func (t OrderCreate_Metadata_AdditionalProperties) AsOrderCreateMetadata3() (OrderCreateMetadata3, error) {
-	var body OrderCreateMetadata3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromOrderCreateMetadata3 overwrites any union data inside the OrderCreate_Metadata_AdditionalProperties as the provided OrderCreateMetadata3
-func (t *OrderCreate_Metadata_AdditionalProperties) FromOrderCreateMetadata3(v OrderCreateMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeOrderCreateMetadata3 performs a merge with any union data inside the OrderCreate_Metadata_AdditionalProperties, using the provided OrderCreateMetadata3
-func (t *OrderCreate_Metadata_AdditionalProperties) MergeOrderCreateMetadata3(v OrderCreateMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t OrderCreate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *OrderCreate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsCardPayment returns the union data inside the Payment as a CardPayment
-func (t Payment) AsCardPayment() (CardPayment, error) {
-	var body CardPayment
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromCardPayment overwrites any union data inside the Payment as the provided CardPayment
-func (t *Payment) FromCardPayment(v CardPayment) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeCardPayment performs a merge with any union data inside the Payment, using the provided CardPayment
-func (t *Payment) MergeCardPayment(v CardPayment) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsKrCardPayment returns the union data inside the Payment as a KrCardPayment
-func (t Payment) AsKrCardPayment() (KrCardPayment, error) {
-	var body KrCardPayment
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromKrCardPayment overwrites any union data inside the Payment as the provided KrCardPayment
-func (t *Payment) FromKrCardPayment(v KrCardPayment) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeKrCardPayment performs a merge with any union data inside the Payment, using the provided KrCardPayment
-func (t *Payment) MergeKrCardPayment(v KrCardPayment) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsGenericPayment returns the union data inside the Payment as a GenericPayment
-func (t Payment) AsGenericPayment() (GenericPayment, error) {
-	var body GenericPayment
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromGenericPayment overwrites any union data inside the Payment as the provided GenericPayment
-func (t *Payment) FromGenericPayment(v GenericPayment) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeGenericPayment performs a merge with any union data inside the Payment, using the provided GenericPayment
-func (t *Payment) MergeGenericPayment(v GenericPayment) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t Payment) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *Payment) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsCustomerPaymentMethodCard returns the union data inside the PaymentMethod as a CustomerPaymentMethodCard
-func (t PaymentMethod) AsCustomerPaymentMethodCard() (CustomerPaymentMethodCard, error) {
-	var body CustomerPaymentMethodCard
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromCustomerPaymentMethodCard overwrites any union data inside the PaymentMethod as the provided CustomerPaymentMethodCard
-func (t *PaymentMethod) FromCustomerPaymentMethodCard(v CustomerPaymentMethodCard) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeCustomerPaymentMethodCard performs a merge with any union data inside the PaymentMethod, using the provided CustomerPaymentMethodCard
-func (t *PaymentMethod) MergeCustomerPaymentMethodCard(v CustomerPaymentMethodCard) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsCustomerPaymentMethodKrCard returns the union data inside the PaymentMethod as a CustomerPaymentMethodKrCard
-func (t PaymentMethod) AsCustomerPaymentMethodKrCard() (CustomerPaymentMethodKrCard, error) {
-	var body CustomerPaymentMethodKrCard
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromCustomerPaymentMethodKrCard overwrites any union data inside the PaymentMethod as the provided CustomerPaymentMethodKrCard
-func (t *PaymentMethod) FromCustomerPaymentMethodKrCard(v CustomerPaymentMethodKrCard) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeCustomerPaymentMethodKrCard performs a merge with any union data inside the PaymentMethod, using the provided CustomerPaymentMethodKrCard
-func (t *PaymentMethod) MergeCustomerPaymentMethodKrCard(v CustomerPaymentMethodKrCard) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsCustomerPaymentMethodGeneric returns the union data inside the PaymentMethod as a CustomerPaymentMethodGeneric
-func (t PaymentMethod) AsCustomerPaymentMethodGeneric() (CustomerPaymentMethodGeneric, error) {
-	var body CustomerPaymentMethodGeneric
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromCustomerPaymentMethodGeneric overwrites any union data inside the PaymentMethod as the provided CustomerPaymentMethodGeneric
-func (t *PaymentMethod) FromCustomerPaymentMethodGeneric(v CustomerPaymentMethodGeneric) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeCustomerPaymentMethodGeneric performs a merge with any union data inside the PaymentMethod, using the provided CustomerPaymentMethodGeneric
-func (t *PaymentMethod) MergeCustomerPaymentMethodGeneric(v CustomerPaymentMethodGeneric) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t PaymentMethod) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *PaymentMethod) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsLegacyRecurringProductPrice returns the union data inside the Product_Prices_Item as a LegacyRecurringProductPrice
-func (t Product_Prices_Item) AsLegacyRecurringProductPrice() (LegacyRecurringProductPrice, error) {
-	var body LegacyRecurringProductPrice
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromLegacyRecurringProductPrice overwrites any union data inside the Product_Prices_Item as the provided LegacyRecurringProductPrice
-func (t *Product_Prices_Item) FromLegacyRecurringProductPrice(v LegacyRecurringProductPrice) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeLegacyRecurringProductPrice performs a merge with any union data inside the Product_Prices_Item, using the provided LegacyRecurringProductPrice
-func (t *Product_Prices_Item) MergeLegacyRecurringProductPrice(v LegacyRecurringProductPrice) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPrice returns the union data inside the Product_Prices_Item as a ProductPrice
-func (t Product_Prices_Item) AsProductPrice() (ProductPrice, error) {
-	var body ProductPrice
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPrice overwrites any union data inside the Product_Prices_Item as the provided ProductPrice
-func (t *Product_Prices_Item) FromProductPrice(v ProductPrice) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeProductPrice performs a merge with any union data inside the Product_Prices_Item, using the provided ProductPrice
-func (t *Product_Prices_Item) MergeProductPrice(v ProductPrice) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t Product_Prices_Item) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *Product_Prices_Item) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsProductCreateRecurring returns the union data inside the ProductCreate as a ProductCreateRecurring
-func (t ProductCreate) AsProductCreateRecurring() (ProductCreateRecurring, error) {
-	var body ProductCreateRecurring
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductCreateRecurring overwrites any union data inside the ProductCreate as the provided ProductCreateRecurring
-func (t *ProductCreate) FromProductCreateRecurring(v ProductCreateRecurring) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeProductCreateRecurring performs a merge with any union data inside the ProductCreate, using the provided ProductCreateRecurring
-func (t *ProductCreate) MergeProductCreateRecurring(v ProductCreateRecurring) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductCreateOneTime returns the union data inside the ProductCreate as a ProductCreateOneTime
-func (t ProductCreate) AsProductCreateOneTime() (ProductCreateOneTime, error) {
-	var body ProductCreateOneTime
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductCreateOneTime overwrites any union data inside the ProductCreate as the provided ProductCreateOneTime
-func (t *ProductCreate) FromProductCreateOneTime(v ProductCreateOneTime) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeProductCreateOneTime performs a merge with any union data inside the ProductCreate, using the provided ProductCreateOneTime
-func (t *ProductCreate) MergeProductCreateOneTime(v ProductCreateOneTime) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t ProductCreate) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *ProductCreate) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsProductCreateOneTimeMetadata0 returns the union data inside the ProductCreateOneTime_Metadata_AdditionalProperties as a ProductCreateOneTimeMetadata0
-func (t ProductCreateOneTime_Metadata_AdditionalProperties) AsProductCreateOneTimeMetadata0() (ProductCreateOneTimeMetadata0, error) {
-	var body ProductCreateOneTimeMetadata0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductCreateOneTimeMetadata0 overwrites any union data inside the ProductCreateOneTime_Metadata_AdditionalProperties as the provided ProductCreateOneTimeMetadata0
-func (t *ProductCreateOneTime_Metadata_AdditionalProperties) FromProductCreateOneTimeMetadata0(v ProductCreateOneTimeMetadata0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeProductCreateOneTimeMetadata0 performs a merge with any union data inside the ProductCreateOneTime_Metadata_AdditionalProperties, using the provided ProductCreateOneTimeMetadata0
-func (t *ProductCreateOneTime_Metadata_AdditionalProperties) MergeProductCreateOneTimeMetadata0(v ProductCreateOneTimeMetadata0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductCreateOneTimeMetadata1 returns the union data inside the ProductCreateOneTime_Metadata_AdditionalProperties as a ProductCreateOneTimeMetadata1
-func (t ProductCreateOneTime_Metadata_AdditionalProperties) AsProductCreateOneTimeMetadata1() (ProductCreateOneTimeMetadata1, error) {
-	var body ProductCreateOneTimeMetadata1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductCreateOneTimeMetadata1 overwrites any union data inside the ProductCreateOneTime_Metadata_AdditionalProperties as the provided ProductCreateOneTimeMetadata1
-func (t *ProductCreateOneTime_Metadata_AdditionalProperties) FromProductCreateOneTimeMetadata1(v ProductCreateOneTimeMetadata1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeProductCreateOneTimeMetadata1 performs a merge with any union data inside the ProductCreateOneTime_Metadata_AdditionalProperties, using the provided ProductCreateOneTimeMetadata1
-func (t *ProductCreateOneTime_Metadata_AdditionalProperties) MergeProductCreateOneTimeMetadata1(v ProductCreateOneTimeMetadata1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductCreateOneTimeMetadata2 returns the union data inside the ProductCreateOneTime_Metadata_AdditionalProperties as a ProductCreateOneTimeMetadata2
-func (t ProductCreateOneTime_Metadata_AdditionalProperties) AsProductCreateOneTimeMetadata2() (ProductCreateOneTimeMetadata2, error) {
-	var body ProductCreateOneTimeMetadata2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductCreateOneTimeMetadata2 overwrites any union data inside the ProductCreateOneTime_Metadata_AdditionalProperties as the provided ProductCreateOneTimeMetadata2
-func (t *ProductCreateOneTime_Metadata_AdditionalProperties) FromProductCreateOneTimeMetadata2(v ProductCreateOneTimeMetadata2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeProductCreateOneTimeMetadata2 performs a merge with any union data inside the ProductCreateOneTime_Metadata_AdditionalProperties, using the provided ProductCreateOneTimeMetadata2
-func (t *ProductCreateOneTime_Metadata_AdditionalProperties) MergeProductCreateOneTimeMetadata2(v ProductCreateOneTimeMetadata2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductCreateOneTimeMetadata3 returns the union data inside the ProductCreateOneTime_Metadata_AdditionalProperties as a ProductCreateOneTimeMetadata3
-func (t ProductCreateOneTime_Metadata_AdditionalProperties) AsProductCreateOneTimeMetadata3() (ProductCreateOneTimeMetadata3, error) {
-	var body ProductCreateOneTimeMetadata3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductCreateOneTimeMetadata3 overwrites any union data inside the ProductCreateOneTime_Metadata_AdditionalProperties as the provided ProductCreateOneTimeMetadata3
-func (t *ProductCreateOneTime_Metadata_AdditionalProperties) FromProductCreateOneTimeMetadata3(v ProductCreateOneTimeMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeProductCreateOneTimeMetadata3 performs a merge with any union data inside the ProductCreateOneTime_Metadata_AdditionalProperties, using the provided ProductCreateOneTimeMetadata3
-func (t *ProductCreateOneTime_Metadata_AdditionalProperties) MergeProductCreateOneTimeMetadata3(v ProductCreateOneTimeMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t ProductCreateOneTime_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *ProductCreateOneTime_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsProductPriceFixedCreate returns the union data inside the ProductCreateOneTime_Prices_Item as a ProductPriceFixedCreate
-func (t ProductCreateOneTime_Prices_Item) AsProductPriceFixedCreate() (ProductPriceFixedCreate, error) {
-	var body ProductPriceFixedCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceFixedCreate overwrites any union data inside the ProductCreateOneTime_Prices_Item as the provided ProductPriceFixedCreate
-func (t *ProductCreateOneTime_Prices_Item) FromProductPriceFixedCreate(v ProductPriceFixedCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"fixed"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceFixedCreate performs a merge with any union data inside the ProductCreateOneTime_Prices_Item, using the provided ProductPriceFixedCreate
-func (t *ProductCreateOneTime_Prices_Item) MergeProductPriceFixedCreate(v ProductPriceFixedCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"fixed"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceCustomCreate returns the union data inside the ProductCreateOneTime_Prices_Item as a ProductPriceCustomCreate
-func (t ProductCreateOneTime_Prices_Item) AsProductPriceCustomCreate() (ProductPriceCustomCreate, error) {
-	var body ProductPriceCustomCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceCustomCreate overwrites any union data inside the ProductCreateOneTime_Prices_Item as the provided ProductPriceCustomCreate
-func (t *ProductCreateOneTime_Prices_Item) FromProductPriceCustomCreate(v ProductPriceCustomCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"custom"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceCustomCreate performs a merge with any union data inside the ProductCreateOneTime_Prices_Item, using the provided ProductPriceCustomCreate
-func (t *ProductCreateOneTime_Prices_Item) MergeProductPriceCustomCreate(v ProductPriceCustomCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"custom"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceSeatBasedCreate returns the union data inside the ProductCreateOneTime_Prices_Item as a ProductPriceSeatBasedCreate
-func (t ProductCreateOneTime_Prices_Item) AsProductPriceSeatBasedCreate() (ProductPriceSeatBasedCreate, error) {
-	var body ProductPriceSeatBasedCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceSeatBasedCreate overwrites any union data inside the ProductCreateOneTime_Prices_Item as the provided ProductPriceSeatBasedCreate
-func (t *ProductCreateOneTime_Prices_Item) FromProductPriceSeatBasedCreate(v ProductPriceSeatBasedCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"seat_based"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceSeatBasedCreate performs a merge with any union data inside the ProductCreateOneTime_Prices_Item, using the provided ProductPriceSeatBasedCreate
-func (t *ProductCreateOneTime_Prices_Item) MergeProductPriceSeatBasedCreate(v ProductPriceSeatBasedCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"seat_based"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceUnitBasedCreate returns the union data inside the ProductCreateOneTime_Prices_Item as a ProductPriceUnitBasedCreate
-func (t ProductCreateOneTime_Prices_Item) AsProductPriceUnitBasedCreate() (ProductPriceUnitBasedCreate, error) {
-	var body ProductPriceUnitBasedCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceUnitBasedCreate overwrites any union data inside the ProductCreateOneTime_Prices_Item as the provided ProductPriceUnitBasedCreate
-func (t *ProductCreateOneTime_Prices_Item) FromProductPriceUnitBasedCreate(v ProductPriceUnitBasedCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"unit_based"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceUnitBasedCreate performs a merge with any union data inside the ProductCreateOneTime_Prices_Item, using the provided ProductPriceUnitBasedCreate
-func (t *ProductCreateOneTime_Prices_Item) MergeProductPriceUnitBasedCreate(v ProductPriceUnitBasedCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"unit_based"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceMeteredUnitCreate returns the union data inside the ProductCreateOneTime_Prices_Item as a ProductPriceMeteredUnitCreate
-func (t ProductCreateOneTime_Prices_Item) AsProductPriceMeteredUnitCreate() (ProductPriceMeteredUnitCreate, error) {
-	var body ProductPriceMeteredUnitCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceMeteredUnitCreate overwrites any union data inside the ProductCreateOneTime_Prices_Item as the provided ProductPriceMeteredUnitCreate
-func (t *ProductCreateOneTime_Prices_Item) FromProductPriceMeteredUnitCreate(v ProductPriceMeteredUnitCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_unit"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceMeteredUnitCreate performs a merge with any union data inside the ProductCreateOneTime_Prices_Item, using the provided ProductPriceMeteredUnitCreate
-func (t *ProductCreateOneTime_Prices_Item) MergeProductPriceMeteredUnitCreate(v ProductPriceMeteredUnitCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_unit"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceMeteredTiersCreate returns the union data inside the ProductCreateOneTime_Prices_Item as a ProductPriceMeteredTiersCreate
-func (t ProductCreateOneTime_Prices_Item) AsProductPriceMeteredTiersCreate() (ProductPriceMeteredTiersCreate, error) {
-	var body ProductPriceMeteredTiersCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceMeteredTiersCreate overwrites any union data inside the ProductCreateOneTime_Prices_Item as the provided ProductPriceMeteredTiersCreate
-func (t *ProductCreateOneTime_Prices_Item) FromProductPriceMeteredTiersCreate(v ProductPriceMeteredTiersCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_tiers"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceMeteredTiersCreate performs a merge with any union data inside the ProductCreateOneTime_Prices_Item, using the provided ProductPriceMeteredTiersCreate
-func (t *ProductCreateOneTime_Prices_Item) MergeProductPriceMeteredTiersCreate(v ProductPriceMeteredTiersCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_tiers"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t ProductCreateOneTime_Prices_Item) Discriminator() (string, error) {
-	var discriminator struct {
-		Discriminator string `json:"amount_type"`
-	}
-	err := json.Unmarshal(t.union, &discriminator)
-	return discriminator.Discriminator, err
-}
-
-func (t ProductCreateOneTime_Prices_Item) ValueByDiscriminator() (interface{}, error) {
-	discriminator, err := t.Discriminator()
-	if err != nil {
-		return nil, err
-	}
-	switch discriminator {
-	case "custom":
-		return t.AsProductPriceCustomCreate()
-	case "fixed":
-		return t.AsProductPriceFixedCreate()
-	case "metered_tiers":
-		return t.AsProductPriceMeteredTiersCreate()
-	case "metered_unit":
-		return t.AsProductPriceMeteredUnitCreate()
-	case "seat_based":
-		return t.AsProductPriceSeatBasedCreate()
-	case "unit_based":
-		return t.AsProductPriceUnitBasedCreate()
-	default:
-		return nil, errors.New("unknown discriminator value: " + discriminator)
-	}
-}
-
-func (t ProductCreateOneTime_Prices_Item) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *ProductCreateOneTime_Prices_Item) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsProductCreateRecurringMetadata0 returns the union data inside the ProductCreateRecurring_Metadata_AdditionalProperties as a ProductCreateRecurringMetadata0
-func (t ProductCreateRecurring_Metadata_AdditionalProperties) AsProductCreateRecurringMetadata0() (ProductCreateRecurringMetadata0, error) {
-	var body ProductCreateRecurringMetadata0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductCreateRecurringMetadata0 overwrites any union data inside the ProductCreateRecurring_Metadata_AdditionalProperties as the provided ProductCreateRecurringMetadata0
-func (t *ProductCreateRecurring_Metadata_AdditionalProperties) FromProductCreateRecurringMetadata0(v ProductCreateRecurringMetadata0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeProductCreateRecurringMetadata0 performs a merge with any union data inside the ProductCreateRecurring_Metadata_AdditionalProperties, using the provided ProductCreateRecurringMetadata0
-func (t *ProductCreateRecurring_Metadata_AdditionalProperties) MergeProductCreateRecurringMetadata0(v ProductCreateRecurringMetadata0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductCreateRecurringMetadata1 returns the union data inside the ProductCreateRecurring_Metadata_AdditionalProperties as a ProductCreateRecurringMetadata1
-func (t ProductCreateRecurring_Metadata_AdditionalProperties) AsProductCreateRecurringMetadata1() (ProductCreateRecurringMetadata1, error) {
-	var body ProductCreateRecurringMetadata1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductCreateRecurringMetadata1 overwrites any union data inside the ProductCreateRecurring_Metadata_AdditionalProperties as the provided ProductCreateRecurringMetadata1
-func (t *ProductCreateRecurring_Metadata_AdditionalProperties) FromProductCreateRecurringMetadata1(v ProductCreateRecurringMetadata1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeProductCreateRecurringMetadata1 performs a merge with any union data inside the ProductCreateRecurring_Metadata_AdditionalProperties, using the provided ProductCreateRecurringMetadata1
-func (t *ProductCreateRecurring_Metadata_AdditionalProperties) MergeProductCreateRecurringMetadata1(v ProductCreateRecurringMetadata1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductCreateRecurringMetadata2 returns the union data inside the ProductCreateRecurring_Metadata_AdditionalProperties as a ProductCreateRecurringMetadata2
-func (t ProductCreateRecurring_Metadata_AdditionalProperties) AsProductCreateRecurringMetadata2() (ProductCreateRecurringMetadata2, error) {
-	var body ProductCreateRecurringMetadata2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductCreateRecurringMetadata2 overwrites any union data inside the ProductCreateRecurring_Metadata_AdditionalProperties as the provided ProductCreateRecurringMetadata2
-func (t *ProductCreateRecurring_Metadata_AdditionalProperties) FromProductCreateRecurringMetadata2(v ProductCreateRecurringMetadata2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeProductCreateRecurringMetadata2 performs a merge with any union data inside the ProductCreateRecurring_Metadata_AdditionalProperties, using the provided ProductCreateRecurringMetadata2
-func (t *ProductCreateRecurring_Metadata_AdditionalProperties) MergeProductCreateRecurringMetadata2(v ProductCreateRecurringMetadata2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductCreateRecurringMetadata3 returns the union data inside the ProductCreateRecurring_Metadata_AdditionalProperties as a ProductCreateRecurringMetadata3
-func (t ProductCreateRecurring_Metadata_AdditionalProperties) AsProductCreateRecurringMetadata3() (ProductCreateRecurringMetadata3, error) {
-	var body ProductCreateRecurringMetadata3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductCreateRecurringMetadata3 overwrites any union data inside the ProductCreateRecurring_Metadata_AdditionalProperties as the provided ProductCreateRecurringMetadata3
-func (t *ProductCreateRecurring_Metadata_AdditionalProperties) FromProductCreateRecurringMetadata3(v ProductCreateRecurringMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeProductCreateRecurringMetadata3 performs a merge with any union data inside the ProductCreateRecurring_Metadata_AdditionalProperties, using the provided ProductCreateRecurringMetadata3
-func (t *ProductCreateRecurring_Metadata_AdditionalProperties) MergeProductCreateRecurringMetadata3(v ProductCreateRecurringMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t ProductCreateRecurring_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *ProductCreateRecurring_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsProductPriceFixedCreate returns the union data inside the ProductCreateRecurring_Prices_Item as a ProductPriceFixedCreate
-func (t ProductCreateRecurring_Prices_Item) AsProductPriceFixedCreate() (ProductPriceFixedCreate, error) {
-	var body ProductPriceFixedCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceFixedCreate overwrites any union data inside the ProductCreateRecurring_Prices_Item as the provided ProductPriceFixedCreate
-func (t *ProductCreateRecurring_Prices_Item) FromProductPriceFixedCreate(v ProductPriceFixedCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"fixed"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceFixedCreate performs a merge with any union data inside the ProductCreateRecurring_Prices_Item, using the provided ProductPriceFixedCreate
-func (t *ProductCreateRecurring_Prices_Item) MergeProductPriceFixedCreate(v ProductPriceFixedCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"fixed"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceCustomCreate returns the union data inside the ProductCreateRecurring_Prices_Item as a ProductPriceCustomCreate
-func (t ProductCreateRecurring_Prices_Item) AsProductPriceCustomCreate() (ProductPriceCustomCreate, error) {
-	var body ProductPriceCustomCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceCustomCreate overwrites any union data inside the ProductCreateRecurring_Prices_Item as the provided ProductPriceCustomCreate
-func (t *ProductCreateRecurring_Prices_Item) FromProductPriceCustomCreate(v ProductPriceCustomCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"custom"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceCustomCreate performs a merge with any union data inside the ProductCreateRecurring_Prices_Item, using the provided ProductPriceCustomCreate
-func (t *ProductCreateRecurring_Prices_Item) MergeProductPriceCustomCreate(v ProductPriceCustomCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"custom"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceSeatBasedCreate returns the union data inside the ProductCreateRecurring_Prices_Item as a ProductPriceSeatBasedCreate
-func (t ProductCreateRecurring_Prices_Item) AsProductPriceSeatBasedCreate() (ProductPriceSeatBasedCreate, error) {
-	var body ProductPriceSeatBasedCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceSeatBasedCreate overwrites any union data inside the ProductCreateRecurring_Prices_Item as the provided ProductPriceSeatBasedCreate
-func (t *ProductCreateRecurring_Prices_Item) FromProductPriceSeatBasedCreate(v ProductPriceSeatBasedCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"seat_based"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceSeatBasedCreate performs a merge with any union data inside the ProductCreateRecurring_Prices_Item, using the provided ProductPriceSeatBasedCreate
-func (t *ProductCreateRecurring_Prices_Item) MergeProductPriceSeatBasedCreate(v ProductPriceSeatBasedCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"seat_based"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceUnitBasedCreate returns the union data inside the ProductCreateRecurring_Prices_Item as a ProductPriceUnitBasedCreate
-func (t ProductCreateRecurring_Prices_Item) AsProductPriceUnitBasedCreate() (ProductPriceUnitBasedCreate, error) {
-	var body ProductPriceUnitBasedCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceUnitBasedCreate overwrites any union data inside the ProductCreateRecurring_Prices_Item as the provided ProductPriceUnitBasedCreate
-func (t *ProductCreateRecurring_Prices_Item) FromProductPriceUnitBasedCreate(v ProductPriceUnitBasedCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"unit_based"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceUnitBasedCreate performs a merge with any union data inside the ProductCreateRecurring_Prices_Item, using the provided ProductPriceUnitBasedCreate
-func (t *ProductCreateRecurring_Prices_Item) MergeProductPriceUnitBasedCreate(v ProductPriceUnitBasedCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"unit_based"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceMeteredUnitCreate returns the union data inside the ProductCreateRecurring_Prices_Item as a ProductPriceMeteredUnitCreate
-func (t ProductCreateRecurring_Prices_Item) AsProductPriceMeteredUnitCreate() (ProductPriceMeteredUnitCreate, error) {
-	var body ProductPriceMeteredUnitCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceMeteredUnitCreate overwrites any union data inside the ProductCreateRecurring_Prices_Item as the provided ProductPriceMeteredUnitCreate
-func (t *ProductCreateRecurring_Prices_Item) FromProductPriceMeteredUnitCreate(v ProductPriceMeteredUnitCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_unit"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceMeteredUnitCreate performs a merge with any union data inside the ProductCreateRecurring_Prices_Item, using the provided ProductPriceMeteredUnitCreate
-func (t *ProductCreateRecurring_Prices_Item) MergeProductPriceMeteredUnitCreate(v ProductPriceMeteredUnitCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_unit"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceMeteredTiersCreate returns the union data inside the ProductCreateRecurring_Prices_Item as a ProductPriceMeteredTiersCreate
-func (t ProductCreateRecurring_Prices_Item) AsProductPriceMeteredTiersCreate() (ProductPriceMeteredTiersCreate, error) {
-	var body ProductPriceMeteredTiersCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceMeteredTiersCreate overwrites any union data inside the ProductCreateRecurring_Prices_Item as the provided ProductPriceMeteredTiersCreate
-func (t *ProductCreateRecurring_Prices_Item) FromProductPriceMeteredTiersCreate(v ProductPriceMeteredTiersCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_tiers"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceMeteredTiersCreate performs a merge with any union data inside the ProductCreateRecurring_Prices_Item, using the provided ProductPriceMeteredTiersCreate
-func (t *ProductCreateRecurring_Prices_Item) MergeProductPriceMeteredTiersCreate(v ProductPriceMeteredTiersCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_tiers"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t ProductCreateRecurring_Prices_Item) Discriminator() (string, error) {
-	var discriminator struct {
-		Discriminator string `json:"amount_type"`
-	}
-	err := json.Unmarshal(t.union, &discriminator)
-	return discriminator.Discriminator, err
-}
-
-func (t ProductCreateRecurring_Prices_Item) ValueByDiscriminator() (interface{}, error) {
-	discriminator, err := t.Discriminator()
-	if err != nil {
-		return nil, err
-	}
-	switch discriminator {
-	case "custom":
-		return t.AsProductPriceCustomCreate()
-	case "fixed":
-		return t.AsProductPriceFixedCreate()
-	case "metered_tiers":
-		return t.AsProductPriceMeteredTiersCreate()
-	case "metered_unit":
-		return t.AsProductPriceMeteredUnitCreate()
-	case "seat_based":
-		return t.AsProductPriceSeatBasedCreate()
-	case "unit_based":
-		return t.AsProductPriceUnitBasedCreate()
-	default:
-		return nil, errors.New("unknown discriminator value: " + discriminator)
-	}
-}
-
-func (t ProductCreateRecurring_Prices_Item) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *ProductCreateRecurring_Prices_Item) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsProductPriceFixed returns the union data inside the ProductPrice as a ProductPriceFixed
-func (t ProductPrice) AsProductPriceFixed() (ProductPriceFixed, error) {
-	var body ProductPriceFixed
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceFixed overwrites any union data inside the ProductPrice as the provided ProductPriceFixed
-func (t *ProductPrice) FromProductPriceFixed(v ProductPriceFixed) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"fixed"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceFixed performs a merge with any union data inside the ProductPrice, using the provided ProductPriceFixed
-func (t *ProductPrice) MergeProductPriceFixed(v ProductPriceFixed) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"fixed"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceCustom returns the union data inside the ProductPrice as a ProductPriceCustom
-func (t ProductPrice) AsProductPriceCustom() (ProductPriceCustom, error) {
-	var body ProductPriceCustom
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceCustom overwrites any union data inside the ProductPrice as the provided ProductPriceCustom
-func (t *ProductPrice) FromProductPriceCustom(v ProductPriceCustom) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"custom"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceCustom performs a merge with any union data inside the ProductPrice, using the provided ProductPriceCustom
-func (t *ProductPrice) MergeProductPriceCustom(v ProductPriceCustom) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"custom"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceSeatBased returns the union data inside the ProductPrice as a ProductPriceSeatBased
-func (t ProductPrice) AsProductPriceSeatBased() (ProductPriceSeatBased, error) {
-	var body ProductPriceSeatBased
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceSeatBased overwrites any union data inside the ProductPrice as the provided ProductPriceSeatBased
-func (t *ProductPrice) FromProductPriceSeatBased(v ProductPriceSeatBased) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"seat_based"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceSeatBased performs a merge with any union data inside the ProductPrice, using the provided ProductPriceSeatBased
-func (t *ProductPrice) MergeProductPriceSeatBased(v ProductPriceSeatBased) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"seat_based"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceUnitBased returns the union data inside the ProductPrice as a ProductPriceUnitBased
-func (t ProductPrice) AsProductPriceUnitBased() (ProductPriceUnitBased, error) {
-	var body ProductPriceUnitBased
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceUnitBased overwrites any union data inside the ProductPrice as the provided ProductPriceUnitBased
-func (t *ProductPrice) FromProductPriceUnitBased(v ProductPriceUnitBased) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"unit_based"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceUnitBased performs a merge with any union data inside the ProductPrice, using the provided ProductPriceUnitBased
-func (t *ProductPrice) MergeProductPriceUnitBased(v ProductPriceUnitBased) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"unit_based"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceMeteredUnit returns the union data inside the ProductPrice as a ProductPriceMeteredUnit
-func (t ProductPrice) AsProductPriceMeteredUnit() (ProductPriceMeteredUnit, error) {
-	var body ProductPriceMeteredUnit
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceMeteredUnit overwrites any union data inside the ProductPrice as the provided ProductPriceMeteredUnit
-func (t *ProductPrice) FromProductPriceMeteredUnit(v ProductPriceMeteredUnit) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_unit"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceMeteredUnit performs a merge with any union data inside the ProductPrice, using the provided ProductPriceMeteredUnit
-func (t *ProductPrice) MergeProductPriceMeteredUnit(v ProductPriceMeteredUnit) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_unit"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceMeteredTiers returns the union data inside the ProductPrice as a ProductPriceMeteredTiers
-func (t ProductPrice) AsProductPriceMeteredTiers() (ProductPriceMeteredTiers, error) {
-	var body ProductPriceMeteredTiers
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceMeteredTiers overwrites any union data inside the ProductPrice as the provided ProductPriceMeteredTiers
-func (t *ProductPrice) FromProductPriceMeteredTiers(v ProductPriceMeteredTiers) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_tiers"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceMeteredTiers performs a merge with any union data inside the ProductPrice, using the provided ProductPriceMeteredTiers
-func (t *ProductPrice) MergeProductPriceMeteredTiers(v ProductPriceMeteredTiers) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_tiers"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t ProductPrice) Discriminator() (string, error) {
-	var discriminator struct {
-		Discriminator string `json:"amount_type"`
-	}
-	err := json.Unmarshal(t.union, &discriminator)
-	return discriminator.Discriminator, err
-}
-
-func (t ProductPrice) ValueByDiscriminator() (interface{}, error) {
-	discriminator, err := t.Discriminator()
-	if err != nil {
-		return nil, err
-	}
-	switch discriminator {
-	case "custom":
-		return t.AsProductPriceCustom()
-	case "fixed":
-		return t.AsProductPriceFixed()
-	case "metered_tiers":
-		return t.AsProductPriceMeteredTiers()
-	case "metered_unit":
-		return t.AsProductPriceMeteredUnit()
-	case "seat_based":
-		return t.AsProductPriceSeatBased()
-	case "unit_based":
-		return t.AsProductPriceUnitBased()
-	default:
-		return nil, errors.New("unknown discriminator value: " + discriminator)
-	}
-}
-
-func (t ProductPrice) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *ProductPrice) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsProductPriceMeteredUnitCreateUnitAmount0 returns the union data inside the ProductPriceMeteredUnitCreate_UnitAmount as a ProductPriceMeteredUnitCreateUnitAmount0
-func (t ProductPriceMeteredUnitCreate_UnitAmount) AsProductPriceMeteredUnitCreateUnitAmount0() (ProductPriceMeteredUnitCreateUnitAmount0, error) {
-	var body ProductPriceMeteredUnitCreateUnitAmount0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceMeteredUnitCreateUnitAmount0 overwrites any union data inside the ProductPriceMeteredUnitCreate_UnitAmount as the provided ProductPriceMeteredUnitCreateUnitAmount0
-func (t *ProductPriceMeteredUnitCreate_UnitAmount) FromProductPriceMeteredUnitCreateUnitAmount0(v ProductPriceMeteredUnitCreateUnitAmount0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeProductPriceMeteredUnitCreateUnitAmount0 performs a merge with any union data inside the ProductPriceMeteredUnitCreate_UnitAmount, using the provided ProductPriceMeteredUnitCreateUnitAmount0
-func (t *ProductPriceMeteredUnitCreate_UnitAmount) MergeProductPriceMeteredUnitCreateUnitAmount0(v ProductPriceMeteredUnitCreateUnitAmount0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceMeteredUnitCreateUnitAmount1 returns the union data inside the ProductPriceMeteredUnitCreate_UnitAmount as a ProductPriceMeteredUnitCreateUnitAmount1
-func (t ProductPriceMeteredUnitCreate_UnitAmount) AsProductPriceMeteredUnitCreateUnitAmount1() (ProductPriceMeteredUnitCreateUnitAmount1, error) {
-	var body ProductPriceMeteredUnitCreateUnitAmount1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceMeteredUnitCreateUnitAmount1 overwrites any union data inside the ProductPriceMeteredUnitCreate_UnitAmount as the provided ProductPriceMeteredUnitCreateUnitAmount1
-func (t *ProductPriceMeteredUnitCreate_UnitAmount) FromProductPriceMeteredUnitCreateUnitAmount1(v ProductPriceMeteredUnitCreateUnitAmount1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeProductPriceMeteredUnitCreateUnitAmount1 performs a merge with any union data inside the ProductPriceMeteredUnitCreate_UnitAmount, using the provided ProductPriceMeteredUnitCreateUnitAmount1
-func (t *ProductPriceMeteredUnitCreate_UnitAmount) MergeProductPriceMeteredUnitCreateUnitAmount1(v ProductPriceMeteredUnitCreateUnitAmount1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t ProductPriceMeteredUnitCreate_UnitAmount) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *ProductPriceMeteredUnitCreate_UnitAmount) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsProductUpdateMetadata0 returns the union data inside the ProductUpdate_Metadata_AdditionalProperties as a ProductUpdateMetadata0
-func (t ProductUpdate_Metadata_AdditionalProperties) AsProductUpdateMetadata0() (ProductUpdateMetadata0, error) {
-	var body ProductUpdateMetadata0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductUpdateMetadata0 overwrites any union data inside the ProductUpdate_Metadata_AdditionalProperties as the provided ProductUpdateMetadata0
-func (t *ProductUpdate_Metadata_AdditionalProperties) FromProductUpdateMetadata0(v ProductUpdateMetadata0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeProductUpdateMetadata0 performs a merge with any union data inside the ProductUpdate_Metadata_AdditionalProperties, using the provided ProductUpdateMetadata0
-func (t *ProductUpdate_Metadata_AdditionalProperties) MergeProductUpdateMetadata0(v ProductUpdateMetadata0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductUpdateMetadata1 returns the union data inside the ProductUpdate_Metadata_AdditionalProperties as a ProductUpdateMetadata1
-func (t ProductUpdate_Metadata_AdditionalProperties) AsProductUpdateMetadata1() (ProductUpdateMetadata1, error) {
-	var body ProductUpdateMetadata1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductUpdateMetadata1 overwrites any union data inside the ProductUpdate_Metadata_AdditionalProperties as the provided ProductUpdateMetadata1
-func (t *ProductUpdate_Metadata_AdditionalProperties) FromProductUpdateMetadata1(v ProductUpdateMetadata1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeProductUpdateMetadata1 performs a merge with any union data inside the ProductUpdate_Metadata_AdditionalProperties, using the provided ProductUpdateMetadata1
-func (t *ProductUpdate_Metadata_AdditionalProperties) MergeProductUpdateMetadata1(v ProductUpdateMetadata1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductUpdateMetadata2 returns the union data inside the ProductUpdate_Metadata_AdditionalProperties as a ProductUpdateMetadata2
-func (t ProductUpdate_Metadata_AdditionalProperties) AsProductUpdateMetadata2() (ProductUpdateMetadata2, error) {
-	var body ProductUpdateMetadata2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductUpdateMetadata2 overwrites any union data inside the ProductUpdate_Metadata_AdditionalProperties as the provided ProductUpdateMetadata2
-func (t *ProductUpdate_Metadata_AdditionalProperties) FromProductUpdateMetadata2(v ProductUpdateMetadata2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeProductUpdateMetadata2 performs a merge with any union data inside the ProductUpdate_Metadata_AdditionalProperties, using the provided ProductUpdateMetadata2
-func (t *ProductUpdate_Metadata_AdditionalProperties) MergeProductUpdateMetadata2(v ProductUpdateMetadata2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductUpdateMetadata3 returns the union data inside the ProductUpdate_Metadata_AdditionalProperties as a ProductUpdateMetadata3
-func (t ProductUpdate_Metadata_AdditionalProperties) AsProductUpdateMetadata3() (ProductUpdateMetadata3, error) {
-	var body ProductUpdateMetadata3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductUpdateMetadata3 overwrites any union data inside the ProductUpdate_Metadata_AdditionalProperties as the provided ProductUpdateMetadata3
-func (t *ProductUpdate_Metadata_AdditionalProperties) FromProductUpdateMetadata3(v ProductUpdateMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeProductUpdateMetadata3 performs a merge with any union data inside the ProductUpdate_Metadata_AdditionalProperties, using the provided ProductUpdateMetadata3
-func (t *ProductUpdate_Metadata_AdditionalProperties) MergeProductUpdateMetadata3(v ProductUpdateMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t ProductUpdate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *ProductUpdate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsProductPriceFixedCreate returns the union data inside the ProductUpdatePrices1 as a ProductPriceFixedCreate
-func (t ProductUpdatePrices1) AsProductPriceFixedCreate() (ProductPriceFixedCreate, error) {
-	var body ProductPriceFixedCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceFixedCreate overwrites any union data inside the ProductUpdatePrices1 as the provided ProductPriceFixedCreate
-func (t *ProductUpdatePrices1) FromProductPriceFixedCreate(v ProductPriceFixedCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"fixed"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceFixedCreate performs a merge with any union data inside the ProductUpdatePrices1, using the provided ProductPriceFixedCreate
-func (t *ProductUpdatePrices1) MergeProductPriceFixedCreate(v ProductPriceFixedCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"fixed"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceCustomCreate returns the union data inside the ProductUpdatePrices1 as a ProductPriceCustomCreate
-func (t ProductUpdatePrices1) AsProductPriceCustomCreate() (ProductPriceCustomCreate, error) {
-	var body ProductPriceCustomCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceCustomCreate overwrites any union data inside the ProductUpdatePrices1 as the provided ProductPriceCustomCreate
-func (t *ProductUpdatePrices1) FromProductPriceCustomCreate(v ProductPriceCustomCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"custom"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceCustomCreate performs a merge with any union data inside the ProductUpdatePrices1, using the provided ProductPriceCustomCreate
-func (t *ProductUpdatePrices1) MergeProductPriceCustomCreate(v ProductPriceCustomCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"custom"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceSeatBasedCreate returns the union data inside the ProductUpdatePrices1 as a ProductPriceSeatBasedCreate
-func (t ProductUpdatePrices1) AsProductPriceSeatBasedCreate() (ProductPriceSeatBasedCreate, error) {
-	var body ProductPriceSeatBasedCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceSeatBasedCreate overwrites any union data inside the ProductUpdatePrices1 as the provided ProductPriceSeatBasedCreate
-func (t *ProductUpdatePrices1) FromProductPriceSeatBasedCreate(v ProductPriceSeatBasedCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"seat_based"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceSeatBasedCreate performs a merge with any union data inside the ProductUpdatePrices1, using the provided ProductPriceSeatBasedCreate
-func (t *ProductUpdatePrices1) MergeProductPriceSeatBasedCreate(v ProductPriceSeatBasedCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"seat_based"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceUnitBasedCreate returns the union data inside the ProductUpdatePrices1 as a ProductPriceUnitBasedCreate
-func (t ProductUpdatePrices1) AsProductPriceUnitBasedCreate() (ProductPriceUnitBasedCreate, error) {
-	var body ProductPriceUnitBasedCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceUnitBasedCreate overwrites any union data inside the ProductUpdatePrices1 as the provided ProductPriceUnitBasedCreate
-func (t *ProductUpdatePrices1) FromProductPriceUnitBasedCreate(v ProductPriceUnitBasedCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"unit_based"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceUnitBasedCreate performs a merge with any union data inside the ProductUpdatePrices1, using the provided ProductPriceUnitBasedCreate
-func (t *ProductUpdatePrices1) MergeProductPriceUnitBasedCreate(v ProductPriceUnitBasedCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"unit_based"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceMeteredUnitCreate returns the union data inside the ProductUpdatePrices1 as a ProductPriceMeteredUnitCreate
-func (t ProductUpdatePrices1) AsProductPriceMeteredUnitCreate() (ProductPriceMeteredUnitCreate, error) {
-	var body ProductPriceMeteredUnitCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceMeteredUnitCreate overwrites any union data inside the ProductUpdatePrices1 as the provided ProductPriceMeteredUnitCreate
-func (t *ProductUpdatePrices1) FromProductPriceMeteredUnitCreate(v ProductPriceMeteredUnitCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_unit"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceMeteredUnitCreate performs a merge with any union data inside the ProductUpdatePrices1, using the provided ProductPriceMeteredUnitCreate
-func (t *ProductUpdatePrices1) MergeProductPriceMeteredUnitCreate(v ProductPriceMeteredUnitCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_unit"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductPriceMeteredTiersCreate returns the union data inside the ProductUpdatePrices1 as a ProductPriceMeteredTiersCreate
-func (t ProductUpdatePrices1) AsProductPriceMeteredTiersCreate() (ProductPriceMeteredTiersCreate, error) {
-	var body ProductPriceMeteredTiersCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductPriceMeteredTiersCreate overwrites any union data inside the ProductUpdatePrices1 as the provided ProductPriceMeteredTiersCreate
-func (t *ProductUpdatePrices1) FromProductPriceMeteredTiersCreate(v ProductPriceMeteredTiersCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_tiers"}`))
-	t.union = b
-	return err
-}
-
-// MergeProductPriceMeteredTiersCreate performs a merge with any union data inside the ProductUpdatePrices1, using the provided ProductPriceMeteredTiersCreate
-func (t *ProductUpdatePrices1) MergeProductPriceMeteredTiersCreate(v ProductPriceMeteredTiersCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_tiers"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t ProductUpdatePrices1) Discriminator() (string, error) {
-	var discriminator struct {
-		Discriminator string `json:"amount_type"`
-	}
-	err := json.Unmarshal(t.union, &discriminator)
-	return discriminator.Discriminator, err
-}
-
-func (t ProductUpdatePrices1) ValueByDiscriminator() (interface{}, error) {
-	discriminator, err := t.Discriminator()
-	if err != nil {
-		return nil, err
-	}
-	switch discriminator {
-	case "custom":
-		return t.AsProductPriceCustomCreate()
-	case "fixed":
-		return t.AsProductPriceFixedCreate()
-	case "metered_tiers":
-		return t.AsProductPriceMeteredTiersCreate()
-	case "metered_unit":
-		return t.AsProductPriceMeteredUnitCreate()
-	case "seat_based":
-		return t.AsProductPriceSeatBasedCreate()
-	case "unit_based":
-		return t.AsProductPriceUnitBasedCreate()
-	default:
-		return nil, errors.New("unknown discriminator value: " + discriminator)
-	}
-}
-
-func (t ProductUpdatePrices1) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *ProductUpdatePrices1) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsExistingProductPrice returns the union data inside the ProductUpdate_Prices_Item as a ExistingProductPrice
-func (t ProductUpdate_Prices_Item) AsExistingProductPrice() (ExistingProductPrice, error) {
-	var body ExistingProductPrice
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromExistingProductPrice overwrites any union data inside the ProductUpdate_Prices_Item as the provided ExistingProductPrice
-func (t *ProductUpdate_Prices_Item) FromExistingProductPrice(v ExistingProductPrice) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeExistingProductPrice performs a merge with any union data inside the ProductUpdate_Prices_Item, using the provided ExistingProductPrice
-func (t *ProductUpdate_Prices_Item) MergeExistingProductPrice(v ExistingProductPrice) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsProductUpdatePrices1 returns the union data inside the ProductUpdate_Prices_Item as a ProductUpdatePrices1
-func (t ProductUpdate_Prices_Item) AsProductUpdatePrices1() (ProductUpdatePrices1, error) {
-	var body ProductUpdatePrices1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromProductUpdatePrices1 overwrites any union data inside the ProductUpdate_Prices_Item as the provided ProductUpdatePrices1
-func (t *ProductUpdate_Prices_Item) FromProductUpdatePrices1(v ProductUpdatePrices1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeProductUpdatePrices1 performs a merge with any union data inside the ProductUpdate_Prices_Item, using the provided ProductUpdatePrices1
-func (t *ProductUpdate_Prices_Item) MergeProductUpdatePrices1(v ProductUpdatePrices1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t ProductUpdate_Prices_Item) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *ProductUpdate_Prices_Item) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsRefundCreateMetadata0 returns the union data inside the RefundCreate_Metadata_AdditionalProperties as a RefundCreateMetadata0
-func (t RefundCreate_Metadata_AdditionalProperties) AsRefundCreateMetadata0() (RefundCreateMetadata0, error) {
-	var body RefundCreateMetadata0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromRefundCreateMetadata0 overwrites any union data inside the RefundCreate_Metadata_AdditionalProperties as the provided RefundCreateMetadata0
-func (t *RefundCreate_Metadata_AdditionalProperties) FromRefundCreateMetadata0(v RefundCreateMetadata0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeRefundCreateMetadata0 performs a merge with any union data inside the RefundCreate_Metadata_AdditionalProperties, using the provided RefundCreateMetadata0
-func (t *RefundCreate_Metadata_AdditionalProperties) MergeRefundCreateMetadata0(v RefundCreateMetadata0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsRefundCreateMetadata1 returns the union data inside the RefundCreate_Metadata_AdditionalProperties as a RefundCreateMetadata1
-func (t RefundCreate_Metadata_AdditionalProperties) AsRefundCreateMetadata1() (RefundCreateMetadata1, error) {
-	var body RefundCreateMetadata1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromRefundCreateMetadata1 overwrites any union data inside the RefundCreate_Metadata_AdditionalProperties as the provided RefundCreateMetadata1
-func (t *RefundCreate_Metadata_AdditionalProperties) FromRefundCreateMetadata1(v RefundCreateMetadata1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeRefundCreateMetadata1 performs a merge with any union data inside the RefundCreate_Metadata_AdditionalProperties, using the provided RefundCreateMetadata1
-func (t *RefundCreate_Metadata_AdditionalProperties) MergeRefundCreateMetadata1(v RefundCreateMetadata1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsRefundCreateMetadata2 returns the union data inside the RefundCreate_Metadata_AdditionalProperties as a RefundCreateMetadata2
-func (t RefundCreate_Metadata_AdditionalProperties) AsRefundCreateMetadata2() (RefundCreateMetadata2, error) {
-	var body RefundCreateMetadata2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromRefundCreateMetadata2 overwrites any union data inside the RefundCreate_Metadata_AdditionalProperties as the provided RefundCreateMetadata2
-func (t *RefundCreate_Metadata_AdditionalProperties) FromRefundCreateMetadata2(v RefundCreateMetadata2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeRefundCreateMetadata2 performs a merge with any union data inside the RefundCreate_Metadata_AdditionalProperties, using the provided RefundCreateMetadata2
-func (t *RefundCreate_Metadata_AdditionalProperties) MergeRefundCreateMetadata2(v RefundCreateMetadata2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsRefundCreateMetadata3 returns the union data inside the RefundCreate_Metadata_AdditionalProperties as a RefundCreateMetadata3
-func (t RefundCreate_Metadata_AdditionalProperties) AsRefundCreateMetadata3() (RefundCreateMetadata3, error) {
-	var body RefundCreateMetadata3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromRefundCreateMetadata3 overwrites any union data inside the RefundCreate_Metadata_AdditionalProperties as the provided RefundCreateMetadata3
-func (t *RefundCreate_Metadata_AdditionalProperties) FromRefundCreateMetadata3(v RefundCreateMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeRefundCreateMetadata3 performs a merge with any union data inside the RefundCreate_Metadata_AdditionalProperties, using the provided RefundCreateMetadata3
-func (t *RefundCreate_Metadata_AdditionalProperties) MergeRefundCreateMetadata3(v RefundCreateMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t RefundCreate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *RefundCreate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsSubscriptionCustomFieldData0 returns the union data inside the Subscription_CustomFieldData_AdditionalProperties as a SubscriptionCustomFieldData0
-func (t Subscription_CustomFieldData_AdditionalProperties) AsSubscriptionCustomFieldData0() (SubscriptionCustomFieldData0, error) {
-	var body SubscriptionCustomFieldData0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSubscriptionCustomFieldData0 overwrites any union data inside the Subscription_CustomFieldData_AdditionalProperties as the provided SubscriptionCustomFieldData0
-func (t *Subscription_CustomFieldData_AdditionalProperties) FromSubscriptionCustomFieldData0(v SubscriptionCustomFieldData0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSubscriptionCustomFieldData0 performs a merge with any union data inside the Subscription_CustomFieldData_AdditionalProperties, using the provided SubscriptionCustomFieldData0
-func (t *Subscription_CustomFieldData_AdditionalProperties) MergeSubscriptionCustomFieldData0(v SubscriptionCustomFieldData0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsSubscriptionCustomFieldData1 returns the union data inside the Subscription_CustomFieldData_AdditionalProperties as a SubscriptionCustomFieldData1
-func (t Subscription_CustomFieldData_AdditionalProperties) AsSubscriptionCustomFieldData1() (SubscriptionCustomFieldData1, error) {
-	var body SubscriptionCustomFieldData1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSubscriptionCustomFieldData1 overwrites any union data inside the Subscription_CustomFieldData_AdditionalProperties as the provided SubscriptionCustomFieldData1
-func (t *Subscription_CustomFieldData_AdditionalProperties) FromSubscriptionCustomFieldData1(v SubscriptionCustomFieldData1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSubscriptionCustomFieldData1 performs a merge with any union data inside the Subscription_CustomFieldData_AdditionalProperties, using the provided SubscriptionCustomFieldData1
-func (t *Subscription_CustomFieldData_AdditionalProperties) MergeSubscriptionCustomFieldData1(v SubscriptionCustomFieldData1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
 // AsSubscriptionCustomFieldData2 returns the union data inside the Subscription_CustomFieldData_AdditionalProperties as a SubscriptionCustomFieldData2
 func (t Subscription_CustomFieldData_AdditionalProperties) AsSubscriptionCustomFieldData2() (SubscriptionCustomFieldData2, error) {
 	var body SubscriptionCustomFieldData2
@@ -6602,24 +4407,6 @@ type ClientInterface interface {
 	// Corresponds with PATCH /v1/customer-portal/orders/{id} (the `CustomerPortalOrdersUpdate` operationId).
 	CustomerPortalOrdersUpdate(ctx context.Context, id string, body CustomerPortalOrdersUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// CustomerPortalOrdersConfirmRetryPaymentWithBody Confirm Retry Payment
-	//
-	// Confirm a retry payment using a Stripe confirmation token.
-	//
-	// Takes any type of body and a specified content type.
-	//
-	// Corresponds with POST /v1/customer-portal/orders/{id}/confirm-payment (the `CustomerPortalOrdersConfirmRetryPayment` operationId).
-	CustomerPortalOrdersConfirmRetryPaymentWithBody(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	// CustomerPortalOrdersConfirmRetryPayment Confirm Retry Payment
-	//
-	// Confirm a retry payment using a Stripe confirmation token.
-	//
-	// Takes a body of the `application/json` content type.
-	//
-	// Corresponds with POST /v1/customer-portal/orders/{id}/confirm-payment (the `CustomerPortalOrdersConfirmRetryPayment` operationId).
-	CustomerPortalOrdersConfirmRetryPayment(ctx context.Context, id string, body CustomerPortalOrdersConfirmRetryPaymentJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
-
 	// CustomerPortalOrdersInvoice Get Order Invoice
 	//
 	// Get an order's invoice data.
@@ -6633,13 +4420,6 @@ type ClientInterface interface {
 	//
 	// Corresponds with POST /v1/customer-portal/orders/{id}/invoice (the `CustomerPortalOrdersGenerateInvoice` operationId).
 	CustomerPortalOrdersGenerateInvoice(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	// CustomerPortalOrdersGetPaymentStatus Get Order Payment Status
-	//
-	// Get the current payment status for an order.
-	//
-	// Corresponds with GET /v1/customer-portal/orders/{id}/payment-status (the `CustomerPortalOrdersGetPaymentStatus` operationId).
-	CustomerPortalOrdersGetPaymentStatus(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// CustomerPortalOrdersReceipt Get Order Receipt
 	//
@@ -6737,20 +4517,6 @@ type ClientInterface interface {
 	//
 	// Corresponds with PATCH /v1/customer-portal/subscriptions/{id} (the `CustomerPortalSubscriptionsUpdate` operationId).
 	CustomerPortalSubscriptionsUpdate(ctx context.Context, id string, body CustomerPortalSubscriptionsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	// CustomerPortalWalletsList List Wallets
-	//
-	// List wallets of the authenticated customer.
-	//
-	// Corresponds with GET /v1/customer-portal/wallets/ (the `CustomerPortalWalletsList` operationId).
-	CustomerPortalWalletsList(ctx context.Context, params *CustomerPortalWalletsListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	// CustomerPortalWalletsGet Get Wallet
-	//
-	// Get a wallet by ID for the authenticated customer.
-	//
-	// Corresponds with GET /v1/customer-portal/wallets/{id} (the `CustomerPortalWalletsGet` operationId).
-	CustomerPortalWalletsGet(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// CustomerSeatsListSeats List Seats
 	//
@@ -6888,15 +4654,6 @@ type ClientInterface interface {
 	//
 	// Corresponds with POST /v1/customers/ (the `CustomersCreate` operationId).
 	CustomersCreate(ctx context.Context, body CustomersCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	// CustomersExport Export Customers
-	//
-	// Export customers as a CSV file.
-	//
-	// **Scopes**: `customers:read` `customers:write`
-	//
-	// Corresponds with GET /v1/customers/export (the `CustomersExport` operationId).
-	CustomersExport(ctx context.Context, params *CustomersExportParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// CustomersDeleteExternal Delete Customer by External ID
 	//
@@ -7671,86 +5428,6 @@ type ClientInterface interface {
 	// Corresponds with GET /v1/metrics/ (the `MetricsGet` operationId).
 	MetricsGet(ctx context.Context, params *MetricsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// MetricsListDashboards List Metric Dashboards
-	//
-	// List user-defined metric dashboards.
-	//
-	// **Scopes**: `metrics:read`
-	//
-	// Corresponds with GET /v1/metrics/dashboards (the `MetricsListDashboards` operationId).
-	MetricsListDashboards(ctx context.Context, params *MetricsListDashboardsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	// MetricsCreateDashboardWithBody Create Metric Dashboard
-	//
-	// Create a user-defined metric dashboard.
-	//
-	// **Scopes**: `metrics:write`
-	//
-	// Takes any type of body and a specified content type.
-	//
-	// Corresponds with POST /v1/metrics/dashboards (the `MetricsCreateDashboard` operationId).
-	MetricsCreateDashboardWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	// MetricsCreateDashboard Create Metric Dashboard
-	//
-	// Create a user-defined metric dashboard.
-	//
-	// **Scopes**: `metrics:write`
-	//
-	// Takes a body of the `application/json` content type.
-	//
-	// Corresponds with POST /v1/metrics/dashboards (the `MetricsCreateDashboard` operationId).
-	MetricsCreateDashboard(ctx context.Context, body MetricsCreateDashboardJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	// MetricsDeleteDashboard Delete Metric Dashboard
-	//
-	// Delete a user-defined metric dashboard.
-	//
-	// **Scopes**: `metrics:write`
-	//
-	// Corresponds with DELETE /v1/metrics/dashboards/{id} (the `MetricsDeleteDashboard` operationId).
-	MetricsDeleteDashboard(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	// MetricsGetDashboard Get Metric Dashboard
-	//
-	// Get a user-defined metric dashboard by ID.
-	//
-	// **Scopes**: `metrics:read`
-	//
-	// Corresponds with GET /v1/metrics/dashboards/{id} (the `MetricsGetDashboard` operationId).
-	MetricsGetDashboard(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	// MetricsUpdateDashboardWithBody Update Metric Dashboard
-	//
-	// Update a user-defined metric dashboard.
-	//
-	// **Scopes**: `metrics:write`
-	//
-	// Takes any type of body and a specified content type.
-	//
-	// Corresponds with PATCH /v1/metrics/dashboards/{id} (the `MetricsUpdateDashboard` operationId).
-	MetricsUpdateDashboardWithBody(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	// MetricsUpdateDashboard Update Metric Dashboard
-	//
-	// Update a user-defined metric dashboard.
-	//
-	// **Scopes**: `metrics:write`
-	//
-	// Takes a body of the `application/json` content type.
-	//
-	// Corresponds with PATCH /v1/metrics/dashboards/{id} (the `MetricsUpdateDashboard` operationId).
-	MetricsUpdateDashboard(ctx context.Context, id string, body MetricsUpdateDashboardJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	// MetricsExport Export Metrics
-	//
-	// Export metrics as a CSV file.
-	//
-	// **Scopes**: `metrics:read`
-	//
-	// Corresponds with GET /v1/metrics/export (the `MetricsExport` operationId).
-	MetricsExport(ctx context.Context, params *MetricsExportParams, reqEditors ...RequestEditorFn) (*http.Response, error)
-
 	// MetricsLimits Get Metrics Limits
 	//
 	// Get the interval limits for the metrics endpoint.
@@ -8263,15 +5940,6 @@ type ClientInterface interface {
 	//
 	// Corresponds with POST /v1/subscriptions/ (the `SubscriptionsCreate` operationId).
 	SubscriptionsCreate(ctx context.Context, body SubscriptionsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	// SubscriptionsExport Export Subscriptions
-	//
-	// Export subscriptions as a CSV file.
-	//
-	// **Scopes**: `subscriptions:read` `subscriptions:write`
-	//
-	// Corresponds with GET /v1/subscriptions/export (the `SubscriptionsExport` operationId).
-	SubscriptionsExport(ctx context.Context, params *SubscriptionsExportParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// SubscriptionsRevoke Revoke Subscription
 	//
@@ -10007,44 +7675,6 @@ func (c *Client) CustomerPortalOrdersUpdate(ctx context.Context, id string, body
 	return c.Client.Do(req)
 }
 
-// CustomerPortalOrdersConfirmRetryPaymentWithBody Confirm Retry Payment
-//
-// Confirm a retry payment using a Stripe confirmation token.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /v1/customer-portal/orders/{id}/confirm-payment (the `CustomerPortalOrdersConfirmRetryPayment` operationId).
-func (c *Client) CustomerPortalOrdersConfirmRetryPaymentWithBody(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewCustomerPortalOrdersConfirmRetryPaymentRequestWithBody(c.Server, id, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// CustomerPortalOrdersConfirmRetryPayment Confirm Retry Payment
-//
-// Confirm a retry payment using a Stripe confirmation token.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /v1/customer-portal/orders/{id}/confirm-payment (the `CustomerPortalOrdersConfirmRetryPayment` operationId).
-func (c *Client) CustomerPortalOrdersConfirmRetryPayment(ctx context.Context, id string, body CustomerPortalOrdersConfirmRetryPaymentJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewCustomerPortalOrdersConfirmRetryPaymentRequest(c.Server, id, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
 // CustomerPortalOrdersInvoice Get Order Invoice
 //
 // Get an order's invoice data.
@@ -10069,23 +7699,6 @@ func (c *Client) CustomerPortalOrdersInvoice(ctx context.Context, id string, req
 // Corresponds with POST /v1/customer-portal/orders/{id}/invoice (the `CustomerPortalOrdersGenerateInvoice` operationId).
 func (c *Client) CustomerPortalOrdersGenerateInvoice(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewCustomerPortalOrdersGenerateInvoiceRequest(c.Server, id)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// CustomerPortalOrdersGetPaymentStatus Get Order Payment Status
-//
-// Get the current payment status for an order.
-//
-// Corresponds with GET /v1/customer-portal/orders/{id}/payment-status (the `CustomerPortalOrdersGetPaymentStatus` operationId).
-func (c *Client) CustomerPortalOrdersGetPaymentStatus(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewCustomerPortalOrdersGetPaymentStatusRequest(c.Server, id)
 	if err != nil {
 		return nil, err
 	}
@@ -10313,40 +7926,6 @@ func (c *Client) CustomerPortalSubscriptionsUpdateWithBody(ctx context.Context, 
 // Corresponds with PATCH /v1/customer-portal/subscriptions/{id} (the `CustomerPortalSubscriptionsUpdate` operationId).
 func (c *Client) CustomerPortalSubscriptionsUpdate(ctx context.Context, id string, body CustomerPortalSubscriptionsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewCustomerPortalSubscriptionsUpdateRequest(c.Server, id, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// CustomerPortalWalletsList List Wallets
-//
-// List wallets of the authenticated customer.
-//
-// Corresponds with GET /v1/customer-portal/wallets/ (the `CustomerPortalWalletsList` operationId).
-func (c *Client) CustomerPortalWalletsList(ctx context.Context, params *CustomerPortalWalletsListParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewCustomerPortalWalletsListRequest(c.Server, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// CustomerPortalWalletsGet Get Wallet
-//
-// Get a wallet by ID for the authenticated customer.
-//
-// Corresponds with GET /v1/customer-portal/wallets/{id} (the `CustomerPortalWalletsGet` operationId).
-func (c *Client) CustomerPortalWalletsGet(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewCustomerPortalWalletsGetRequest(c.Server, id)
 	if err != nil {
 		return nil, err
 	}
@@ -10614,25 +8193,6 @@ func (c *Client) CustomersCreateWithBody(ctx context.Context, contentType string
 // Corresponds with POST /v1/customers/ (the `CustomersCreate` operationId).
 func (c *Client) CustomersCreate(ctx context.Context, body CustomersCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewCustomersCreateRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// CustomersExport Export Customers
-//
-// Export customers as a CSV file.
-//
-// **Scopes**: `customers:read` `customers:write`
-//
-// Corresponds with GET /v1/customers/export (the `CustomersExport` operationId).
-func (c *Client) CustomersExport(ctx context.Context, params *CustomersExportParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewCustomersExportRequest(c.Server, params)
 	if err != nil {
 		return nil, err
 	}
@@ -12136,166 +9696,6 @@ func (c *Client) MetricsGet(ctx context.Context, params *MetricsGetParams, reqEd
 	return c.Client.Do(req)
 }
 
-// MetricsListDashboards List Metric Dashboards
-//
-// List user-defined metric dashboards.
-//
-// **Scopes**: `metrics:read`
-//
-// Corresponds with GET /v1/metrics/dashboards (the `MetricsListDashboards` operationId).
-func (c *Client) MetricsListDashboards(ctx context.Context, params *MetricsListDashboardsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewMetricsListDashboardsRequest(c.Server, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// MetricsCreateDashboardWithBody Create Metric Dashboard
-//
-// Create a user-defined metric dashboard.
-//
-// **Scopes**: `metrics:write`
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /v1/metrics/dashboards (the `MetricsCreateDashboard` operationId).
-func (c *Client) MetricsCreateDashboardWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewMetricsCreateDashboardRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// MetricsCreateDashboard Create Metric Dashboard
-//
-// Create a user-defined metric dashboard.
-//
-// **Scopes**: `metrics:write`
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /v1/metrics/dashboards (the `MetricsCreateDashboard` operationId).
-func (c *Client) MetricsCreateDashboard(ctx context.Context, body MetricsCreateDashboardJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewMetricsCreateDashboardRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// MetricsDeleteDashboard Delete Metric Dashboard
-//
-// Delete a user-defined metric dashboard.
-//
-// **Scopes**: `metrics:write`
-//
-// Corresponds with DELETE /v1/metrics/dashboards/{id} (the `MetricsDeleteDashboard` operationId).
-func (c *Client) MetricsDeleteDashboard(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewMetricsDeleteDashboardRequest(c.Server, id)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// MetricsGetDashboard Get Metric Dashboard
-//
-// Get a user-defined metric dashboard by ID.
-//
-// **Scopes**: `metrics:read`
-//
-// Corresponds with GET /v1/metrics/dashboards/{id} (the `MetricsGetDashboard` operationId).
-func (c *Client) MetricsGetDashboard(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewMetricsGetDashboardRequest(c.Server, id)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// MetricsUpdateDashboardWithBody Update Metric Dashboard
-//
-// Update a user-defined metric dashboard.
-//
-// **Scopes**: `metrics:write`
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with PATCH /v1/metrics/dashboards/{id} (the `MetricsUpdateDashboard` operationId).
-func (c *Client) MetricsUpdateDashboardWithBody(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewMetricsUpdateDashboardRequestWithBody(c.Server, id, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// MetricsUpdateDashboard Update Metric Dashboard
-//
-// Update a user-defined metric dashboard.
-//
-// **Scopes**: `metrics:write`
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with PATCH /v1/metrics/dashboards/{id} (the `MetricsUpdateDashboard` operationId).
-func (c *Client) MetricsUpdateDashboard(ctx context.Context, id string, body MetricsUpdateDashboardJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewMetricsUpdateDashboardRequest(c.Server, id, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// MetricsExport Export Metrics
-//
-// Export metrics as a CSV file.
-//
-// **Scopes**: `metrics:read`
-//
-// Corresponds with GET /v1/metrics/export (the `MetricsExport` operationId).
-func (c *Client) MetricsExport(ctx context.Context, params *MetricsExportParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewMetricsExportRequest(c.Server, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
 // MetricsLimits Get Metrics Limits
 //
 // Get the interval limits for the metrics endpoint.
@@ -13299,25 +10699,6 @@ func (c *Client) SubscriptionsCreateWithBody(ctx context.Context, contentType st
 // Corresponds with POST /v1/subscriptions/ (the `SubscriptionsCreate` operationId).
 func (c *Client) SubscriptionsCreate(ctx context.Context, body SubscriptionsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewSubscriptionsCreateRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// SubscriptionsExport Export Subscriptions
-//
-// Export subscriptions as a CSV file.
-//
-// **Scopes**: `subscriptions:read` `subscriptions:write`
-//
-// Corresponds with GET /v1/subscriptions/export (the `SubscriptionsExport` operationId).
-func (c *Client) SubscriptionsExport(ctx context.Context, params *SubscriptionsExportParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewSubscriptionsExportRequest(c.Server, params)
 	if err != nil {
 		return nil, err
 	}
@@ -16854,53 +14235,6 @@ func NewCustomerPortalOrdersUpdateRequestWithBody(server string, id string, cont
 	return req, nil
 }
 
-// NewCustomerPortalOrdersConfirmRetryPaymentRequest calls the generic CustomerPortalOrdersConfirmRetryPayment builder with application/json body
-func NewCustomerPortalOrdersConfirmRetryPaymentRequest(server string, id string, body CustomerPortalOrdersConfirmRetryPaymentJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewCustomerPortalOrdersConfirmRetryPaymentRequestWithBody(server, id, "application/json", bodyReader)
-}
-
-// NewCustomerPortalOrdersConfirmRetryPaymentRequestWithBody constructs an http.Request for the CustomerPortalOrdersConfirmRetryPayment method, with any body, and a specified content type
-func NewCustomerPortalOrdersConfirmRetryPaymentRequestWithBody(server string, id string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/v1/customer-portal/orders/%s/confirm-payment", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
 // NewCustomerPortalOrdersInvoiceRequest constructs an http.Request for the CustomerPortalOrdersInvoice method
 func NewCustomerPortalOrdersInvoiceRequest(server string, id string) (*http.Request, error) {
 	var err error
@@ -16962,40 +14296,6 @@ func NewCustomerPortalOrdersGenerateInvoiceRequest(server string, id string) (*h
 	}
 
 	req, err := http.NewRequest(http.MethodPost, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewCustomerPortalOrdersGetPaymentStatusRequest constructs an http.Request for the CustomerPortalOrdersGetPaymentStatus method
-func NewCustomerPortalOrdersGetPaymentStatusRequest(server string, id string) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/v1/customer-portal/orders/%s/payment-status", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
 	if err != nil {
 		return nil, err
 	}
@@ -17540,118 +14840,6 @@ func NewCustomerPortalSubscriptionsUpdateRequestWithBody(server string, id strin
 	return req, nil
 }
 
-// NewCustomerPortalWalletsListRequest constructs an http.Request for the CustomerPortalWalletsList method
-func NewCustomerPortalWalletsListRequest(server string, params *CustomerPortalWalletsListParams) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/v1/customer-portal/wallets/")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.Page != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "page", *params.Page, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Limit != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Sorting != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "sorting", *params.Sorting, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewCustomerPortalWalletsGetRequest constructs an http.Request for the CustomerPortalWalletsGet method
-func NewCustomerPortalWalletsGetRequest(server string, id string) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/v1/customer-portal/wallets/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
 // NewCustomerSeatsListSeatsRequest constructs an http.Request for the CustomerSeatsListSeats method
 func NewCustomerSeatsListSeatsRequest(server string, params *CustomerSeatsListSeatsParams) (*http.Request, error) {
 	var err error
@@ -18114,60 +15302,6 @@ func NewCustomersCreateRequestWithBody(server string, contentType string, body i
 	}
 
 	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewCustomersExportRequest constructs an http.Request for the CustomersExport method
-func NewCustomersExportRequest(server string, params *CustomersExportParams) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/v1/customers/export")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.OrganizationId != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "organization_id", *params.OrganizationId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
 
 	return req, nil
 }
@@ -20041,6 +17175,2927 @@ func NewEventsListRequest(server string, params *EventsListParams) (*http.Reques
 		if params.Depth != nil {
 
 			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "depth", *params.Depth, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Page != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "page", *params.Page, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Sorting != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "sorting", *params.Sorting, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Metadata != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("deepObject", true, "metadata", *params.Metadata, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewEventsIngestRequest calls the generic EventsIngest builder with application/json body
+func NewEventsIngestRequest(server string, body EventsIngestJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewEventsIngestRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewEventsIngestRequestWithBody constructs an http.Request for the EventsIngest method, with any body, and a specified content type
+func NewEventsIngestRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/events/ingest")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewEventsListNamesRequest constructs an http.Request for the EventsListNames method
+func NewEventsListNamesRequest(server string, params *EventsListNamesParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/events/names")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.OrganizationId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "organization_id", *params.OrganizationId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.CustomerId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "customer_id", *params.CustomerId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.ExternalCustomerId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "external_customer_id", *params.ExternalCustomerId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Source != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "source", *params.Source, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Query != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "query", *params.Query, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Page != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "page", *params.Page, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Sorting != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "sorting", *params.Sorting, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewEventsGetRequest constructs an http.Request for the EventsGet method
+func NewEventsGetRequest(server string, id string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/events/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewFilesListRequest constructs an http.Request for the FilesList method
+func NewFilesListRequest(server string, params *FilesListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/files/")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.OrganizationId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "organization_id", *params.OrganizationId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Ids != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "ids", *params.Ids, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Page != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "page", *params.Page, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewFilesCreateRequest calls the generic FilesCreate builder with application/json body
+func NewFilesCreateRequest(server string, body FilesCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewFilesCreateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewFilesCreateRequestWithBody constructs an http.Request for the FilesCreate method, with any body, and a specified content type
+func NewFilesCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/files/")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewFilesDeleteRequest constructs an http.Request for the FilesDelete method
+func NewFilesDeleteRequest(server string, id string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/files/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewFilesUpdateRequest calls the generic FilesUpdate builder with application/json body
+func NewFilesUpdateRequest(server string, id string, body FilesUpdateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewFilesUpdateRequestWithBody(server, id, "application/json", bodyReader)
+}
+
+// NewFilesUpdateRequestWithBody constructs an http.Request for the FilesUpdate method, with any body, and a specified content type
+func NewFilesUpdateRequestWithBody(server string, id string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/files/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewFilesUploadedRequest calls the generic FilesUploaded builder with application/json body
+func NewFilesUploadedRequest(server string, id string, body FilesUploadedJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewFilesUploadedRequestWithBody(server, id, "application/json", bodyReader)
+}
+
+// NewFilesUploadedRequestWithBody constructs an http.Request for the FilesUploaded method, with any body, and a specified content type
+func NewFilesUploadedRequestWithBody(server string, id string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/files/%s/uploaded", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewLicenseKeysListRequest constructs an http.Request for the LicenseKeysList method
+func NewLicenseKeysListRequest(server string, params *LicenseKeysListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/license-keys/")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.OrganizationId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "organization_id", *params.OrganizationId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.BenefitId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "benefit_id", *params.BenefitId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Status != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "status", *params.Status, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Page != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "page", *params.Page, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewLicenseKeysActivateRequest calls the generic LicenseKeysActivate builder with application/json body
+func NewLicenseKeysActivateRequest(server string, body LicenseKeysActivateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewLicenseKeysActivateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewLicenseKeysActivateRequestWithBody constructs an http.Request for the LicenseKeysActivate method, with any body, and a specified content type
+func NewLicenseKeysActivateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/license-keys/activate")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewLicenseKeysDeactivateRequest calls the generic LicenseKeysDeactivate builder with application/json body
+func NewLicenseKeysDeactivateRequest(server string, body LicenseKeysDeactivateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewLicenseKeysDeactivateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewLicenseKeysDeactivateRequestWithBody constructs an http.Request for the LicenseKeysDeactivate method, with any body, and a specified content type
+func NewLicenseKeysDeactivateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/license-keys/deactivate")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewLicenseKeysValidateRequest calls the generic LicenseKeysValidate builder with application/json body
+func NewLicenseKeysValidateRequest(server string, body LicenseKeysValidateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewLicenseKeysValidateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewLicenseKeysValidateRequestWithBody constructs an http.Request for the LicenseKeysValidate method, with any body, and a specified content type
+func NewLicenseKeysValidateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/license-keys/validate")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewLicenseKeysGetRequest constructs an http.Request for the LicenseKeysGet method
+func NewLicenseKeysGetRequest(server string, id string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/license-keys/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewLicenseKeysUpdateRequest calls the generic LicenseKeysUpdate builder with application/json body
+func NewLicenseKeysUpdateRequest(server string, id string, body LicenseKeysUpdateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewLicenseKeysUpdateRequestWithBody(server, id, "application/json", bodyReader)
+}
+
+// NewLicenseKeysUpdateRequestWithBody constructs an http.Request for the LicenseKeysUpdate method, with any body, and a specified content type
+func NewLicenseKeysUpdateRequestWithBody(server string, id string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/license-keys/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewLicenseKeysGetActivationRequest constructs an http.Request for the LicenseKeysGetActivation method
+func NewLicenseKeysGetActivationRequest(server string, id string, activationId string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "activation_id", activationId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/license-keys/%s/activations/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewLicenseKeysRotateRequest constructs an http.Request for the LicenseKeysRotate method
+func NewLicenseKeysRotateRequest(server string, id string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/license-keys/%s/rotate", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewMetersListRequest constructs an http.Request for the MetersList method
+func NewMetersListRequest(server string, params *MetersListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/meters/")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.OrganizationId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "organization_id", *params.OrganizationId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Query != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "query", *params.Query, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.IsArchived != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "is_archived", *params.IsArchived, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Page != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "page", *params.Page, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Sorting != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "sorting", *params.Sorting, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Metadata != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("deepObject", true, "metadata", *params.Metadata, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewMetersCreateRequest calls the generic MetersCreate builder with application/json body
+func NewMetersCreateRequest(server string, body MetersCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewMetersCreateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewMetersCreateRequestWithBody constructs an http.Request for the MetersCreate method, with any body, and a specified content type
+func NewMetersCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/meters/")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewMetersGetRequest constructs an http.Request for the MetersGet method
+func NewMetersGetRequest(server string, id string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/meters/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewMetersUpdateRequest calls the generic MetersUpdate builder with application/json body
+func NewMetersUpdateRequest(server string, id string, body MetersUpdateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewMetersUpdateRequestWithBody(server, id, "application/json", bodyReader)
+}
+
+// NewMetersUpdateRequestWithBody constructs an http.Request for the MetersUpdate method, with any body, and a specified content type
+func NewMetersUpdateRequestWithBody(server string, id string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/meters/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewMetersQuantitiesRequest constructs an http.Request for the MetersQuantities method
+func NewMetersQuantitiesRequest(server string, id string, params *MetersQuantitiesParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/meters/%s/quantities", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "start_timestamp", params.StartTimestamp, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: "date-time"}); err != nil {
+			return nil, err
+		} else {
+			for _, qp := range strings.Split(queryFrag, "&") {
+				rawQueryFragments = append(rawQueryFragments, qp)
+			}
+		}
+
+		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "end_timestamp", params.EndTimestamp, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: "date-time"}); err != nil {
+			return nil, err
+		} else {
+			for _, qp := range strings.Split(queryFrag, "&") {
+				rawQueryFragments = append(rawQueryFragments, qp)
+			}
+		}
+
+		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "interval", params.Interval, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+			return nil, err
+		} else {
+			for _, qp := range strings.Split(queryFrag, "&") {
+				rawQueryFragments = append(rawQueryFragments, qp)
+			}
+		}
+
+		if params.Timezone != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "timezone", *params.Timezone, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.CustomerId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "customer_id", *params.CustomerId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.ExternalCustomerId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "external_customer_id", *params.ExternalCustomerId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.CustomerAggregationFunction != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "customer_aggregation_function", *params.CustomerAggregationFunction, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Metadata != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("deepObject", true, "metadata", *params.Metadata, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewMetricsGetRequest constructs an http.Request for the MetricsGet method
+func NewMetricsGetRequest(server string, params *MetricsGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/metrics/")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "start_date", params.StartDate, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: "date"}); err != nil {
+			return nil, err
+		} else {
+			for _, qp := range strings.Split(queryFrag, "&") {
+				rawQueryFragments = append(rawQueryFragments, qp)
+			}
+		}
+
+		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "end_date", params.EndDate, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: "date"}); err != nil {
+			return nil, err
+		} else {
+			for _, qp := range strings.Split(queryFrag, "&") {
+				rawQueryFragments = append(rawQueryFragments, qp)
+			}
+		}
+
+		if params.Timezone != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "timezone", *params.Timezone, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "interval", params.Interval, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+			return nil, err
+		} else {
+			for _, qp := range strings.Split(queryFrag, "&") {
+				rawQueryFragments = append(rawQueryFragments, qp)
+			}
+		}
+
+		if params.OrganizationId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "organization_id", *params.OrganizationId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.ProductId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "product_id", *params.ProductId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.BillingType != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "billing_type", *params.BillingType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.CustomerId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "customer_id", *params.CustomerId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Metrics != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "metrics", *params.Metrics, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewMetricsLimitsRequest constructs an http.Request for the MetricsLimits method
+func NewMetricsLimitsRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/metrics/limits")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewOauth2AuthorizeRequest constructs an http.Request for the Oauth2Authorize method
+func NewOauth2AuthorizeRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/oauth2/authorize")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewOauth2IntrospectTokenRequestWithFormdataBody calls the generic Oauth2IntrospectToken builder with application/x-www-form-urlencoded body
+func NewOauth2IntrospectTokenRequestWithFormdataBody(server string, body Oauth2IntrospectTokenFormdataRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	bodyStr, err := runtime.MarshalForm(body, nil)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = strings.NewReader(bodyStr.Encode())
+	return NewOauth2IntrospectTokenRequestWithBody(server, "application/x-www-form-urlencoded", bodyReader)
+}
+
+// NewOauth2IntrospectTokenRequestWithBody constructs an http.Request for the Oauth2IntrospectToken method, with any body, and a specified content type
+func NewOauth2IntrospectTokenRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/oauth2/introspect")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewOauth2ClientsOauth2CreateClientRequest calls the generic Oauth2ClientsOauth2CreateClient builder with application/json body
+func NewOauth2ClientsOauth2CreateClientRequest(server string, body Oauth2ClientsOauth2CreateClientJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewOauth2ClientsOauth2CreateClientRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewOauth2ClientsOauth2CreateClientRequestWithBody constructs an http.Request for the Oauth2ClientsOauth2CreateClient method, with any body, and a specified content type
+func NewOauth2ClientsOauth2CreateClientRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/oauth2/register")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewOauth2ClientsOauth2DeleteClientRequest constructs an http.Request for the Oauth2ClientsOauth2DeleteClient method
+func NewOauth2ClientsOauth2DeleteClientRequest(server string, clientId string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "client_id", clientId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/oauth2/register/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewOauth2ClientsOauth2GetClientRequest constructs an http.Request for the Oauth2ClientsOauth2GetClient method
+func NewOauth2ClientsOauth2GetClientRequest(server string, clientId string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "client_id", clientId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/oauth2/register/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewOauth2ClientsOauth2UpdateClientRequest calls the generic Oauth2ClientsOauth2UpdateClient builder with application/json body
+func NewOauth2ClientsOauth2UpdateClientRequest(server string, clientId string, body Oauth2ClientsOauth2UpdateClientJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewOauth2ClientsOauth2UpdateClientRequestWithBody(server, clientId, "application/json", bodyReader)
+}
+
+// NewOauth2ClientsOauth2UpdateClientRequestWithBody constructs an http.Request for the Oauth2ClientsOauth2UpdateClient method, with any body, and a specified content type
+func NewOauth2ClientsOauth2UpdateClientRequestWithBody(server string, clientId string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "client_id", clientId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/oauth2/register/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPut, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewOauth2RevokeTokenRequestWithFormdataBody calls the generic Oauth2RevokeToken builder with application/x-www-form-urlencoded body
+func NewOauth2RevokeTokenRequestWithFormdataBody(server string, body Oauth2RevokeTokenFormdataRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	bodyStr, err := runtime.MarshalForm(body, nil)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = strings.NewReader(bodyStr.Encode())
+	return NewOauth2RevokeTokenRequestWithBody(server, "application/x-www-form-urlencoded", bodyReader)
+}
+
+// NewOauth2RevokeTokenRequestWithBody constructs an http.Request for the Oauth2RevokeToken method, with any body, and a specified content type
+func NewOauth2RevokeTokenRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/oauth2/revoke")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewOauth2RequestTokenRequestWithFormdataBody calls the generic Oauth2RequestToken builder with application/x-www-form-urlencoded body
+func NewOauth2RequestTokenRequestWithFormdataBody(server string, body Oauth2RequestTokenFormdataRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	bodyStr, err := runtime.MarshalForm(body, nil)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = strings.NewReader(bodyStr.Encode())
+	return NewOauth2RequestTokenRequestWithBody(server, "application/x-www-form-urlencoded", bodyReader)
+}
+
+// NewOauth2RequestTokenRequestWithBody constructs an http.Request for the Oauth2RequestToken method, with any body, and a specified content type
+func NewOauth2RequestTokenRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/oauth2/token")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewOauth2UserinfoRequest constructs an http.Request for the Oauth2Userinfo method
+func NewOauth2UserinfoRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/oauth2/userinfo")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewOrdersListRequest constructs an http.Request for the OrdersList method
+func NewOrdersListRequest(server string, params *OrdersListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/orders/")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.OrganizationId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "organization_id", *params.OrganizationId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.ProductId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "product_id", *params.ProductId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.ProductBillingType != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "product_billing_type", *params.ProductBillingType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.DiscountId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "discount_id", *params.DiscountId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.CustomerId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "customer_id", *params.CustomerId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.ExternalCustomerId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "external_customer_id", *params.ExternalCustomerId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.CheckoutId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "checkout_id", *params.CheckoutId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.SubscriptionId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "subscription_id", *params.SubscriptionId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Status != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "status", *params.Status, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.CreatedAfter != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "created_after", *params.CreatedAfter, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.CreatedBefore != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "created_before", *params.CreatedBefore, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Page != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "page", *params.Page, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Sorting != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "sorting", *params.Sorting, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Metadata != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("deepObject", true, "metadata", *params.Metadata, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewOrdersCreateRequest calls the generic OrdersCreate builder with application/json body
+func NewOrdersCreateRequest(server string, body OrdersCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewOrdersCreateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewOrdersCreateRequestWithBody constructs an http.Request for the OrdersCreate method, with any body, and a specified content type
+func NewOrdersCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/orders/")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewOrdersExportRequest constructs an http.Request for the OrdersExport method
+func NewOrdersExportRequest(server string, params *OrdersExportParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/orders/export")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.OrganizationId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "organization_id", *params.OrganizationId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.ProductId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "product_id", *params.ProductId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Status != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "status", *params.Status, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.CreatedAfter != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "created_after", *params.CreatedAfter, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.CreatedBefore != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "created_before", *params.CreatedBefore, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Timezone != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "timezone", *params.Timezone, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Columns != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "columns", *params.Columns, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewOrdersGetRequest constructs an http.Request for the OrdersGet method
+func NewOrdersGetRequest(server string, id string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/orders/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewOrdersUpdateRequest calls the generic OrdersUpdate builder with application/json body
+func NewOrdersUpdateRequest(server string, id string, body OrdersUpdateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewOrdersUpdateRequestWithBody(server, id, "application/json", bodyReader)
+}
+
+// NewOrdersUpdateRequestWithBody constructs an http.Request for the OrdersUpdate method, with any body, and a specified content type
+func NewOrdersUpdateRequestWithBody(server string, id string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/orders/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewOrdersFinalizeRequest calls the generic OrdersFinalize builder with application/json body
+func NewOrdersFinalizeRequest(server string, id string, body OrdersFinalizeJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewOrdersFinalizeRequestWithBody(server, id, "application/json", bodyReader)
+}
+
+// NewOrdersFinalizeRequestWithBody constructs an http.Request for the OrdersFinalize method, with any body, and a specified content type
+func NewOrdersFinalizeRequestWithBody(server string, id string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/orders/%s/finalize", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewOrdersInvoiceRequest constructs an http.Request for the OrdersInvoice method
+func NewOrdersInvoiceRequest(server string, id string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/orders/%s/invoice", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewOrdersGenerateInvoiceRequest constructs an http.Request for the OrdersGenerateInvoice method
+func NewOrdersGenerateInvoiceRequest(server string, id string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/orders/%s/invoice", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewOrdersReceiptRequest constructs an http.Request for the OrdersReceipt method
+func NewOrdersReceiptRequest(server string, id string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/orders/%s/receipt", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewOrganizationsListRequest constructs an http.Request for the OrganizationsList method
+func NewOrganizationsListRequest(server string, params *OrganizationsListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/organizations/")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Slug != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "slug", *params.Slug, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Page != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "page", *params.Page, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Sorting != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "sorting", *params.Sorting, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewOrganizationsCreateRequest calls the generic OrganizationsCreate builder with application/json body
+func NewOrganizationsCreateRequest(server string, body OrganizationsCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewOrganizationsCreateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewOrganizationsCreateRequestWithBody constructs an http.Request for the OrganizationsCreate method, with any body, and a specified content type
+func NewOrganizationsCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/organizations/")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewOrganizationsGetRequest constructs an http.Request for the OrganizationsGet method
+func NewOrganizationsGetRequest(server string, id string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/organizations/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewOrganizationsUpdateRequest calls the generic OrganizationsUpdate builder with application/json body
+func NewOrganizationsUpdateRequest(server string, id string, body OrganizationsUpdateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewOrganizationsUpdateRequestWithBody(server, id, "application/json", bodyReader)
+}
+
+// NewOrganizationsUpdateRequestWithBody constructs an http.Request for the OrganizationsUpdate method, with any body, and a specified content type
+func NewOrganizationsUpdateRequestWithBody(server string, id string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/organizations/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPaymentsListRequest constructs an http.Request for the PaymentsList method
+func NewPaymentsListRequest(server string, params *PaymentsListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/payments/")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.OrganizationId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "organization_id", *params.OrganizationId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.CheckoutId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "checkout_id", *params.CheckoutId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.OrderId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "order_id", *params.OrderId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.CustomerId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "customer_id", *params.CustomerId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Status != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "status", *params.Status, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Method != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "method", *params.Method, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.CustomerEmail != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "customer_email", *params.CustomerEmail, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Page != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "page", *params.Page, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Sorting != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "sorting", *params.Sorting, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPaymentsGetRequest constructs an http.Request for the PaymentsGet method
+func NewPaymentsGetRequest(server string, id string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid4"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/payments/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewProductsListRequest constructs an http.Request for the ProductsList method
+func NewProductsListRequest(server string, params *ProductsListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/products/")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Id != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "id", *params.Id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.OrganizationId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "organization_id", *params.OrganizationId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Query != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "query", *params.Query, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.IsArchived != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "is_archived", *params.IsArchived, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.IsRecurring != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "is_recurring", *params.IsRecurring, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.BenefitId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "benefit_id", *params.BenefitId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Visibility != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "visibility", *params.Visibility, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
 				return nil, err
 			} else {
 				for _, qp := range strings.Split(queryFrag, "&") {

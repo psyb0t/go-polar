@@ -5605,30 +5605,6 @@ func (e CustomerUpdatedEventSource) Valid() bool {
 	}
 }
 
-// Defines values for CustomerWalletSortProperty.
-const (
-	CustomerWalletSortPropertyBalance        CustomerWalletSortProperty = "balance"
-	CustomerWalletSortPropertyCreatedAt      CustomerWalletSortProperty = "created_at"
-	CustomerWalletSortPropertyMinusBalance   CustomerWalletSortProperty = "-balance"
-	CustomerWalletSortPropertyMinusCreatedAt CustomerWalletSortProperty = "-created_at"
-)
-
-// Valid indicates whether the value is a known member of the CustomerWalletSortProperty enum.
-func (e CustomerWalletSortProperty) Valid() bool {
-	switch e {
-	case CustomerWalletSortPropertyBalance:
-		return true
-	case CustomerWalletSortPropertyCreatedAt:
-		return true
-	case CustomerWalletSortPropertyMinusBalance:
-		return true
-	case CustomerWalletSortPropertyMinusCreatedAt:
-		return true
-	default:
-		return false
-	}
-}
-
 // Defines values for DiscountDuration.
 const (
 	DiscountDurationForever   DiscountDuration = "forever"
@@ -6292,21 +6268,6 @@ func (e LicenseKeyStatus) Valid() bool {
 	}
 }
 
-// Defines values for ManualRetryLimitExceededError.
-const (
-	ManualRetryLimitExceededErrorManualRetryLimitExceeded ManualRetryLimitExceededError = "ManualRetryLimitExceeded"
-)
-
-// Valid indicates whether the value is a known member of the ManualRetryLimitExceededError enum.
-func (e ManualRetryLimitExceededError) Valid() bool {
-	switch e {
-	case ManualRetryLimitExceededErrorManualRetryLimitExceeded:
-		return true
-	default:
-		return false
-	}
-}
-
 // Defines values for MemberCreateFromCustomerRole.
 const (
 	MemberCreateFromCustomerRoleBillingManager MemberCreateFromCustomerRole = "billing_manager"
@@ -6805,21 +6766,6 @@ const (
 func (e OrderNotEligibleForInvoiceError) Valid() bool {
 	switch e {
 	case OrderNotEligibleForInvoiceErrorOrderNotEligibleForInvoice:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for OrderNotEligibleForRetryError.
-const (
-	OrderNotEligibleForRetryErrorOrderNotEligibleForRetry OrderNotEligibleForRetryError = "OrderNotEligibleForRetry"
-)
-
-// Valid indicates whether the value is a known member of the OrderNotEligibleForRetryError enum.
-func (e OrderNotEligibleForRetryError) Valid() bool {
-	switch e {
-	case OrderNotEligibleForRetryErrorOrderNotEligibleForRetry:
 		return true
 	default:
 		return false
@@ -9562,21 +9508,6 @@ func (e PaymentActionRequiredError) Valid() bool {
 	}
 }
 
-// Defines values for PaymentAlreadyInProgressError.
-const (
-	PaymentAlreadyInProgressErrorPaymentAlreadyInProgress PaymentAlreadyInProgressError = "PaymentAlreadyInProgress"
-)
-
-// Valid indicates whether the value is a known member of the PaymentAlreadyInProgressError enum.
-func (e PaymentAlreadyInProgressError) Valid() bool {
-	switch e {
-	case PaymentAlreadyInProgressErrorPaymentAlreadyInProgress:
-		return true
-	default:
-		return false
-	}
-}
-
 // Defines values for PaymentErrorError.
 const (
 	PaymentErrorErrorPaymentError PaymentErrorError = "PaymentError"
@@ -11173,84 +11104,6 @@ const (
 func (e SubscriptionCycledEventSource) Valid() bool {
 	switch e {
 	case SubscriptionCycledEventSourceSystem:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for SubscriptionExportColumn.
-const (
-	SubscriptionExportColumnAmount             SubscriptionExportColumn = "amount"
-	SubscriptionExportColumnBillingCountry     SubscriptionExportColumn = "billing_country"
-	SubscriptionExportColumnBillingName        SubscriptionExportColumn = "billing_name"
-	SubscriptionExportColumnCancelAtPeriodEnd  SubscriptionExportColumn = "cancel_at_period_end"
-	SubscriptionExportColumnCanceledAt         SubscriptionExportColumn = "canceled_at"
-	SubscriptionExportColumnCancellationReason SubscriptionExportColumn = "cancellation_reason"
-	SubscriptionExportColumnCurrency           SubscriptionExportColumn = "currency"
-	SubscriptionExportColumnCurrentPeriodEnd   SubscriptionExportColumn = "current_period_end"
-	SubscriptionExportColumnCurrentPeriodStart SubscriptionExportColumn = "current_period_start"
-	SubscriptionExportColumnCustomerName       SubscriptionExportColumn = "customer_name"
-	SubscriptionExportColumnDiscount           SubscriptionExportColumn = "discount"
-	SubscriptionExportColumnEmail              SubscriptionExportColumn = "email"
-	SubscriptionExportColumnEndedAt            SubscriptionExportColumn = "ended_at"
-	SubscriptionExportColumnEndsAt             SubscriptionExportColumn = "ends_at"
-	SubscriptionExportColumnNetAmount          SubscriptionExportColumn = "net_amount"
-	SubscriptionExportColumnProduct            SubscriptionExportColumn = "product"
-	SubscriptionExportColumnRecurringInterval  SubscriptionExportColumn = "recurring_interval"
-	SubscriptionExportColumnSeats              SubscriptionExportColumn = "seats"
-	SubscriptionExportColumnStartedAt          SubscriptionExportColumn = "started_at"
-	SubscriptionExportColumnStatus             SubscriptionExportColumn = "status"
-	SubscriptionExportColumnTrialEnd           SubscriptionExportColumn = "trial_end"
-	SubscriptionExportColumnTrialStart         SubscriptionExportColumn = "trial_start"
-)
-
-// Valid indicates whether the value is a known member of the SubscriptionExportColumn enum.
-func (e SubscriptionExportColumn) Valid() bool {
-	switch e {
-	case SubscriptionExportColumnAmount:
-		return true
-	case SubscriptionExportColumnBillingCountry:
-		return true
-	case SubscriptionExportColumnBillingName:
-		return true
-	case SubscriptionExportColumnCancelAtPeriodEnd:
-		return true
-	case SubscriptionExportColumnCanceledAt:
-		return true
-	case SubscriptionExportColumnCancellationReason:
-		return true
-	case SubscriptionExportColumnCurrency:
-		return true
-	case SubscriptionExportColumnCurrentPeriodEnd:
-		return true
-	case SubscriptionExportColumnCurrentPeriodStart:
-		return true
-	case SubscriptionExportColumnCustomerName:
-		return true
-	case SubscriptionExportColumnDiscount:
-		return true
-	case SubscriptionExportColumnEmail:
-		return true
-	case SubscriptionExportColumnEndedAt:
-		return true
-	case SubscriptionExportColumnEndsAt:
-		return true
-	case SubscriptionExportColumnNetAmount:
-		return true
-	case SubscriptionExportColumnProduct:
-		return true
-	case SubscriptionExportColumnRecurringInterval:
-		return true
-	case SubscriptionExportColumnSeats:
-		return true
-	case SubscriptionExportColumnStartedAt:
-		return true
-	case SubscriptionExportColumnStatus:
-		return true
-	case SubscriptionExportColumnTrialEnd:
-		return true
-	case SubscriptionExportColumnTrialStart:
 		return true
 	default:
 		return false
@@ -16891,1809 +16744,6 @@ func (e MetricsGetParamsTimezone) Valid() bool {
 	}
 }
 
-// Defines values for MetricsExportParamsTimezone.
-const (
-	MetricsExportParamsTimezoneAfricaAbidjan                  MetricsExportParamsTimezone = "Africa/Abidjan"
-	MetricsExportParamsTimezoneAfricaAccra                    MetricsExportParamsTimezone = "Africa/Accra"
-	MetricsExportParamsTimezoneAfricaAddisAbaba               MetricsExportParamsTimezone = "Africa/Addis_Ababa"
-	MetricsExportParamsTimezoneAfricaAlgiers                  MetricsExportParamsTimezone = "Africa/Algiers"
-	MetricsExportParamsTimezoneAfricaAsmara                   MetricsExportParamsTimezone = "Africa/Asmara"
-	MetricsExportParamsTimezoneAfricaAsmera                   MetricsExportParamsTimezone = "Africa/Asmera"
-	MetricsExportParamsTimezoneAfricaBamako                   MetricsExportParamsTimezone = "Africa/Bamako"
-	MetricsExportParamsTimezoneAfricaBangui                   MetricsExportParamsTimezone = "Africa/Bangui"
-	MetricsExportParamsTimezoneAfricaBanjul                   MetricsExportParamsTimezone = "Africa/Banjul"
-	MetricsExportParamsTimezoneAfricaBissau                   MetricsExportParamsTimezone = "Africa/Bissau"
-	MetricsExportParamsTimezoneAfricaBlantyre                 MetricsExportParamsTimezone = "Africa/Blantyre"
-	MetricsExportParamsTimezoneAfricaBrazzaville              MetricsExportParamsTimezone = "Africa/Brazzaville"
-	MetricsExportParamsTimezoneAfricaBujumbura                MetricsExportParamsTimezone = "Africa/Bujumbura"
-	MetricsExportParamsTimezoneAfricaCairo                    MetricsExportParamsTimezone = "Africa/Cairo"
-	MetricsExportParamsTimezoneAfricaCasablanca               MetricsExportParamsTimezone = "Africa/Casablanca"
-	MetricsExportParamsTimezoneAfricaCeuta                    MetricsExportParamsTimezone = "Africa/Ceuta"
-	MetricsExportParamsTimezoneAfricaConakry                  MetricsExportParamsTimezone = "Africa/Conakry"
-	MetricsExportParamsTimezoneAfricaDakar                    MetricsExportParamsTimezone = "Africa/Dakar"
-	MetricsExportParamsTimezoneAfricaDarEsSalaam              MetricsExportParamsTimezone = "Africa/Dar_es_Salaam"
-	MetricsExportParamsTimezoneAfricaDjibouti                 MetricsExportParamsTimezone = "Africa/Djibouti"
-	MetricsExportParamsTimezoneAfricaDouala                   MetricsExportParamsTimezone = "Africa/Douala"
-	MetricsExportParamsTimezoneAfricaElAaiun                  MetricsExportParamsTimezone = "Africa/El_Aaiun"
-	MetricsExportParamsTimezoneAfricaFreetown                 MetricsExportParamsTimezone = "Africa/Freetown"
-	MetricsExportParamsTimezoneAfricaGaborone                 MetricsExportParamsTimezone = "Africa/Gaborone"
-	MetricsExportParamsTimezoneAfricaHarare                   MetricsExportParamsTimezone = "Africa/Harare"
-	MetricsExportParamsTimezoneAfricaJohannesburg             MetricsExportParamsTimezone = "Africa/Johannesburg"
-	MetricsExportParamsTimezoneAfricaJuba                     MetricsExportParamsTimezone = "Africa/Juba"
-	MetricsExportParamsTimezoneAfricaKampala                  MetricsExportParamsTimezone = "Africa/Kampala"
-	MetricsExportParamsTimezoneAfricaKhartoum                 MetricsExportParamsTimezone = "Africa/Khartoum"
-	MetricsExportParamsTimezoneAfricaKigali                   MetricsExportParamsTimezone = "Africa/Kigali"
-	MetricsExportParamsTimezoneAfricaKinshasa                 MetricsExportParamsTimezone = "Africa/Kinshasa"
-	MetricsExportParamsTimezoneAfricaLagos                    MetricsExportParamsTimezone = "Africa/Lagos"
-	MetricsExportParamsTimezoneAfricaLibreville               MetricsExportParamsTimezone = "Africa/Libreville"
-	MetricsExportParamsTimezoneAfricaLome                     MetricsExportParamsTimezone = "Africa/Lome"
-	MetricsExportParamsTimezoneAfricaLuanda                   MetricsExportParamsTimezone = "Africa/Luanda"
-	MetricsExportParamsTimezoneAfricaLubumbashi               MetricsExportParamsTimezone = "Africa/Lubumbashi"
-	MetricsExportParamsTimezoneAfricaLusaka                   MetricsExportParamsTimezone = "Africa/Lusaka"
-	MetricsExportParamsTimezoneAfricaMalabo                   MetricsExportParamsTimezone = "Africa/Malabo"
-	MetricsExportParamsTimezoneAfricaMaputo                   MetricsExportParamsTimezone = "Africa/Maputo"
-	MetricsExportParamsTimezoneAfricaMaseru                   MetricsExportParamsTimezone = "Africa/Maseru"
-	MetricsExportParamsTimezoneAfricaMbabane                  MetricsExportParamsTimezone = "Africa/Mbabane"
-	MetricsExportParamsTimezoneAfricaMogadishu                MetricsExportParamsTimezone = "Africa/Mogadishu"
-	MetricsExportParamsTimezoneAfricaMonrovia                 MetricsExportParamsTimezone = "Africa/Monrovia"
-	MetricsExportParamsTimezoneAfricaNairobi                  MetricsExportParamsTimezone = "Africa/Nairobi"
-	MetricsExportParamsTimezoneAfricaNdjamena                 MetricsExportParamsTimezone = "Africa/Ndjamena"
-	MetricsExportParamsTimezoneAfricaNiamey                   MetricsExportParamsTimezone = "Africa/Niamey"
-	MetricsExportParamsTimezoneAfricaNouakchott               MetricsExportParamsTimezone = "Africa/Nouakchott"
-	MetricsExportParamsTimezoneAfricaOuagadougou              MetricsExportParamsTimezone = "Africa/Ouagadougou"
-	MetricsExportParamsTimezoneAfricaPortoNovo                MetricsExportParamsTimezone = "Africa/Porto-Novo"
-	MetricsExportParamsTimezoneAfricaSaoTome                  MetricsExportParamsTimezone = "Africa/Sao_Tome"
-	MetricsExportParamsTimezoneAfricaTimbuktu                 MetricsExportParamsTimezone = "Africa/Timbuktu"
-	MetricsExportParamsTimezoneAfricaTripoli                  MetricsExportParamsTimezone = "Africa/Tripoli"
-	MetricsExportParamsTimezoneAfricaTunis                    MetricsExportParamsTimezone = "Africa/Tunis"
-	MetricsExportParamsTimezoneAfricaWindhoek                 MetricsExportParamsTimezone = "Africa/Windhoek"
-	MetricsExportParamsTimezoneAmericaAdak                    MetricsExportParamsTimezone = "America/Adak"
-	MetricsExportParamsTimezoneAmericaAnchorage               MetricsExportParamsTimezone = "America/Anchorage"
-	MetricsExportParamsTimezoneAmericaAnguilla                MetricsExportParamsTimezone = "America/Anguilla"
-	MetricsExportParamsTimezoneAmericaAntigua                 MetricsExportParamsTimezone = "America/Antigua"
-	MetricsExportParamsTimezoneAmericaAraguaina               MetricsExportParamsTimezone = "America/Araguaina"
-	MetricsExportParamsTimezoneAmericaArgentinaBuenosAires    MetricsExportParamsTimezone = "America/Argentina/Buenos_Aires"
-	MetricsExportParamsTimezoneAmericaArgentinaCatamarca      MetricsExportParamsTimezone = "America/Argentina/Catamarca"
-	MetricsExportParamsTimezoneAmericaArgentinaComodRivadavia MetricsExportParamsTimezone = "America/Argentina/ComodRivadavia"
-	MetricsExportParamsTimezoneAmericaArgentinaCordoba        MetricsExportParamsTimezone = "America/Argentina/Cordoba"
-	MetricsExportParamsTimezoneAmericaArgentinaJujuy          MetricsExportParamsTimezone = "America/Argentina/Jujuy"
-	MetricsExportParamsTimezoneAmericaArgentinaLaRioja        MetricsExportParamsTimezone = "America/Argentina/La_Rioja"
-	MetricsExportParamsTimezoneAmericaArgentinaMendoza        MetricsExportParamsTimezone = "America/Argentina/Mendoza"
-	MetricsExportParamsTimezoneAmericaArgentinaRioGallegos    MetricsExportParamsTimezone = "America/Argentina/Rio_Gallegos"
-	MetricsExportParamsTimezoneAmericaArgentinaSalta          MetricsExportParamsTimezone = "America/Argentina/Salta"
-	MetricsExportParamsTimezoneAmericaArgentinaSanJuan        MetricsExportParamsTimezone = "America/Argentina/San_Juan"
-	MetricsExportParamsTimezoneAmericaArgentinaSanLuis        MetricsExportParamsTimezone = "America/Argentina/San_Luis"
-	MetricsExportParamsTimezoneAmericaArgentinaTucuman        MetricsExportParamsTimezone = "America/Argentina/Tucuman"
-	MetricsExportParamsTimezoneAmericaArgentinaUshuaia        MetricsExportParamsTimezone = "America/Argentina/Ushuaia"
-	MetricsExportParamsTimezoneAmericaAruba                   MetricsExportParamsTimezone = "America/Aruba"
-	MetricsExportParamsTimezoneAmericaAsuncion                MetricsExportParamsTimezone = "America/Asuncion"
-	MetricsExportParamsTimezoneAmericaAtikokan                MetricsExportParamsTimezone = "America/Atikokan"
-	MetricsExportParamsTimezoneAmericaAtka                    MetricsExportParamsTimezone = "America/Atka"
-	MetricsExportParamsTimezoneAmericaBahia                   MetricsExportParamsTimezone = "America/Bahia"
-	MetricsExportParamsTimezoneAmericaBahiaBanderas           MetricsExportParamsTimezone = "America/Bahia_Banderas"
-	MetricsExportParamsTimezoneAmericaBarbados                MetricsExportParamsTimezone = "America/Barbados"
-	MetricsExportParamsTimezoneAmericaBelem                   MetricsExportParamsTimezone = "America/Belem"
-	MetricsExportParamsTimezoneAmericaBelize                  MetricsExportParamsTimezone = "America/Belize"
-	MetricsExportParamsTimezoneAmericaBlancSablon             MetricsExportParamsTimezone = "America/Blanc-Sablon"
-	MetricsExportParamsTimezoneAmericaBoaVista                MetricsExportParamsTimezone = "America/Boa_Vista"
-	MetricsExportParamsTimezoneAmericaBogota                  MetricsExportParamsTimezone = "America/Bogota"
-	MetricsExportParamsTimezoneAmericaBoise                   MetricsExportParamsTimezone = "America/Boise"
-	MetricsExportParamsTimezoneAmericaBuenosAires             MetricsExportParamsTimezone = "America/Buenos_Aires"
-	MetricsExportParamsTimezoneAmericaCambridgeBay            MetricsExportParamsTimezone = "America/Cambridge_Bay"
-	MetricsExportParamsTimezoneAmericaCampoGrande             MetricsExportParamsTimezone = "America/Campo_Grande"
-	MetricsExportParamsTimezoneAmericaCancun                  MetricsExportParamsTimezone = "America/Cancun"
-	MetricsExportParamsTimezoneAmericaCaracas                 MetricsExportParamsTimezone = "America/Caracas"
-	MetricsExportParamsTimezoneAmericaCatamarca               MetricsExportParamsTimezone = "America/Catamarca"
-	MetricsExportParamsTimezoneAmericaCayenne                 MetricsExportParamsTimezone = "America/Cayenne"
-	MetricsExportParamsTimezoneAmericaCayman                  MetricsExportParamsTimezone = "America/Cayman"
-	MetricsExportParamsTimezoneAmericaChicago                 MetricsExportParamsTimezone = "America/Chicago"
-	MetricsExportParamsTimezoneAmericaChihuahua               MetricsExportParamsTimezone = "America/Chihuahua"
-	MetricsExportParamsTimezoneAmericaCiudadJuarez            MetricsExportParamsTimezone = "America/Ciudad_Juarez"
-	MetricsExportParamsTimezoneAmericaCoralHarbour            MetricsExportParamsTimezone = "America/Coral_Harbour"
-	MetricsExportParamsTimezoneAmericaCordoba                 MetricsExportParamsTimezone = "America/Cordoba"
-	MetricsExportParamsTimezoneAmericaCostaRica               MetricsExportParamsTimezone = "America/Costa_Rica"
-	MetricsExportParamsTimezoneAmericaCoyhaique               MetricsExportParamsTimezone = "America/Coyhaique"
-	MetricsExportParamsTimezoneAmericaCreston                 MetricsExportParamsTimezone = "America/Creston"
-	MetricsExportParamsTimezoneAmericaCuiaba                  MetricsExportParamsTimezone = "America/Cuiaba"
-	MetricsExportParamsTimezoneAmericaCuracao                 MetricsExportParamsTimezone = "America/Curacao"
-	MetricsExportParamsTimezoneAmericaDanmarkshavn            MetricsExportParamsTimezone = "America/Danmarkshavn"
-	MetricsExportParamsTimezoneAmericaDawson                  MetricsExportParamsTimezone = "America/Dawson"
-	MetricsExportParamsTimezoneAmericaDawsonCreek             MetricsExportParamsTimezone = "America/Dawson_Creek"
-	MetricsExportParamsTimezoneAmericaDenver                  MetricsExportParamsTimezone = "America/Denver"
-	MetricsExportParamsTimezoneAmericaDetroit                 MetricsExportParamsTimezone = "America/Detroit"
-	MetricsExportParamsTimezoneAmericaDominica                MetricsExportParamsTimezone = "America/Dominica"
-	MetricsExportParamsTimezoneAmericaEdmonton                MetricsExportParamsTimezone = "America/Edmonton"
-	MetricsExportParamsTimezoneAmericaEirunepe                MetricsExportParamsTimezone = "America/Eirunepe"
-	MetricsExportParamsTimezoneAmericaElSalvador              MetricsExportParamsTimezone = "America/El_Salvador"
-	MetricsExportParamsTimezoneAmericaEnsenada                MetricsExportParamsTimezone = "America/Ensenada"
-	MetricsExportParamsTimezoneAmericaFortNelson              MetricsExportParamsTimezone = "America/Fort_Nelson"
-	MetricsExportParamsTimezoneAmericaFortWayne               MetricsExportParamsTimezone = "America/Fort_Wayne"
-	MetricsExportParamsTimezoneAmericaFortaleza               MetricsExportParamsTimezone = "America/Fortaleza"
-	MetricsExportParamsTimezoneAmericaGlaceBay                MetricsExportParamsTimezone = "America/Glace_Bay"
-	MetricsExportParamsTimezoneAmericaGodthab                 MetricsExportParamsTimezone = "America/Godthab"
-	MetricsExportParamsTimezoneAmericaGooseBay                MetricsExportParamsTimezone = "America/Goose_Bay"
-	MetricsExportParamsTimezoneAmericaGrandTurk               MetricsExportParamsTimezone = "America/Grand_Turk"
-	MetricsExportParamsTimezoneAmericaGrenada                 MetricsExportParamsTimezone = "America/Grenada"
-	MetricsExportParamsTimezoneAmericaGuadeloupe              MetricsExportParamsTimezone = "America/Guadeloupe"
-	MetricsExportParamsTimezoneAmericaGuatemala               MetricsExportParamsTimezone = "America/Guatemala"
-	MetricsExportParamsTimezoneAmericaGuayaquil               MetricsExportParamsTimezone = "America/Guayaquil"
-	MetricsExportParamsTimezoneAmericaGuyana                  MetricsExportParamsTimezone = "America/Guyana"
-	MetricsExportParamsTimezoneAmericaHalifax                 MetricsExportParamsTimezone = "America/Halifax"
-	MetricsExportParamsTimezoneAmericaHavana                  MetricsExportParamsTimezone = "America/Havana"
-	MetricsExportParamsTimezoneAmericaHermosillo              MetricsExportParamsTimezone = "America/Hermosillo"
-	MetricsExportParamsTimezoneAmericaIndianaIndianapolis     MetricsExportParamsTimezone = "America/Indiana/Indianapolis"
-	MetricsExportParamsTimezoneAmericaIndianaKnox             MetricsExportParamsTimezone = "America/Indiana/Knox"
-	MetricsExportParamsTimezoneAmericaIndianaMarengo          MetricsExportParamsTimezone = "America/Indiana/Marengo"
-	MetricsExportParamsTimezoneAmericaIndianaPetersburg       MetricsExportParamsTimezone = "America/Indiana/Petersburg"
-	MetricsExportParamsTimezoneAmericaIndianaTellCity         MetricsExportParamsTimezone = "America/Indiana/Tell_City"
-	MetricsExportParamsTimezoneAmericaIndianaVevay            MetricsExportParamsTimezone = "America/Indiana/Vevay"
-	MetricsExportParamsTimezoneAmericaIndianaVincennes        MetricsExportParamsTimezone = "America/Indiana/Vincennes"
-	MetricsExportParamsTimezoneAmericaIndianaWinamac          MetricsExportParamsTimezone = "America/Indiana/Winamac"
-	MetricsExportParamsTimezoneAmericaIndianapolis            MetricsExportParamsTimezone = "America/Indianapolis"
-	MetricsExportParamsTimezoneAmericaInuvik                  MetricsExportParamsTimezone = "America/Inuvik"
-	MetricsExportParamsTimezoneAmericaIqaluit                 MetricsExportParamsTimezone = "America/Iqaluit"
-	MetricsExportParamsTimezoneAmericaJamaica                 MetricsExportParamsTimezone = "America/Jamaica"
-	MetricsExportParamsTimezoneAmericaJujuy                   MetricsExportParamsTimezone = "America/Jujuy"
-	MetricsExportParamsTimezoneAmericaJuneau                  MetricsExportParamsTimezone = "America/Juneau"
-	MetricsExportParamsTimezoneAmericaKentuckyLouisville      MetricsExportParamsTimezone = "America/Kentucky/Louisville"
-	MetricsExportParamsTimezoneAmericaKentuckyMonticello      MetricsExportParamsTimezone = "America/Kentucky/Monticello"
-	MetricsExportParamsTimezoneAmericaKnoxIN                  MetricsExportParamsTimezone = "America/Knox_IN"
-	MetricsExportParamsTimezoneAmericaKralendijk              MetricsExportParamsTimezone = "America/Kralendijk"
-	MetricsExportParamsTimezoneAmericaLaPaz                   MetricsExportParamsTimezone = "America/La_Paz"
-	MetricsExportParamsTimezoneAmericaLima                    MetricsExportParamsTimezone = "America/Lima"
-	MetricsExportParamsTimezoneAmericaLosAngeles              MetricsExportParamsTimezone = "America/Los_Angeles"
-	MetricsExportParamsTimezoneAmericaLouisville              MetricsExportParamsTimezone = "America/Louisville"
-	MetricsExportParamsTimezoneAmericaLowerPrinces            MetricsExportParamsTimezone = "America/Lower_Princes"
-	MetricsExportParamsTimezoneAmericaMaceio                  MetricsExportParamsTimezone = "America/Maceio"
-	MetricsExportParamsTimezoneAmericaManagua                 MetricsExportParamsTimezone = "America/Managua"
-	MetricsExportParamsTimezoneAmericaManaus                  MetricsExportParamsTimezone = "America/Manaus"
-	MetricsExportParamsTimezoneAmericaMarigot                 MetricsExportParamsTimezone = "America/Marigot"
-	MetricsExportParamsTimezoneAmericaMartinique              MetricsExportParamsTimezone = "America/Martinique"
-	MetricsExportParamsTimezoneAmericaMatamoros               MetricsExportParamsTimezone = "America/Matamoros"
-	MetricsExportParamsTimezoneAmericaMazatlan                MetricsExportParamsTimezone = "America/Mazatlan"
-	MetricsExportParamsTimezoneAmericaMendoza                 MetricsExportParamsTimezone = "America/Mendoza"
-	MetricsExportParamsTimezoneAmericaMenominee               MetricsExportParamsTimezone = "America/Menominee"
-	MetricsExportParamsTimezoneAmericaMerida                  MetricsExportParamsTimezone = "America/Merida"
-	MetricsExportParamsTimezoneAmericaMetlakatla              MetricsExportParamsTimezone = "America/Metlakatla"
-	MetricsExportParamsTimezoneAmericaMexicoCity              MetricsExportParamsTimezone = "America/Mexico_City"
-	MetricsExportParamsTimezoneAmericaMiquelon                MetricsExportParamsTimezone = "America/Miquelon"
-	MetricsExportParamsTimezoneAmericaMoncton                 MetricsExportParamsTimezone = "America/Moncton"
-	MetricsExportParamsTimezoneAmericaMonterrey               MetricsExportParamsTimezone = "America/Monterrey"
-	MetricsExportParamsTimezoneAmericaMontevideo              MetricsExportParamsTimezone = "America/Montevideo"
-	MetricsExportParamsTimezoneAmericaMontreal                MetricsExportParamsTimezone = "America/Montreal"
-	MetricsExportParamsTimezoneAmericaMontserrat              MetricsExportParamsTimezone = "America/Montserrat"
-	MetricsExportParamsTimezoneAmericaNassau                  MetricsExportParamsTimezone = "America/Nassau"
-	MetricsExportParamsTimezoneAmericaNewYork                 MetricsExportParamsTimezone = "America/New_York"
-	MetricsExportParamsTimezoneAmericaNipigon                 MetricsExportParamsTimezone = "America/Nipigon"
-	MetricsExportParamsTimezoneAmericaNome                    MetricsExportParamsTimezone = "America/Nome"
-	MetricsExportParamsTimezoneAmericaNoronha                 MetricsExportParamsTimezone = "America/Noronha"
-	MetricsExportParamsTimezoneAmericaNorthDakotaBeulah       MetricsExportParamsTimezone = "America/North_Dakota/Beulah"
-	MetricsExportParamsTimezoneAmericaNorthDakotaCenter       MetricsExportParamsTimezone = "America/North_Dakota/Center"
-	MetricsExportParamsTimezoneAmericaNorthDakotaNewSalem     MetricsExportParamsTimezone = "America/North_Dakota/New_Salem"
-	MetricsExportParamsTimezoneAmericaNuuk                    MetricsExportParamsTimezone = "America/Nuuk"
-	MetricsExportParamsTimezoneAmericaOjinaga                 MetricsExportParamsTimezone = "America/Ojinaga"
-	MetricsExportParamsTimezoneAmericaPanama                  MetricsExportParamsTimezone = "America/Panama"
-	MetricsExportParamsTimezoneAmericaPangnirtung             MetricsExportParamsTimezone = "America/Pangnirtung"
-	MetricsExportParamsTimezoneAmericaParamaribo              MetricsExportParamsTimezone = "America/Paramaribo"
-	MetricsExportParamsTimezoneAmericaPhoenix                 MetricsExportParamsTimezone = "America/Phoenix"
-	MetricsExportParamsTimezoneAmericaPortAuPrince            MetricsExportParamsTimezone = "America/Port-au-Prince"
-	MetricsExportParamsTimezoneAmericaPortOfSpain             MetricsExportParamsTimezone = "America/Port_of_Spain"
-	MetricsExportParamsTimezoneAmericaPortoAcre               MetricsExportParamsTimezone = "America/Porto_Acre"
-	MetricsExportParamsTimezoneAmericaPortoVelho              MetricsExportParamsTimezone = "America/Porto_Velho"
-	MetricsExportParamsTimezoneAmericaPuertoRico              MetricsExportParamsTimezone = "America/Puerto_Rico"
-	MetricsExportParamsTimezoneAmericaPuntaArenas             MetricsExportParamsTimezone = "America/Punta_Arenas"
-	MetricsExportParamsTimezoneAmericaRainyRiver              MetricsExportParamsTimezone = "America/Rainy_River"
-	MetricsExportParamsTimezoneAmericaRankinInlet             MetricsExportParamsTimezone = "America/Rankin_Inlet"
-	MetricsExportParamsTimezoneAmericaRecife                  MetricsExportParamsTimezone = "America/Recife"
-	MetricsExportParamsTimezoneAmericaRegina                  MetricsExportParamsTimezone = "America/Regina"
-	MetricsExportParamsTimezoneAmericaResolute                MetricsExportParamsTimezone = "America/Resolute"
-	MetricsExportParamsTimezoneAmericaRioBranco               MetricsExportParamsTimezone = "America/Rio_Branco"
-	MetricsExportParamsTimezoneAmericaRosario                 MetricsExportParamsTimezone = "America/Rosario"
-	MetricsExportParamsTimezoneAmericaSantaIsabel             MetricsExportParamsTimezone = "America/Santa_Isabel"
-	MetricsExportParamsTimezoneAmericaSantarem                MetricsExportParamsTimezone = "America/Santarem"
-	MetricsExportParamsTimezoneAmericaSantiago                MetricsExportParamsTimezone = "America/Santiago"
-	MetricsExportParamsTimezoneAmericaSantoDomingo            MetricsExportParamsTimezone = "America/Santo_Domingo"
-	MetricsExportParamsTimezoneAmericaSaoPaulo                MetricsExportParamsTimezone = "America/Sao_Paulo"
-	MetricsExportParamsTimezoneAmericaScoresbysund            MetricsExportParamsTimezone = "America/Scoresbysund"
-	MetricsExportParamsTimezoneAmericaShiprock                MetricsExportParamsTimezone = "America/Shiprock"
-	MetricsExportParamsTimezoneAmericaSitka                   MetricsExportParamsTimezone = "America/Sitka"
-	MetricsExportParamsTimezoneAmericaStBarthelemy            MetricsExportParamsTimezone = "America/St_Barthelemy"
-	MetricsExportParamsTimezoneAmericaStJohns                 MetricsExportParamsTimezone = "America/St_Johns"
-	MetricsExportParamsTimezoneAmericaStKitts                 MetricsExportParamsTimezone = "America/St_Kitts"
-	MetricsExportParamsTimezoneAmericaStLucia                 MetricsExportParamsTimezone = "America/St_Lucia"
-	MetricsExportParamsTimezoneAmericaStThomas                MetricsExportParamsTimezone = "America/St_Thomas"
-	MetricsExportParamsTimezoneAmericaStVincent               MetricsExportParamsTimezone = "America/St_Vincent"
-	MetricsExportParamsTimezoneAmericaSwiftCurrent            MetricsExportParamsTimezone = "America/Swift_Current"
-	MetricsExportParamsTimezoneAmericaTegucigalpa             MetricsExportParamsTimezone = "America/Tegucigalpa"
-	MetricsExportParamsTimezoneAmericaThule                   MetricsExportParamsTimezone = "America/Thule"
-	MetricsExportParamsTimezoneAmericaThunderBay              MetricsExportParamsTimezone = "America/Thunder_Bay"
-	MetricsExportParamsTimezoneAmericaTijuana                 MetricsExportParamsTimezone = "America/Tijuana"
-	MetricsExportParamsTimezoneAmericaToronto                 MetricsExportParamsTimezone = "America/Toronto"
-	MetricsExportParamsTimezoneAmericaTortola                 MetricsExportParamsTimezone = "America/Tortola"
-	MetricsExportParamsTimezoneAmericaVancouver               MetricsExportParamsTimezone = "America/Vancouver"
-	MetricsExportParamsTimezoneAmericaVirgin                  MetricsExportParamsTimezone = "America/Virgin"
-	MetricsExportParamsTimezoneAmericaWhitehorse              MetricsExportParamsTimezone = "America/Whitehorse"
-	MetricsExportParamsTimezoneAmericaWinnipeg                MetricsExportParamsTimezone = "America/Winnipeg"
-	MetricsExportParamsTimezoneAmericaYakutat                 MetricsExportParamsTimezone = "America/Yakutat"
-	MetricsExportParamsTimezoneAmericaYellowknife             MetricsExportParamsTimezone = "America/Yellowknife"
-	MetricsExportParamsTimezoneAntarcticaCasey                MetricsExportParamsTimezone = "Antarctica/Casey"
-	MetricsExportParamsTimezoneAntarcticaDavis                MetricsExportParamsTimezone = "Antarctica/Davis"
-	MetricsExportParamsTimezoneAntarcticaDumontDUrville       MetricsExportParamsTimezone = "Antarctica/DumontDUrville"
-	MetricsExportParamsTimezoneAntarcticaMacquarie            MetricsExportParamsTimezone = "Antarctica/Macquarie"
-	MetricsExportParamsTimezoneAntarcticaMawson               MetricsExportParamsTimezone = "Antarctica/Mawson"
-	MetricsExportParamsTimezoneAntarcticaMcMurdo              MetricsExportParamsTimezone = "Antarctica/McMurdo"
-	MetricsExportParamsTimezoneAntarcticaPalmer               MetricsExportParamsTimezone = "Antarctica/Palmer"
-	MetricsExportParamsTimezoneAntarcticaRothera              MetricsExportParamsTimezone = "Antarctica/Rothera"
-	MetricsExportParamsTimezoneAntarcticaSouthPole            MetricsExportParamsTimezone = "Antarctica/South_Pole"
-	MetricsExportParamsTimezoneAntarcticaSyowa                MetricsExportParamsTimezone = "Antarctica/Syowa"
-	MetricsExportParamsTimezoneAntarcticaTroll                MetricsExportParamsTimezone = "Antarctica/Troll"
-	MetricsExportParamsTimezoneAntarcticaVostok               MetricsExportParamsTimezone = "Antarctica/Vostok"
-	MetricsExportParamsTimezoneArcticLongyearbyen             MetricsExportParamsTimezone = "Arctic/Longyearbyen"
-	MetricsExportParamsTimezoneAsiaAden                       MetricsExportParamsTimezone = "Asia/Aden"
-	MetricsExportParamsTimezoneAsiaAlmaty                     MetricsExportParamsTimezone = "Asia/Almaty"
-	MetricsExportParamsTimezoneAsiaAmman                      MetricsExportParamsTimezone = "Asia/Amman"
-	MetricsExportParamsTimezoneAsiaAnadyr                     MetricsExportParamsTimezone = "Asia/Anadyr"
-	MetricsExportParamsTimezoneAsiaAqtau                      MetricsExportParamsTimezone = "Asia/Aqtau"
-	MetricsExportParamsTimezoneAsiaAqtobe                     MetricsExportParamsTimezone = "Asia/Aqtobe"
-	MetricsExportParamsTimezoneAsiaAshgabat                   MetricsExportParamsTimezone = "Asia/Ashgabat"
-	MetricsExportParamsTimezoneAsiaAshkhabad                  MetricsExportParamsTimezone = "Asia/Ashkhabad"
-	MetricsExportParamsTimezoneAsiaAtyrau                     MetricsExportParamsTimezone = "Asia/Atyrau"
-	MetricsExportParamsTimezoneAsiaBaghdad                    MetricsExportParamsTimezone = "Asia/Baghdad"
-	MetricsExportParamsTimezoneAsiaBahrain                    MetricsExportParamsTimezone = "Asia/Bahrain"
-	MetricsExportParamsTimezoneAsiaBaku                       MetricsExportParamsTimezone = "Asia/Baku"
-	MetricsExportParamsTimezoneAsiaBangkok                    MetricsExportParamsTimezone = "Asia/Bangkok"
-	MetricsExportParamsTimezoneAsiaBarnaul                    MetricsExportParamsTimezone = "Asia/Barnaul"
-	MetricsExportParamsTimezoneAsiaBeirut                     MetricsExportParamsTimezone = "Asia/Beirut"
-	MetricsExportParamsTimezoneAsiaBishkek                    MetricsExportParamsTimezone = "Asia/Bishkek"
-	MetricsExportParamsTimezoneAsiaBrunei                     MetricsExportParamsTimezone = "Asia/Brunei"
-	MetricsExportParamsTimezoneAsiaCalcutta                   MetricsExportParamsTimezone = "Asia/Calcutta"
-	MetricsExportParamsTimezoneAsiaChita                      MetricsExportParamsTimezone = "Asia/Chita"
-	MetricsExportParamsTimezoneAsiaChoibalsan                 MetricsExportParamsTimezone = "Asia/Choibalsan"
-	MetricsExportParamsTimezoneAsiaChongqing                  MetricsExportParamsTimezone = "Asia/Chongqing"
-	MetricsExportParamsTimezoneAsiaChungking                  MetricsExportParamsTimezone = "Asia/Chungking"
-	MetricsExportParamsTimezoneAsiaColombo                    MetricsExportParamsTimezone = "Asia/Colombo"
-	MetricsExportParamsTimezoneAsiaDacca                      MetricsExportParamsTimezone = "Asia/Dacca"
-	MetricsExportParamsTimezoneAsiaDamascus                   MetricsExportParamsTimezone = "Asia/Damascus"
-	MetricsExportParamsTimezoneAsiaDhaka                      MetricsExportParamsTimezone = "Asia/Dhaka"
-	MetricsExportParamsTimezoneAsiaDili                       MetricsExportParamsTimezone = "Asia/Dili"
-	MetricsExportParamsTimezoneAsiaDubai                      MetricsExportParamsTimezone = "Asia/Dubai"
-	MetricsExportParamsTimezoneAsiaDushanbe                   MetricsExportParamsTimezone = "Asia/Dushanbe"
-	MetricsExportParamsTimezoneAsiaFamagusta                  MetricsExportParamsTimezone = "Asia/Famagusta"
-	MetricsExportParamsTimezoneAsiaGaza                       MetricsExportParamsTimezone = "Asia/Gaza"
-	MetricsExportParamsTimezoneAsiaHarbin                     MetricsExportParamsTimezone = "Asia/Harbin"
-	MetricsExportParamsTimezoneAsiaHebron                     MetricsExportParamsTimezone = "Asia/Hebron"
-	MetricsExportParamsTimezoneAsiaHoChiMinh                  MetricsExportParamsTimezone = "Asia/Ho_Chi_Minh"
-	MetricsExportParamsTimezoneAsiaHongKong                   MetricsExportParamsTimezone = "Asia/Hong_Kong"
-	MetricsExportParamsTimezoneAsiaHovd                       MetricsExportParamsTimezone = "Asia/Hovd"
-	MetricsExportParamsTimezoneAsiaIrkutsk                    MetricsExportParamsTimezone = "Asia/Irkutsk"
-	MetricsExportParamsTimezoneAsiaIstanbul                   MetricsExportParamsTimezone = "Asia/Istanbul"
-	MetricsExportParamsTimezoneAsiaJakarta                    MetricsExportParamsTimezone = "Asia/Jakarta"
-	MetricsExportParamsTimezoneAsiaJayapura                   MetricsExportParamsTimezone = "Asia/Jayapura"
-	MetricsExportParamsTimezoneAsiaJerusalem                  MetricsExportParamsTimezone = "Asia/Jerusalem"
-	MetricsExportParamsTimezoneAsiaKabul                      MetricsExportParamsTimezone = "Asia/Kabul"
-	MetricsExportParamsTimezoneAsiaKamchatka                  MetricsExportParamsTimezone = "Asia/Kamchatka"
-	MetricsExportParamsTimezoneAsiaKarachi                    MetricsExportParamsTimezone = "Asia/Karachi"
-	MetricsExportParamsTimezoneAsiaKashgar                    MetricsExportParamsTimezone = "Asia/Kashgar"
-	MetricsExportParamsTimezoneAsiaKathmandu                  MetricsExportParamsTimezone = "Asia/Kathmandu"
-	MetricsExportParamsTimezoneAsiaKatmandu                   MetricsExportParamsTimezone = "Asia/Katmandu"
-	MetricsExportParamsTimezoneAsiaKhandyga                   MetricsExportParamsTimezone = "Asia/Khandyga"
-	MetricsExportParamsTimezoneAsiaKolkata                    MetricsExportParamsTimezone = "Asia/Kolkata"
-	MetricsExportParamsTimezoneAsiaKrasnoyarsk                MetricsExportParamsTimezone = "Asia/Krasnoyarsk"
-	MetricsExportParamsTimezoneAsiaKualaLumpur                MetricsExportParamsTimezone = "Asia/Kuala_Lumpur"
-	MetricsExportParamsTimezoneAsiaKuching                    MetricsExportParamsTimezone = "Asia/Kuching"
-	MetricsExportParamsTimezoneAsiaKuwait                     MetricsExportParamsTimezone = "Asia/Kuwait"
-	MetricsExportParamsTimezoneAsiaMacao                      MetricsExportParamsTimezone = "Asia/Macao"
-	MetricsExportParamsTimezoneAsiaMacau                      MetricsExportParamsTimezone = "Asia/Macau"
-	MetricsExportParamsTimezoneAsiaMagadan                    MetricsExportParamsTimezone = "Asia/Magadan"
-	MetricsExportParamsTimezoneAsiaMakassar                   MetricsExportParamsTimezone = "Asia/Makassar"
-	MetricsExportParamsTimezoneAsiaManila                     MetricsExportParamsTimezone = "Asia/Manila"
-	MetricsExportParamsTimezoneAsiaMuscat                     MetricsExportParamsTimezone = "Asia/Muscat"
-	MetricsExportParamsTimezoneAsiaNicosia                    MetricsExportParamsTimezone = "Asia/Nicosia"
-	MetricsExportParamsTimezoneAsiaNovokuznetsk               MetricsExportParamsTimezone = "Asia/Novokuznetsk"
-	MetricsExportParamsTimezoneAsiaNovosibirsk                MetricsExportParamsTimezone = "Asia/Novosibirsk"
-	MetricsExportParamsTimezoneAsiaOmsk                       MetricsExportParamsTimezone = "Asia/Omsk"
-	MetricsExportParamsTimezoneAsiaOral                       MetricsExportParamsTimezone = "Asia/Oral"
-	MetricsExportParamsTimezoneAsiaPhnomPenh                  MetricsExportParamsTimezone = "Asia/Phnom_Penh"
-	MetricsExportParamsTimezoneAsiaPontianak                  MetricsExportParamsTimezone = "Asia/Pontianak"
-	MetricsExportParamsTimezoneAsiaPyongyang                  MetricsExportParamsTimezone = "Asia/Pyongyang"
-	MetricsExportParamsTimezoneAsiaQatar                      MetricsExportParamsTimezone = "Asia/Qatar"
-	MetricsExportParamsTimezoneAsiaQostanay                   MetricsExportParamsTimezone = "Asia/Qostanay"
-	MetricsExportParamsTimezoneAsiaQyzylorda                  MetricsExportParamsTimezone = "Asia/Qyzylorda"
-	MetricsExportParamsTimezoneAsiaRangoon                    MetricsExportParamsTimezone = "Asia/Rangoon"
-	MetricsExportParamsTimezoneAsiaRiyadh                     MetricsExportParamsTimezone = "Asia/Riyadh"
-	MetricsExportParamsTimezoneAsiaSaigon                     MetricsExportParamsTimezone = "Asia/Saigon"
-	MetricsExportParamsTimezoneAsiaSakhalin                   MetricsExportParamsTimezone = "Asia/Sakhalin"
-	MetricsExportParamsTimezoneAsiaSamarkand                  MetricsExportParamsTimezone = "Asia/Samarkand"
-	MetricsExportParamsTimezoneAsiaSeoul                      MetricsExportParamsTimezone = "Asia/Seoul"
-	MetricsExportParamsTimezoneAsiaShanghai                   MetricsExportParamsTimezone = "Asia/Shanghai"
-	MetricsExportParamsTimezoneAsiaSingapore                  MetricsExportParamsTimezone = "Asia/Singapore"
-	MetricsExportParamsTimezoneAsiaSrednekolymsk              MetricsExportParamsTimezone = "Asia/Srednekolymsk"
-	MetricsExportParamsTimezoneAsiaTaipei                     MetricsExportParamsTimezone = "Asia/Taipei"
-	MetricsExportParamsTimezoneAsiaTashkent                   MetricsExportParamsTimezone = "Asia/Tashkent"
-	MetricsExportParamsTimezoneAsiaTbilisi                    MetricsExportParamsTimezone = "Asia/Tbilisi"
-	MetricsExportParamsTimezoneAsiaTehran                     MetricsExportParamsTimezone = "Asia/Tehran"
-	MetricsExportParamsTimezoneAsiaTelAviv                    MetricsExportParamsTimezone = "Asia/Tel_Aviv"
-	MetricsExportParamsTimezoneAsiaThimbu                     MetricsExportParamsTimezone = "Asia/Thimbu"
-	MetricsExportParamsTimezoneAsiaThimphu                    MetricsExportParamsTimezone = "Asia/Thimphu"
-	MetricsExportParamsTimezoneAsiaTokyo                      MetricsExportParamsTimezone = "Asia/Tokyo"
-	MetricsExportParamsTimezoneAsiaTomsk                      MetricsExportParamsTimezone = "Asia/Tomsk"
-	MetricsExportParamsTimezoneAsiaUjungPandang               MetricsExportParamsTimezone = "Asia/Ujung_Pandang"
-	MetricsExportParamsTimezoneAsiaUlaanbaatar                MetricsExportParamsTimezone = "Asia/Ulaanbaatar"
-	MetricsExportParamsTimezoneAsiaUlanBator                  MetricsExportParamsTimezone = "Asia/Ulan_Bator"
-	MetricsExportParamsTimezoneAsiaUrumqi                     MetricsExportParamsTimezone = "Asia/Urumqi"
-	MetricsExportParamsTimezoneAsiaUstNera                    MetricsExportParamsTimezone = "Asia/Ust-Nera"
-	MetricsExportParamsTimezoneAsiaVientiane                  MetricsExportParamsTimezone = "Asia/Vientiane"
-	MetricsExportParamsTimezoneAsiaVladivostok                MetricsExportParamsTimezone = "Asia/Vladivostok"
-	MetricsExportParamsTimezoneAsiaYakutsk                    MetricsExportParamsTimezone = "Asia/Yakutsk"
-	MetricsExportParamsTimezoneAsiaYangon                     MetricsExportParamsTimezone = "Asia/Yangon"
-	MetricsExportParamsTimezoneAsiaYekaterinburg              MetricsExportParamsTimezone = "Asia/Yekaterinburg"
-	MetricsExportParamsTimezoneAsiaYerevan                    MetricsExportParamsTimezone = "Asia/Yerevan"
-	MetricsExportParamsTimezoneAtlanticAzores                 MetricsExportParamsTimezone = "Atlantic/Azores"
-	MetricsExportParamsTimezoneAtlanticBermuda                MetricsExportParamsTimezone = "Atlantic/Bermuda"
-	MetricsExportParamsTimezoneAtlanticCanary                 MetricsExportParamsTimezone = "Atlantic/Canary"
-	MetricsExportParamsTimezoneAtlanticCapeVerde              MetricsExportParamsTimezone = "Atlantic/Cape_Verde"
-	MetricsExportParamsTimezoneAtlanticFaeroe                 MetricsExportParamsTimezone = "Atlantic/Faeroe"
-	MetricsExportParamsTimezoneAtlanticFaroe                  MetricsExportParamsTimezone = "Atlantic/Faroe"
-	MetricsExportParamsTimezoneAtlanticJanMayen               MetricsExportParamsTimezone = "Atlantic/Jan_Mayen"
-	MetricsExportParamsTimezoneAtlanticMadeira                MetricsExportParamsTimezone = "Atlantic/Madeira"
-	MetricsExportParamsTimezoneAtlanticReykjavik              MetricsExportParamsTimezone = "Atlantic/Reykjavik"
-	MetricsExportParamsTimezoneAtlanticSouthGeorgia           MetricsExportParamsTimezone = "Atlantic/South_Georgia"
-	MetricsExportParamsTimezoneAtlanticStHelena               MetricsExportParamsTimezone = "Atlantic/St_Helena"
-	MetricsExportParamsTimezoneAtlanticStanley                MetricsExportParamsTimezone = "Atlantic/Stanley"
-	MetricsExportParamsTimezoneAustraliaACT                   MetricsExportParamsTimezone = "Australia/ACT"
-	MetricsExportParamsTimezoneAustraliaAdelaide              MetricsExportParamsTimezone = "Australia/Adelaide"
-	MetricsExportParamsTimezoneAustraliaBrisbane              MetricsExportParamsTimezone = "Australia/Brisbane"
-	MetricsExportParamsTimezoneAustraliaBrokenHill            MetricsExportParamsTimezone = "Australia/Broken_Hill"
-	MetricsExportParamsTimezoneAustraliaCanberra              MetricsExportParamsTimezone = "Australia/Canberra"
-	MetricsExportParamsTimezoneAustraliaCurrie                MetricsExportParamsTimezone = "Australia/Currie"
-	MetricsExportParamsTimezoneAustraliaDarwin                MetricsExportParamsTimezone = "Australia/Darwin"
-	MetricsExportParamsTimezoneAustraliaEucla                 MetricsExportParamsTimezone = "Australia/Eucla"
-	MetricsExportParamsTimezoneAustraliaHobart                MetricsExportParamsTimezone = "Australia/Hobart"
-	MetricsExportParamsTimezoneAustraliaLHI                   MetricsExportParamsTimezone = "Australia/LHI"
-	MetricsExportParamsTimezoneAustraliaLindeman              MetricsExportParamsTimezone = "Australia/Lindeman"
-	MetricsExportParamsTimezoneAustraliaLordHowe              MetricsExportParamsTimezone = "Australia/Lord_Howe"
-	MetricsExportParamsTimezoneAustraliaMelbourne             MetricsExportParamsTimezone = "Australia/Melbourne"
-	MetricsExportParamsTimezoneAustraliaNSW                   MetricsExportParamsTimezone = "Australia/NSW"
-	MetricsExportParamsTimezoneAustraliaNorth                 MetricsExportParamsTimezone = "Australia/North"
-	MetricsExportParamsTimezoneAustraliaPerth                 MetricsExportParamsTimezone = "Australia/Perth"
-	MetricsExportParamsTimezoneAustraliaQueensland            MetricsExportParamsTimezone = "Australia/Queensland"
-	MetricsExportParamsTimezoneAustraliaSouth                 MetricsExportParamsTimezone = "Australia/South"
-	MetricsExportParamsTimezoneAustraliaSydney                MetricsExportParamsTimezone = "Australia/Sydney"
-	MetricsExportParamsTimezoneAustraliaTasmania              MetricsExportParamsTimezone = "Australia/Tasmania"
-	MetricsExportParamsTimezoneAustraliaVictoria              MetricsExportParamsTimezone = "Australia/Victoria"
-	MetricsExportParamsTimezoneAustraliaWest                  MetricsExportParamsTimezone = "Australia/West"
-	MetricsExportParamsTimezoneAustraliaYancowinna            MetricsExportParamsTimezone = "Australia/Yancowinna"
-	MetricsExportParamsTimezoneBrazilAcre                     MetricsExportParamsTimezone = "Brazil/Acre"
-	MetricsExportParamsTimezoneBrazilDeNoronha                MetricsExportParamsTimezone = "Brazil/DeNoronha"
-	MetricsExportParamsTimezoneBrazilEast                     MetricsExportParamsTimezone = "Brazil/East"
-	MetricsExportParamsTimezoneBrazilWest                     MetricsExportParamsTimezone = "Brazil/West"
-	MetricsExportParamsTimezoneCET                            MetricsExportParamsTimezone = "CET"
-	MetricsExportParamsTimezoneCST6CDT                        MetricsExportParamsTimezone = "CST6CDT"
-	MetricsExportParamsTimezoneCanadaAtlantic                 MetricsExportParamsTimezone = "Canada/Atlantic"
-	MetricsExportParamsTimezoneCanadaCentral                  MetricsExportParamsTimezone = "Canada/Central"
-	MetricsExportParamsTimezoneCanadaEastern                  MetricsExportParamsTimezone = "Canada/Eastern"
-	MetricsExportParamsTimezoneCanadaMountain                 MetricsExportParamsTimezone = "Canada/Mountain"
-	MetricsExportParamsTimezoneCanadaNewfoundland             MetricsExportParamsTimezone = "Canada/Newfoundland"
-	MetricsExportParamsTimezoneCanadaPacific                  MetricsExportParamsTimezone = "Canada/Pacific"
-	MetricsExportParamsTimezoneCanadaSaskatchewan             MetricsExportParamsTimezone = "Canada/Saskatchewan"
-	MetricsExportParamsTimezoneCanadaYukon                    MetricsExportParamsTimezone = "Canada/Yukon"
-	MetricsExportParamsTimezoneChileContinental               MetricsExportParamsTimezone = "Chile/Continental"
-	MetricsExportParamsTimezoneChileEasterIsland              MetricsExportParamsTimezone = "Chile/EasterIsland"
-	MetricsExportParamsTimezoneCuba                           MetricsExportParamsTimezone = "Cuba"
-	MetricsExportParamsTimezoneEET                            MetricsExportParamsTimezone = "EET"
-	MetricsExportParamsTimezoneEST                            MetricsExportParamsTimezone = "EST"
-	MetricsExportParamsTimezoneEST5EDT                        MetricsExportParamsTimezone = "EST5EDT"
-	MetricsExportParamsTimezoneEgypt                          MetricsExportParamsTimezone = "Egypt"
-	MetricsExportParamsTimezoneEire                           MetricsExportParamsTimezone = "Eire"
-	MetricsExportParamsTimezoneEtcGMT                         MetricsExportParamsTimezone = "Etc/GMT"
-	MetricsExportParamsTimezoneEtcGMT0                        MetricsExportParamsTimezone = "Etc/GMT+0"
-	MetricsExportParamsTimezoneEtcGMT01                       MetricsExportParamsTimezone = "Etc/GMT-0"
-	MetricsExportParamsTimezoneEtcGMT02                       MetricsExportParamsTimezone = "Etc/GMT0"
-	MetricsExportParamsTimezoneEtcGMT1                        MetricsExportParamsTimezone = "Etc/GMT+1"
-	MetricsExportParamsTimezoneEtcGMT10                       MetricsExportParamsTimezone = "Etc/GMT+10"
-	MetricsExportParamsTimezoneEtcGMT101                      MetricsExportParamsTimezone = "Etc/GMT-10"
-	MetricsExportParamsTimezoneEtcGMT11                       MetricsExportParamsTimezone = "Etc/GMT-1"
-	MetricsExportParamsTimezoneEtcGMT111                      MetricsExportParamsTimezone = "Etc/GMT-11"
-	MetricsExportParamsTimezoneEtcGMT12                       MetricsExportParamsTimezone = "Etc/GMT+12"
-	MetricsExportParamsTimezoneEtcGMT121                      MetricsExportParamsTimezone = "Etc/GMT-12"
-	MetricsExportParamsTimezoneEtcGMT13                       MetricsExportParamsTimezone = "Etc/GMT-13"
-	MetricsExportParamsTimezoneEtcGMT14                       MetricsExportParamsTimezone = "Etc/GMT-14"
-	MetricsExportParamsTimezoneEtcGMT2                        MetricsExportParamsTimezone = "Etc/GMT+2"
-	MetricsExportParamsTimezoneEtcGMT21                       MetricsExportParamsTimezone = "Etc/GMT-2"
-	MetricsExportParamsTimezoneEtcGMT3                        MetricsExportParamsTimezone = "Etc/GMT+3"
-	MetricsExportParamsTimezoneEtcGMT31                       MetricsExportParamsTimezone = "Etc/GMT-3"
-	MetricsExportParamsTimezoneEtcGMT4                        MetricsExportParamsTimezone = "Etc/GMT+4"
-	MetricsExportParamsTimezoneEtcGMT41                       MetricsExportParamsTimezone = "Etc/GMT-4"
-	MetricsExportParamsTimezoneEtcGMT5                        MetricsExportParamsTimezone = "Etc/GMT+5"
-	MetricsExportParamsTimezoneEtcGMT51                       MetricsExportParamsTimezone = "Etc/GMT-5"
-	MetricsExportParamsTimezoneEtcGMT6                        MetricsExportParamsTimezone = "Etc/GMT+6"
-	MetricsExportParamsTimezoneEtcGMT61                       MetricsExportParamsTimezone = "Etc/GMT-6"
-	MetricsExportParamsTimezoneEtcGMT7                        MetricsExportParamsTimezone = "Etc/GMT+7"
-	MetricsExportParamsTimezoneEtcGMT71                       MetricsExportParamsTimezone = "Etc/GMT-7"
-	MetricsExportParamsTimezoneEtcGMT8                        MetricsExportParamsTimezone = "Etc/GMT+8"
-	MetricsExportParamsTimezoneEtcGMT81                       MetricsExportParamsTimezone = "Etc/GMT-8"
-	MetricsExportParamsTimezoneEtcGMT9                        MetricsExportParamsTimezone = "Etc/GMT+9"
-	MetricsExportParamsTimezoneEtcGMT91                       MetricsExportParamsTimezone = "Etc/GMT-9"
-	MetricsExportParamsTimezoneEtcGreenwich                   MetricsExportParamsTimezone = "Etc/Greenwich"
-	MetricsExportParamsTimezoneEtcUCT                         MetricsExportParamsTimezone = "Etc/UCT"
-	MetricsExportParamsTimezoneEtcUTC                         MetricsExportParamsTimezone = "Etc/UTC"
-	MetricsExportParamsTimezoneEtcUniversal                   MetricsExportParamsTimezone = "Etc/Universal"
-	MetricsExportParamsTimezoneEtcZulu                        MetricsExportParamsTimezone = "Etc/Zulu"
-	MetricsExportParamsTimezoneEuropeAmsterdam                MetricsExportParamsTimezone = "Europe/Amsterdam"
-	MetricsExportParamsTimezoneEuropeAndorra                  MetricsExportParamsTimezone = "Europe/Andorra"
-	MetricsExportParamsTimezoneEuropeAstrakhan                MetricsExportParamsTimezone = "Europe/Astrakhan"
-	MetricsExportParamsTimezoneEuropeAthens                   MetricsExportParamsTimezone = "Europe/Athens"
-	MetricsExportParamsTimezoneEuropeBelfast                  MetricsExportParamsTimezone = "Europe/Belfast"
-	MetricsExportParamsTimezoneEuropeBelgrade                 MetricsExportParamsTimezone = "Europe/Belgrade"
-	MetricsExportParamsTimezoneEuropeBerlin                   MetricsExportParamsTimezone = "Europe/Berlin"
-	MetricsExportParamsTimezoneEuropeBratislava               MetricsExportParamsTimezone = "Europe/Bratislava"
-	MetricsExportParamsTimezoneEuropeBrussels                 MetricsExportParamsTimezone = "Europe/Brussels"
-	MetricsExportParamsTimezoneEuropeBucharest                MetricsExportParamsTimezone = "Europe/Bucharest"
-	MetricsExportParamsTimezoneEuropeBudapest                 MetricsExportParamsTimezone = "Europe/Budapest"
-	MetricsExportParamsTimezoneEuropeBusingen                 MetricsExportParamsTimezone = "Europe/Busingen"
-	MetricsExportParamsTimezoneEuropeChisinau                 MetricsExportParamsTimezone = "Europe/Chisinau"
-	MetricsExportParamsTimezoneEuropeCopenhagen               MetricsExportParamsTimezone = "Europe/Copenhagen"
-	MetricsExportParamsTimezoneEuropeDublin                   MetricsExportParamsTimezone = "Europe/Dublin"
-	MetricsExportParamsTimezoneEuropeGibraltar                MetricsExportParamsTimezone = "Europe/Gibraltar"
-	MetricsExportParamsTimezoneEuropeGuernsey                 MetricsExportParamsTimezone = "Europe/Guernsey"
-	MetricsExportParamsTimezoneEuropeHelsinki                 MetricsExportParamsTimezone = "Europe/Helsinki"
-	MetricsExportParamsTimezoneEuropeIsleOfMan                MetricsExportParamsTimezone = "Europe/Isle_of_Man"
-	MetricsExportParamsTimezoneEuropeIstanbul                 MetricsExportParamsTimezone = "Europe/Istanbul"
-	MetricsExportParamsTimezoneEuropeJersey                   MetricsExportParamsTimezone = "Europe/Jersey"
-	MetricsExportParamsTimezoneEuropeKaliningrad              MetricsExportParamsTimezone = "Europe/Kaliningrad"
-	MetricsExportParamsTimezoneEuropeKiev                     MetricsExportParamsTimezone = "Europe/Kiev"
-	MetricsExportParamsTimezoneEuropeKirov                    MetricsExportParamsTimezone = "Europe/Kirov"
-	MetricsExportParamsTimezoneEuropeKyiv                     MetricsExportParamsTimezone = "Europe/Kyiv"
-	MetricsExportParamsTimezoneEuropeLisbon                   MetricsExportParamsTimezone = "Europe/Lisbon"
-	MetricsExportParamsTimezoneEuropeLjubljana                MetricsExportParamsTimezone = "Europe/Ljubljana"
-	MetricsExportParamsTimezoneEuropeLondon                   MetricsExportParamsTimezone = "Europe/London"
-	MetricsExportParamsTimezoneEuropeLuxembourg               MetricsExportParamsTimezone = "Europe/Luxembourg"
-	MetricsExportParamsTimezoneEuropeMadrid                   MetricsExportParamsTimezone = "Europe/Madrid"
-	MetricsExportParamsTimezoneEuropeMalta                    MetricsExportParamsTimezone = "Europe/Malta"
-	MetricsExportParamsTimezoneEuropeMariehamn                MetricsExportParamsTimezone = "Europe/Mariehamn"
-	MetricsExportParamsTimezoneEuropeMinsk                    MetricsExportParamsTimezone = "Europe/Minsk"
-	MetricsExportParamsTimezoneEuropeMonaco                   MetricsExportParamsTimezone = "Europe/Monaco"
-	MetricsExportParamsTimezoneEuropeMoscow                   MetricsExportParamsTimezone = "Europe/Moscow"
-	MetricsExportParamsTimezoneEuropeNicosia                  MetricsExportParamsTimezone = "Europe/Nicosia"
-	MetricsExportParamsTimezoneEuropeOslo                     MetricsExportParamsTimezone = "Europe/Oslo"
-	MetricsExportParamsTimezoneEuropeParis                    MetricsExportParamsTimezone = "Europe/Paris"
-	MetricsExportParamsTimezoneEuropePodgorica                MetricsExportParamsTimezone = "Europe/Podgorica"
-	MetricsExportParamsTimezoneEuropePrague                   MetricsExportParamsTimezone = "Europe/Prague"
-	MetricsExportParamsTimezoneEuropeRiga                     MetricsExportParamsTimezone = "Europe/Riga"
-	MetricsExportParamsTimezoneEuropeRome                     MetricsExportParamsTimezone = "Europe/Rome"
-	MetricsExportParamsTimezoneEuropeSamara                   MetricsExportParamsTimezone = "Europe/Samara"
-	MetricsExportParamsTimezoneEuropeSanMarino                MetricsExportParamsTimezone = "Europe/San_Marino"
-	MetricsExportParamsTimezoneEuropeSarajevo                 MetricsExportParamsTimezone = "Europe/Sarajevo"
-	MetricsExportParamsTimezoneEuropeSaratov                  MetricsExportParamsTimezone = "Europe/Saratov"
-	MetricsExportParamsTimezoneEuropeSimferopol               MetricsExportParamsTimezone = "Europe/Simferopol"
-	MetricsExportParamsTimezoneEuropeSkopje                   MetricsExportParamsTimezone = "Europe/Skopje"
-	MetricsExportParamsTimezoneEuropeSofia                    MetricsExportParamsTimezone = "Europe/Sofia"
-	MetricsExportParamsTimezoneEuropeStockholm                MetricsExportParamsTimezone = "Europe/Stockholm"
-	MetricsExportParamsTimezoneEuropeTallinn                  MetricsExportParamsTimezone = "Europe/Tallinn"
-	MetricsExportParamsTimezoneEuropeTirane                   MetricsExportParamsTimezone = "Europe/Tirane"
-	MetricsExportParamsTimezoneEuropeTiraspol                 MetricsExportParamsTimezone = "Europe/Tiraspol"
-	MetricsExportParamsTimezoneEuropeUlyanovsk                MetricsExportParamsTimezone = "Europe/Ulyanovsk"
-	MetricsExportParamsTimezoneEuropeUzhgorod                 MetricsExportParamsTimezone = "Europe/Uzhgorod"
-	MetricsExportParamsTimezoneEuropeVaduz                    MetricsExportParamsTimezone = "Europe/Vaduz"
-	MetricsExportParamsTimezoneEuropeVatican                  MetricsExportParamsTimezone = "Europe/Vatican"
-	MetricsExportParamsTimezoneEuropeVienna                   MetricsExportParamsTimezone = "Europe/Vienna"
-	MetricsExportParamsTimezoneEuropeVilnius                  MetricsExportParamsTimezone = "Europe/Vilnius"
-	MetricsExportParamsTimezoneEuropeVolgograd                MetricsExportParamsTimezone = "Europe/Volgograd"
-	MetricsExportParamsTimezoneEuropeWarsaw                   MetricsExportParamsTimezone = "Europe/Warsaw"
-	MetricsExportParamsTimezoneEuropeZagreb                   MetricsExportParamsTimezone = "Europe/Zagreb"
-	MetricsExportParamsTimezoneEuropeZaporozhye               MetricsExportParamsTimezone = "Europe/Zaporozhye"
-	MetricsExportParamsTimezoneEuropeZurich                   MetricsExportParamsTimezone = "Europe/Zurich"
-	MetricsExportParamsTimezoneFactory                        MetricsExportParamsTimezone = "Factory"
-	MetricsExportParamsTimezoneGB                             MetricsExportParamsTimezone = "GB"
-	MetricsExportParamsTimezoneGBEire                         MetricsExportParamsTimezone = "GB-Eire"
-	MetricsExportParamsTimezoneGMT                            MetricsExportParamsTimezone = "GMT"
-	MetricsExportParamsTimezoneGMT0                           MetricsExportParamsTimezone = "GMT+0"
-	MetricsExportParamsTimezoneGMT01                          MetricsExportParamsTimezone = "GMT-0"
-	MetricsExportParamsTimezoneGMT02                          MetricsExportParamsTimezone = "GMT0"
-	MetricsExportParamsTimezoneGreenwich                      MetricsExportParamsTimezone = "Greenwich"
-	MetricsExportParamsTimezoneHST                            MetricsExportParamsTimezone = "HST"
-	MetricsExportParamsTimezoneHongkong                       MetricsExportParamsTimezone = "Hongkong"
-	MetricsExportParamsTimezoneIceland                        MetricsExportParamsTimezone = "Iceland"
-	MetricsExportParamsTimezoneIndianAntananarivo             MetricsExportParamsTimezone = "Indian/Antananarivo"
-	MetricsExportParamsTimezoneIndianChagos                   MetricsExportParamsTimezone = "Indian/Chagos"
-	MetricsExportParamsTimezoneIndianChristmas                MetricsExportParamsTimezone = "Indian/Christmas"
-	MetricsExportParamsTimezoneIndianCocos                    MetricsExportParamsTimezone = "Indian/Cocos"
-	MetricsExportParamsTimezoneIndianComoro                   MetricsExportParamsTimezone = "Indian/Comoro"
-	MetricsExportParamsTimezoneIndianKerguelen                MetricsExportParamsTimezone = "Indian/Kerguelen"
-	MetricsExportParamsTimezoneIndianMahe                     MetricsExportParamsTimezone = "Indian/Mahe"
-	MetricsExportParamsTimezoneIndianMaldives                 MetricsExportParamsTimezone = "Indian/Maldives"
-	MetricsExportParamsTimezoneIndianMauritius                MetricsExportParamsTimezone = "Indian/Mauritius"
-	MetricsExportParamsTimezoneIndianMayotte                  MetricsExportParamsTimezone = "Indian/Mayotte"
-	MetricsExportParamsTimezoneIndianReunion                  MetricsExportParamsTimezone = "Indian/Reunion"
-	MetricsExportParamsTimezoneIran                           MetricsExportParamsTimezone = "Iran"
-	MetricsExportParamsTimezoneIsrael                         MetricsExportParamsTimezone = "Israel"
-	MetricsExportParamsTimezoneJamaica                        MetricsExportParamsTimezone = "Jamaica"
-	MetricsExportParamsTimezoneJapan                          MetricsExportParamsTimezone = "Japan"
-	MetricsExportParamsTimezoneKwajalein                      MetricsExportParamsTimezone = "Kwajalein"
-	MetricsExportParamsTimezoneLibya                          MetricsExportParamsTimezone = "Libya"
-	MetricsExportParamsTimezoneMET                            MetricsExportParamsTimezone = "MET"
-	MetricsExportParamsTimezoneMST                            MetricsExportParamsTimezone = "MST"
-	MetricsExportParamsTimezoneMST7MDT                        MetricsExportParamsTimezone = "MST7MDT"
-	MetricsExportParamsTimezoneMexicoBajaNorte                MetricsExportParamsTimezone = "Mexico/BajaNorte"
-	MetricsExportParamsTimezoneMexicoBajaSur                  MetricsExportParamsTimezone = "Mexico/BajaSur"
-	MetricsExportParamsTimezoneMexicoGeneral                  MetricsExportParamsTimezone = "Mexico/General"
-	MetricsExportParamsTimezoneNZ                             MetricsExportParamsTimezone = "NZ"
-	MetricsExportParamsTimezoneNZCHAT                         MetricsExportParamsTimezone = "NZ-CHAT"
-	MetricsExportParamsTimezoneNavajo                         MetricsExportParamsTimezone = "Navajo"
-	MetricsExportParamsTimezonePRC                            MetricsExportParamsTimezone = "PRC"
-	MetricsExportParamsTimezonePST8PDT                        MetricsExportParamsTimezone = "PST8PDT"
-	MetricsExportParamsTimezonePacificApia                    MetricsExportParamsTimezone = "Pacific/Apia"
-	MetricsExportParamsTimezonePacificAuckland                MetricsExportParamsTimezone = "Pacific/Auckland"
-	MetricsExportParamsTimezonePacificBougainville            MetricsExportParamsTimezone = "Pacific/Bougainville"
-	MetricsExportParamsTimezonePacificChatham                 MetricsExportParamsTimezone = "Pacific/Chatham"
-	MetricsExportParamsTimezonePacificChuuk                   MetricsExportParamsTimezone = "Pacific/Chuuk"
-	MetricsExportParamsTimezonePacificEaster                  MetricsExportParamsTimezone = "Pacific/Easter"
-	MetricsExportParamsTimezonePacificEfate                   MetricsExportParamsTimezone = "Pacific/Efate"
-	MetricsExportParamsTimezonePacificEnderbury               MetricsExportParamsTimezone = "Pacific/Enderbury"
-	MetricsExportParamsTimezonePacificFakaofo                 MetricsExportParamsTimezone = "Pacific/Fakaofo"
-	MetricsExportParamsTimezonePacificFiji                    MetricsExportParamsTimezone = "Pacific/Fiji"
-	MetricsExportParamsTimezonePacificFunafuti                MetricsExportParamsTimezone = "Pacific/Funafuti"
-	MetricsExportParamsTimezonePacificGalapagos               MetricsExportParamsTimezone = "Pacific/Galapagos"
-	MetricsExportParamsTimezonePacificGambier                 MetricsExportParamsTimezone = "Pacific/Gambier"
-	MetricsExportParamsTimezonePacificGuadalcanal             MetricsExportParamsTimezone = "Pacific/Guadalcanal"
-	MetricsExportParamsTimezonePacificGuam                    MetricsExportParamsTimezone = "Pacific/Guam"
-	MetricsExportParamsTimezonePacificHonolulu                MetricsExportParamsTimezone = "Pacific/Honolulu"
-	MetricsExportParamsTimezonePacificJohnston                MetricsExportParamsTimezone = "Pacific/Johnston"
-	MetricsExportParamsTimezonePacificKanton                  MetricsExportParamsTimezone = "Pacific/Kanton"
-	MetricsExportParamsTimezonePacificKiritimati              MetricsExportParamsTimezone = "Pacific/Kiritimati"
-	MetricsExportParamsTimezonePacificKosrae                  MetricsExportParamsTimezone = "Pacific/Kosrae"
-	MetricsExportParamsTimezonePacificKwajalein               MetricsExportParamsTimezone = "Pacific/Kwajalein"
-	MetricsExportParamsTimezonePacificMajuro                  MetricsExportParamsTimezone = "Pacific/Majuro"
-	MetricsExportParamsTimezonePacificMarquesas               MetricsExportParamsTimezone = "Pacific/Marquesas"
-	MetricsExportParamsTimezonePacificMidway                  MetricsExportParamsTimezone = "Pacific/Midway"
-	MetricsExportParamsTimezonePacificNauru                   MetricsExportParamsTimezone = "Pacific/Nauru"
-	MetricsExportParamsTimezonePacificNiue                    MetricsExportParamsTimezone = "Pacific/Niue"
-	MetricsExportParamsTimezonePacificNorfolk                 MetricsExportParamsTimezone = "Pacific/Norfolk"
-	MetricsExportParamsTimezonePacificNoumea                  MetricsExportParamsTimezone = "Pacific/Noumea"
-	MetricsExportParamsTimezonePacificPagoPago                MetricsExportParamsTimezone = "Pacific/Pago_Pago"
-	MetricsExportParamsTimezonePacificPalau                   MetricsExportParamsTimezone = "Pacific/Palau"
-	MetricsExportParamsTimezonePacificPitcairn                MetricsExportParamsTimezone = "Pacific/Pitcairn"
-	MetricsExportParamsTimezonePacificPohnpei                 MetricsExportParamsTimezone = "Pacific/Pohnpei"
-	MetricsExportParamsTimezonePacificPonape                  MetricsExportParamsTimezone = "Pacific/Ponape"
-	MetricsExportParamsTimezonePacificPortMoresby             MetricsExportParamsTimezone = "Pacific/Port_Moresby"
-	MetricsExportParamsTimezonePacificRarotonga               MetricsExportParamsTimezone = "Pacific/Rarotonga"
-	MetricsExportParamsTimezonePacificSaipan                  MetricsExportParamsTimezone = "Pacific/Saipan"
-	MetricsExportParamsTimezonePacificSamoa                   MetricsExportParamsTimezone = "Pacific/Samoa"
-	MetricsExportParamsTimezonePacificTahiti                  MetricsExportParamsTimezone = "Pacific/Tahiti"
-	MetricsExportParamsTimezonePacificTarawa                  MetricsExportParamsTimezone = "Pacific/Tarawa"
-	MetricsExportParamsTimezonePacificTongatapu               MetricsExportParamsTimezone = "Pacific/Tongatapu"
-	MetricsExportParamsTimezonePacificTruk                    MetricsExportParamsTimezone = "Pacific/Truk"
-	MetricsExportParamsTimezonePacificWake                    MetricsExportParamsTimezone = "Pacific/Wake"
-	MetricsExportParamsTimezonePacificWallis                  MetricsExportParamsTimezone = "Pacific/Wallis"
-	MetricsExportParamsTimezonePacificYap                     MetricsExportParamsTimezone = "Pacific/Yap"
-	MetricsExportParamsTimezonePoland                         MetricsExportParamsTimezone = "Poland"
-	MetricsExportParamsTimezonePortugal                       MetricsExportParamsTimezone = "Portugal"
-	MetricsExportParamsTimezoneROC                            MetricsExportParamsTimezone = "ROC"
-	MetricsExportParamsTimezoneROK                            MetricsExportParamsTimezone = "ROK"
-	MetricsExportParamsTimezoneSingapore                      MetricsExportParamsTimezone = "Singapore"
-	MetricsExportParamsTimezoneTurkey                         MetricsExportParamsTimezone = "Turkey"
-	MetricsExportParamsTimezoneUCT                            MetricsExportParamsTimezone = "UCT"
-	MetricsExportParamsTimezoneUSAlaska                       MetricsExportParamsTimezone = "US/Alaska"
-	MetricsExportParamsTimezoneUSAleutian                     MetricsExportParamsTimezone = "US/Aleutian"
-	MetricsExportParamsTimezoneUSArizona                      MetricsExportParamsTimezone = "US/Arizona"
-	MetricsExportParamsTimezoneUSCentral                      MetricsExportParamsTimezone = "US/Central"
-	MetricsExportParamsTimezoneUSEastIndiana                  MetricsExportParamsTimezone = "US/East-Indiana"
-	MetricsExportParamsTimezoneUSEastern                      MetricsExportParamsTimezone = "US/Eastern"
-	MetricsExportParamsTimezoneUSHawaii                       MetricsExportParamsTimezone = "US/Hawaii"
-	MetricsExportParamsTimezoneUSIndianaStarke                MetricsExportParamsTimezone = "US/Indiana-Starke"
-	MetricsExportParamsTimezoneUSMichigan                     MetricsExportParamsTimezone = "US/Michigan"
-	MetricsExportParamsTimezoneUSMountain                     MetricsExportParamsTimezone = "US/Mountain"
-	MetricsExportParamsTimezoneUSPacific                      MetricsExportParamsTimezone = "US/Pacific"
-	MetricsExportParamsTimezoneUSSamoa                        MetricsExportParamsTimezone = "US/Samoa"
-	MetricsExportParamsTimezoneUTC                            MetricsExportParamsTimezone = "UTC"
-	MetricsExportParamsTimezoneUniversal                      MetricsExportParamsTimezone = "Universal"
-	MetricsExportParamsTimezoneWET                            MetricsExportParamsTimezone = "WET"
-	MetricsExportParamsTimezoneWSU                            MetricsExportParamsTimezone = "W-SU"
-	MetricsExportParamsTimezoneZulu                           MetricsExportParamsTimezone = "Zulu"
-)
-
-// Valid indicates whether the value is a known member of the MetricsExportParamsTimezone enum.
-func (e MetricsExportParamsTimezone) Valid() bool {
-	switch e {
-	case MetricsExportParamsTimezoneAfricaAbidjan:
-		return true
-	case MetricsExportParamsTimezoneAfricaAccra:
-		return true
-	case MetricsExportParamsTimezoneAfricaAddisAbaba:
-		return true
-	case MetricsExportParamsTimezoneAfricaAlgiers:
-		return true
-	case MetricsExportParamsTimezoneAfricaAsmara:
-		return true
-	case MetricsExportParamsTimezoneAfricaAsmera:
-		return true
-	case MetricsExportParamsTimezoneAfricaBamako:
-		return true
-	case MetricsExportParamsTimezoneAfricaBangui:
-		return true
-	case MetricsExportParamsTimezoneAfricaBanjul:
-		return true
-	case MetricsExportParamsTimezoneAfricaBissau:
-		return true
-	case MetricsExportParamsTimezoneAfricaBlantyre:
-		return true
-	case MetricsExportParamsTimezoneAfricaBrazzaville:
-		return true
-	case MetricsExportParamsTimezoneAfricaBujumbura:
-		return true
-	case MetricsExportParamsTimezoneAfricaCairo:
-		return true
-	case MetricsExportParamsTimezoneAfricaCasablanca:
-		return true
-	case MetricsExportParamsTimezoneAfricaCeuta:
-		return true
-	case MetricsExportParamsTimezoneAfricaConakry:
-		return true
-	case MetricsExportParamsTimezoneAfricaDakar:
-		return true
-	case MetricsExportParamsTimezoneAfricaDarEsSalaam:
-		return true
-	case MetricsExportParamsTimezoneAfricaDjibouti:
-		return true
-	case MetricsExportParamsTimezoneAfricaDouala:
-		return true
-	case MetricsExportParamsTimezoneAfricaElAaiun:
-		return true
-	case MetricsExportParamsTimezoneAfricaFreetown:
-		return true
-	case MetricsExportParamsTimezoneAfricaGaborone:
-		return true
-	case MetricsExportParamsTimezoneAfricaHarare:
-		return true
-	case MetricsExportParamsTimezoneAfricaJohannesburg:
-		return true
-	case MetricsExportParamsTimezoneAfricaJuba:
-		return true
-	case MetricsExportParamsTimezoneAfricaKampala:
-		return true
-	case MetricsExportParamsTimezoneAfricaKhartoum:
-		return true
-	case MetricsExportParamsTimezoneAfricaKigali:
-		return true
-	case MetricsExportParamsTimezoneAfricaKinshasa:
-		return true
-	case MetricsExportParamsTimezoneAfricaLagos:
-		return true
-	case MetricsExportParamsTimezoneAfricaLibreville:
-		return true
-	case MetricsExportParamsTimezoneAfricaLome:
-		return true
-	case MetricsExportParamsTimezoneAfricaLuanda:
-		return true
-	case MetricsExportParamsTimezoneAfricaLubumbashi:
-		return true
-	case MetricsExportParamsTimezoneAfricaLusaka:
-		return true
-	case MetricsExportParamsTimezoneAfricaMalabo:
-		return true
-	case MetricsExportParamsTimezoneAfricaMaputo:
-		return true
-	case MetricsExportParamsTimezoneAfricaMaseru:
-		return true
-	case MetricsExportParamsTimezoneAfricaMbabane:
-		return true
-	case MetricsExportParamsTimezoneAfricaMogadishu:
-		return true
-	case MetricsExportParamsTimezoneAfricaMonrovia:
-		return true
-	case MetricsExportParamsTimezoneAfricaNairobi:
-		return true
-	case MetricsExportParamsTimezoneAfricaNdjamena:
-		return true
-	case MetricsExportParamsTimezoneAfricaNiamey:
-		return true
-	case MetricsExportParamsTimezoneAfricaNouakchott:
-		return true
-	case MetricsExportParamsTimezoneAfricaOuagadougou:
-		return true
-	case MetricsExportParamsTimezoneAfricaPortoNovo:
-		return true
-	case MetricsExportParamsTimezoneAfricaSaoTome:
-		return true
-	case MetricsExportParamsTimezoneAfricaTimbuktu:
-		return true
-	case MetricsExportParamsTimezoneAfricaTripoli:
-		return true
-	case MetricsExportParamsTimezoneAfricaTunis:
-		return true
-	case MetricsExportParamsTimezoneAfricaWindhoek:
-		return true
-	case MetricsExportParamsTimezoneAmericaAdak:
-		return true
-	case MetricsExportParamsTimezoneAmericaAnchorage:
-		return true
-	case MetricsExportParamsTimezoneAmericaAnguilla:
-		return true
-	case MetricsExportParamsTimezoneAmericaAntigua:
-		return true
-	case MetricsExportParamsTimezoneAmericaAraguaina:
-		return true
-	case MetricsExportParamsTimezoneAmericaArgentinaBuenosAires:
-		return true
-	case MetricsExportParamsTimezoneAmericaArgentinaCatamarca:
-		return true
-	case MetricsExportParamsTimezoneAmericaArgentinaComodRivadavia:
-		return true
-	case MetricsExportParamsTimezoneAmericaArgentinaCordoba:
-		return true
-	case MetricsExportParamsTimezoneAmericaArgentinaJujuy:
-		return true
-	case MetricsExportParamsTimezoneAmericaArgentinaLaRioja:
-		return true
-	case MetricsExportParamsTimezoneAmericaArgentinaMendoza:
-		return true
-	case MetricsExportParamsTimezoneAmericaArgentinaRioGallegos:
-		return true
-	case MetricsExportParamsTimezoneAmericaArgentinaSalta:
-		return true
-	case MetricsExportParamsTimezoneAmericaArgentinaSanJuan:
-		return true
-	case MetricsExportParamsTimezoneAmericaArgentinaSanLuis:
-		return true
-	case MetricsExportParamsTimezoneAmericaArgentinaTucuman:
-		return true
-	case MetricsExportParamsTimezoneAmericaArgentinaUshuaia:
-		return true
-	case MetricsExportParamsTimezoneAmericaAruba:
-		return true
-	case MetricsExportParamsTimezoneAmericaAsuncion:
-		return true
-	case MetricsExportParamsTimezoneAmericaAtikokan:
-		return true
-	case MetricsExportParamsTimezoneAmericaAtka:
-		return true
-	case MetricsExportParamsTimezoneAmericaBahia:
-		return true
-	case MetricsExportParamsTimezoneAmericaBahiaBanderas:
-		return true
-	case MetricsExportParamsTimezoneAmericaBarbados:
-		return true
-	case MetricsExportParamsTimezoneAmericaBelem:
-		return true
-	case MetricsExportParamsTimezoneAmericaBelize:
-		return true
-	case MetricsExportParamsTimezoneAmericaBlancSablon:
-		return true
-	case MetricsExportParamsTimezoneAmericaBoaVista:
-		return true
-	case MetricsExportParamsTimezoneAmericaBogota:
-		return true
-	case MetricsExportParamsTimezoneAmericaBoise:
-		return true
-	case MetricsExportParamsTimezoneAmericaBuenosAires:
-		return true
-	case MetricsExportParamsTimezoneAmericaCambridgeBay:
-		return true
-	case MetricsExportParamsTimezoneAmericaCampoGrande:
-		return true
-	case MetricsExportParamsTimezoneAmericaCancun:
-		return true
-	case MetricsExportParamsTimezoneAmericaCaracas:
-		return true
-	case MetricsExportParamsTimezoneAmericaCatamarca:
-		return true
-	case MetricsExportParamsTimezoneAmericaCayenne:
-		return true
-	case MetricsExportParamsTimezoneAmericaCayman:
-		return true
-	case MetricsExportParamsTimezoneAmericaChicago:
-		return true
-	case MetricsExportParamsTimezoneAmericaChihuahua:
-		return true
-	case MetricsExportParamsTimezoneAmericaCiudadJuarez:
-		return true
-	case MetricsExportParamsTimezoneAmericaCoralHarbour:
-		return true
-	case MetricsExportParamsTimezoneAmericaCordoba:
-		return true
-	case MetricsExportParamsTimezoneAmericaCostaRica:
-		return true
-	case MetricsExportParamsTimezoneAmericaCoyhaique:
-		return true
-	case MetricsExportParamsTimezoneAmericaCreston:
-		return true
-	case MetricsExportParamsTimezoneAmericaCuiaba:
-		return true
-	case MetricsExportParamsTimezoneAmericaCuracao:
-		return true
-	case MetricsExportParamsTimezoneAmericaDanmarkshavn:
-		return true
-	case MetricsExportParamsTimezoneAmericaDawson:
-		return true
-	case MetricsExportParamsTimezoneAmericaDawsonCreek:
-		return true
-	case MetricsExportParamsTimezoneAmericaDenver:
-		return true
-	case MetricsExportParamsTimezoneAmericaDetroit:
-		return true
-	case MetricsExportParamsTimezoneAmericaDominica:
-		return true
-	case MetricsExportParamsTimezoneAmericaEdmonton:
-		return true
-	case MetricsExportParamsTimezoneAmericaEirunepe:
-		return true
-	case MetricsExportParamsTimezoneAmericaElSalvador:
-		return true
-	case MetricsExportParamsTimezoneAmericaEnsenada:
-		return true
-	case MetricsExportParamsTimezoneAmericaFortNelson:
-		return true
-	case MetricsExportParamsTimezoneAmericaFortWayne:
-		return true
-	case MetricsExportParamsTimezoneAmericaFortaleza:
-		return true
-	case MetricsExportParamsTimezoneAmericaGlaceBay:
-		return true
-	case MetricsExportParamsTimezoneAmericaGodthab:
-		return true
-	case MetricsExportParamsTimezoneAmericaGooseBay:
-		return true
-	case MetricsExportParamsTimezoneAmericaGrandTurk:
-		return true
-	case MetricsExportParamsTimezoneAmericaGrenada:
-		return true
-	case MetricsExportParamsTimezoneAmericaGuadeloupe:
-		return true
-	case MetricsExportParamsTimezoneAmericaGuatemala:
-		return true
-	case MetricsExportParamsTimezoneAmericaGuayaquil:
-		return true
-	case MetricsExportParamsTimezoneAmericaGuyana:
-		return true
-	case MetricsExportParamsTimezoneAmericaHalifax:
-		return true
-	case MetricsExportParamsTimezoneAmericaHavana:
-		return true
-	case MetricsExportParamsTimezoneAmericaHermosillo:
-		return true
-	case MetricsExportParamsTimezoneAmericaIndianaIndianapolis:
-		return true
-	case MetricsExportParamsTimezoneAmericaIndianaKnox:
-		return true
-	case MetricsExportParamsTimezoneAmericaIndianaMarengo:
-		return true
-	case MetricsExportParamsTimezoneAmericaIndianaPetersburg:
-		return true
-	case MetricsExportParamsTimezoneAmericaIndianaTellCity:
-		return true
-	case MetricsExportParamsTimezoneAmericaIndianaVevay:
-		return true
-	case MetricsExportParamsTimezoneAmericaIndianaVincennes:
-		return true
-	case MetricsExportParamsTimezoneAmericaIndianaWinamac:
-		return true
-	case MetricsExportParamsTimezoneAmericaIndianapolis:
-		return true
-	case MetricsExportParamsTimezoneAmericaInuvik:
-		return true
-	case MetricsExportParamsTimezoneAmericaIqaluit:
-		return true
-	case MetricsExportParamsTimezoneAmericaJamaica:
-		return true
-	case MetricsExportParamsTimezoneAmericaJujuy:
-		return true
-	case MetricsExportParamsTimezoneAmericaJuneau:
-		return true
-	case MetricsExportParamsTimezoneAmericaKentuckyLouisville:
-		return true
-	case MetricsExportParamsTimezoneAmericaKentuckyMonticello:
-		return true
-	case MetricsExportParamsTimezoneAmericaKnoxIN:
-		return true
-	case MetricsExportParamsTimezoneAmericaKralendijk:
-		return true
-	case MetricsExportParamsTimezoneAmericaLaPaz:
-		return true
-	case MetricsExportParamsTimezoneAmericaLima:
-		return true
-	case MetricsExportParamsTimezoneAmericaLosAngeles:
-		return true
-	case MetricsExportParamsTimezoneAmericaLouisville:
-		return true
-	case MetricsExportParamsTimezoneAmericaLowerPrinces:
-		return true
-	case MetricsExportParamsTimezoneAmericaMaceio:
-		return true
-	case MetricsExportParamsTimezoneAmericaManagua:
-		return true
-	case MetricsExportParamsTimezoneAmericaManaus:
-		return true
-	case MetricsExportParamsTimezoneAmericaMarigot:
-		return true
-	case MetricsExportParamsTimezoneAmericaMartinique:
-		return true
-	case MetricsExportParamsTimezoneAmericaMatamoros:
-		return true
-	case MetricsExportParamsTimezoneAmericaMazatlan:
-		return true
-	case MetricsExportParamsTimezoneAmericaMendoza:
-		return true
-	case MetricsExportParamsTimezoneAmericaMenominee:
-		return true
-	case MetricsExportParamsTimezoneAmericaMerida:
-		return true
-	case MetricsExportParamsTimezoneAmericaMetlakatla:
-		return true
-	case MetricsExportParamsTimezoneAmericaMexicoCity:
-		return true
-	case MetricsExportParamsTimezoneAmericaMiquelon:
-		return true
-	case MetricsExportParamsTimezoneAmericaMoncton:
-		return true
-	case MetricsExportParamsTimezoneAmericaMonterrey:
-		return true
-	case MetricsExportParamsTimezoneAmericaMontevideo:
-		return true
-	case MetricsExportParamsTimezoneAmericaMontreal:
-		return true
-	case MetricsExportParamsTimezoneAmericaMontserrat:
-		return true
-	case MetricsExportParamsTimezoneAmericaNassau:
-		return true
-	case MetricsExportParamsTimezoneAmericaNewYork:
-		return true
-	case MetricsExportParamsTimezoneAmericaNipigon:
-		return true
-	case MetricsExportParamsTimezoneAmericaNome:
-		return true
-	case MetricsExportParamsTimezoneAmericaNoronha:
-		return true
-	case MetricsExportParamsTimezoneAmericaNorthDakotaBeulah:
-		return true
-	case MetricsExportParamsTimezoneAmericaNorthDakotaCenter:
-		return true
-	case MetricsExportParamsTimezoneAmericaNorthDakotaNewSalem:
-		return true
-	case MetricsExportParamsTimezoneAmericaNuuk:
-		return true
-	case MetricsExportParamsTimezoneAmericaOjinaga:
-		return true
-	case MetricsExportParamsTimezoneAmericaPanama:
-		return true
-	case MetricsExportParamsTimezoneAmericaPangnirtung:
-		return true
-	case MetricsExportParamsTimezoneAmericaParamaribo:
-		return true
-	case MetricsExportParamsTimezoneAmericaPhoenix:
-		return true
-	case MetricsExportParamsTimezoneAmericaPortAuPrince:
-		return true
-	case MetricsExportParamsTimezoneAmericaPortOfSpain:
-		return true
-	case MetricsExportParamsTimezoneAmericaPortoAcre:
-		return true
-	case MetricsExportParamsTimezoneAmericaPortoVelho:
-		return true
-	case MetricsExportParamsTimezoneAmericaPuertoRico:
-		return true
-	case MetricsExportParamsTimezoneAmericaPuntaArenas:
-		return true
-	case MetricsExportParamsTimezoneAmericaRainyRiver:
-		return true
-	case MetricsExportParamsTimezoneAmericaRankinInlet:
-		return true
-	case MetricsExportParamsTimezoneAmericaRecife:
-		return true
-	case MetricsExportParamsTimezoneAmericaRegina:
-		return true
-	case MetricsExportParamsTimezoneAmericaResolute:
-		return true
-	case MetricsExportParamsTimezoneAmericaRioBranco:
-		return true
-	case MetricsExportParamsTimezoneAmericaRosario:
-		return true
-	case MetricsExportParamsTimezoneAmericaSantaIsabel:
-		return true
-	case MetricsExportParamsTimezoneAmericaSantarem:
-		return true
-	case MetricsExportParamsTimezoneAmericaSantiago:
-		return true
-	case MetricsExportParamsTimezoneAmericaSantoDomingo:
-		return true
-	case MetricsExportParamsTimezoneAmericaSaoPaulo:
-		return true
-	case MetricsExportParamsTimezoneAmericaScoresbysund:
-		return true
-	case MetricsExportParamsTimezoneAmericaShiprock:
-		return true
-	case MetricsExportParamsTimezoneAmericaSitka:
-		return true
-	case MetricsExportParamsTimezoneAmericaStBarthelemy:
-		return true
-	case MetricsExportParamsTimezoneAmericaStJohns:
-		return true
-	case MetricsExportParamsTimezoneAmericaStKitts:
-		return true
-	case MetricsExportParamsTimezoneAmericaStLucia:
-		return true
-	case MetricsExportParamsTimezoneAmericaStThomas:
-		return true
-	case MetricsExportParamsTimezoneAmericaStVincent:
-		return true
-	case MetricsExportParamsTimezoneAmericaSwiftCurrent:
-		return true
-	case MetricsExportParamsTimezoneAmericaTegucigalpa:
-		return true
-	case MetricsExportParamsTimezoneAmericaThule:
-		return true
-	case MetricsExportParamsTimezoneAmericaThunderBay:
-		return true
-	case MetricsExportParamsTimezoneAmericaTijuana:
-		return true
-	case MetricsExportParamsTimezoneAmericaToronto:
-		return true
-	case MetricsExportParamsTimezoneAmericaTortola:
-		return true
-	case MetricsExportParamsTimezoneAmericaVancouver:
-		return true
-	case MetricsExportParamsTimezoneAmericaVirgin:
-		return true
-	case MetricsExportParamsTimezoneAmericaWhitehorse:
-		return true
-	case MetricsExportParamsTimezoneAmericaWinnipeg:
-		return true
-	case MetricsExportParamsTimezoneAmericaYakutat:
-		return true
-	case MetricsExportParamsTimezoneAmericaYellowknife:
-		return true
-	case MetricsExportParamsTimezoneAntarcticaCasey:
-		return true
-	case MetricsExportParamsTimezoneAntarcticaDavis:
-		return true
-	case MetricsExportParamsTimezoneAntarcticaDumontDUrville:
-		return true
-	case MetricsExportParamsTimezoneAntarcticaMacquarie:
-		return true
-	case MetricsExportParamsTimezoneAntarcticaMawson:
-		return true
-	case MetricsExportParamsTimezoneAntarcticaMcMurdo:
-		return true
-	case MetricsExportParamsTimezoneAntarcticaPalmer:
-		return true
-	case MetricsExportParamsTimezoneAntarcticaRothera:
-		return true
-	case MetricsExportParamsTimezoneAntarcticaSouthPole:
-		return true
-	case MetricsExportParamsTimezoneAntarcticaSyowa:
-		return true
-	case MetricsExportParamsTimezoneAntarcticaTroll:
-		return true
-	case MetricsExportParamsTimezoneAntarcticaVostok:
-		return true
-	case MetricsExportParamsTimezoneArcticLongyearbyen:
-		return true
-	case MetricsExportParamsTimezoneAsiaAden:
-		return true
-	case MetricsExportParamsTimezoneAsiaAlmaty:
-		return true
-	case MetricsExportParamsTimezoneAsiaAmman:
-		return true
-	case MetricsExportParamsTimezoneAsiaAnadyr:
-		return true
-	case MetricsExportParamsTimezoneAsiaAqtau:
-		return true
-	case MetricsExportParamsTimezoneAsiaAqtobe:
-		return true
-	case MetricsExportParamsTimezoneAsiaAshgabat:
-		return true
-	case MetricsExportParamsTimezoneAsiaAshkhabad:
-		return true
-	case MetricsExportParamsTimezoneAsiaAtyrau:
-		return true
-	case MetricsExportParamsTimezoneAsiaBaghdad:
-		return true
-	case MetricsExportParamsTimezoneAsiaBahrain:
-		return true
-	case MetricsExportParamsTimezoneAsiaBaku:
-		return true
-	case MetricsExportParamsTimezoneAsiaBangkok:
-		return true
-	case MetricsExportParamsTimezoneAsiaBarnaul:
-		return true
-	case MetricsExportParamsTimezoneAsiaBeirut:
-		return true
-	case MetricsExportParamsTimezoneAsiaBishkek:
-		return true
-	case MetricsExportParamsTimezoneAsiaBrunei:
-		return true
-	case MetricsExportParamsTimezoneAsiaCalcutta:
-		return true
-	case MetricsExportParamsTimezoneAsiaChita:
-		return true
-	case MetricsExportParamsTimezoneAsiaChoibalsan:
-		return true
-	case MetricsExportParamsTimezoneAsiaChongqing:
-		return true
-	case MetricsExportParamsTimezoneAsiaChungking:
-		return true
-	case MetricsExportParamsTimezoneAsiaColombo:
-		return true
-	case MetricsExportParamsTimezoneAsiaDacca:
-		return true
-	case MetricsExportParamsTimezoneAsiaDamascus:
-		return true
-	case MetricsExportParamsTimezoneAsiaDhaka:
-		return true
-	case MetricsExportParamsTimezoneAsiaDili:
-		return true
-	case MetricsExportParamsTimezoneAsiaDubai:
-		return true
-	case MetricsExportParamsTimezoneAsiaDushanbe:
-		return true
-	case MetricsExportParamsTimezoneAsiaFamagusta:
-		return true
-	case MetricsExportParamsTimezoneAsiaGaza:
-		return true
-	case MetricsExportParamsTimezoneAsiaHarbin:
-		return true
-	case MetricsExportParamsTimezoneAsiaHebron:
-		return true
-	case MetricsExportParamsTimezoneAsiaHoChiMinh:
-		return true
-	case MetricsExportParamsTimezoneAsiaHongKong:
-		return true
-	case MetricsExportParamsTimezoneAsiaHovd:
-		return true
-	case MetricsExportParamsTimezoneAsiaIrkutsk:
-		return true
-	case MetricsExportParamsTimezoneAsiaIstanbul:
-		return true
-	case MetricsExportParamsTimezoneAsiaJakarta:
-		return true
-	case MetricsExportParamsTimezoneAsiaJayapura:
-		return true
-	case MetricsExportParamsTimezoneAsiaJerusalem:
-		return true
-	case MetricsExportParamsTimezoneAsiaKabul:
-		return true
-	case MetricsExportParamsTimezoneAsiaKamchatka:
-		return true
-	case MetricsExportParamsTimezoneAsiaKarachi:
-		return true
-	case MetricsExportParamsTimezoneAsiaKashgar:
-		return true
-	case MetricsExportParamsTimezoneAsiaKathmandu:
-		return true
-	case MetricsExportParamsTimezoneAsiaKatmandu:
-		return true
-	case MetricsExportParamsTimezoneAsiaKhandyga:
-		return true
-	case MetricsExportParamsTimezoneAsiaKolkata:
-		return true
-	case MetricsExportParamsTimezoneAsiaKrasnoyarsk:
-		return true
-	case MetricsExportParamsTimezoneAsiaKualaLumpur:
-		return true
-	case MetricsExportParamsTimezoneAsiaKuching:
-		return true
-	case MetricsExportParamsTimezoneAsiaKuwait:
-		return true
-	case MetricsExportParamsTimezoneAsiaMacao:
-		return true
-	case MetricsExportParamsTimezoneAsiaMacau:
-		return true
-	case MetricsExportParamsTimezoneAsiaMagadan:
-		return true
-	case MetricsExportParamsTimezoneAsiaMakassar:
-		return true
-	case MetricsExportParamsTimezoneAsiaManila:
-		return true
-	case MetricsExportParamsTimezoneAsiaMuscat:
-		return true
-	case MetricsExportParamsTimezoneAsiaNicosia:
-		return true
-	case MetricsExportParamsTimezoneAsiaNovokuznetsk:
-		return true
-	case MetricsExportParamsTimezoneAsiaNovosibirsk:
-		return true
-	case MetricsExportParamsTimezoneAsiaOmsk:
-		return true
-	case MetricsExportParamsTimezoneAsiaOral:
-		return true
-	case MetricsExportParamsTimezoneAsiaPhnomPenh:
-		return true
-	case MetricsExportParamsTimezoneAsiaPontianak:
-		return true
-	case MetricsExportParamsTimezoneAsiaPyongyang:
-		return true
-	case MetricsExportParamsTimezoneAsiaQatar:
-		return true
-	case MetricsExportParamsTimezoneAsiaQostanay:
-		return true
-	case MetricsExportParamsTimezoneAsiaQyzylorda:
-		return true
-	case MetricsExportParamsTimezoneAsiaRangoon:
-		return true
-	case MetricsExportParamsTimezoneAsiaRiyadh:
-		return true
-	case MetricsExportParamsTimezoneAsiaSaigon:
-		return true
-	case MetricsExportParamsTimezoneAsiaSakhalin:
-		return true
-	case MetricsExportParamsTimezoneAsiaSamarkand:
-		return true
-	case MetricsExportParamsTimezoneAsiaSeoul:
-		return true
-	case MetricsExportParamsTimezoneAsiaShanghai:
-		return true
-	case MetricsExportParamsTimezoneAsiaSingapore:
-		return true
-	case MetricsExportParamsTimezoneAsiaSrednekolymsk:
-		return true
-	case MetricsExportParamsTimezoneAsiaTaipei:
-		return true
-	case MetricsExportParamsTimezoneAsiaTashkent:
-		return true
-	case MetricsExportParamsTimezoneAsiaTbilisi:
-		return true
-	case MetricsExportParamsTimezoneAsiaTehran:
-		return true
-	case MetricsExportParamsTimezoneAsiaTelAviv:
-		return true
-	case MetricsExportParamsTimezoneAsiaThimbu:
-		return true
-	case MetricsExportParamsTimezoneAsiaThimphu:
-		return true
-	case MetricsExportParamsTimezoneAsiaTokyo:
-		return true
-	case MetricsExportParamsTimezoneAsiaTomsk:
-		return true
-	case MetricsExportParamsTimezoneAsiaUjungPandang:
-		return true
-	case MetricsExportParamsTimezoneAsiaUlaanbaatar:
-		return true
-	case MetricsExportParamsTimezoneAsiaUlanBator:
-		return true
-	case MetricsExportParamsTimezoneAsiaUrumqi:
-		return true
-	case MetricsExportParamsTimezoneAsiaUstNera:
-		return true
-	case MetricsExportParamsTimezoneAsiaVientiane:
-		return true
-	case MetricsExportParamsTimezoneAsiaVladivostok:
-		return true
-	case MetricsExportParamsTimezoneAsiaYakutsk:
-		return true
-	case MetricsExportParamsTimezoneAsiaYangon:
-		return true
-	case MetricsExportParamsTimezoneAsiaYekaterinburg:
-		return true
-	case MetricsExportParamsTimezoneAsiaYerevan:
-		return true
-	case MetricsExportParamsTimezoneAtlanticAzores:
-		return true
-	case MetricsExportParamsTimezoneAtlanticBermuda:
-		return true
-	case MetricsExportParamsTimezoneAtlanticCanary:
-		return true
-	case MetricsExportParamsTimezoneAtlanticCapeVerde:
-		return true
-	case MetricsExportParamsTimezoneAtlanticFaeroe:
-		return true
-	case MetricsExportParamsTimezoneAtlanticFaroe:
-		return true
-	case MetricsExportParamsTimezoneAtlanticJanMayen:
-		return true
-	case MetricsExportParamsTimezoneAtlanticMadeira:
-		return true
-	case MetricsExportParamsTimezoneAtlanticReykjavik:
-		return true
-	case MetricsExportParamsTimezoneAtlanticSouthGeorgia:
-		return true
-	case MetricsExportParamsTimezoneAtlanticStHelena:
-		return true
-	case MetricsExportParamsTimezoneAtlanticStanley:
-		return true
-	case MetricsExportParamsTimezoneAustraliaACT:
-		return true
-	case MetricsExportParamsTimezoneAustraliaAdelaide:
-		return true
-	case MetricsExportParamsTimezoneAustraliaBrisbane:
-		return true
-	case MetricsExportParamsTimezoneAustraliaBrokenHill:
-		return true
-	case MetricsExportParamsTimezoneAustraliaCanberra:
-		return true
-	case MetricsExportParamsTimezoneAustraliaCurrie:
-		return true
-	case MetricsExportParamsTimezoneAustraliaDarwin:
-		return true
-	case MetricsExportParamsTimezoneAustraliaEucla:
-		return true
-	case MetricsExportParamsTimezoneAustraliaHobart:
-		return true
-	case MetricsExportParamsTimezoneAustraliaLHI:
-		return true
-	case MetricsExportParamsTimezoneAustraliaLindeman:
-		return true
-	case MetricsExportParamsTimezoneAustraliaLordHowe:
-		return true
-	case MetricsExportParamsTimezoneAustraliaMelbourne:
-		return true
-	case MetricsExportParamsTimezoneAustraliaNSW:
-		return true
-	case MetricsExportParamsTimezoneAustraliaNorth:
-		return true
-	case MetricsExportParamsTimezoneAustraliaPerth:
-		return true
-	case MetricsExportParamsTimezoneAustraliaQueensland:
-		return true
-	case MetricsExportParamsTimezoneAustraliaSouth:
-		return true
-	case MetricsExportParamsTimezoneAustraliaSydney:
-		return true
-	case MetricsExportParamsTimezoneAustraliaTasmania:
-		return true
-	case MetricsExportParamsTimezoneAustraliaVictoria:
-		return true
-	case MetricsExportParamsTimezoneAustraliaWest:
-		return true
-	case MetricsExportParamsTimezoneAustraliaYancowinna:
-		return true
-	case MetricsExportParamsTimezoneBrazilAcre:
-		return true
-	case MetricsExportParamsTimezoneBrazilDeNoronha:
-		return true
-	case MetricsExportParamsTimezoneBrazilEast:
-		return true
-	case MetricsExportParamsTimezoneBrazilWest:
-		return true
-	case MetricsExportParamsTimezoneCET:
-		return true
-	case MetricsExportParamsTimezoneCST6CDT:
-		return true
-	case MetricsExportParamsTimezoneCanadaAtlantic:
-		return true
-	case MetricsExportParamsTimezoneCanadaCentral:
-		return true
-	case MetricsExportParamsTimezoneCanadaEastern:
-		return true
-	case MetricsExportParamsTimezoneCanadaMountain:
-		return true
-	case MetricsExportParamsTimezoneCanadaNewfoundland:
-		return true
-	case MetricsExportParamsTimezoneCanadaPacific:
-		return true
-	case MetricsExportParamsTimezoneCanadaSaskatchewan:
-		return true
-	case MetricsExportParamsTimezoneCanadaYukon:
-		return true
-	case MetricsExportParamsTimezoneChileContinental:
-		return true
-	case MetricsExportParamsTimezoneChileEasterIsland:
-		return true
-	case MetricsExportParamsTimezoneCuba:
-		return true
-	case MetricsExportParamsTimezoneEET:
-		return true
-	case MetricsExportParamsTimezoneEST:
-		return true
-	case MetricsExportParamsTimezoneEST5EDT:
-		return true
-	case MetricsExportParamsTimezoneEgypt:
-		return true
-	case MetricsExportParamsTimezoneEire:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT0:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT01:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT02:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT1:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT10:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT101:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT11:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT111:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT12:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT121:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT13:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT14:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT2:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT21:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT3:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT31:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT4:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT41:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT5:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT51:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT6:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT61:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT7:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT71:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT8:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT81:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT9:
-		return true
-	case MetricsExportParamsTimezoneEtcGMT91:
-		return true
-	case MetricsExportParamsTimezoneEtcGreenwich:
-		return true
-	case MetricsExportParamsTimezoneEtcUCT:
-		return true
-	case MetricsExportParamsTimezoneEtcUTC:
-		return true
-	case MetricsExportParamsTimezoneEtcUniversal:
-		return true
-	case MetricsExportParamsTimezoneEtcZulu:
-		return true
-	case MetricsExportParamsTimezoneEuropeAmsterdam:
-		return true
-	case MetricsExportParamsTimezoneEuropeAndorra:
-		return true
-	case MetricsExportParamsTimezoneEuropeAstrakhan:
-		return true
-	case MetricsExportParamsTimezoneEuropeAthens:
-		return true
-	case MetricsExportParamsTimezoneEuropeBelfast:
-		return true
-	case MetricsExportParamsTimezoneEuropeBelgrade:
-		return true
-	case MetricsExportParamsTimezoneEuropeBerlin:
-		return true
-	case MetricsExportParamsTimezoneEuropeBratislava:
-		return true
-	case MetricsExportParamsTimezoneEuropeBrussels:
-		return true
-	case MetricsExportParamsTimezoneEuropeBucharest:
-		return true
-	case MetricsExportParamsTimezoneEuropeBudapest:
-		return true
-	case MetricsExportParamsTimezoneEuropeBusingen:
-		return true
-	case MetricsExportParamsTimezoneEuropeChisinau:
-		return true
-	case MetricsExportParamsTimezoneEuropeCopenhagen:
-		return true
-	case MetricsExportParamsTimezoneEuropeDublin:
-		return true
-	case MetricsExportParamsTimezoneEuropeGibraltar:
-		return true
-	case MetricsExportParamsTimezoneEuropeGuernsey:
-		return true
-	case MetricsExportParamsTimezoneEuropeHelsinki:
-		return true
-	case MetricsExportParamsTimezoneEuropeIsleOfMan:
-		return true
-	case MetricsExportParamsTimezoneEuropeIstanbul:
-		return true
-	case MetricsExportParamsTimezoneEuropeJersey:
-		return true
-	case MetricsExportParamsTimezoneEuropeKaliningrad:
-		return true
-	case MetricsExportParamsTimezoneEuropeKiev:
-		return true
-	case MetricsExportParamsTimezoneEuropeKirov:
-		return true
-	case MetricsExportParamsTimezoneEuropeKyiv:
-		return true
-	case MetricsExportParamsTimezoneEuropeLisbon:
-		return true
-	case MetricsExportParamsTimezoneEuropeLjubljana:
-		return true
-	case MetricsExportParamsTimezoneEuropeLondon:
-		return true
-	case MetricsExportParamsTimezoneEuropeLuxembourg:
-		return true
-	case MetricsExportParamsTimezoneEuropeMadrid:
-		return true
-	case MetricsExportParamsTimezoneEuropeMalta:
-		return true
-	case MetricsExportParamsTimezoneEuropeMariehamn:
-		return true
-	case MetricsExportParamsTimezoneEuropeMinsk:
-		return true
-	case MetricsExportParamsTimezoneEuropeMonaco:
-		return true
-	case MetricsExportParamsTimezoneEuropeMoscow:
-		return true
-	case MetricsExportParamsTimezoneEuropeNicosia:
-		return true
-	case MetricsExportParamsTimezoneEuropeOslo:
-		return true
-	case MetricsExportParamsTimezoneEuropeParis:
-		return true
-	case MetricsExportParamsTimezoneEuropePodgorica:
-		return true
-	case MetricsExportParamsTimezoneEuropePrague:
-		return true
-	case MetricsExportParamsTimezoneEuropeRiga:
-		return true
-	case MetricsExportParamsTimezoneEuropeRome:
-		return true
-	case MetricsExportParamsTimezoneEuropeSamara:
-		return true
-	case MetricsExportParamsTimezoneEuropeSanMarino:
-		return true
-	case MetricsExportParamsTimezoneEuropeSarajevo:
-		return true
-	case MetricsExportParamsTimezoneEuropeSaratov:
-		return true
-	case MetricsExportParamsTimezoneEuropeSimferopol:
-		return true
-	case MetricsExportParamsTimezoneEuropeSkopje:
-		return true
-	case MetricsExportParamsTimezoneEuropeSofia:
-		return true
-	case MetricsExportParamsTimezoneEuropeStockholm:
-		return true
-	case MetricsExportParamsTimezoneEuropeTallinn:
-		return true
-	case MetricsExportParamsTimezoneEuropeTirane:
-		return true
-	case MetricsExportParamsTimezoneEuropeTiraspol:
-		return true
-	case MetricsExportParamsTimezoneEuropeUlyanovsk:
-		return true
-	case MetricsExportParamsTimezoneEuropeUzhgorod:
-		return true
-	case MetricsExportParamsTimezoneEuropeVaduz:
-		return true
-	case MetricsExportParamsTimezoneEuropeVatican:
-		return true
-	case MetricsExportParamsTimezoneEuropeVienna:
-		return true
-	case MetricsExportParamsTimezoneEuropeVilnius:
-		return true
-	case MetricsExportParamsTimezoneEuropeVolgograd:
-		return true
-	case MetricsExportParamsTimezoneEuropeWarsaw:
-		return true
-	case MetricsExportParamsTimezoneEuropeZagreb:
-		return true
-	case MetricsExportParamsTimezoneEuropeZaporozhye:
-		return true
-	case MetricsExportParamsTimezoneEuropeZurich:
-		return true
-	case MetricsExportParamsTimezoneFactory:
-		return true
-	case MetricsExportParamsTimezoneGB:
-		return true
-	case MetricsExportParamsTimezoneGBEire:
-		return true
-	case MetricsExportParamsTimezoneGMT:
-		return true
-	case MetricsExportParamsTimezoneGMT0:
-		return true
-	case MetricsExportParamsTimezoneGMT01:
-		return true
-	case MetricsExportParamsTimezoneGMT02:
-		return true
-	case MetricsExportParamsTimezoneGreenwich:
-		return true
-	case MetricsExportParamsTimezoneHST:
-		return true
-	case MetricsExportParamsTimezoneHongkong:
-		return true
-	case MetricsExportParamsTimezoneIceland:
-		return true
-	case MetricsExportParamsTimezoneIndianAntananarivo:
-		return true
-	case MetricsExportParamsTimezoneIndianChagos:
-		return true
-	case MetricsExportParamsTimezoneIndianChristmas:
-		return true
-	case MetricsExportParamsTimezoneIndianCocos:
-		return true
-	case MetricsExportParamsTimezoneIndianComoro:
-		return true
-	case MetricsExportParamsTimezoneIndianKerguelen:
-		return true
-	case MetricsExportParamsTimezoneIndianMahe:
-		return true
-	case MetricsExportParamsTimezoneIndianMaldives:
-		return true
-	case MetricsExportParamsTimezoneIndianMauritius:
-		return true
-	case MetricsExportParamsTimezoneIndianMayotte:
-		return true
-	case MetricsExportParamsTimezoneIndianReunion:
-		return true
-	case MetricsExportParamsTimezoneIran:
-		return true
-	case MetricsExportParamsTimezoneIsrael:
-		return true
-	case MetricsExportParamsTimezoneJamaica:
-		return true
-	case MetricsExportParamsTimezoneJapan:
-		return true
-	case MetricsExportParamsTimezoneKwajalein:
-		return true
-	case MetricsExportParamsTimezoneLibya:
-		return true
-	case MetricsExportParamsTimezoneMET:
-		return true
-	case MetricsExportParamsTimezoneMST:
-		return true
-	case MetricsExportParamsTimezoneMST7MDT:
-		return true
-	case MetricsExportParamsTimezoneMexicoBajaNorte:
-		return true
-	case MetricsExportParamsTimezoneMexicoBajaSur:
-		return true
-	case MetricsExportParamsTimezoneMexicoGeneral:
-		return true
-	case MetricsExportParamsTimezoneNZ:
-		return true
-	case MetricsExportParamsTimezoneNZCHAT:
-		return true
-	case MetricsExportParamsTimezoneNavajo:
-		return true
-	case MetricsExportParamsTimezonePRC:
-		return true
-	case MetricsExportParamsTimezonePST8PDT:
-		return true
-	case MetricsExportParamsTimezonePacificApia:
-		return true
-	case MetricsExportParamsTimezonePacificAuckland:
-		return true
-	case MetricsExportParamsTimezonePacificBougainville:
-		return true
-	case MetricsExportParamsTimezonePacificChatham:
-		return true
-	case MetricsExportParamsTimezonePacificChuuk:
-		return true
-	case MetricsExportParamsTimezonePacificEaster:
-		return true
-	case MetricsExportParamsTimezonePacificEfate:
-		return true
-	case MetricsExportParamsTimezonePacificEnderbury:
-		return true
-	case MetricsExportParamsTimezonePacificFakaofo:
-		return true
-	case MetricsExportParamsTimezonePacificFiji:
-		return true
-	case MetricsExportParamsTimezonePacificFunafuti:
-		return true
-	case MetricsExportParamsTimezonePacificGalapagos:
-		return true
-	case MetricsExportParamsTimezonePacificGambier:
-		return true
-	case MetricsExportParamsTimezonePacificGuadalcanal:
-		return true
-	case MetricsExportParamsTimezonePacificGuam:
-		return true
-	case MetricsExportParamsTimezonePacificHonolulu:
-		return true
-	case MetricsExportParamsTimezonePacificJohnston:
-		return true
-	case MetricsExportParamsTimezonePacificKanton:
-		return true
-	case MetricsExportParamsTimezonePacificKiritimati:
-		return true
-	case MetricsExportParamsTimezonePacificKosrae:
-		return true
-	case MetricsExportParamsTimezonePacificKwajalein:
-		return true
-	case MetricsExportParamsTimezonePacificMajuro:
-		return true
-	case MetricsExportParamsTimezonePacificMarquesas:
-		return true
-	case MetricsExportParamsTimezonePacificMidway:
-		return true
-	case MetricsExportParamsTimezonePacificNauru:
-		return true
-	case MetricsExportParamsTimezonePacificNiue:
-		return true
-	case MetricsExportParamsTimezonePacificNorfolk:
-		return true
-	case MetricsExportParamsTimezonePacificNoumea:
-		return true
-	case MetricsExportParamsTimezonePacificPagoPago:
-		return true
-	case MetricsExportParamsTimezonePacificPalau:
-		return true
-	case MetricsExportParamsTimezonePacificPitcairn:
-		return true
-	case MetricsExportParamsTimezonePacificPohnpei:
-		return true
-	case MetricsExportParamsTimezonePacificPonape:
-		return true
-	case MetricsExportParamsTimezonePacificPortMoresby:
-		return true
-	case MetricsExportParamsTimezonePacificRarotonga:
-		return true
-	case MetricsExportParamsTimezonePacificSaipan:
-		return true
-	case MetricsExportParamsTimezonePacificSamoa:
-		return true
-	case MetricsExportParamsTimezonePacificTahiti:
-		return true
-	case MetricsExportParamsTimezonePacificTarawa:
-		return true
-	case MetricsExportParamsTimezonePacificTongatapu:
-		return true
-	case MetricsExportParamsTimezonePacificTruk:
-		return true
-	case MetricsExportParamsTimezonePacificWake:
-		return true
-	case MetricsExportParamsTimezonePacificWallis:
-		return true
-	case MetricsExportParamsTimezonePacificYap:
-		return true
-	case MetricsExportParamsTimezonePoland:
-		return true
-	case MetricsExportParamsTimezonePortugal:
-		return true
-	case MetricsExportParamsTimezoneROC:
-		return true
-	case MetricsExportParamsTimezoneROK:
-		return true
-	case MetricsExportParamsTimezoneSingapore:
-		return true
-	case MetricsExportParamsTimezoneTurkey:
-		return true
-	case MetricsExportParamsTimezoneUCT:
-		return true
-	case MetricsExportParamsTimezoneUSAlaska:
-		return true
-	case MetricsExportParamsTimezoneUSAleutian:
-		return true
-	case MetricsExportParamsTimezoneUSArizona:
-		return true
-	case MetricsExportParamsTimezoneUSCentral:
-		return true
-	case MetricsExportParamsTimezoneUSEastIndiana:
-		return true
-	case MetricsExportParamsTimezoneUSEastern:
-		return true
-	case MetricsExportParamsTimezoneUSHawaii:
-		return true
-	case MetricsExportParamsTimezoneUSIndianaStarke:
-		return true
-	case MetricsExportParamsTimezoneUSMichigan:
-		return true
-	case MetricsExportParamsTimezoneUSMountain:
-		return true
-	case MetricsExportParamsTimezoneUSPacific:
-		return true
-	case MetricsExportParamsTimezoneUSSamoa:
-		return true
-	case MetricsExportParamsTimezoneUTC:
-		return true
-	case MetricsExportParamsTimezoneUniversal:
-		return true
-	case MetricsExportParamsTimezoneWET:
-		return true
-	case MetricsExportParamsTimezoneWSU:
-		return true
-	case MetricsExportParamsTimezoneZulu:
-		return true
-	default:
-		return false
-	}
-}
-
 // Defines values for WebhooksListWebhookDeliveriesParamsHttpCodeClass.
 const (
 	WebhooksListWebhookDeliveriesParamsHttpCodeClassN2xx WebhooksListWebhookDeliveriesParamsHttpCodeClass = "2xx"
@@ -20016,4 +18066,1947 @@ type BenefitDownloadablesUpdate struct {
 	Metadata   *map[string]BenefitDownloadablesUpdate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
 	Properties *BenefitDownloadablesCreateProperties                                `json:"properties,omitempty"`
 	Type       BenefitDownloadablesUpdateType                                       `json:"type"`
+}
+
+// BenefitDownloadablesUpdateMetadata0 defines model for BenefitDownloadablesUpdate.Metadata.0.
+type BenefitDownloadablesUpdateMetadata0 = string
+
+// BenefitDownloadablesUpdateMetadata1 defines model for BenefitDownloadablesUpdate.Metadata.1.
+type BenefitDownloadablesUpdateMetadata1 = int
+
+// BenefitDownloadablesUpdateMetadata2 defines model for BenefitDownloadablesUpdate.Metadata.2.
+type BenefitDownloadablesUpdateMetadata2 = float64
+
+// BenefitDownloadablesUpdateMetadata3 defines model for BenefitDownloadablesUpdate.Metadata.3.
+type BenefitDownloadablesUpdateMetadata3 = bool
+
+// BenefitDownloadablesUpdate_Metadata_AdditionalProperties defines model for BenefitDownloadablesUpdate.metadata.AdditionalProperties.
+type BenefitDownloadablesUpdate_Metadata_AdditionalProperties struct {
+	union json.RawMessage
+}
+
+// BenefitDownloadablesUpdateType defines model for BenefitDownloadablesUpdate.Type.
+type BenefitDownloadablesUpdateType string
+
+// BenefitFeatureFlag A benefit of type `feature_flag`.
+//
+// Use it to grant feature flags with key-value metadata
+// that can be queried via the API and webhooks.
+type BenefitFeatureFlag struct {
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+
+	// Deletable Whether the benefit is deletable.
+	Deletable bool `json:"deletable"`
+
+	// Description The description of the benefit.
+	Description string `json:"description"`
+
+	// Id The ID of the benefit.
+	Id string `json:"id"`
+
+	// IsDeleted Whether the benefit is deleted.
+	IsDeleted bool               `json:"is_deleted"`
+	Metadata  MetadataOutputType `json:"metadata"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrganizationId The ID of the organization owning the benefit.
+	OrganizationId string `json:"organization_id"`
+
+	// Properties Properties for a benefit of type `feature_flag`.
+	Properties BenefitFeatureFlagProperties `json:"properties"`
+
+	// Selectable Whether the benefit is selectable when creating a product.
+	Selectable bool                   `json:"selectable"`
+	Type       BenefitFeatureFlagType `json:"type"`
+
+	// Visibility The visibility of the benefit in the customer portal.
+	Visibility             BenefitVisibility `json:"visibility"`
+	VisibilityConfigurable *bool             `json:"visibility_configurable,omitempty"`
+}
+
+// BenefitFeatureFlagType defines model for BenefitFeatureFlag.Type.
+type BenefitFeatureFlagType string
+
+// BenefitFeatureFlagCreate Schema to create a benefit of type `feature_flag`.
+type BenefitFeatureFlagCreate struct {
+	// Description The description of the benefit. Will be displayed on products having this benefit.
+	Description string `json:"description"`
+
+	// Metadata Key-value object allowing you to store additional information.
+	//
+	// The key must be a string with a maximum length of **40 characters**.
+	// The value must be either:
+	//
+	// * A string with a maximum length of **500 characters**
+	// * An integer
+	// * A floating-point number
+	// * A boolean
+	//
+	// You can store up to **50 key-value pairs**.
+	Metadata *map[string]BenefitFeatureFlagCreate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
+
+	// OrganizationId The ID of the organization owning the benefit. **Required unless you use an organization token.**
+	OrganizationId *string `json:"organization_id,omitempty"`
+
+	// Properties Properties for creating a benefit of type `feature_flag`.
+	Properties BenefitFeatureFlagCreateProperties `json:"properties"`
+	Type       BenefitFeatureFlagCreateType       `json:"type"`
+
+	// Visibility The visibility of the benefit in the customer portal.
+	Visibility *BenefitVisibility `json:"visibility,omitempty"`
+}
+
+// BenefitFeatureFlagCreateMetadata0 defines model for BenefitFeatureFlagCreate.Metadata.0.
+type BenefitFeatureFlagCreateMetadata0 = string
+
+// BenefitFeatureFlagCreateMetadata1 defines model for BenefitFeatureFlagCreate.Metadata.1.
+type BenefitFeatureFlagCreateMetadata1 = int
+
+// BenefitFeatureFlagCreateMetadata2 defines model for BenefitFeatureFlagCreate.Metadata.2.
+type BenefitFeatureFlagCreateMetadata2 = float64
+
+// BenefitFeatureFlagCreateMetadata3 defines model for BenefitFeatureFlagCreate.Metadata.3.
+type BenefitFeatureFlagCreateMetadata3 = bool
+
+// BenefitFeatureFlagCreate_Metadata_AdditionalProperties defines model for BenefitFeatureFlagCreate.metadata.AdditionalProperties.
+type BenefitFeatureFlagCreate_Metadata_AdditionalProperties struct {
+	union json.RawMessage
+}
+
+// BenefitFeatureFlagCreateType defines model for BenefitFeatureFlagCreate.Type.
+type BenefitFeatureFlagCreateType string
+
+// BenefitFeatureFlagCreateProperties Properties for creating a benefit of type `feature_flag`.
+type BenefitFeatureFlagCreateProperties = map[string]interface{}
+
+// BenefitFeatureFlagProperties Properties for a benefit of type `feature_flag`.
+type BenefitFeatureFlagProperties = map[string]interface{}
+
+// BenefitFeatureFlagPublic defines model for BenefitFeatureFlagPublic.
+type BenefitFeatureFlagPublic struct {
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+
+	// Deletable Whether the benefit is deletable.
+	Deletable bool `json:"deletable"`
+
+	// Description The description of the benefit.
+	Description string `json:"description"`
+
+	// Id The ID of the benefit.
+	Id string `json:"id"`
+
+	// IsDeleted Whether the benefit is deleted.
+	IsDeleted bool `json:"is_deleted"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrganizationId The ID of the organization owning the benefit.
+	OrganizationId string `json:"organization_id"`
+
+	// Selectable Whether the benefit is selectable when creating a product.
+	Selectable bool                         `json:"selectable"`
+	Type       BenefitFeatureFlagPublicType `json:"type"`
+}
+
+// BenefitFeatureFlagPublicType defines model for BenefitFeatureFlagPublic.Type.
+type BenefitFeatureFlagPublicType string
+
+// BenefitFeatureFlagSubscriber defines model for BenefitFeatureFlagSubscriber.
+type BenefitFeatureFlagSubscriber struct {
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+
+	// Deletable Whether the benefit is deletable.
+	Deletable bool `json:"deletable"`
+
+	// Description The description of the benefit.
+	Description string `json:"description"`
+
+	// Id The ID of the benefit.
+	Id string `json:"id"`
+
+	// IsDeleted Whether the benefit is deleted.
+	IsDeleted bool `json:"is_deleted"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt   *time.Time                    `json:"modified_at"`
+	Organization BenefitSubscriberOrganization `json:"organization"`
+
+	// OrganizationId The ID of the organization owning the benefit.
+	OrganizationId string `json:"organization_id"`
+
+	// Properties Properties available to subscribers for a benefit of type `feature_flag`.
+	Properties BenefitFeatureFlagSubscriberProperties `json:"properties"`
+
+	// Selectable Whether the benefit is selectable when creating a product.
+	Selectable bool                             `json:"selectable"`
+	Type       BenefitFeatureFlagSubscriberType `json:"type"`
+}
+
+// BenefitFeatureFlagSubscriberType defines model for BenefitFeatureFlagSubscriber.Type.
+type BenefitFeatureFlagSubscriberType string
+
+// BenefitFeatureFlagSubscriberProperties Properties available to subscribers for a benefit of type `feature_flag`.
+type BenefitFeatureFlagSubscriberProperties = map[string]interface{}
+
+// BenefitFeatureFlagUpdate defines model for BenefitFeatureFlagUpdate.
+type BenefitFeatureFlagUpdate struct {
+	// Description The description of the benefit. Will be displayed on products having this benefit.
+	Description *string `json:"description,omitempty"`
+
+	// Metadata Key-value object allowing you to store additional information.
+	//
+	// The key must be a string with a maximum length of **40 characters**.
+	// The value must be either:
+	//
+	// * A string with a maximum length of **500 characters**
+	// * An integer
+	// * A floating-point number
+	// * A boolean
+	//
+	// You can store up to **50 key-value pairs**.
+	Metadata   *map[string]BenefitFeatureFlagUpdate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
+	Properties *BenefitFeatureFlagProperties                                      `json:"properties,omitempty"`
+	Type       BenefitFeatureFlagUpdateType                                       `json:"type"`
+
+	// Visibility The visibility of the benefit in the customer portal.
+	Visibility *BenefitVisibility `json:"visibility,omitempty"`
+}
+
+// BenefitFeatureFlagUpdateMetadata0 defines model for BenefitFeatureFlagUpdate.Metadata.0.
+type BenefitFeatureFlagUpdateMetadata0 = string
+
+// BenefitFeatureFlagUpdateMetadata1 defines model for BenefitFeatureFlagUpdate.Metadata.1.
+type BenefitFeatureFlagUpdateMetadata1 = int
+
+// BenefitFeatureFlagUpdateMetadata2 defines model for BenefitFeatureFlagUpdate.Metadata.2.
+type BenefitFeatureFlagUpdateMetadata2 = float64
+
+// BenefitFeatureFlagUpdateMetadata3 defines model for BenefitFeatureFlagUpdate.Metadata.3.
+type BenefitFeatureFlagUpdateMetadata3 = bool
+
+// BenefitFeatureFlagUpdate_Metadata_AdditionalProperties defines model for BenefitFeatureFlagUpdate.metadata.AdditionalProperties.
+type BenefitFeatureFlagUpdate_Metadata_AdditionalProperties struct {
+	union json.RawMessage
+}
+
+// BenefitFeatureFlagUpdateType defines model for BenefitFeatureFlagUpdate.Type.
+type BenefitFeatureFlagUpdateType string
+
+// BenefitGitHubRepository A benefit of type `github_repository`.
+//
+// Use it to automatically invite your backers to a private GitHub repository.
+type BenefitGitHubRepository struct {
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+
+	// Deletable Whether the benefit is deletable.
+	Deletable bool `json:"deletable"`
+
+	// Description The description of the benefit.
+	Description string `json:"description"`
+
+	// Id The ID of the benefit.
+	Id string `json:"id"`
+
+	// IsDeleted Whether the benefit is deleted.
+	IsDeleted bool               `json:"is_deleted"`
+	Metadata  MetadataOutputType `json:"metadata"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrganizationId The ID of the organization owning the benefit.
+	OrganizationId string `json:"organization_id"`
+
+	// Properties Properties for a benefit of type `github_repository`.
+	Properties BenefitGitHubRepositoryProperties `json:"properties"`
+
+	// Selectable Whether the benefit is selectable when creating a product.
+	Selectable bool                        `json:"selectable"`
+	Type       BenefitGitHubRepositoryType `json:"type"`
+
+	// Visibility The visibility of the benefit in the customer portal.
+	Visibility             BenefitVisibility `json:"visibility"`
+	VisibilityConfigurable *bool             `json:"visibility_configurable,omitempty"`
+}
+
+// BenefitGitHubRepositoryType defines model for BenefitGitHubRepository.Type.
+type BenefitGitHubRepositoryType string
+
+// BenefitGitHubRepositoryCreate defines model for BenefitGitHubRepositoryCreate.
+type BenefitGitHubRepositoryCreate struct {
+	// Description The description of the benefit. Will be displayed on products having this benefit.
+	Description string `json:"description"`
+
+	// Metadata Key-value object allowing you to store additional information.
+	//
+	// The key must be a string with a maximum length of **40 characters**.
+	// The value must be either:
+	//
+	// * A string with a maximum length of **500 characters**
+	// * An integer
+	// * A floating-point number
+	// * A boolean
+	//
+	// You can store up to **50 key-value pairs**.
+	Metadata *map[string]BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
+
+	// OrganizationId The ID of the organization owning the benefit. **Required unless you use an organization token.**
+	OrganizationId *string `json:"organization_id,omitempty"`
+
+	// Properties Properties to create a benefit of type `github_repository`.
+	Properties BenefitGitHubRepositoryCreateProperties `json:"properties"`
+	Type       BenefitGitHubRepositoryCreateType       `json:"type"`
+
+	// Visibility The visibility of the benefit in the customer portal.
+	Visibility *BenefitVisibility `json:"visibility,omitempty"`
+}
+
+// BenefitGitHubRepositoryCreateMetadata0 defines model for BenefitGitHubRepositoryCreate.Metadata.0.
+type BenefitGitHubRepositoryCreateMetadata0 = string
+
+// BenefitGitHubRepositoryCreateMetadata1 defines model for BenefitGitHubRepositoryCreate.Metadata.1.
+type BenefitGitHubRepositoryCreateMetadata1 = int
+
+// BenefitGitHubRepositoryCreateMetadata2 defines model for BenefitGitHubRepositoryCreate.Metadata.2.
+type BenefitGitHubRepositoryCreateMetadata2 = float64
+
+// BenefitGitHubRepositoryCreateMetadata3 defines model for BenefitGitHubRepositoryCreate.Metadata.3.
+type BenefitGitHubRepositoryCreateMetadata3 = bool
+
+// BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties defines model for BenefitGitHubRepositoryCreate.metadata.AdditionalProperties.
+type BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties struct {
+	union json.RawMessage
+}
+
+// BenefitGitHubRepositoryCreateType defines model for BenefitGitHubRepositoryCreate.Type.
+type BenefitGitHubRepositoryCreateType string
+
+// BenefitGitHubRepositoryCreateProperties Properties to create a benefit of type `github_repository`.
+type BenefitGitHubRepositoryCreateProperties struct {
+	// Permission The permission level to grant. Read more about roles and their permissions on [GitHub documentation](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization#permissions-for-each-role).
+	Permission BenefitGitHubRepositoryCreatePropertiesPermission `json:"permission"`
+
+	// RepositoryName The name of the repository.
+	//
+	// Examples: private_repo
+	RepositoryName string `json:"repository_name"`
+
+	// RepositoryOwner The owner of the repository.
+	//
+	// Examples: polarsource
+	RepositoryOwner string `json:"repository_owner"`
+}
+
+// BenefitGitHubRepositoryCreatePropertiesPermission The permission level to grant. Read more about roles and their permissions on [GitHub documentation](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization#permissions-for-each-role).
+type BenefitGitHubRepositoryCreatePropertiesPermission string
+
+// BenefitGitHubRepositoryProperties Properties for a benefit of type `github_repository`.
+type BenefitGitHubRepositoryProperties struct {
+	// Permission The permission level to grant. Read more about roles and their permissions on [GitHub documentation](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization#permissions-for-each-role).
+	Permission BenefitGitHubRepositoryPropertiesPermission `json:"permission"`
+
+	// RepositoryName The name of the repository.
+	//
+	// Examples: private_repo
+	RepositoryName string `json:"repository_name"`
+
+	// RepositoryOwner The owner of the repository.
+	//
+	// Examples: polarsource
+	RepositoryOwner string `json:"repository_owner"`
+}
+
+// BenefitGitHubRepositoryPropertiesPermission The permission level to grant. Read more about roles and their permissions on [GitHub documentation](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization#permissions-for-each-role).
+type BenefitGitHubRepositoryPropertiesPermission string
+
+// BenefitGitHubRepositoryPublic defines model for BenefitGitHubRepositoryPublic.
+type BenefitGitHubRepositoryPublic struct {
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+
+	// Deletable Whether the benefit is deletable.
+	Deletable bool `json:"deletable"`
+
+	// Description The description of the benefit.
+	Description string `json:"description"`
+
+	// Id The ID of the benefit.
+	Id string `json:"id"`
+
+	// IsDeleted Whether the benefit is deleted.
+	IsDeleted bool `json:"is_deleted"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrganizationId The ID of the organization owning the benefit.
+	OrganizationId string `json:"organization_id"`
+
+	// Selectable Whether the benefit is selectable when creating a product.
+	Selectable bool                              `json:"selectable"`
+	Type       BenefitGitHubRepositoryPublicType `json:"type"`
+}
+
+// BenefitGitHubRepositoryPublicType defines model for BenefitGitHubRepositoryPublic.Type.
+type BenefitGitHubRepositoryPublicType string
+
+// BenefitGitHubRepositorySubscriber defines model for BenefitGitHubRepositorySubscriber.
+type BenefitGitHubRepositorySubscriber struct {
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+
+	// Deletable Whether the benefit is deletable.
+	Deletable bool `json:"deletable"`
+
+	// Description The description of the benefit.
+	Description string `json:"description"`
+
+	// Id The ID of the benefit.
+	Id string `json:"id"`
+
+	// IsDeleted Whether the benefit is deleted.
+	IsDeleted bool `json:"is_deleted"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt   *time.Time                    `json:"modified_at"`
+	Organization BenefitSubscriberOrganization `json:"organization"`
+
+	// OrganizationId The ID of the organization owning the benefit.
+	OrganizationId string `json:"organization_id"`
+
+	// Properties Properties available to subscribers for a benefit of type `github_repository`.
+	Properties BenefitGitHubRepositorySubscriberProperties `json:"properties"`
+
+	// Selectable Whether the benefit is selectable when creating a product.
+	Selectable bool                                  `json:"selectable"`
+	Type       BenefitGitHubRepositorySubscriberType `json:"type"`
+}
+
+// BenefitGitHubRepositorySubscriberType defines model for BenefitGitHubRepositorySubscriber.Type.
+type BenefitGitHubRepositorySubscriberType string
+
+// BenefitGitHubRepositorySubscriberProperties Properties available to subscribers for a benefit of type `github_repository`.
+type BenefitGitHubRepositorySubscriberProperties struct {
+	// RepositoryName The name of the repository.
+	//
+	// Examples: private_repo
+	RepositoryName string `json:"repository_name"`
+
+	// RepositoryOwner The owner of the repository.
+	//
+	// Examples: polarsource
+	RepositoryOwner string `json:"repository_owner"`
+}
+
+// BenefitGitHubRepositoryUpdate defines model for BenefitGitHubRepositoryUpdate.
+type BenefitGitHubRepositoryUpdate struct {
+	// Description The description of the benefit. Will be displayed on products having this benefit.
+	Description *string `json:"description,omitempty"`
+
+	// Metadata Key-value object allowing you to store additional information.
+	//
+	// The key must be a string with a maximum length of **40 characters**.
+	// The value must be either:
+	//
+	// * A string with a maximum length of **500 characters**
+	// * An integer
+	// * A floating-point number
+	// * A boolean
+	//
+	// You can store up to **50 key-value pairs**.
+	Metadata   *map[string]BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
+	Properties *BenefitGitHubRepositoryCreateProperties                                `json:"properties,omitempty"`
+	Type       BenefitGitHubRepositoryUpdateType                                       `json:"type"`
+}
+
+// BenefitGitHubRepositoryUpdateMetadata0 defines model for BenefitGitHubRepositoryUpdate.Metadata.0.
+type BenefitGitHubRepositoryUpdateMetadata0 = string
+
+// BenefitGitHubRepositoryUpdateMetadata1 defines model for BenefitGitHubRepositoryUpdate.Metadata.1.
+type BenefitGitHubRepositoryUpdateMetadata1 = int
+
+// BenefitGitHubRepositoryUpdateMetadata2 defines model for BenefitGitHubRepositoryUpdate.Metadata.2.
+type BenefitGitHubRepositoryUpdateMetadata2 = float64
+
+// BenefitGitHubRepositoryUpdateMetadata3 defines model for BenefitGitHubRepositoryUpdate.Metadata.3.
+type BenefitGitHubRepositoryUpdateMetadata3 = bool
+
+// BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties defines model for BenefitGitHubRepositoryUpdate.metadata.AdditionalProperties.
+type BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties struct {
+	union json.RawMessage
+}
+
+// BenefitGitHubRepositoryUpdateType defines model for BenefitGitHubRepositoryUpdate.Type.
+type BenefitGitHubRepositoryUpdateType string
+
+// BenefitGrant defines model for BenefitGrant.
+type BenefitGrant struct {
+	Benefit Benefit `json:"benefit"`
+
+	// BenefitId The ID of the benefit concerned by this grant.
+	BenefitId string `json:"benefit_id"`
+
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+	Customer  Customer  `json:"customer"`
+
+	// CustomerId The ID of the customer concerned by this grant.
+	CustomerId string `json:"customer_id"`
+
+	// Error The error information if the benefit grant failed with an unrecoverable error.
+	Error *BenefitGrantError `json:"error,omitempty"`
+
+	// GrantedAt The timestamp when the benefit was granted. If `None`, the benefit is not granted.
+	GrantedAt *time.Time `json:"granted_at,omitempty"`
+
+	// Id The ID of the grant.
+	Id string `json:"id"`
+
+	// IsGranted Whether the benefit is granted.
+	IsGranted bool `json:"is_granted"`
+
+	// IsRevoked Whether the benefit is revoked.
+	IsRevoked bool    `json:"is_revoked"`
+	Member    *Member `json:"member,omitempty"`
+
+	// MemberId The ID of the member concerned by this grant.
+	MemberId *string `json:"member_id,omitempty"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrderId The ID of the order that granted this benefit.
+	OrderId    *string                 `json:"order_id"`
+	Properties BenefitGrant_Properties `json:"properties"`
+
+	// RevokedAt The timestamp when the benefit was revoked. If `None`, the benefit is not revoked.
+	RevokedAt *time.Time `json:"revoked_at,omitempty"`
+
+	// SubscriptionId The ID of the subscription that granted this benefit.
+	SubscriptionId *string `json:"subscription_id"`
+}
+
+// BenefitGrant_Properties defines model for BenefitGrant.Properties.
+type BenefitGrant_Properties struct {
+	union json.RawMessage
+}
+
+// BenefitGrantCustomProperties defines model for BenefitGrantCustomProperties.
+type BenefitGrantCustomProperties = map[string]interface{}
+
+// BenefitGrantCustomWebhook defines model for BenefitGrantCustomWebhook.
+type BenefitGrantCustomWebhook struct {
+	// Benefit A benefit of type `custom`.
+	//
+	// Use it to grant any kind of benefit that doesn't fit in the other types.
+	Benefit BenefitCustom `json:"benefit"`
+
+	// BenefitId The ID of the benefit concerned by this grant.
+	BenefitId string `json:"benefit_id"`
+
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+	Customer  Customer  `json:"customer"`
+
+	// CustomerId The ID of the customer concerned by this grant.
+	CustomerId string `json:"customer_id"`
+
+	// Error The error information if the benefit grant failed with an unrecoverable error.
+	Error *BenefitGrantError `json:"error,omitempty"`
+
+	// GrantedAt The timestamp when the benefit was granted. If `None`, the benefit is not granted.
+	GrantedAt *time.Time `json:"granted_at,omitempty"`
+
+	// Id The ID of the grant.
+	Id string `json:"id"`
+
+	// IsGranted Whether the benefit is granted.
+	IsGranted bool `json:"is_granted"`
+
+	// IsRevoked Whether the benefit is revoked.
+	IsRevoked bool    `json:"is_revoked"`
+	Member    *Member `json:"member,omitempty"`
+
+	// MemberId The ID of the member concerned by this grant.
+	MemberId *string `json:"member_id,omitempty"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrderId The ID of the order that granted this benefit.
+	OrderId            *string                       `json:"order_id"`
+	PreviousProperties *BenefitGrantCustomProperties `json:"previous_properties,omitempty"`
+	Properties         BenefitGrantCustomProperties  `json:"properties"`
+
+	// RevokedAt The timestamp when the benefit was revoked. If `None`, the benefit is not revoked.
+	RevokedAt *time.Time `json:"revoked_at,omitempty"`
+
+	// SubscriptionId The ID of the subscription that granted this benefit.
+	SubscriptionId *string `json:"subscription_id"`
+}
+
+// BenefitGrantDiscordProperties defines model for BenefitGrantDiscordProperties.
+type BenefitGrantDiscordProperties struct {
+	AccountId        *string `json:"account_id,omitempty"`
+	GrantedAccountId *string `json:"granted_account_id,omitempty"`
+	GuildId          *string `json:"guild_id,omitempty"`
+	RoleId           *string `json:"role_id,omitempty"`
+}
+
+// BenefitGrantDiscordWebhook defines model for BenefitGrantDiscordWebhook.
+type BenefitGrantDiscordWebhook struct {
+	// Benefit A benefit of type `discord`.
+	//
+	// Use it to automatically invite your backers to a Discord server.
+	Benefit BenefitDiscord `json:"benefit"`
+
+	// BenefitId The ID of the benefit concerned by this grant.
+	BenefitId string `json:"benefit_id"`
+
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+	Customer  Customer  `json:"customer"`
+
+	// CustomerId The ID of the customer concerned by this grant.
+	CustomerId string `json:"customer_id"`
+
+	// Error The error information if the benefit grant failed with an unrecoverable error.
+	Error *BenefitGrantError `json:"error,omitempty"`
+
+	// GrantedAt The timestamp when the benefit was granted. If `None`, the benefit is not granted.
+	GrantedAt *time.Time `json:"granted_at,omitempty"`
+
+	// Id The ID of the grant.
+	Id string `json:"id"`
+
+	// IsGranted Whether the benefit is granted.
+	IsGranted bool `json:"is_granted"`
+
+	// IsRevoked Whether the benefit is revoked.
+	IsRevoked bool    `json:"is_revoked"`
+	Member    *Member `json:"member,omitempty"`
+
+	// MemberId The ID of the member concerned by this grant.
+	MemberId *string `json:"member_id,omitempty"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrderId The ID of the order that granted this benefit.
+	OrderId            *string                        `json:"order_id"`
+	PreviousProperties *BenefitGrantDiscordProperties `json:"previous_properties,omitempty"`
+	Properties         BenefitGrantDiscordProperties  `json:"properties"`
+
+	// RevokedAt The timestamp when the benefit was revoked. If `None`, the benefit is not revoked.
+	RevokedAt *time.Time `json:"revoked_at,omitempty"`
+
+	// SubscriptionId The ID of the subscription that granted this benefit.
+	SubscriptionId *string `json:"subscription_id"`
+}
+
+// BenefitGrantDownloadablesProperties defines model for BenefitGrantDownloadablesProperties.
+type BenefitGrantDownloadablesProperties struct {
+	Files *[]string `json:"files,omitempty"`
+}
+
+// BenefitGrantDownloadablesWebhook defines model for BenefitGrantDownloadablesWebhook.
+type BenefitGrantDownloadablesWebhook struct {
+	Benefit BenefitDownloadables `json:"benefit"`
+
+	// BenefitId The ID of the benefit concerned by this grant.
+	BenefitId string `json:"benefit_id"`
+
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+	Customer  Customer  `json:"customer"`
+
+	// CustomerId The ID of the customer concerned by this grant.
+	CustomerId string `json:"customer_id"`
+
+	// Error The error information if the benefit grant failed with an unrecoverable error.
+	Error *BenefitGrantError `json:"error,omitempty"`
+
+	// GrantedAt The timestamp when the benefit was granted. If `None`, the benefit is not granted.
+	GrantedAt *time.Time `json:"granted_at,omitempty"`
+
+	// Id The ID of the grant.
+	Id string `json:"id"`
+
+	// IsGranted Whether the benefit is granted.
+	IsGranted bool `json:"is_granted"`
+
+	// IsRevoked Whether the benefit is revoked.
+	IsRevoked bool    `json:"is_revoked"`
+	Member    *Member `json:"member,omitempty"`
+
+	// MemberId The ID of the member concerned by this grant.
+	MemberId *string `json:"member_id,omitempty"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrderId The ID of the order that granted this benefit.
+	OrderId            *string                              `json:"order_id"`
+	PreviousProperties *BenefitGrantDownloadablesProperties `json:"previous_properties,omitempty"`
+	Properties         BenefitGrantDownloadablesProperties  `json:"properties"`
+
+	// RevokedAt The timestamp when the benefit was revoked. If `None`, the benefit is not revoked.
+	RevokedAt *time.Time `json:"revoked_at,omitempty"`
+
+	// SubscriptionId The ID of the subscription that granted this benefit.
+	SubscriptionId *string `json:"subscription_id"`
+}
+
+// BenefitGrantError defines model for BenefitGrantError.
+type BenefitGrantError struct {
+	Message   string `json:"message"`
+	Timestamp string `json:"timestamp"`
+	Type      string `json:"type"`
+}
+
+// BenefitGrantFeatureFlagProperties defines model for BenefitGrantFeatureFlagProperties.
+type BenefitGrantFeatureFlagProperties = map[string]interface{}
+
+// BenefitGrantFeatureFlagWebhook defines model for BenefitGrantFeatureFlagWebhook.
+type BenefitGrantFeatureFlagWebhook struct {
+	// Benefit A benefit of type `feature_flag`.
+	//
+	// Use it to grant feature flags with key-value metadata
+	// that can be queried via the API and webhooks.
+	Benefit BenefitFeatureFlag `json:"benefit"`
+
+	// BenefitId The ID of the benefit concerned by this grant.
+	BenefitId string `json:"benefit_id"`
+
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+	Customer  Customer  `json:"customer"`
+
+	// CustomerId The ID of the customer concerned by this grant.
+	CustomerId string `json:"customer_id"`
+
+	// Error The error information if the benefit grant failed with an unrecoverable error.
+	Error *BenefitGrantError `json:"error,omitempty"`
+
+	// GrantedAt The timestamp when the benefit was granted. If `None`, the benefit is not granted.
+	GrantedAt *time.Time `json:"granted_at,omitempty"`
+
+	// Id The ID of the grant.
+	Id string `json:"id"`
+
+	// IsGranted Whether the benefit is granted.
+	IsGranted bool `json:"is_granted"`
+
+	// IsRevoked Whether the benefit is revoked.
+	IsRevoked bool    `json:"is_revoked"`
+	Member    *Member `json:"member,omitempty"`
+
+	// MemberId The ID of the member concerned by this grant.
+	MemberId *string `json:"member_id,omitempty"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrderId The ID of the order that granted this benefit.
+	OrderId            *string                            `json:"order_id"`
+	PreviousProperties *BenefitGrantFeatureFlagProperties `json:"previous_properties,omitempty"`
+	Properties         BenefitGrantFeatureFlagProperties  `json:"properties"`
+
+	// RevokedAt The timestamp when the benefit was revoked. If `None`, the benefit is not revoked.
+	RevokedAt *time.Time `json:"revoked_at,omitempty"`
+
+	// SubscriptionId The ID of the subscription that granted this benefit.
+	SubscriptionId *string `json:"subscription_id"`
+}
+
+// BenefitGrantGitHubRepositoryProperties defines model for BenefitGrantGitHubRepositoryProperties.
+type BenefitGrantGitHubRepositoryProperties struct {
+	AccountId        *string                                           `json:"account_id,omitempty"`
+	GrantedAccountId *string                                           `json:"granted_account_id,omitempty"`
+	Permission       *BenefitGrantGitHubRepositoryPropertiesPermission `json:"permission,omitempty"`
+	RepositoryName   *string                                           `json:"repository_name,omitempty"`
+	RepositoryOwner  *string                                           `json:"repository_owner,omitempty"`
+}
+
+// BenefitGrantGitHubRepositoryPropertiesPermission defines model for BenefitGrantGitHubRepositoryProperties.Permission.
+type BenefitGrantGitHubRepositoryPropertiesPermission string
+
+// BenefitGrantGitHubRepositoryWebhook defines model for BenefitGrantGitHubRepositoryWebhook.
+type BenefitGrantGitHubRepositoryWebhook struct {
+	// Benefit A benefit of type `github_repository`.
+	//
+	// Use it to automatically invite your backers to a private GitHub repository.
+	Benefit BenefitGitHubRepository `json:"benefit"`
+
+	// BenefitId The ID of the benefit concerned by this grant.
+	BenefitId string `json:"benefit_id"`
+
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+	Customer  Customer  `json:"customer"`
+
+	// CustomerId The ID of the customer concerned by this grant.
+	CustomerId string `json:"customer_id"`
+
+	// Error The error information if the benefit grant failed with an unrecoverable error.
+	Error *BenefitGrantError `json:"error,omitempty"`
+
+	// GrantedAt The timestamp when the benefit was granted. If `None`, the benefit is not granted.
+	GrantedAt *time.Time `json:"granted_at,omitempty"`
+
+	// Id The ID of the grant.
+	Id string `json:"id"`
+
+	// IsGranted Whether the benefit is granted.
+	IsGranted bool `json:"is_granted"`
+
+	// IsRevoked Whether the benefit is revoked.
+	IsRevoked bool    `json:"is_revoked"`
+	Member    *Member `json:"member,omitempty"`
+
+	// MemberId The ID of the member concerned by this grant.
+	MemberId *string `json:"member_id,omitempty"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrderId The ID of the order that granted this benefit.
+	OrderId            *string                                 `json:"order_id"`
+	PreviousProperties *BenefitGrantGitHubRepositoryProperties `json:"previous_properties,omitempty"`
+	Properties         BenefitGrantGitHubRepositoryProperties  `json:"properties"`
+
+	// RevokedAt The timestamp when the benefit was revoked. If `None`, the benefit is not revoked.
+	RevokedAt *time.Time `json:"revoked_at,omitempty"`
+
+	// SubscriptionId The ID of the subscription that granted this benefit.
+	SubscriptionId *string `json:"subscription_id"`
+}
+
+// BenefitGrantLicenseKeysProperties defines model for BenefitGrantLicenseKeysProperties.
+type BenefitGrantLicenseKeysProperties struct {
+	DisplayKey      *string `json:"display_key,omitempty"`
+	LicenseKeyId    *string `json:"license_key_id,omitempty"`
+	UserProvidedKey *string `json:"user_provided_key,omitempty"`
+}
+
+// BenefitGrantLicenseKeysWebhook defines model for BenefitGrantLicenseKeysWebhook.
+type BenefitGrantLicenseKeysWebhook struct {
+	Benefit BenefitLicenseKeys `json:"benefit"`
+
+	// BenefitId The ID of the benefit concerned by this grant.
+	BenefitId string `json:"benefit_id"`
+
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+	Customer  Customer  `json:"customer"`
+
+	// CustomerId The ID of the customer concerned by this grant.
+	CustomerId string `json:"customer_id"`
+
+	// Error The error information if the benefit grant failed with an unrecoverable error.
+	Error *BenefitGrantError `json:"error,omitempty"`
+
+	// GrantedAt The timestamp when the benefit was granted. If `None`, the benefit is not granted.
+	GrantedAt *time.Time `json:"granted_at,omitempty"`
+
+	// Id The ID of the grant.
+	Id string `json:"id"`
+
+	// IsGranted Whether the benefit is granted.
+	IsGranted bool `json:"is_granted"`
+
+	// IsRevoked Whether the benefit is revoked.
+	IsRevoked bool    `json:"is_revoked"`
+	Member    *Member `json:"member,omitempty"`
+
+	// MemberId The ID of the member concerned by this grant.
+	MemberId *string `json:"member_id,omitempty"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrderId The ID of the order that granted this benefit.
+	OrderId            *string                            `json:"order_id"`
+	PreviousProperties *BenefitGrantLicenseKeysProperties `json:"previous_properties,omitempty"`
+	Properties         BenefitGrantLicenseKeysProperties  `json:"properties"`
+
+	// RevokedAt The timestamp when the benefit was revoked. If `None`, the benefit is not revoked.
+	RevokedAt *time.Time `json:"revoked_at,omitempty"`
+
+	// SubscriptionId The ID of the subscription that granted this benefit.
+	SubscriptionId *string `json:"subscription_id"`
+}
+
+// BenefitGrantMetadata defines model for BenefitGrantMetadata.
+type BenefitGrantMetadata struct {
+	BenefitGrantId string      `json:"benefit_grant_id"`
+	BenefitId      string      `json:"benefit_id"`
+	BenefitType    BenefitType `json:"benefit_type"`
+	MemberId       *string     `json:"member_id,omitempty"`
+}
+
+// BenefitGrantMeterCreditProperties defines model for BenefitGrantMeterCreditProperties.
+type BenefitGrantMeterCreditProperties struct {
+	LastCreditedAt      *string `json:"last_credited_at,omitempty"`
+	LastCreditedMeterId *string `json:"last_credited_meter_id,omitempty"`
+	LastCreditedUnits   *int    `json:"last_credited_units,omitempty"`
+}
+
+// BenefitGrantMeterCreditWebhook defines model for BenefitGrantMeterCreditWebhook.
+type BenefitGrantMeterCreditWebhook struct {
+	// Benefit A benefit of type `meter_unit`.
+	//
+	// Use it to grant a number of units on a specific meter.
+	Benefit BenefitMeterCredit `json:"benefit"`
+
+	// BenefitId The ID of the benefit concerned by this grant.
+	BenefitId string `json:"benefit_id"`
+
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+	Customer  Customer  `json:"customer"`
+
+	// CustomerId The ID of the customer concerned by this grant.
+	CustomerId string `json:"customer_id"`
+
+	// Error The error information if the benefit grant failed with an unrecoverable error.
+	Error *BenefitGrantError `json:"error,omitempty"`
+
+	// GrantedAt The timestamp when the benefit was granted. If `None`, the benefit is not granted.
+	GrantedAt *time.Time `json:"granted_at,omitempty"`
+
+	// Id The ID of the grant.
+	Id string `json:"id"`
+
+	// IsGranted Whether the benefit is granted.
+	IsGranted bool `json:"is_granted"`
+
+	// IsRevoked Whether the benefit is revoked.
+	IsRevoked bool    `json:"is_revoked"`
+	Member    *Member `json:"member,omitempty"`
+
+	// MemberId The ID of the member concerned by this grant.
+	MemberId *string `json:"member_id,omitempty"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrderId The ID of the order that granted this benefit.
+	OrderId            *string                            `json:"order_id"`
+	PreviousProperties *BenefitGrantMeterCreditProperties `json:"previous_properties,omitempty"`
+	Properties         BenefitGrantMeterCreditProperties  `json:"properties"`
+
+	// RevokedAt The timestamp when the benefit was revoked. If `None`, the benefit is not revoked.
+	RevokedAt *time.Time `json:"revoked_at,omitempty"`
+
+	// SubscriptionId The ID of the subscription that granted this benefit.
+	SubscriptionId *string `json:"subscription_id"`
+}
+
+// BenefitGrantSlackSharedChannelProperties defines model for BenefitGrantSlackSharedChannelProperties.
+type BenefitGrantSlackSharedChannelProperties struct {
+	ChannelId       *string `json:"channel_id,omitempty"`
+	ChannelName     *string `json:"channel_name,omitempty"`
+	ConnectedTeamId *string `json:"connected_team_id,omitempty"`
+	InviteId        *string `json:"invite_id,omitempty"`
+	InviteUrl       *string `json:"invite_url,omitempty"`
+	InvitedEmail    *string `json:"invited_email,omitempty"`
+}
+
+// BenefitGrantSlackSharedChannelWebhook defines model for BenefitGrantSlackSharedChannelWebhook.
+type BenefitGrantSlackSharedChannelWebhook struct {
+	Benefit BenefitSlackSharedChannel `json:"benefit"`
+
+	// BenefitId The ID of the benefit concerned by this grant.
+	BenefitId string `json:"benefit_id"`
+
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+	Customer  Customer  `json:"customer"`
+
+	// CustomerId The ID of the customer concerned by this grant.
+	CustomerId string `json:"customer_id"`
+
+	// Error The error information if the benefit grant failed with an unrecoverable error.
+	Error *BenefitGrantError `json:"error,omitempty"`
+
+	// GrantedAt The timestamp when the benefit was granted. If `None`, the benefit is not granted.
+	GrantedAt *time.Time `json:"granted_at,omitempty"`
+
+	// Id The ID of the grant.
+	Id string `json:"id"`
+
+	// IsGranted Whether the benefit is granted.
+	IsGranted bool `json:"is_granted"`
+
+	// IsRevoked Whether the benefit is revoked.
+	IsRevoked bool    `json:"is_revoked"`
+	Member    *Member `json:"member,omitempty"`
+
+	// MemberId The ID of the member concerned by this grant.
+	MemberId *string `json:"member_id,omitempty"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrderId The ID of the order that granted this benefit.
+	OrderId            *string                                   `json:"order_id"`
+	PreviousProperties *BenefitGrantSlackSharedChannelProperties `json:"previous_properties,omitempty"`
+	Properties         BenefitGrantSlackSharedChannelProperties  `json:"properties"`
+
+	// RevokedAt The timestamp when the benefit was revoked. If `None`, the benefit is not revoked.
+	RevokedAt *time.Time `json:"revoked_at,omitempty"`
+
+	// SubscriptionId The ID of the subscription that granted this benefit.
+	SubscriptionId *string `json:"subscription_id"`
+}
+
+// BenefitGrantSortProperty defines model for BenefitGrantSortProperty.
+type BenefitGrantSortProperty string
+
+// BenefitGrantWebhook defines model for BenefitGrantWebhook.
+type BenefitGrantWebhook struct {
+	union json.RawMessage
+}
+
+// BenefitGrantedEvent An event created by Polar when a benefit is granted to a customer.
+type BenefitGrantedEvent struct {
+	// ChildCount Number of direct child events linked to this event.
+	ChildCount *int `json:"child_count,omitempty"`
+
+	// Customer The customer associated with the event.
+	Customer *Customer `json:"customer"`
+
+	// CustomerId ID of the customer in your Polar organization associated with the event.
+	CustomerId *string `json:"customer_id"`
+
+	// ExternalCustomerId ID of the customer in your system associated with the event.
+	ExternalCustomerId *string `json:"external_customer_id"`
+
+	// ExternalMemberId ID of the member in your system within the customer's organization who performed the action inside B2B.
+	ExternalMemberId *string `json:"external_member_id,omitempty"`
+
+	// Id The ID of the object.
+	Id string `json:"id"`
+
+	// Label Human readable label of the event type.
+	Label string `json:"label"`
+
+	// MemberId ID of the member within the customer's organization who performed the action inside B2B.
+	MemberId *string              `json:"member_id,omitempty"`
+	Metadata BenefitGrantMetadata `json:"metadata"`
+
+	// Name The name of the event.
+	Name BenefitGrantedEventName `json:"name"`
+
+	// OrganizationId The ID of the organization owning the event.
+	//
+	// Examples: 1dbfc517-0bbf-4301-9ba8-555ca42b9737
+	OrganizationId string `json:"organization_id"`
+
+	// ParentId The ID of the parent event.
+	ParentId *string `json:"parent_id,omitempty"`
+
+	// Source The source of the event. `system` events are created by Polar. `user` events are the one you create through our ingestion API.
+	Source BenefitGrantedEventSource `json:"source"`
+
+	// Timestamp The timestamp of the event.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	Timestamp time.Time `json:"timestamp"`
+}
+
+// BenefitGrantedEventName The name of the event.
+type BenefitGrantedEventName string
+
+// BenefitGrantedEventSource The source of the event. `system` events are created by Polar. `user` events are the one you create through our ingestion API.
+type BenefitGrantedEventSource string
+
+// BenefitLicenseKeyActivationCreateProperties defines model for BenefitLicenseKeyActivationCreateProperties.
+type BenefitLicenseKeyActivationCreateProperties struct {
+	EnableCustomerAdmin bool `json:"enable_customer_admin"`
+	Limit               int  `json:"limit"`
+}
+
+// BenefitLicenseKeyActivationProperties defines model for BenefitLicenseKeyActivationProperties.
+type BenefitLicenseKeyActivationProperties struct {
+	EnableCustomerAdmin bool `json:"enable_customer_admin"`
+	Limit               int  `json:"limit"`
+}
+
+// BenefitLicenseKeyExpirationProperties defines model for BenefitLicenseKeyExpirationProperties.
+type BenefitLicenseKeyExpirationProperties struct {
+	Timeframe BenefitLicenseKeyExpirationPropertiesTimeframe `json:"timeframe"`
+	Ttl       int                                            `json:"ttl"`
+}
+
+// BenefitLicenseKeyExpirationPropertiesTimeframe defines model for BenefitLicenseKeyExpirationProperties.Timeframe.
+type BenefitLicenseKeyExpirationPropertiesTimeframe string
+
+// BenefitLicenseKeys defines model for BenefitLicenseKeys.
+type BenefitLicenseKeys struct {
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+
+	// Deletable Whether the benefit is deletable.
+	Deletable bool `json:"deletable"`
+
+	// Description The description of the benefit.
+	Description string `json:"description"`
+
+	// Id The ID of the benefit.
+	Id string `json:"id"`
+
+	// IsDeleted Whether the benefit is deleted.
+	IsDeleted bool               `json:"is_deleted"`
+	Metadata  MetadataOutputType `json:"metadata"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrganizationId The ID of the organization owning the benefit.
+	OrganizationId string                       `json:"organization_id"`
+	Properties     BenefitLicenseKeysProperties `json:"properties"`
+
+	// Selectable Whether the benefit is selectable when creating a product.
+	Selectable bool                   `json:"selectable"`
+	Type       BenefitLicenseKeysType `json:"type"`
+
+	// Visibility The visibility of the benefit in the customer portal.
+	Visibility             BenefitVisibility `json:"visibility"`
+	VisibilityConfigurable *bool             `json:"visibility_configurable,omitempty"`
+}
+
+// BenefitLicenseKeysType defines model for BenefitLicenseKeys.Type.
+type BenefitLicenseKeysType string
+
+// BenefitLicenseKeysCreate defines model for BenefitLicenseKeysCreate.
+type BenefitLicenseKeysCreate struct {
+	// Description The description of the benefit. Will be displayed on products having this benefit.
+	Description string `json:"description"`
+
+	// Metadata Key-value object allowing you to store additional information.
+	//
+	// The key must be a string with a maximum length of **40 characters**.
+	// The value must be either:
+	//
+	// * A string with a maximum length of **500 characters**
+	// * An integer
+	// * A floating-point number
+	// * A boolean
+	//
+	// You can store up to **50 key-value pairs**.
+	Metadata *map[string]BenefitLicenseKeysCreate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
+
+	// OrganizationId The ID of the organization owning the benefit. **Required unless you use an organization token.**
+	OrganizationId *string                            `json:"organization_id,omitempty"`
+	Properties     BenefitLicenseKeysCreateProperties `json:"properties"`
+	Type           BenefitLicenseKeysCreateType       `json:"type"`
+
+	// Visibility The visibility of the benefit in the customer portal.
+	Visibility *BenefitVisibility `json:"visibility,omitempty"`
+}
+
+// BenefitLicenseKeysCreateMetadata0 defines model for BenefitLicenseKeysCreate.Metadata.0.
+type BenefitLicenseKeysCreateMetadata0 = string
+
+// BenefitLicenseKeysCreateMetadata1 defines model for BenefitLicenseKeysCreate.Metadata.1.
+type BenefitLicenseKeysCreateMetadata1 = int
+
+// BenefitLicenseKeysCreateMetadata2 defines model for BenefitLicenseKeysCreate.Metadata.2.
+type BenefitLicenseKeysCreateMetadata2 = float64
+
+// BenefitLicenseKeysCreateMetadata3 defines model for BenefitLicenseKeysCreate.Metadata.3.
+type BenefitLicenseKeysCreateMetadata3 = bool
+
+// BenefitLicenseKeysCreate_Metadata_AdditionalProperties defines model for BenefitLicenseKeysCreate.metadata.AdditionalProperties.
+type BenefitLicenseKeysCreate_Metadata_AdditionalProperties struct {
+	union json.RawMessage
+}
+
+// BenefitLicenseKeysCreateType defines model for BenefitLicenseKeysCreate.Type.
+type BenefitLicenseKeysCreateType string
+
+// BenefitLicenseKeysCreateProperties defines model for BenefitLicenseKeysCreateProperties.
+type BenefitLicenseKeysCreateProperties struct {
+	Activations *BenefitLicenseKeyActivationCreateProperties `json:"activations,omitempty"`
+	Expires     *BenefitLicenseKeyExpirationProperties       `json:"expires,omitempty"`
+	LimitUsage  *int                                         `json:"limit_usage,omitempty"`
+	Prefix      *string                                      `json:"prefix,omitempty"`
+}
+
+// BenefitLicenseKeysProperties defines model for BenefitLicenseKeysProperties.
+type BenefitLicenseKeysProperties struct {
+	Activations *BenefitLicenseKeyActivationProperties `json:"activations"`
+	Expires     *BenefitLicenseKeyExpirationProperties `json:"expires"`
+	LimitUsage  *int                                   `json:"limit_usage"`
+	Prefix      *string                                `json:"prefix"`
+}
+
+// BenefitLicenseKeysPublic defines model for BenefitLicenseKeysPublic.
+type BenefitLicenseKeysPublic struct {
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+
+	// Deletable Whether the benefit is deletable.
+	Deletable bool `json:"deletable"`
+
+	// Description The description of the benefit.
+	Description string `json:"description"`
+
+	// Id The ID of the benefit.
+	Id string `json:"id"`
+
+	// IsDeleted Whether the benefit is deleted.
+	IsDeleted bool `json:"is_deleted"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrganizationId The ID of the organization owning the benefit.
+	OrganizationId string `json:"organization_id"`
+
+	// Selectable Whether the benefit is selectable when creating a product.
+	Selectable bool                         `json:"selectable"`
+	Type       BenefitLicenseKeysPublicType `json:"type"`
+}
+
+// BenefitLicenseKeysPublicType defines model for BenefitLicenseKeysPublic.Type.
+type BenefitLicenseKeysPublicType string
+
+// BenefitLicenseKeysSubscriber defines model for BenefitLicenseKeysSubscriber.
+type BenefitLicenseKeysSubscriber struct {
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+
+	// Deletable Whether the benefit is deletable.
+	Deletable bool `json:"deletable"`
+
+	// Description The description of the benefit.
+	Description string `json:"description"`
+
+	// Id The ID of the benefit.
+	Id string `json:"id"`
+
+	// IsDeleted Whether the benefit is deleted.
+	IsDeleted bool `json:"is_deleted"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt   *time.Time                    `json:"modified_at"`
+	Organization BenefitSubscriberOrganization `json:"organization"`
+
+	// OrganizationId The ID of the organization owning the benefit.
+	OrganizationId string                                 `json:"organization_id"`
+	Properties     BenefitLicenseKeysSubscriberProperties `json:"properties"`
+
+	// Selectable Whether the benefit is selectable when creating a product.
+	Selectable bool                             `json:"selectable"`
+	Type       BenefitLicenseKeysSubscriberType `json:"type"`
+}
+
+// BenefitLicenseKeysSubscriberType defines model for BenefitLicenseKeysSubscriber.Type.
+type BenefitLicenseKeysSubscriberType string
+
+// BenefitLicenseKeysSubscriberProperties defines model for BenefitLicenseKeysSubscriberProperties.
+type BenefitLicenseKeysSubscriberProperties struct {
+	Activations *BenefitLicenseKeyActivationProperties `json:"activations"`
+	Expires     *BenefitLicenseKeyExpirationProperties `json:"expires"`
+	LimitUsage  *int                                   `json:"limit_usage"`
+	Prefix      *string                                `json:"prefix"`
+}
+
+// BenefitLicenseKeysUpdate defines model for BenefitLicenseKeysUpdate.
+type BenefitLicenseKeysUpdate struct {
+	// Description The description of the benefit. Will be displayed on products having this benefit.
+	Description *string `json:"description,omitempty"`
+
+	// Metadata Key-value object allowing you to store additional information.
+	//
+	// The key must be a string with a maximum length of **40 characters**.
+	// The value must be either:
+	//
+	// * A string with a maximum length of **500 characters**
+	// * An integer
+	// * A floating-point number
+	// * A boolean
+	//
+	// You can store up to **50 key-value pairs**.
+	Metadata   *map[string]BenefitLicenseKeysUpdate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
+	Properties *BenefitLicenseKeysCreateProperties                                `json:"properties,omitempty"`
+	Type       BenefitLicenseKeysUpdateType                                       `json:"type"`
+
+	// Visibility The visibility of the benefit in the customer portal.
+	Visibility *BenefitVisibility `json:"visibility,omitempty"`
+}
+
+// BenefitLicenseKeysUpdateMetadata0 defines model for BenefitLicenseKeysUpdate.Metadata.0.
+type BenefitLicenseKeysUpdateMetadata0 = string
+
+// BenefitLicenseKeysUpdateMetadata1 defines model for BenefitLicenseKeysUpdate.Metadata.1.
+type BenefitLicenseKeysUpdateMetadata1 = int
+
+// BenefitLicenseKeysUpdateMetadata2 defines model for BenefitLicenseKeysUpdate.Metadata.2.
+type BenefitLicenseKeysUpdateMetadata2 = float64
+
+// BenefitLicenseKeysUpdateMetadata3 defines model for BenefitLicenseKeysUpdate.Metadata.3.
+type BenefitLicenseKeysUpdateMetadata3 = bool
+
+// BenefitLicenseKeysUpdate_Metadata_AdditionalProperties defines model for BenefitLicenseKeysUpdate.metadata.AdditionalProperties.
+type BenefitLicenseKeysUpdate_Metadata_AdditionalProperties struct {
+	union json.RawMessage
+}
+
+// BenefitLicenseKeysUpdateType defines model for BenefitLicenseKeysUpdate.Type.
+type BenefitLicenseKeysUpdateType string
+
+// BenefitMeterCredit A benefit of type `meter_unit`.
+//
+// Use it to grant a number of units on a specific meter.
+type BenefitMeterCredit struct {
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+
+	// Deletable Whether the benefit is deletable.
+	Deletable bool `json:"deletable"`
+
+	// Description The description of the benefit.
+	Description string `json:"description"`
+
+	// Id The ID of the benefit.
+	Id string `json:"id"`
+
+	// IsDeleted Whether the benefit is deleted.
+	IsDeleted bool               `json:"is_deleted"`
+	Metadata  MetadataOutputType `json:"metadata"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrganizationId The ID of the organization owning the benefit.
+	OrganizationId string `json:"organization_id"`
+
+	// Properties Properties for a benefit of type `meter_unit`.
+	Properties BenefitMeterCreditProperties `json:"properties"`
+
+	// Selectable Whether the benefit is selectable when creating a product.
+	Selectable bool                   `json:"selectable"`
+	Type       BenefitMeterCreditType `json:"type"`
+
+	// Visibility The visibility of the benefit in the customer portal.
+	Visibility             BenefitVisibility `json:"visibility"`
+	VisibilityConfigurable *bool             `json:"visibility_configurable,omitempty"`
+}
+
+// BenefitMeterCreditType defines model for BenefitMeterCredit.Type.
+type BenefitMeterCreditType string
+
+// BenefitMeterCreditCreate Schema to create a benefit of type `meter_unit`.
+type BenefitMeterCreditCreate struct {
+	// Description The description of the benefit. Will be displayed on products having this benefit.
+	Description string `json:"description"`
+
+	// Metadata Key-value object allowing you to store additional information.
+	//
+	// The key must be a string with a maximum length of **40 characters**.
+	// The value must be either:
+	//
+	// * A string with a maximum length of **500 characters**
+	// * An integer
+	// * A floating-point number
+	// * A boolean
+	//
+	// You can store up to **50 key-value pairs**.
+	Metadata *map[string]BenefitMeterCreditCreate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
+
+	// OrganizationId The ID of the organization owning the benefit. **Required unless you use an organization token.**
+	OrganizationId *string `json:"organization_id,omitempty"`
+
+	// Properties Properties for creating a benefit of type `meter_unit`.
+	Properties BenefitMeterCreditCreateProperties `json:"properties"`
+	Type       BenefitMeterCreditCreateType       `json:"type"`
+
+	// Visibility The visibility of the benefit in the customer portal.
+	Visibility *BenefitVisibility `json:"visibility,omitempty"`
+}
+
+// BenefitMeterCreditCreateMetadata0 defines model for BenefitMeterCreditCreate.Metadata.0.
+type BenefitMeterCreditCreateMetadata0 = string
+
+// BenefitMeterCreditCreateMetadata1 defines model for BenefitMeterCreditCreate.Metadata.1.
+type BenefitMeterCreditCreateMetadata1 = int
+
+// BenefitMeterCreditCreateMetadata2 defines model for BenefitMeterCreditCreate.Metadata.2.
+type BenefitMeterCreditCreateMetadata2 = float64
+
+// BenefitMeterCreditCreateMetadata3 defines model for BenefitMeterCreditCreate.Metadata.3.
+type BenefitMeterCreditCreateMetadata3 = bool
+
+// BenefitMeterCreditCreate_Metadata_AdditionalProperties defines model for BenefitMeterCreditCreate.metadata.AdditionalProperties.
+type BenefitMeterCreditCreate_Metadata_AdditionalProperties struct {
+	union json.RawMessage
+}
+
+// BenefitMeterCreditCreateType defines model for BenefitMeterCreditCreate.Type.
+type BenefitMeterCreditCreateType string
+
+// BenefitMeterCreditCreateProperties Properties for creating a benefit of type `meter_unit`.
+type BenefitMeterCreditCreateProperties struct {
+	MeterId  string `json:"meter_id"`
+	Rollover bool   `json:"rollover"`
+	Units    int    `json:"units"`
+}
+
+// BenefitMeterCreditProperties Properties for a benefit of type `meter_unit`.
+type BenefitMeterCreditProperties struct {
+	MeterId  string `json:"meter_id"`
+	Rollover bool   `json:"rollover"`
+	Units    int    `json:"units"`
+}
+
+// BenefitMeterCreditPublic A benefit of type `meter_credit`.
+//
+// Grants a number of units on a specific meter.
+type BenefitMeterCreditPublic struct {
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+
+	// Deletable Whether the benefit is deletable.
+	Deletable bool `json:"deletable"`
+
+	// Description The description of the benefit.
+	Description string `json:"description"`
+
+	// Id The ID of the benefit.
+	Id string `json:"id"`
+
+	// IsDeleted Whether the benefit is deleted.
+	IsDeleted bool `json:"is_deleted"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrganizationId The ID of the organization owning the benefit.
+	OrganizationId string `json:"organization_id"`
+
+	// Properties Properties for a benefit of type `meter_credit`.
+	Properties BenefitMeterCreditPublicProperties `json:"properties"`
+
+	// Selectable Whether the benefit is selectable when creating a product.
+	Selectable bool                         `json:"selectable"`
+	Type       BenefitMeterCreditPublicType `json:"type"`
+}
+
+// BenefitMeterCreditPublicType defines model for BenefitMeterCreditPublic.Type.
+type BenefitMeterCreditPublicType string
+
+// BenefitMeterCreditPublicProperties Properties for a benefit of type `meter_credit`.
+type BenefitMeterCreditPublicProperties struct {
+	MeterId string `json:"meter_id"`
+	Units   int    `json:"units"`
+}
+
+// BenefitMeterCreditSubscriber defines model for BenefitMeterCreditSubscriber.
+type BenefitMeterCreditSubscriber struct {
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+
+	// Deletable Whether the benefit is deletable.
+	Deletable bool `json:"deletable"`
+
+	// Description The description of the benefit.
+	Description string `json:"description"`
+
+	// Id The ID of the benefit.
+	Id string `json:"id"`
+
+	// IsDeleted Whether the benefit is deleted.
+	IsDeleted bool `json:"is_deleted"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt   *time.Time                    `json:"modified_at"`
+	Organization BenefitSubscriberOrganization `json:"organization"`
+
+	// OrganizationId The ID of the organization owning the benefit.
+	OrganizationId string `json:"organization_id"`
+
+	// Properties Properties available to subscribers for a benefit of type `meter_unit`.
+	Properties BenefitMeterCreditSubscriberProperties `json:"properties"`
+
+	// Selectable Whether the benefit is selectable when creating a product.
+	Selectable bool                             `json:"selectable"`
+	Type       BenefitMeterCreditSubscriberType `json:"type"`
+}
+
+// BenefitMeterCreditSubscriberType defines model for BenefitMeterCreditSubscriber.Type.
+type BenefitMeterCreditSubscriberType string
+
+// BenefitMeterCreditSubscriberProperties Properties available to subscribers for a benefit of type `meter_unit`.
+type BenefitMeterCreditSubscriberProperties struct {
+	MeterId  string `json:"meter_id"`
+	Rollover bool   `json:"rollover"`
+	Units    int    `json:"units"`
+}
+
+// BenefitMeterCreditUpdate defines model for BenefitMeterCreditUpdate.
+type BenefitMeterCreditUpdate struct {
+	// Description The description of the benefit. Will be displayed on products having this benefit.
+	Description *string `json:"description,omitempty"`
+
+	// Metadata Key-value object allowing you to store additional information.
+	//
+	// The key must be a string with a maximum length of **40 characters**.
+	// The value must be either:
+	//
+	// * A string with a maximum length of **500 characters**
+	// * An integer
+	// * A floating-point number
+	// * A boolean
+	//
+	// You can store up to **50 key-value pairs**.
+	Metadata   *map[string]BenefitMeterCreditUpdate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
+	Properties *BenefitMeterCreditCreateProperties                                `json:"properties,omitempty"`
+	Type       BenefitMeterCreditUpdateType                                       `json:"type"`
+
+	// Visibility The visibility of the benefit in the customer portal.
+	Visibility *BenefitVisibility `json:"visibility,omitempty"`
+}
+
+// BenefitMeterCreditUpdateMetadata0 defines model for BenefitMeterCreditUpdate.Metadata.0.
+type BenefitMeterCreditUpdateMetadata0 = string
+
+// BenefitMeterCreditUpdateMetadata1 defines model for BenefitMeterCreditUpdate.Metadata.1.
+type BenefitMeterCreditUpdateMetadata1 = int
+
+// BenefitMeterCreditUpdateMetadata2 defines model for BenefitMeterCreditUpdate.Metadata.2.
+type BenefitMeterCreditUpdateMetadata2 = float64
+
+// BenefitMeterCreditUpdateMetadata3 defines model for BenefitMeterCreditUpdate.Metadata.3.
+type BenefitMeterCreditUpdateMetadata3 = bool
+
+// BenefitMeterCreditUpdate_Metadata_AdditionalProperties defines model for BenefitMeterCreditUpdate.metadata.AdditionalProperties.
+type BenefitMeterCreditUpdate_Metadata_AdditionalProperties struct {
+	union json.RawMessage
+}
+
+// BenefitMeterCreditUpdateType defines model for BenefitMeterCreditUpdate.Type.
+type BenefitMeterCreditUpdateType string
+
+// BenefitPublic defines model for BenefitPublic.
+type BenefitPublic struct {
+	union json.RawMessage
+}
+
+// BenefitRevokedEvent An event created by Polar when a benefit is revoked from a customer.
+type BenefitRevokedEvent struct {
+	// ChildCount Number of direct child events linked to this event.
+	ChildCount *int `json:"child_count,omitempty"`
+
+	// Customer The customer associated with the event.
+	Customer *Customer `json:"customer"`
+
+	// CustomerId ID of the customer in your Polar organization associated with the event.
+	CustomerId *string `json:"customer_id"`
+
+	// ExternalCustomerId ID of the customer in your system associated with the event.
+	ExternalCustomerId *string `json:"external_customer_id"`
+
+	// ExternalMemberId ID of the member in your system within the customer's organization who performed the action inside B2B.
+	ExternalMemberId *string `json:"external_member_id,omitempty"`
+
+	// Id The ID of the object.
+	Id string `json:"id"`
+
+	// Label Human readable label of the event type.
+	Label string `json:"label"`
+
+	// MemberId ID of the member within the customer's organization who performed the action inside B2B.
+	MemberId *string              `json:"member_id,omitempty"`
+	Metadata BenefitGrantMetadata `json:"metadata"`
+
+	// Name The name of the event.
+	Name BenefitRevokedEventName `json:"name"`
+
+	// OrganizationId The ID of the organization owning the event.
+	//
+	// Examples: 1dbfc517-0bbf-4301-9ba8-555ca42b9737
+	OrganizationId string `json:"organization_id"`
+
+	// ParentId The ID of the parent event.
+	ParentId *string `json:"parent_id,omitempty"`
+
+	// Source The source of the event. `system` events are created by Polar. `user` events are the one you create through our ingestion API.
+	Source BenefitRevokedEventSource `json:"source"`
+
+	// Timestamp The timestamp of the event.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	Timestamp time.Time `json:"timestamp"`
+}
+
+// BenefitRevokedEventName The name of the event.
+type BenefitRevokedEventName string
+
+// BenefitRevokedEventSource The source of the event. `system` events are created by Polar. `user` events are the one you create through our ingestion API.
+type BenefitRevokedEventSource string
+
+// BenefitSlackSharedChannel defines model for BenefitSlackSharedChannel.
+type BenefitSlackSharedChannel struct {
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+
+	// Deletable Whether the benefit is deletable.
+	Deletable bool `json:"deletable"`
+
+	// Description The description of the benefit.
+	Description string `json:"description"`
+
+	// Id The ID of the benefit.
+	Id string `json:"id"`
+
+	// IsDeleted Whether the benefit is deleted.
+	IsDeleted bool               `json:"is_deleted"`
+	Metadata  MetadataOutputType `json:"metadata"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrganizationId The ID of the organization owning the benefit.
+	OrganizationId string                              `json:"organization_id"`
+	Properties     BenefitSlackSharedChannelProperties `json:"properties"`
+
+	// Selectable Whether the benefit is selectable when creating a product.
+	Selectable bool                          `json:"selectable"`
+	Type       BenefitSlackSharedChannelType `json:"type"`
+
+	// Visibility The visibility of the benefit in the customer portal.
+	Visibility             BenefitVisibility `json:"visibility"`
+	VisibilityConfigurable *bool             `json:"visibility_configurable,omitempty"`
+}
+
+// BenefitSlackSharedChannelType defines model for BenefitSlackSharedChannel.Type.
+type BenefitSlackSharedChannelType string
+
+// BenefitSlackSharedChannelCreate defines model for BenefitSlackSharedChannelCreate.
+type BenefitSlackSharedChannelCreate struct {
+	// Description The description of the benefit. Will be displayed on products having this benefit.
+	Description string `json:"description"`
+
+	// Metadata Key-value object allowing you to store additional information.
+	//
+	// The key must be a string with a maximum length of **40 characters**.
+	// The value must be either:
+	//
+	// * A string with a maximum length of **500 characters**
+	// * An integer
+	// * A floating-point number
+	// * A boolean
+	//
+	// You can store up to **50 key-value pairs**.
+	Metadata *map[string]BenefitSlackSharedChannelCreate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
+
+	// OrganizationId The ID of the organization owning the benefit. **Required unless you use an organization token.**
+	OrganizationId *string                                   `json:"organization_id,omitempty"`
+	Properties     BenefitSlackSharedChannelCreateProperties `json:"properties"`
+	Type           BenefitSlackSharedChannelCreateType       `json:"type"`
+
+	// Visibility The visibility of the benefit in the customer portal.
+	Visibility *BenefitVisibility `json:"visibility,omitempty"`
+}
+
+// BenefitSlackSharedChannelCreateMetadata0 defines model for BenefitSlackSharedChannelCreate.Metadata.0.
+type BenefitSlackSharedChannelCreateMetadata0 = string
+
+// BenefitSlackSharedChannelCreateMetadata1 defines model for BenefitSlackSharedChannelCreate.Metadata.1.
+type BenefitSlackSharedChannelCreateMetadata1 = int
+
+// BenefitSlackSharedChannelCreateMetadata2 defines model for BenefitSlackSharedChannelCreate.Metadata.2.
+type BenefitSlackSharedChannelCreateMetadata2 = float64
+
+// BenefitSlackSharedChannelCreateMetadata3 defines model for BenefitSlackSharedChannelCreate.Metadata.3.
+type BenefitSlackSharedChannelCreateMetadata3 = bool
+
+// BenefitSlackSharedChannelCreate_Metadata_AdditionalProperties defines model for BenefitSlackSharedChannelCreate.metadata.AdditionalProperties.
+type BenefitSlackSharedChannelCreate_Metadata_AdditionalProperties struct {
+	union json.RawMessage
+}
+
+// BenefitSlackSharedChannelCreateType defines model for BenefitSlackSharedChannelCreate.Type.
+type BenefitSlackSharedChannelCreateType string
+
+// BenefitSlackSharedChannelCreateProperties defines model for BenefitSlackSharedChannelCreateProperties.
+type BenefitSlackSharedChannelCreateProperties struct {
+	ArchiveOnRevoke     *bool  `json:"archive_on_revoke,omitempty"`
+	ChannelNameTemplate string `json:"channel_name_template"`
+	Private             *bool  `json:"private,omitempty"`
+
+	// SlackIntegrationId Polar Slack integration to use for this benefit.
+	SlackIntegrationId string    `json:"slack_integration_id"`
+	TeamInvitees       *[]string `json:"team_invitees,omitempty"`
+	WelcomeMessage     *string   `json:"welcome_message,omitempty"`
+}
+
+// BenefitSlackSharedChannelProperties defines model for BenefitSlackSharedChannelProperties.
+type BenefitSlackSharedChannelProperties struct {
+	// ArchiveOnRevoke Archive the channel when the benefit is revoked.
+	ArchiveOnRevoke *bool `json:"archive_on_revoke,omitempty"`
+
+	// ChannelNameTemplate Template for the channel name. Supports placeholders: {customer_name}, {customer_email_local}, and {metadata.<key>} for any value stored in customer user metadata.
+	ChannelNameTemplate string `json:"channel_name_template"`
+
+	// Private Create the channel as private (recommended).
+	Private *bool `json:"private,omitempty"`
+
+	// SlackIntegrationId Polar Slack integration linked to this benefit.
+	SlackIntegrationId string `json:"slack_integration_id"`
+
+	// TeamInvitees Slack user IDs from the merchant workspace to invite to every channel created for this benefit.
+	TeamInvitees *[]string `json:"team_invitees,omitempty"`
+
+	// WelcomeMessage Optional message posted to the channel right after creation.
+	WelcomeMessage *string `json:"welcome_message,omitempty"`
+}
+
+// BenefitSlackSharedChannelPublic defines model for BenefitSlackSharedChannelPublic.
+type BenefitSlackSharedChannelPublic struct {
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+
+	// Deletable Whether the benefit is deletable.
+	Deletable bool `json:"deletable"`
+
+	// Description The description of the benefit.
+	Description string `json:"description"`
+
+	// Id The ID of the benefit.
+	Id string `json:"id"`
+
+	// IsDeleted Whether the benefit is deleted.
+	IsDeleted bool `json:"is_deleted"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// OrganizationId The ID of the organization owning the benefit.
+	OrganizationId string `json:"organization_id"`
+
+	// Selectable Whether the benefit is selectable when creating a product.
+	Selectable bool                                `json:"selectable"`
+	Type       BenefitSlackSharedChannelPublicType `json:"type"`
+}
+
+// BenefitSlackSharedChannelPublicType defines model for BenefitSlackSharedChannelPublic.Type.
+type BenefitSlackSharedChannelPublicType string
+
+// BenefitSlackSharedChannelSubscriber defines model for BenefitSlackSharedChannelSubscriber.
+type BenefitSlackSharedChannelSubscriber struct {
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+
+	// Deletable Whether the benefit is deletable.
+	Deletable bool `json:"deletable"`
+
+	// Description The description of the benefit.
+	Description string `json:"description"`
+
+	// Id The ID of the benefit.
+	Id string `json:"id"`
+
+	// IsDeleted Whether the benefit is deleted.
+	IsDeleted bool `json:"is_deleted"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt   *time.Time                    `json:"modified_at"`
+	Organization BenefitSubscriberOrganization `json:"organization"`
+
+	// OrganizationId The ID of the organization owning the benefit.
+	OrganizationId string                                        `json:"organization_id"`
+	Properties     BenefitSlackSharedChannelSubscriberProperties `json:"properties"`
+
+	// Selectable Whether the benefit is selectable when creating a product.
+	Selectable bool                                    `json:"selectable"`
+	Type       BenefitSlackSharedChannelSubscriberType `json:"type"`
+}
+
+// BenefitSlackSharedChannelSubscriberType defines model for BenefitSlackSharedChannelSubscriber.Type.
+type BenefitSlackSharedChannelSubscriberType string
+
+// BenefitSlackSharedChannelSubscriberProperties defines model for BenefitSlackSharedChannelSubscriberProperties.
+type BenefitSlackSharedChannelSubscriberProperties = map[string]interface{}
+
+// BenefitSlackSharedChannelUpdate defines model for BenefitSlackSharedChannelUpdate.
+type BenefitSlackSharedChannelUpdate struct {
+	// Description The description of the benefit. Will be displayed on products having this benefit.
+	Description *string `json:"description,omitempty"`
+
+	// Metadata Key-value object allowing you to store additional information.
+	//
+	// The key must be a string with a maximum length of **40 characters**.
+	// The value must be either:
+	//
+	// * A string with a maximum length of **500 characters**
+	// * An integer
+	// * A floating-point number
+	// * A boolean
+	//
+	// You can store up to **50 key-value pairs**.
+	Metadata   *map[string]BenefitSlackSharedChannelUpdate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
+	Properties *BenefitSlackSharedChannelCreateProperties                                `json:"properties,omitempty"`
+	Type       BenefitSlackSharedChannelUpdateType                                       `json:"type"`
+}
+
+// BenefitSlackSharedChannelUpdateMetadata0 defines model for BenefitSlackSharedChannelUpdate.Metadata.0.
+type BenefitSlackSharedChannelUpdateMetadata0 = string
+
+// BenefitSlackSharedChannelUpdateMetadata1 defines model for BenefitSlackSharedChannelUpdate.Metadata.1.
+type BenefitSlackSharedChannelUpdateMetadata1 = int
+
+// BenefitSlackSharedChannelUpdateMetadata2 defines model for BenefitSlackSharedChannelUpdate.Metadata.2.
+type BenefitSlackSharedChannelUpdateMetadata2 = float64
+
+// BenefitSlackSharedChannelUpdateMetadata3 defines model for BenefitSlackSharedChannelUpdate.Metadata.3.
+type BenefitSlackSharedChannelUpdateMetadata3 = bool
+
+// BenefitSlackSharedChannelUpdate_Metadata_AdditionalProperties defines model for BenefitSlackSharedChannelUpdate.metadata.AdditionalProperties.
+type BenefitSlackSharedChannelUpdate_Metadata_AdditionalProperties struct {
+	union json.RawMessage
+}
+
+// BenefitSlackSharedChannelUpdateType defines model for BenefitSlackSharedChannelUpdate.Type.
+type BenefitSlackSharedChannelUpdateType string
+
+// BenefitSortProperty defines model for BenefitSortProperty.
+type BenefitSortProperty string
+
+// BenefitSubscriberOrganization defines model for BenefitSubscriberOrganization.
+type BenefitSubscriberOrganization struct {
+	// AllowCustomerUpdates Whether customers can update their subscriptions from the customer portal.
+	AllowCustomerUpdates bool `json:"allow_customer_updates"`
+
+	// AvatarUrl Avatar URL shown in checkout, customer portal, emails etc.
+	AvatarUrl *string `json:"avatar_url"`
+
+	// CreatedAt Creation timestamp of the object.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	CreatedAt time.Time `json:"created_at"`
+
+	// Id The ID of the object.
+	Id string `json:"id"`
+
+	// ModifiedAt Last modification timestamp of the object.
+	ModifiedAt *time.Time `json:"modified_at"`
+
+	// Name Organization name shown in checkout, customer portal, emails etc.
+	Name string `json:"name"`
+
+	// ProrationBehavior Proration behavior applied when customer updates their subscription from the portal.
+	ProrationBehavior SubscriptionProrationBehavior `json:"proration_behavior"`
+
+	// Slug Unique organization slug in checkout, customer portal and credit card statements.
+	Slug string `json:"slug"`
+}
+
+// BenefitType defines model for BenefitType.
+type BenefitType string
+
+// BenefitUpdatedEvent An event created by Polar when a benefit is updated.
+type BenefitUpdatedEvent struct {
+	// ChildCount Number of direct child events linked to this event.
+	ChildCount *int `json:"child_count,omitempty"`
+
+	// Customer The customer associated with the event.
+	Customer *Customer `json:"customer"`
+
+	// CustomerId ID of the customer in your Polar organization associated with the event.
+	CustomerId *string `json:"customer_id"`
+
+	// ExternalCustomerId ID of the customer in your system associated with the event.
+	ExternalCustomerId *string `json:"external_customer_id"`
+
+	// ExternalMemberId ID of the member in your system within the customer's organization who performed the action inside B2B.
+	ExternalMemberId *string `json:"external_member_id,omitempty"`
+
+	// Id The ID of the object.
+	Id string `json:"id"`
+
+	// Label Human readable label of the event type.
+	Label string `json:"label"`
+
+	// MemberId ID of the member within the customer's organization who performed the action inside B2B.
+	MemberId *string              `json:"member_id,omitempty"`
+	Metadata BenefitGrantMetadata `json:"metadata"`
+
+	// Name The name of the event.
+	Name BenefitUpdatedEventName `json:"name"`
+
+	// OrganizationId The ID of the organization owning the event.
+	//
+	// Examples: 1dbfc517-0bbf-4301-9ba8-555ca42b9737
+	OrganizationId string `json:"organization_id"`
+
+	// ParentId The ID of the parent event.
+	ParentId *string `json:"parent_id,omitempty"`
+
+	// Source The source of the event. `system` events are created by Polar. `user` events are the one you create through our ingestion API.
+	Source BenefitUpdatedEventSource `json:"source"`
+
+	// Timestamp The timestamp of the event.
+	//
+	// Examples: 2026-01-01T00:00:00.000000Z
+	Timestamp time.Time `json:"timestamp"`
 }

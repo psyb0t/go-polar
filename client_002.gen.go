@@ -13,1949 +13,6 @@ import (
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
 
-// BenefitDownloadablesUpdateMetadata0 defines model for BenefitDownloadablesUpdate.Metadata.0.
-type BenefitDownloadablesUpdateMetadata0 = string
-
-// BenefitDownloadablesUpdateMetadata1 defines model for BenefitDownloadablesUpdate.Metadata.1.
-type BenefitDownloadablesUpdateMetadata1 = int
-
-// BenefitDownloadablesUpdateMetadata2 defines model for BenefitDownloadablesUpdate.Metadata.2.
-type BenefitDownloadablesUpdateMetadata2 = float64
-
-// BenefitDownloadablesUpdateMetadata3 defines model for BenefitDownloadablesUpdate.Metadata.3.
-type BenefitDownloadablesUpdateMetadata3 = bool
-
-// BenefitDownloadablesUpdate_Metadata_AdditionalProperties defines model for BenefitDownloadablesUpdate.metadata.AdditionalProperties.
-type BenefitDownloadablesUpdate_Metadata_AdditionalProperties struct {
-	union json.RawMessage
-}
-
-// BenefitDownloadablesUpdateType defines model for BenefitDownloadablesUpdate.Type.
-type BenefitDownloadablesUpdateType string
-
-// BenefitFeatureFlag A benefit of type `feature_flag`.
-//
-// Use it to grant feature flags with key-value metadata
-// that can be queried via the API and webhooks.
-type BenefitFeatureFlag struct {
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-
-	// Deletable Whether the benefit is deletable.
-	Deletable bool `json:"deletable"`
-
-	// Description The description of the benefit.
-	Description string `json:"description"`
-
-	// Id The ID of the benefit.
-	Id string `json:"id"`
-
-	// IsDeleted Whether the benefit is deleted.
-	IsDeleted bool               `json:"is_deleted"`
-	Metadata  MetadataOutputType `json:"metadata"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrganizationId The ID of the organization owning the benefit.
-	OrganizationId string `json:"organization_id"`
-
-	// Properties Properties for a benefit of type `feature_flag`.
-	Properties BenefitFeatureFlagProperties `json:"properties"`
-
-	// Selectable Whether the benefit is selectable when creating a product.
-	Selectable bool                   `json:"selectable"`
-	Type       BenefitFeatureFlagType `json:"type"`
-
-	// Visibility The visibility of the benefit in the customer portal.
-	Visibility             BenefitVisibility `json:"visibility"`
-	VisibilityConfigurable *bool             `json:"visibility_configurable,omitempty"`
-}
-
-// BenefitFeatureFlagType defines model for BenefitFeatureFlag.Type.
-type BenefitFeatureFlagType string
-
-// BenefitFeatureFlagCreate Schema to create a benefit of type `feature_flag`.
-type BenefitFeatureFlagCreate struct {
-	// Description The description of the benefit. Will be displayed on products having this benefit.
-	Description string `json:"description"`
-
-	// Metadata Key-value object allowing you to store additional information.
-	//
-	// The key must be a string with a maximum length of **40 characters**.
-	// The value must be either:
-	//
-	// * A string with a maximum length of **500 characters**
-	// * An integer
-	// * A floating-point number
-	// * A boolean
-	//
-	// You can store up to **50 key-value pairs**.
-	Metadata *map[string]BenefitFeatureFlagCreate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
-
-	// OrganizationId The ID of the organization owning the benefit. **Required unless you use an organization token.**
-	OrganizationId *string `json:"organization_id,omitempty"`
-
-	// Properties Properties for creating a benefit of type `feature_flag`.
-	Properties BenefitFeatureFlagCreateProperties `json:"properties"`
-	Type       BenefitFeatureFlagCreateType       `json:"type"`
-
-	// Visibility The visibility of the benefit in the customer portal.
-	Visibility *BenefitVisibility `json:"visibility,omitempty"`
-}
-
-// BenefitFeatureFlagCreateMetadata0 defines model for BenefitFeatureFlagCreate.Metadata.0.
-type BenefitFeatureFlagCreateMetadata0 = string
-
-// BenefitFeatureFlagCreateMetadata1 defines model for BenefitFeatureFlagCreate.Metadata.1.
-type BenefitFeatureFlagCreateMetadata1 = int
-
-// BenefitFeatureFlagCreateMetadata2 defines model for BenefitFeatureFlagCreate.Metadata.2.
-type BenefitFeatureFlagCreateMetadata2 = float64
-
-// BenefitFeatureFlagCreateMetadata3 defines model for BenefitFeatureFlagCreate.Metadata.3.
-type BenefitFeatureFlagCreateMetadata3 = bool
-
-// BenefitFeatureFlagCreate_Metadata_AdditionalProperties defines model for BenefitFeatureFlagCreate.metadata.AdditionalProperties.
-type BenefitFeatureFlagCreate_Metadata_AdditionalProperties struct {
-	union json.RawMessage
-}
-
-// BenefitFeatureFlagCreateType defines model for BenefitFeatureFlagCreate.Type.
-type BenefitFeatureFlagCreateType string
-
-// BenefitFeatureFlagCreateProperties Properties for creating a benefit of type `feature_flag`.
-type BenefitFeatureFlagCreateProperties = map[string]interface{}
-
-// BenefitFeatureFlagProperties Properties for a benefit of type `feature_flag`.
-type BenefitFeatureFlagProperties = map[string]interface{}
-
-// BenefitFeatureFlagPublic defines model for BenefitFeatureFlagPublic.
-type BenefitFeatureFlagPublic struct {
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-
-	// Deletable Whether the benefit is deletable.
-	Deletable bool `json:"deletable"`
-
-	// Description The description of the benefit.
-	Description string `json:"description"`
-
-	// Id The ID of the benefit.
-	Id string `json:"id"`
-
-	// IsDeleted Whether the benefit is deleted.
-	IsDeleted bool `json:"is_deleted"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrganizationId The ID of the organization owning the benefit.
-	OrganizationId string `json:"organization_id"`
-
-	// Selectable Whether the benefit is selectable when creating a product.
-	Selectable bool                         `json:"selectable"`
-	Type       BenefitFeatureFlagPublicType `json:"type"`
-}
-
-// BenefitFeatureFlagPublicType defines model for BenefitFeatureFlagPublic.Type.
-type BenefitFeatureFlagPublicType string
-
-// BenefitFeatureFlagSubscriber defines model for BenefitFeatureFlagSubscriber.
-type BenefitFeatureFlagSubscriber struct {
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-
-	// Deletable Whether the benefit is deletable.
-	Deletable bool `json:"deletable"`
-
-	// Description The description of the benefit.
-	Description string `json:"description"`
-
-	// Id The ID of the benefit.
-	Id string `json:"id"`
-
-	// IsDeleted Whether the benefit is deleted.
-	IsDeleted bool `json:"is_deleted"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt   *time.Time                    `json:"modified_at"`
-	Organization BenefitSubscriberOrganization `json:"organization"`
-
-	// OrganizationId The ID of the organization owning the benefit.
-	OrganizationId string `json:"organization_id"`
-
-	// Properties Properties available to subscribers for a benefit of type `feature_flag`.
-	Properties BenefitFeatureFlagSubscriberProperties `json:"properties"`
-
-	// Selectable Whether the benefit is selectable when creating a product.
-	Selectable bool                             `json:"selectable"`
-	Type       BenefitFeatureFlagSubscriberType `json:"type"`
-}
-
-// BenefitFeatureFlagSubscriberType defines model for BenefitFeatureFlagSubscriber.Type.
-type BenefitFeatureFlagSubscriberType string
-
-// BenefitFeatureFlagSubscriberProperties Properties available to subscribers for a benefit of type `feature_flag`.
-type BenefitFeatureFlagSubscriberProperties = map[string]interface{}
-
-// BenefitFeatureFlagUpdate defines model for BenefitFeatureFlagUpdate.
-type BenefitFeatureFlagUpdate struct {
-	// Description The description of the benefit. Will be displayed on products having this benefit.
-	Description *string `json:"description,omitempty"`
-
-	// Metadata Key-value object allowing you to store additional information.
-	//
-	// The key must be a string with a maximum length of **40 characters**.
-	// The value must be either:
-	//
-	// * A string with a maximum length of **500 characters**
-	// * An integer
-	// * A floating-point number
-	// * A boolean
-	//
-	// You can store up to **50 key-value pairs**.
-	Metadata   *map[string]BenefitFeatureFlagUpdate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
-	Properties *BenefitFeatureFlagProperties                                      `json:"properties,omitempty"`
-	Type       BenefitFeatureFlagUpdateType                                       `json:"type"`
-
-	// Visibility The visibility of the benefit in the customer portal.
-	Visibility *BenefitVisibility `json:"visibility,omitempty"`
-}
-
-// BenefitFeatureFlagUpdateMetadata0 defines model for BenefitFeatureFlagUpdate.Metadata.0.
-type BenefitFeatureFlagUpdateMetadata0 = string
-
-// BenefitFeatureFlagUpdateMetadata1 defines model for BenefitFeatureFlagUpdate.Metadata.1.
-type BenefitFeatureFlagUpdateMetadata1 = int
-
-// BenefitFeatureFlagUpdateMetadata2 defines model for BenefitFeatureFlagUpdate.Metadata.2.
-type BenefitFeatureFlagUpdateMetadata2 = float64
-
-// BenefitFeatureFlagUpdateMetadata3 defines model for BenefitFeatureFlagUpdate.Metadata.3.
-type BenefitFeatureFlagUpdateMetadata3 = bool
-
-// BenefitFeatureFlagUpdate_Metadata_AdditionalProperties defines model for BenefitFeatureFlagUpdate.metadata.AdditionalProperties.
-type BenefitFeatureFlagUpdate_Metadata_AdditionalProperties struct {
-	union json.RawMessage
-}
-
-// BenefitFeatureFlagUpdateType defines model for BenefitFeatureFlagUpdate.Type.
-type BenefitFeatureFlagUpdateType string
-
-// BenefitGitHubRepository A benefit of type `github_repository`.
-//
-// Use it to automatically invite your backers to a private GitHub repository.
-type BenefitGitHubRepository struct {
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-
-	// Deletable Whether the benefit is deletable.
-	Deletable bool `json:"deletable"`
-
-	// Description The description of the benefit.
-	Description string `json:"description"`
-
-	// Id The ID of the benefit.
-	Id string `json:"id"`
-
-	// IsDeleted Whether the benefit is deleted.
-	IsDeleted bool               `json:"is_deleted"`
-	Metadata  MetadataOutputType `json:"metadata"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrganizationId The ID of the organization owning the benefit.
-	OrganizationId string `json:"organization_id"`
-
-	// Properties Properties for a benefit of type `github_repository`.
-	Properties BenefitGitHubRepositoryProperties `json:"properties"`
-
-	// Selectable Whether the benefit is selectable when creating a product.
-	Selectable bool                        `json:"selectable"`
-	Type       BenefitGitHubRepositoryType `json:"type"`
-
-	// Visibility The visibility of the benefit in the customer portal.
-	Visibility             BenefitVisibility `json:"visibility"`
-	VisibilityConfigurable *bool             `json:"visibility_configurable,omitempty"`
-}
-
-// BenefitGitHubRepositoryType defines model for BenefitGitHubRepository.Type.
-type BenefitGitHubRepositoryType string
-
-// BenefitGitHubRepositoryCreate defines model for BenefitGitHubRepositoryCreate.
-type BenefitGitHubRepositoryCreate struct {
-	// Description The description of the benefit. Will be displayed on products having this benefit.
-	Description string `json:"description"`
-
-	// Metadata Key-value object allowing you to store additional information.
-	//
-	// The key must be a string with a maximum length of **40 characters**.
-	// The value must be either:
-	//
-	// * A string with a maximum length of **500 characters**
-	// * An integer
-	// * A floating-point number
-	// * A boolean
-	//
-	// You can store up to **50 key-value pairs**.
-	Metadata *map[string]BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
-
-	// OrganizationId The ID of the organization owning the benefit. **Required unless you use an organization token.**
-	OrganizationId *string `json:"organization_id,omitempty"`
-
-	// Properties Properties to create a benefit of type `github_repository`.
-	Properties BenefitGitHubRepositoryCreateProperties `json:"properties"`
-	Type       BenefitGitHubRepositoryCreateType       `json:"type"`
-
-	// Visibility The visibility of the benefit in the customer portal.
-	Visibility *BenefitVisibility `json:"visibility,omitempty"`
-}
-
-// BenefitGitHubRepositoryCreateMetadata0 defines model for BenefitGitHubRepositoryCreate.Metadata.0.
-type BenefitGitHubRepositoryCreateMetadata0 = string
-
-// BenefitGitHubRepositoryCreateMetadata1 defines model for BenefitGitHubRepositoryCreate.Metadata.1.
-type BenefitGitHubRepositoryCreateMetadata1 = int
-
-// BenefitGitHubRepositoryCreateMetadata2 defines model for BenefitGitHubRepositoryCreate.Metadata.2.
-type BenefitGitHubRepositoryCreateMetadata2 = float64
-
-// BenefitGitHubRepositoryCreateMetadata3 defines model for BenefitGitHubRepositoryCreate.Metadata.3.
-type BenefitGitHubRepositoryCreateMetadata3 = bool
-
-// BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties defines model for BenefitGitHubRepositoryCreate.metadata.AdditionalProperties.
-type BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties struct {
-	union json.RawMessage
-}
-
-// BenefitGitHubRepositoryCreateType defines model for BenefitGitHubRepositoryCreate.Type.
-type BenefitGitHubRepositoryCreateType string
-
-// BenefitGitHubRepositoryCreateProperties Properties to create a benefit of type `github_repository`.
-type BenefitGitHubRepositoryCreateProperties struct {
-	// Permission The permission level to grant. Read more about roles and their permissions on [GitHub documentation](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization#permissions-for-each-role).
-	Permission BenefitGitHubRepositoryCreatePropertiesPermission `json:"permission"`
-
-	// RepositoryName The name of the repository.
-	//
-	// Examples: private_repo
-	RepositoryName string `json:"repository_name"`
-
-	// RepositoryOwner The owner of the repository.
-	//
-	// Examples: polarsource
-	RepositoryOwner string `json:"repository_owner"`
-}
-
-// BenefitGitHubRepositoryCreatePropertiesPermission The permission level to grant. Read more about roles and their permissions on [GitHub documentation](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization#permissions-for-each-role).
-type BenefitGitHubRepositoryCreatePropertiesPermission string
-
-// BenefitGitHubRepositoryProperties Properties for a benefit of type `github_repository`.
-type BenefitGitHubRepositoryProperties struct {
-	// Permission The permission level to grant. Read more about roles and their permissions on [GitHub documentation](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization#permissions-for-each-role).
-	Permission BenefitGitHubRepositoryPropertiesPermission `json:"permission"`
-
-	// RepositoryName The name of the repository.
-	//
-	// Examples: private_repo
-	RepositoryName string `json:"repository_name"`
-
-	// RepositoryOwner The owner of the repository.
-	//
-	// Examples: polarsource
-	RepositoryOwner string `json:"repository_owner"`
-}
-
-// BenefitGitHubRepositoryPropertiesPermission The permission level to grant. Read more about roles and their permissions on [GitHub documentation](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization#permissions-for-each-role).
-type BenefitGitHubRepositoryPropertiesPermission string
-
-// BenefitGitHubRepositoryPublic defines model for BenefitGitHubRepositoryPublic.
-type BenefitGitHubRepositoryPublic struct {
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-
-	// Deletable Whether the benefit is deletable.
-	Deletable bool `json:"deletable"`
-
-	// Description The description of the benefit.
-	Description string `json:"description"`
-
-	// Id The ID of the benefit.
-	Id string `json:"id"`
-
-	// IsDeleted Whether the benefit is deleted.
-	IsDeleted bool `json:"is_deleted"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrganizationId The ID of the organization owning the benefit.
-	OrganizationId string `json:"organization_id"`
-
-	// Selectable Whether the benefit is selectable when creating a product.
-	Selectable bool                              `json:"selectable"`
-	Type       BenefitGitHubRepositoryPublicType `json:"type"`
-}
-
-// BenefitGitHubRepositoryPublicType defines model for BenefitGitHubRepositoryPublic.Type.
-type BenefitGitHubRepositoryPublicType string
-
-// BenefitGitHubRepositorySubscriber defines model for BenefitGitHubRepositorySubscriber.
-type BenefitGitHubRepositorySubscriber struct {
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-
-	// Deletable Whether the benefit is deletable.
-	Deletable bool `json:"deletable"`
-
-	// Description The description of the benefit.
-	Description string `json:"description"`
-
-	// Id The ID of the benefit.
-	Id string `json:"id"`
-
-	// IsDeleted Whether the benefit is deleted.
-	IsDeleted bool `json:"is_deleted"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt   *time.Time                    `json:"modified_at"`
-	Organization BenefitSubscriberOrganization `json:"organization"`
-
-	// OrganizationId The ID of the organization owning the benefit.
-	OrganizationId string `json:"organization_id"`
-
-	// Properties Properties available to subscribers for a benefit of type `github_repository`.
-	Properties BenefitGitHubRepositorySubscriberProperties `json:"properties"`
-
-	// Selectable Whether the benefit is selectable when creating a product.
-	Selectable bool                                  `json:"selectable"`
-	Type       BenefitGitHubRepositorySubscriberType `json:"type"`
-}
-
-// BenefitGitHubRepositorySubscriberType defines model for BenefitGitHubRepositorySubscriber.Type.
-type BenefitGitHubRepositorySubscriberType string
-
-// BenefitGitHubRepositorySubscriberProperties Properties available to subscribers for a benefit of type `github_repository`.
-type BenefitGitHubRepositorySubscriberProperties struct {
-	// RepositoryName The name of the repository.
-	//
-	// Examples: private_repo
-	RepositoryName string `json:"repository_name"`
-
-	// RepositoryOwner The owner of the repository.
-	//
-	// Examples: polarsource
-	RepositoryOwner string `json:"repository_owner"`
-}
-
-// BenefitGitHubRepositoryUpdate defines model for BenefitGitHubRepositoryUpdate.
-type BenefitGitHubRepositoryUpdate struct {
-	// Description The description of the benefit. Will be displayed on products having this benefit.
-	Description *string `json:"description,omitempty"`
-
-	// Metadata Key-value object allowing you to store additional information.
-	//
-	// The key must be a string with a maximum length of **40 characters**.
-	// The value must be either:
-	//
-	// * A string with a maximum length of **500 characters**
-	// * An integer
-	// * A floating-point number
-	// * A boolean
-	//
-	// You can store up to **50 key-value pairs**.
-	Metadata   *map[string]BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
-	Properties *BenefitGitHubRepositoryCreateProperties                                `json:"properties,omitempty"`
-	Type       BenefitGitHubRepositoryUpdateType                                       `json:"type"`
-}
-
-// BenefitGitHubRepositoryUpdateMetadata0 defines model for BenefitGitHubRepositoryUpdate.Metadata.0.
-type BenefitGitHubRepositoryUpdateMetadata0 = string
-
-// BenefitGitHubRepositoryUpdateMetadata1 defines model for BenefitGitHubRepositoryUpdate.Metadata.1.
-type BenefitGitHubRepositoryUpdateMetadata1 = int
-
-// BenefitGitHubRepositoryUpdateMetadata2 defines model for BenefitGitHubRepositoryUpdate.Metadata.2.
-type BenefitGitHubRepositoryUpdateMetadata2 = float64
-
-// BenefitGitHubRepositoryUpdateMetadata3 defines model for BenefitGitHubRepositoryUpdate.Metadata.3.
-type BenefitGitHubRepositoryUpdateMetadata3 = bool
-
-// BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties defines model for BenefitGitHubRepositoryUpdate.metadata.AdditionalProperties.
-type BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties struct {
-	union json.RawMessage
-}
-
-// BenefitGitHubRepositoryUpdateType defines model for BenefitGitHubRepositoryUpdate.Type.
-type BenefitGitHubRepositoryUpdateType string
-
-// BenefitGrant defines model for BenefitGrant.
-type BenefitGrant struct {
-	Benefit Benefit `json:"benefit"`
-
-	// BenefitId The ID of the benefit concerned by this grant.
-	BenefitId string `json:"benefit_id"`
-
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-	Customer  Customer  `json:"customer"`
-
-	// CustomerId The ID of the customer concerned by this grant.
-	CustomerId string `json:"customer_id"`
-
-	// Error The error information if the benefit grant failed with an unrecoverable error.
-	Error *BenefitGrantError `json:"error,omitempty"`
-
-	// GrantedAt The timestamp when the benefit was granted. If `None`, the benefit is not granted.
-	GrantedAt *time.Time `json:"granted_at,omitempty"`
-
-	// Id The ID of the grant.
-	Id string `json:"id"`
-
-	// IsGranted Whether the benefit is granted.
-	IsGranted bool `json:"is_granted"`
-
-	// IsRevoked Whether the benefit is revoked.
-	IsRevoked bool    `json:"is_revoked"`
-	Member    *Member `json:"member,omitempty"`
-
-	// MemberId The ID of the member concerned by this grant.
-	MemberId *string `json:"member_id,omitempty"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrderId The ID of the order that granted this benefit.
-	OrderId    *string                 `json:"order_id"`
-	Properties BenefitGrant_Properties `json:"properties"`
-
-	// RevokedAt The timestamp when the benefit was revoked. If `None`, the benefit is not revoked.
-	RevokedAt *time.Time `json:"revoked_at,omitempty"`
-
-	// SubscriptionId The ID of the subscription that granted this benefit.
-	SubscriptionId *string `json:"subscription_id"`
-}
-
-// BenefitGrant_Properties defines model for BenefitGrant.Properties.
-type BenefitGrant_Properties struct {
-	union json.RawMessage
-}
-
-// BenefitGrantCustomProperties defines model for BenefitGrantCustomProperties.
-type BenefitGrantCustomProperties = map[string]interface{}
-
-// BenefitGrantCustomWebhook defines model for BenefitGrantCustomWebhook.
-type BenefitGrantCustomWebhook struct {
-	// Benefit A benefit of type `custom`.
-	//
-	// Use it to grant any kind of benefit that doesn't fit in the other types.
-	Benefit BenefitCustom `json:"benefit"`
-
-	// BenefitId The ID of the benefit concerned by this grant.
-	BenefitId string `json:"benefit_id"`
-
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-	Customer  Customer  `json:"customer"`
-
-	// CustomerId The ID of the customer concerned by this grant.
-	CustomerId string `json:"customer_id"`
-
-	// Error The error information if the benefit grant failed with an unrecoverable error.
-	Error *BenefitGrantError `json:"error,omitempty"`
-
-	// GrantedAt The timestamp when the benefit was granted. If `None`, the benefit is not granted.
-	GrantedAt *time.Time `json:"granted_at,omitempty"`
-
-	// Id The ID of the grant.
-	Id string `json:"id"`
-
-	// IsGranted Whether the benefit is granted.
-	IsGranted bool `json:"is_granted"`
-
-	// IsRevoked Whether the benefit is revoked.
-	IsRevoked bool    `json:"is_revoked"`
-	Member    *Member `json:"member,omitempty"`
-
-	// MemberId The ID of the member concerned by this grant.
-	MemberId *string `json:"member_id,omitempty"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrderId The ID of the order that granted this benefit.
-	OrderId            *string                       `json:"order_id"`
-	PreviousProperties *BenefitGrantCustomProperties `json:"previous_properties,omitempty"`
-	Properties         BenefitGrantCustomProperties  `json:"properties"`
-
-	// RevokedAt The timestamp when the benefit was revoked. If `None`, the benefit is not revoked.
-	RevokedAt *time.Time `json:"revoked_at,omitempty"`
-
-	// SubscriptionId The ID of the subscription that granted this benefit.
-	SubscriptionId *string `json:"subscription_id"`
-}
-
-// BenefitGrantDiscordProperties defines model for BenefitGrantDiscordProperties.
-type BenefitGrantDiscordProperties struct {
-	AccountId        *string `json:"account_id,omitempty"`
-	GrantedAccountId *string `json:"granted_account_id,omitempty"`
-	GuildId          *string `json:"guild_id,omitempty"`
-	RoleId           *string `json:"role_id,omitempty"`
-}
-
-// BenefitGrantDiscordWebhook defines model for BenefitGrantDiscordWebhook.
-type BenefitGrantDiscordWebhook struct {
-	// Benefit A benefit of type `discord`.
-	//
-	// Use it to automatically invite your backers to a Discord server.
-	Benefit BenefitDiscord `json:"benefit"`
-
-	// BenefitId The ID of the benefit concerned by this grant.
-	BenefitId string `json:"benefit_id"`
-
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-	Customer  Customer  `json:"customer"`
-
-	// CustomerId The ID of the customer concerned by this grant.
-	CustomerId string `json:"customer_id"`
-
-	// Error The error information if the benefit grant failed with an unrecoverable error.
-	Error *BenefitGrantError `json:"error,omitempty"`
-
-	// GrantedAt The timestamp when the benefit was granted. If `None`, the benefit is not granted.
-	GrantedAt *time.Time `json:"granted_at,omitempty"`
-
-	// Id The ID of the grant.
-	Id string `json:"id"`
-
-	// IsGranted Whether the benefit is granted.
-	IsGranted bool `json:"is_granted"`
-
-	// IsRevoked Whether the benefit is revoked.
-	IsRevoked bool    `json:"is_revoked"`
-	Member    *Member `json:"member,omitempty"`
-
-	// MemberId The ID of the member concerned by this grant.
-	MemberId *string `json:"member_id,omitempty"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrderId The ID of the order that granted this benefit.
-	OrderId            *string                        `json:"order_id"`
-	PreviousProperties *BenefitGrantDiscordProperties `json:"previous_properties,omitempty"`
-	Properties         BenefitGrantDiscordProperties  `json:"properties"`
-
-	// RevokedAt The timestamp when the benefit was revoked. If `None`, the benefit is not revoked.
-	RevokedAt *time.Time `json:"revoked_at,omitempty"`
-
-	// SubscriptionId The ID of the subscription that granted this benefit.
-	SubscriptionId *string `json:"subscription_id"`
-}
-
-// BenefitGrantDownloadablesProperties defines model for BenefitGrantDownloadablesProperties.
-type BenefitGrantDownloadablesProperties struct {
-	Files *[]string `json:"files,omitempty"`
-}
-
-// BenefitGrantDownloadablesWebhook defines model for BenefitGrantDownloadablesWebhook.
-type BenefitGrantDownloadablesWebhook struct {
-	Benefit BenefitDownloadables `json:"benefit"`
-
-	// BenefitId The ID of the benefit concerned by this grant.
-	BenefitId string `json:"benefit_id"`
-
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-	Customer  Customer  `json:"customer"`
-
-	// CustomerId The ID of the customer concerned by this grant.
-	CustomerId string `json:"customer_id"`
-
-	// Error The error information if the benefit grant failed with an unrecoverable error.
-	Error *BenefitGrantError `json:"error,omitempty"`
-
-	// GrantedAt The timestamp when the benefit was granted. If `None`, the benefit is not granted.
-	GrantedAt *time.Time `json:"granted_at,omitempty"`
-
-	// Id The ID of the grant.
-	Id string `json:"id"`
-
-	// IsGranted Whether the benefit is granted.
-	IsGranted bool `json:"is_granted"`
-
-	// IsRevoked Whether the benefit is revoked.
-	IsRevoked bool    `json:"is_revoked"`
-	Member    *Member `json:"member,omitempty"`
-
-	// MemberId The ID of the member concerned by this grant.
-	MemberId *string `json:"member_id,omitempty"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrderId The ID of the order that granted this benefit.
-	OrderId            *string                              `json:"order_id"`
-	PreviousProperties *BenefitGrantDownloadablesProperties `json:"previous_properties,omitempty"`
-	Properties         BenefitGrantDownloadablesProperties  `json:"properties"`
-
-	// RevokedAt The timestamp when the benefit was revoked. If `None`, the benefit is not revoked.
-	RevokedAt *time.Time `json:"revoked_at,omitempty"`
-
-	// SubscriptionId The ID of the subscription that granted this benefit.
-	SubscriptionId *string `json:"subscription_id"`
-}
-
-// BenefitGrantError defines model for BenefitGrantError.
-type BenefitGrantError struct {
-	Message   string `json:"message"`
-	Timestamp string `json:"timestamp"`
-	Type      string `json:"type"`
-}
-
-// BenefitGrantFeatureFlagProperties defines model for BenefitGrantFeatureFlagProperties.
-type BenefitGrantFeatureFlagProperties = map[string]interface{}
-
-// BenefitGrantFeatureFlagWebhook defines model for BenefitGrantFeatureFlagWebhook.
-type BenefitGrantFeatureFlagWebhook struct {
-	// Benefit A benefit of type `feature_flag`.
-	//
-	// Use it to grant feature flags with key-value metadata
-	// that can be queried via the API and webhooks.
-	Benefit BenefitFeatureFlag `json:"benefit"`
-
-	// BenefitId The ID of the benefit concerned by this grant.
-	BenefitId string `json:"benefit_id"`
-
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-	Customer  Customer  `json:"customer"`
-
-	// CustomerId The ID of the customer concerned by this grant.
-	CustomerId string `json:"customer_id"`
-
-	// Error The error information if the benefit grant failed with an unrecoverable error.
-	Error *BenefitGrantError `json:"error,omitempty"`
-
-	// GrantedAt The timestamp when the benefit was granted. If `None`, the benefit is not granted.
-	GrantedAt *time.Time `json:"granted_at,omitempty"`
-
-	// Id The ID of the grant.
-	Id string `json:"id"`
-
-	// IsGranted Whether the benefit is granted.
-	IsGranted bool `json:"is_granted"`
-
-	// IsRevoked Whether the benefit is revoked.
-	IsRevoked bool    `json:"is_revoked"`
-	Member    *Member `json:"member,omitempty"`
-
-	// MemberId The ID of the member concerned by this grant.
-	MemberId *string `json:"member_id,omitempty"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrderId The ID of the order that granted this benefit.
-	OrderId            *string                            `json:"order_id"`
-	PreviousProperties *BenefitGrantFeatureFlagProperties `json:"previous_properties,omitempty"`
-	Properties         BenefitGrantFeatureFlagProperties  `json:"properties"`
-
-	// RevokedAt The timestamp when the benefit was revoked. If `None`, the benefit is not revoked.
-	RevokedAt *time.Time `json:"revoked_at,omitempty"`
-
-	// SubscriptionId The ID of the subscription that granted this benefit.
-	SubscriptionId *string `json:"subscription_id"`
-}
-
-// BenefitGrantGitHubRepositoryProperties defines model for BenefitGrantGitHubRepositoryProperties.
-type BenefitGrantGitHubRepositoryProperties struct {
-	AccountId        *string                                           `json:"account_id,omitempty"`
-	GrantedAccountId *string                                           `json:"granted_account_id,omitempty"`
-	Permission       *BenefitGrantGitHubRepositoryPropertiesPermission `json:"permission,omitempty"`
-	RepositoryName   *string                                           `json:"repository_name,omitempty"`
-	RepositoryOwner  *string                                           `json:"repository_owner,omitempty"`
-}
-
-// BenefitGrantGitHubRepositoryPropertiesPermission defines model for BenefitGrantGitHubRepositoryProperties.Permission.
-type BenefitGrantGitHubRepositoryPropertiesPermission string
-
-// BenefitGrantGitHubRepositoryWebhook defines model for BenefitGrantGitHubRepositoryWebhook.
-type BenefitGrantGitHubRepositoryWebhook struct {
-	// Benefit A benefit of type `github_repository`.
-	//
-	// Use it to automatically invite your backers to a private GitHub repository.
-	Benefit BenefitGitHubRepository `json:"benefit"`
-
-	// BenefitId The ID of the benefit concerned by this grant.
-	BenefitId string `json:"benefit_id"`
-
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-	Customer  Customer  `json:"customer"`
-
-	// CustomerId The ID of the customer concerned by this grant.
-	CustomerId string `json:"customer_id"`
-
-	// Error The error information if the benefit grant failed with an unrecoverable error.
-	Error *BenefitGrantError `json:"error,omitempty"`
-
-	// GrantedAt The timestamp when the benefit was granted. If `None`, the benefit is not granted.
-	GrantedAt *time.Time `json:"granted_at,omitempty"`
-
-	// Id The ID of the grant.
-	Id string `json:"id"`
-
-	// IsGranted Whether the benefit is granted.
-	IsGranted bool `json:"is_granted"`
-
-	// IsRevoked Whether the benefit is revoked.
-	IsRevoked bool    `json:"is_revoked"`
-	Member    *Member `json:"member,omitempty"`
-
-	// MemberId The ID of the member concerned by this grant.
-	MemberId *string `json:"member_id,omitempty"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrderId The ID of the order that granted this benefit.
-	OrderId            *string                                 `json:"order_id"`
-	PreviousProperties *BenefitGrantGitHubRepositoryProperties `json:"previous_properties,omitempty"`
-	Properties         BenefitGrantGitHubRepositoryProperties  `json:"properties"`
-
-	// RevokedAt The timestamp when the benefit was revoked. If `None`, the benefit is not revoked.
-	RevokedAt *time.Time `json:"revoked_at,omitempty"`
-
-	// SubscriptionId The ID of the subscription that granted this benefit.
-	SubscriptionId *string `json:"subscription_id"`
-}
-
-// BenefitGrantLicenseKeysProperties defines model for BenefitGrantLicenseKeysProperties.
-type BenefitGrantLicenseKeysProperties struct {
-	DisplayKey      *string `json:"display_key,omitempty"`
-	LicenseKeyId    *string `json:"license_key_id,omitempty"`
-	UserProvidedKey *string `json:"user_provided_key,omitempty"`
-}
-
-// BenefitGrantLicenseKeysWebhook defines model for BenefitGrantLicenseKeysWebhook.
-type BenefitGrantLicenseKeysWebhook struct {
-	Benefit BenefitLicenseKeys `json:"benefit"`
-
-	// BenefitId The ID of the benefit concerned by this grant.
-	BenefitId string `json:"benefit_id"`
-
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-	Customer  Customer  `json:"customer"`
-
-	// CustomerId The ID of the customer concerned by this grant.
-	CustomerId string `json:"customer_id"`
-
-	// Error The error information if the benefit grant failed with an unrecoverable error.
-	Error *BenefitGrantError `json:"error,omitempty"`
-
-	// GrantedAt The timestamp when the benefit was granted. If `None`, the benefit is not granted.
-	GrantedAt *time.Time `json:"granted_at,omitempty"`
-
-	// Id The ID of the grant.
-	Id string `json:"id"`
-
-	// IsGranted Whether the benefit is granted.
-	IsGranted bool `json:"is_granted"`
-
-	// IsRevoked Whether the benefit is revoked.
-	IsRevoked bool    `json:"is_revoked"`
-	Member    *Member `json:"member,omitempty"`
-
-	// MemberId The ID of the member concerned by this grant.
-	MemberId *string `json:"member_id,omitempty"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrderId The ID of the order that granted this benefit.
-	OrderId            *string                            `json:"order_id"`
-	PreviousProperties *BenefitGrantLicenseKeysProperties `json:"previous_properties,omitempty"`
-	Properties         BenefitGrantLicenseKeysProperties  `json:"properties"`
-
-	// RevokedAt The timestamp when the benefit was revoked. If `None`, the benefit is not revoked.
-	RevokedAt *time.Time `json:"revoked_at,omitempty"`
-
-	// SubscriptionId The ID of the subscription that granted this benefit.
-	SubscriptionId *string `json:"subscription_id"`
-}
-
-// BenefitGrantMetadata defines model for BenefitGrantMetadata.
-type BenefitGrantMetadata struct {
-	BenefitGrantId string      `json:"benefit_grant_id"`
-	BenefitId      string      `json:"benefit_id"`
-	BenefitType    BenefitType `json:"benefit_type"`
-	MemberId       *string     `json:"member_id,omitempty"`
-}
-
-// BenefitGrantMeterCreditProperties defines model for BenefitGrantMeterCreditProperties.
-type BenefitGrantMeterCreditProperties struct {
-	LastCreditedAt      *string `json:"last_credited_at,omitempty"`
-	LastCreditedMeterId *string `json:"last_credited_meter_id,omitempty"`
-	LastCreditedUnits   *int    `json:"last_credited_units,omitempty"`
-}
-
-// BenefitGrantMeterCreditWebhook defines model for BenefitGrantMeterCreditWebhook.
-type BenefitGrantMeterCreditWebhook struct {
-	// Benefit A benefit of type `meter_unit`.
-	//
-	// Use it to grant a number of units on a specific meter.
-	Benefit BenefitMeterCredit `json:"benefit"`
-
-	// BenefitId The ID of the benefit concerned by this grant.
-	BenefitId string `json:"benefit_id"`
-
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-	Customer  Customer  `json:"customer"`
-
-	// CustomerId The ID of the customer concerned by this grant.
-	CustomerId string `json:"customer_id"`
-
-	// Error The error information if the benefit grant failed with an unrecoverable error.
-	Error *BenefitGrantError `json:"error,omitempty"`
-
-	// GrantedAt The timestamp when the benefit was granted. If `None`, the benefit is not granted.
-	GrantedAt *time.Time `json:"granted_at,omitempty"`
-
-	// Id The ID of the grant.
-	Id string `json:"id"`
-
-	// IsGranted Whether the benefit is granted.
-	IsGranted bool `json:"is_granted"`
-
-	// IsRevoked Whether the benefit is revoked.
-	IsRevoked bool    `json:"is_revoked"`
-	Member    *Member `json:"member,omitempty"`
-
-	// MemberId The ID of the member concerned by this grant.
-	MemberId *string `json:"member_id,omitempty"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrderId The ID of the order that granted this benefit.
-	OrderId            *string                            `json:"order_id"`
-	PreviousProperties *BenefitGrantMeterCreditProperties `json:"previous_properties,omitempty"`
-	Properties         BenefitGrantMeterCreditProperties  `json:"properties"`
-
-	// RevokedAt The timestamp when the benefit was revoked. If `None`, the benefit is not revoked.
-	RevokedAt *time.Time `json:"revoked_at,omitempty"`
-
-	// SubscriptionId The ID of the subscription that granted this benefit.
-	SubscriptionId *string `json:"subscription_id"`
-}
-
-// BenefitGrantSlackSharedChannelProperties defines model for BenefitGrantSlackSharedChannelProperties.
-type BenefitGrantSlackSharedChannelProperties struct {
-	ChannelId       *string `json:"channel_id,omitempty"`
-	ChannelName     *string `json:"channel_name,omitempty"`
-	ConnectedTeamId *string `json:"connected_team_id,omitempty"`
-	InviteId        *string `json:"invite_id,omitempty"`
-	InviteUrl       *string `json:"invite_url,omitempty"`
-	InvitedEmail    *string `json:"invited_email,omitempty"`
-}
-
-// BenefitGrantSlackSharedChannelWebhook defines model for BenefitGrantSlackSharedChannelWebhook.
-type BenefitGrantSlackSharedChannelWebhook struct {
-	Benefit BenefitSlackSharedChannel `json:"benefit"`
-
-	// BenefitId The ID of the benefit concerned by this grant.
-	BenefitId string `json:"benefit_id"`
-
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-	Customer  Customer  `json:"customer"`
-
-	// CustomerId The ID of the customer concerned by this grant.
-	CustomerId string `json:"customer_id"`
-
-	// Error The error information if the benefit grant failed with an unrecoverable error.
-	Error *BenefitGrantError `json:"error,omitempty"`
-
-	// GrantedAt The timestamp when the benefit was granted. If `None`, the benefit is not granted.
-	GrantedAt *time.Time `json:"granted_at,omitempty"`
-
-	// Id The ID of the grant.
-	Id string `json:"id"`
-
-	// IsGranted Whether the benefit is granted.
-	IsGranted bool `json:"is_granted"`
-
-	// IsRevoked Whether the benefit is revoked.
-	IsRevoked bool    `json:"is_revoked"`
-	Member    *Member `json:"member,omitempty"`
-
-	// MemberId The ID of the member concerned by this grant.
-	MemberId *string `json:"member_id,omitempty"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrderId The ID of the order that granted this benefit.
-	OrderId            *string                                   `json:"order_id"`
-	PreviousProperties *BenefitGrantSlackSharedChannelProperties `json:"previous_properties,omitempty"`
-	Properties         BenefitGrantSlackSharedChannelProperties  `json:"properties"`
-
-	// RevokedAt The timestamp when the benefit was revoked. If `None`, the benefit is not revoked.
-	RevokedAt *time.Time `json:"revoked_at,omitempty"`
-
-	// SubscriptionId The ID of the subscription that granted this benefit.
-	SubscriptionId *string `json:"subscription_id"`
-}
-
-// BenefitGrantSortProperty defines model for BenefitGrantSortProperty.
-type BenefitGrantSortProperty string
-
-// BenefitGrantWebhook defines model for BenefitGrantWebhook.
-type BenefitGrantWebhook struct {
-	union json.RawMessage
-}
-
-// BenefitGrantedEvent An event created by Polar when a benefit is granted to a customer.
-type BenefitGrantedEvent struct {
-	// ChildCount Number of direct child events linked to this event.
-	ChildCount *int `json:"child_count,omitempty"`
-
-	// Customer The customer associated with the event.
-	Customer *Customer `json:"customer"`
-
-	// CustomerId ID of the customer in your Polar organization associated with the event.
-	CustomerId *string `json:"customer_id"`
-
-	// ExternalCustomerId ID of the customer in your system associated with the event.
-	ExternalCustomerId *string `json:"external_customer_id"`
-
-	// ExternalMemberId ID of the member in your system within the customer's organization who performed the action inside B2B.
-	ExternalMemberId *string `json:"external_member_id,omitempty"`
-
-	// Id The ID of the object.
-	Id string `json:"id"`
-
-	// Label Human readable label of the event type.
-	Label string `json:"label"`
-
-	// MemberId ID of the member within the customer's organization who performed the action inside B2B.
-	MemberId *string              `json:"member_id,omitempty"`
-	Metadata BenefitGrantMetadata `json:"metadata"`
-
-	// Name The name of the event.
-	Name BenefitGrantedEventName `json:"name"`
-
-	// OrganizationId The ID of the organization owning the event.
-	//
-	// Examples: 1dbfc517-0bbf-4301-9ba8-555ca42b9737
-	OrganizationId string `json:"organization_id"`
-
-	// ParentId The ID of the parent event.
-	ParentId *string `json:"parent_id,omitempty"`
-
-	// Source The source of the event. `system` events are created by Polar. `user` events are the one you create through our ingestion API.
-	Source BenefitGrantedEventSource `json:"source"`
-
-	// Timestamp The timestamp of the event.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	Timestamp time.Time `json:"timestamp"`
-}
-
-// BenefitGrantedEventName The name of the event.
-type BenefitGrantedEventName string
-
-// BenefitGrantedEventSource The source of the event. `system` events are created by Polar. `user` events are the one you create through our ingestion API.
-type BenefitGrantedEventSource string
-
-// BenefitLicenseKeyActivationCreateProperties defines model for BenefitLicenseKeyActivationCreateProperties.
-type BenefitLicenseKeyActivationCreateProperties struct {
-	EnableCustomerAdmin bool `json:"enable_customer_admin"`
-	Limit               int  `json:"limit"`
-}
-
-// BenefitLicenseKeyActivationProperties defines model for BenefitLicenseKeyActivationProperties.
-type BenefitLicenseKeyActivationProperties struct {
-	EnableCustomerAdmin bool `json:"enable_customer_admin"`
-	Limit               int  `json:"limit"`
-}
-
-// BenefitLicenseKeyExpirationProperties defines model for BenefitLicenseKeyExpirationProperties.
-type BenefitLicenseKeyExpirationProperties struct {
-	Timeframe BenefitLicenseKeyExpirationPropertiesTimeframe `json:"timeframe"`
-	Ttl       int                                            `json:"ttl"`
-}
-
-// BenefitLicenseKeyExpirationPropertiesTimeframe defines model for BenefitLicenseKeyExpirationProperties.Timeframe.
-type BenefitLicenseKeyExpirationPropertiesTimeframe string
-
-// BenefitLicenseKeys defines model for BenefitLicenseKeys.
-type BenefitLicenseKeys struct {
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-
-	// Deletable Whether the benefit is deletable.
-	Deletable bool `json:"deletable"`
-
-	// Description The description of the benefit.
-	Description string `json:"description"`
-
-	// Id The ID of the benefit.
-	Id string `json:"id"`
-
-	// IsDeleted Whether the benefit is deleted.
-	IsDeleted bool               `json:"is_deleted"`
-	Metadata  MetadataOutputType `json:"metadata"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrganizationId The ID of the organization owning the benefit.
-	OrganizationId string                       `json:"organization_id"`
-	Properties     BenefitLicenseKeysProperties `json:"properties"`
-
-	// Selectable Whether the benefit is selectable when creating a product.
-	Selectable bool                   `json:"selectable"`
-	Type       BenefitLicenseKeysType `json:"type"`
-
-	// Visibility The visibility of the benefit in the customer portal.
-	Visibility             BenefitVisibility `json:"visibility"`
-	VisibilityConfigurable *bool             `json:"visibility_configurable,omitempty"`
-}
-
-// BenefitLicenseKeysType defines model for BenefitLicenseKeys.Type.
-type BenefitLicenseKeysType string
-
-// BenefitLicenseKeysCreate defines model for BenefitLicenseKeysCreate.
-type BenefitLicenseKeysCreate struct {
-	// Description The description of the benefit. Will be displayed on products having this benefit.
-	Description string `json:"description"`
-
-	// Metadata Key-value object allowing you to store additional information.
-	//
-	// The key must be a string with a maximum length of **40 characters**.
-	// The value must be either:
-	//
-	// * A string with a maximum length of **500 characters**
-	// * An integer
-	// * A floating-point number
-	// * A boolean
-	//
-	// You can store up to **50 key-value pairs**.
-	Metadata *map[string]BenefitLicenseKeysCreate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
-
-	// OrganizationId The ID of the organization owning the benefit. **Required unless you use an organization token.**
-	OrganizationId *string                            `json:"organization_id,omitempty"`
-	Properties     BenefitLicenseKeysCreateProperties `json:"properties"`
-	Type           BenefitLicenseKeysCreateType       `json:"type"`
-
-	// Visibility The visibility of the benefit in the customer portal.
-	Visibility *BenefitVisibility `json:"visibility,omitempty"`
-}
-
-// BenefitLicenseKeysCreateMetadata0 defines model for BenefitLicenseKeysCreate.Metadata.0.
-type BenefitLicenseKeysCreateMetadata0 = string
-
-// BenefitLicenseKeysCreateMetadata1 defines model for BenefitLicenseKeysCreate.Metadata.1.
-type BenefitLicenseKeysCreateMetadata1 = int
-
-// BenefitLicenseKeysCreateMetadata2 defines model for BenefitLicenseKeysCreate.Metadata.2.
-type BenefitLicenseKeysCreateMetadata2 = float64
-
-// BenefitLicenseKeysCreateMetadata3 defines model for BenefitLicenseKeysCreate.Metadata.3.
-type BenefitLicenseKeysCreateMetadata3 = bool
-
-// BenefitLicenseKeysCreate_Metadata_AdditionalProperties defines model for BenefitLicenseKeysCreate.metadata.AdditionalProperties.
-type BenefitLicenseKeysCreate_Metadata_AdditionalProperties struct {
-	union json.RawMessage
-}
-
-// BenefitLicenseKeysCreateType defines model for BenefitLicenseKeysCreate.Type.
-type BenefitLicenseKeysCreateType string
-
-// BenefitLicenseKeysCreateProperties defines model for BenefitLicenseKeysCreateProperties.
-type BenefitLicenseKeysCreateProperties struct {
-	Activations *BenefitLicenseKeyActivationCreateProperties `json:"activations,omitempty"`
-	Expires     *BenefitLicenseKeyExpirationProperties       `json:"expires,omitempty"`
-	LimitUsage  *int                                         `json:"limit_usage,omitempty"`
-	Prefix      *string                                      `json:"prefix,omitempty"`
-}
-
-// BenefitLicenseKeysProperties defines model for BenefitLicenseKeysProperties.
-type BenefitLicenseKeysProperties struct {
-	Activations *BenefitLicenseKeyActivationProperties `json:"activations"`
-	Expires     *BenefitLicenseKeyExpirationProperties `json:"expires"`
-	LimitUsage  *int                                   `json:"limit_usage"`
-	Prefix      *string                                `json:"prefix"`
-}
-
-// BenefitLicenseKeysPublic defines model for BenefitLicenseKeysPublic.
-type BenefitLicenseKeysPublic struct {
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-
-	// Deletable Whether the benefit is deletable.
-	Deletable bool `json:"deletable"`
-
-	// Description The description of the benefit.
-	Description string `json:"description"`
-
-	// Id The ID of the benefit.
-	Id string `json:"id"`
-
-	// IsDeleted Whether the benefit is deleted.
-	IsDeleted bool `json:"is_deleted"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrganizationId The ID of the organization owning the benefit.
-	OrganizationId string `json:"organization_id"`
-
-	// Selectable Whether the benefit is selectable when creating a product.
-	Selectable bool                         `json:"selectable"`
-	Type       BenefitLicenseKeysPublicType `json:"type"`
-}
-
-// BenefitLicenseKeysPublicType defines model for BenefitLicenseKeysPublic.Type.
-type BenefitLicenseKeysPublicType string
-
-// BenefitLicenseKeysSubscriber defines model for BenefitLicenseKeysSubscriber.
-type BenefitLicenseKeysSubscriber struct {
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-
-	// Deletable Whether the benefit is deletable.
-	Deletable bool `json:"deletable"`
-
-	// Description The description of the benefit.
-	Description string `json:"description"`
-
-	// Id The ID of the benefit.
-	Id string `json:"id"`
-
-	// IsDeleted Whether the benefit is deleted.
-	IsDeleted bool `json:"is_deleted"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt   *time.Time                    `json:"modified_at"`
-	Organization BenefitSubscriberOrganization `json:"organization"`
-
-	// OrganizationId The ID of the organization owning the benefit.
-	OrganizationId string                                 `json:"organization_id"`
-	Properties     BenefitLicenseKeysSubscriberProperties `json:"properties"`
-
-	// Selectable Whether the benefit is selectable when creating a product.
-	Selectable bool                             `json:"selectable"`
-	Type       BenefitLicenseKeysSubscriberType `json:"type"`
-}
-
-// BenefitLicenseKeysSubscriberType defines model for BenefitLicenseKeysSubscriber.Type.
-type BenefitLicenseKeysSubscriberType string
-
-// BenefitLicenseKeysSubscriberProperties defines model for BenefitLicenseKeysSubscriberProperties.
-type BenefitLicenseKeysSubscriberProperties struct {
-	Activations *BenefitLicenseKeyActivationProperties `json:"activations"`
-	Expires     *BenefitLicenseKeyExpirationProperties `json:"expires"`
-	LimitUsage  *int                                   `json:"limit_usage"`
-	Prefix      *string                                `json:"prefix"`
-}
-
-// BenefitLicenseKeysUpdate defines model for BenefitLicenseKeysUpdate.
-type BenefitLicenseKeysUpdate struct {
-	// Description The description of the benefit. Will be displayed on products having this benefit.
-	Description *string `json:"description,omitempty"`
-
-	// Metadata Key-value object allowing you to store additional information.
-	//
-	// The key must be a string with a maximum length of **40 characters**.
-	// The value must be either:
-	//
-	// * A string with a maximum length of **500 characters**
-	// * An integer
-	// * A floating-point number
-	// * A boolean
-	//
-	// You can store up to **50 key-value pairs**.
-	Metadata   *map[string]BenefitLicenseKeysUpdate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
-	Properties *BenefitLicenseKeysCreateProperties                                `json:"properties,omitempty"`
-	Type       BenefitLicenseKeysUpdateType                                       `json:"type"`
-
-	// Visibility The visibility of the benefit in the customer portal.
-	Visibility *BenefitVisibility `json:"visibility,omitempty"`
-}
-
-// BenefitLicenseKeysUpdateMetadata0 defines model for BenefitLicenseKeysUpdate.Metadata.0.
-type BenefitLicenseKeysUpdateMetadata0 = string
-
-// BenefitLicenseKeysUpdateMetadata1 defines model for BenefitLicenseKeysUpdate.Metadata.1.
-type BenefitLicenseKeysUpdateMetadata1 = int
-
-// BenefitLicenseKeysUpdateMetadata2 defines model for BenefitLicenseKeysUpdate.Metadata.2.
-type BenefitLicenseKeysUpdateMetadata2 = float64
-
-// BenefitLicenseKeysUpdateMetadata3 defines model for BenefitLicenseKeysUpdate.Metadata.3.
-type BenefitLicenseKeysUpdateMetadata3 = bool
-
-// BenefitLicenseKeysUpdate_Metadata_AdditionalProperties defines model for BenefitLicenseKeysUpdate.metadata.AdditionalProperties.
-type BenefitLicenseKeysUpdate_Metadata_AdditionalProperties struct {
-	union json.RawMessage
-}
-
-// BenefitLicenseKeysUpdateType defines model for BenefitLicenseKeysUpdate.Type.
-type BenefitLicenseKeysUpdateType string
-
-// BenefitMeterCredit A benefit of type `meter_unit`.
-//
-// Use it to grant a number of units on a specific meter.
-type BenefitMeterCredit struct {
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-
-	// Deletable Whether the benefit is deletable.
-	Deletable bool `json:"deletable"`
-
-	// Description The description of the benefit.
-	Description string `json:"description"`
-
-	// Id The ID of the benefit.
-	Id string `json:"id"`
-
-	// IsDeleted Whether the benefit is deleted.
-	IsDeleted bool               `json:"is_deleted"`
-	Metadata  MetadataOutputType `json:"metadata"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrganizationId The ID of the organization owning the benefit.
-	OrganizationId string `json:"organization_id"`
-
-	// Properties Properties for a benefit of type `meter_unit`.
-	Properties BenefitMeterCreditProperties `json:"properties"`
-
-	// Selectable Whether the benefit is selectable when creating a product.
-	Selectable bool                   `json:"selectable"`
-	Type       BenefitMeterCreditType `json:"type"`
-
-	// Visibility The visibility of the benefit in the customer portal.
-	Visibility             BenefitVisibility `json:"visibility"`
-	VisibilityConfigurable *bool             `json:"visibility_configurable,omitempty"`
-}
-
-// BenefitMeterCreditType defines model for BenefitMeterCredit.Type.
-type BenefitMeterCreditType string
-
-// BenefitMeterCreditCreate Schema to create a benefit of type `meter_unit`.
-type BenefitMeterCreditCreate struct {
-	// Description The description of the benefit. Will be displayed on products having this benefit.
-	Description string `json:"description"`
-
-	// Metadata Key-value object allowing you to store additional information.
-	//
-	// The key must be a string with a maximum length of **40 characters**.
-	// The value must be either:
-	//
-	// * A string with a maximum length of **500 characters**
-	// * An integer
-	// * A floating-point number
-	// * A boolean
-	//
-	// You can store up to **50 key-value pairs**.
-	Metadata *map[string]BenefitMeterCreditCreate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
-
-	// OrganizationId The ID of the organization owning the benefit. **Required unless you use an organization token.**
-	OrganizationId *string `json:"organization_id,omitempty"`
-
-	// Properties Properties for creating a benefit of type `meter_unit`.
-	Properties BenefitMeterCreditCreateProperties `json:"properties"`
-	Type       BenefitMeterCreditCreateType       `json:"type"`
-
-	// Visibility The visibility of the benefit in the customer portal.
-	Visibility *BenefitVisibility `json:"visibility,omitempty"`
-}
-
-// BenefitMeterCreditCreateMetadata0 defines model for BenefitMeterCreditCreate.Metadata.0.
-type BenefitMeterCreditCreateMetadata0 = string
-
-// BenefitMeterCreditCreateMetadata1 defines model for BenefitMeterCreditCreate.Metadata.1.
-type BenefitMeterCreditCreateMetadata1 = int
-
-// BenefitMeterCreditCreateMetadata2 defines model for BenefitMeterCreditCreate.Metadata.2.
-type BenefitMeterCreditCreateMetadata2 = float64
-
-// BenefitMeterCreditCreateMetadata3 defines model for BenefitMeterCreditCreate.Metadata.3.
-type BenefitMeterCreditCreateMetadata3 = bool
-
-// BenefitMeterCreditCreate_Metadata_AdditionalProperties defines model for BenefitMeterCreditCreate.metadata.AdditionalProperties.
-type BenefitMeterCreditCreate_Metadata_AdditionalProperties struct {
-	union json.RawMessage
-}
-
-// BenefitMeterCreditCreateType defines model for BenefitMeterCreditCreate.Type.
-type BenefitMeterCreditCreateType string
-
-// BenefitMeterCreditCreateProperties Properties for creating a benefit of type `meter_unit`.
-type BenefitMeterCreditCreateProperties struct {
-	MeterId  string `json:"meter_id"`
-	Rollover bool   `json:"rollover"`
-	Units    int    `json:"units"`
-}
-
-// BenefitMeterCreditProperties Properties for a benefit of type `meter_unit`.
-type BenefitMeterCreditProperties struct {
-	MeterId  string `json:"meter_id"`
-	Rollover bool   `json:"rollover"`
-	Units    int    `json:"units"`
-}
-
-// BenefitMeterCreditPublic A benefit of type `meter_credit`.
-//
-// Grants a number of units on a specific meter.
-type BenefitMeterCreditPublic struct {
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-
-	// Deletable Whether the benefit is deletable.
-	Deletable bool `json:"deletable"`
-
-	// Description The description of the benefit.
-	Description string `json:"description"`
-
-	// Id The ID of the benefit.
-	Id string `json:"id"`
-
-	// IsDeleted Whether the benefit is deleted.
-	IsDeleted bool `json:"is_deleted"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrganizationId The ID of the organization owning the benefit.
-	OrganizationId string `json:"organization_id"`
-
-	// Properties Properties for a benefit of type `meter_credit`.
-	Properties BenefitMeterCreditPublicProperties `json:"properties"`
-
-	// Selectable Whether the benefit is selectable when creating a product.
-	Selectable bool                         `json:"selectable"`
-	Type       BenefitMeterCreditPublicType `json:"type"`
-}
-
-// BenefitMeterCreditPublicType defines model for BenefitMeterCreditPublic.Type.
-type BenefitMeterCreditPublicType string
-
-// BenefitMeterCreditPublicProperties Properties for a benefit of type `meter_credit`.
-type BenefitMeterCreditPublicProperties struct {
-	MeterId string `json:"meter_id"`
-	Units   int    `json:"units"`
-}
-
-// BenefitMeterCreditSubscriber defines model for BenefitMeterCreditSubscriber.
-type BenefitMeterCreditSubscriber struct {
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-
-	// Deletable Whether the benefit is deletable.
-	Deletable bool `json:"deletable"`
-
-	// Description The description of the benefit.
-	Description string `json:"description"`
-
-	// Id The ID of the benefit.
-	Id string `json:"id"`
-
-	// IsDeleted Whether the benefit is deleted.
-	IsDeleted bool `json:"is_deleted"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt   *time.Time                    `json:"modified_at"`
-	Organization BenefitSubscriberOrganization `json:"organization"`
-
-	// OrganizationId The ID of the organization owning the benefit.
-	OrganizationId string `json:"organization_id"`
-
-	// Properties Properties available to subscribers for a benefit of type `meter_unit`.
-	Properties BenefitMeterCreditSubscriberProperties `json:"properties"`
-
-	// Selectable Whether the benefit is selectable when creating a product.
-	Selectable bool                             `json:"selectable"`
-	Type       BenefitMeterCreditSubscriberType `json:"type"`
-}
-
-// BenefitMeterCreditSubscriberType defines model for BenefitMeterCreditSubscriber.Type.
-type BenefitMeterCreditSubscriberType string
-
-// BenefitMeterCreditSubscriberProperties Properties available to subscribers for a benefit of type `meter_unit`.
-type BenefitMeterCreditSubscriberProperties struct {
-	MeterId  string `json:"meter_id"`
-	Rollover bool   `json:"rollover"`
-	Units    int    `json:"units"`
-}
-
-// BenefitMeterCreditUpdate defines model for BenefitMeterCreditUpdate.
-type BenefitMeterCreditUpdate struct {
-	// Description The description of the benefit. Will be displayed on products having this benefit.
-	Description *string `json:"description,omitempty"`
-
-	// Metadata Key-value object allowing you to store additional information.
-	//
-	// The key must be a string with a maximum length of **40 characters**.
-	// The value must be either:
-	//
-	// * A string with a maximum length of **500 characters**
-	// * An integer
-	// * A floating-point number
-	// * A boolean
-	//
-	// You can store up to **50 key-value pairs**.
-	Metadata   *map[string]BenefitMeterCreditUpdate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
-	Properties *BenefitMeterCreditCreateProperties                                `json:"properties,omitempty"`
-	Type       BenefitMeterCreditUpdateType                                       `json:"type"`
-
-	// Visibility The visibility of the benefit in the customer portal.
-	Visibility *BenefitVisibility `json:"visibility,omitempty"`
-}
-
-// BenefitMeterCreditUpdateMetadata0 defines model for BenefitMeterCreditUpdate.Metadata.0.
-type BenefitMeterCreditUpdateMetadata0 = string
-
-// BenefitMeterCreditUpdateMetadata1 defines model for BenefitMeterCreditUpdate.Metadata.1.
-type BenefitMeterCreditUpdateMetadata1 = int
-
-// BenefitMeterCreditUpdateMetadata2 defines model for BenefitMeterCreditUpdate.Metadata.2.
-type BenefitMeterCreditUpdateMetadata2 = float64
-
-// BenefitMeterCreditUpdateMetadata3 defines model for BenefitMeterCreditUpdate.Metadata.3.
-type BenefitMeterCreditUpdateMetadata3 = bool
-
-// BenefitMeterCreditUpdate_Metadata_AdditionalProperties defines model for BenefitMeterCreditUpdate.metadata.AdditionalProperties.
-type BenefitMeterCreditUpdate_Metadata_AdditionalProperties struct {
-	union json.RawMessage
-}
-
-// BenefitMeterCreditUpdateType defines model for BenefitMeterCreditUpdate.Type.
-type BenefitMeterCreditUpdateType string
-
-// BenefitPublic defines model for BenefitPublic.
-type BenefitPublic struct {
-	union json.RawMessage
-}
-
-// BenefitRevokedEvent An event created by Polar when a benefit is revoked from a customer.
-type BenefitRevokedEvent struct {
-	// ChildCount Number of direct child events linked to this event.
-	ChildCount *int `json:"child_count,omitempty"`
-
-	// Customer The customer associated with the event.
-	Customer *Customer `json:"customer"`
-
-	// CustomerId ID of the customer in your Polar organization associated with the event.
-	CustomerId *string `json:"customer_id"`
-
-	// ExternalCustomerId ID of the customer in your system associated with the event.
-	ExternalCustomerId *string `json:"external_customer_id"`
-
-	// ExternalMemberId ID of the member in your system within the customer's organization who performed the action inside B2B.
-	ExternalMemberId *string `json:"external_member_id,omitempty"`
-
-	// Id The ID of the object.
-	Id string `json:"id"`
-
-	// Label Human readable label of the event type.
-	Label string `json:"label"`
-
-	// MemberId ID of the member within the customer's organization who performed the action inside B2B.
-	MemberId *string              `json:"member_id,omitempty"`
-	Metadata BenefitGrantMetadata `json:"metadata"`
-
-	// Name The name of the event.
-	Name BenefitRevokedEventName `json:"name"`
-
-	// OrganizationId The ID of the organization owning the event.
-	//
-	// Examples: 1dbfc517-0bbf-4301-9ba8-555ca42b9737
-	OrganizationId string `json:"organization_id"`
-
-	// ParentId The ID of the parent event.
-	ParentId *string `json:"parent_id,omitempty"`
-
-	// Source The source of the event. `system` events are created by Polar. `user` events are the one you create through our ingestion API.
-	Source BenefitRevokedEventSource `json:"source"`
-
-	// Timestamp The timestamp of the event.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	Timestamp time.Time `json:"timestamp"`
-}
-
-// BenefitRevokedEventName The name of the event.
-type BenefitRevokedEventName string
-
-// BenefitRevokedEventSource The source of the event. `system` events are created by Polar. `user` events are the one you create through our ingestion API.
-type BenefitRevokedEventSource string
-
-// BenefitSlackSharedChannel defines model for BenefitSlackSharedChannel.
-type BenefitSlackSharedChannel struct {
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-
-	// Deletable Whether the benefit is deletable.
-	Deletable bool `json:"deletable"`
-
-	// Description The description of the benefit.
-	Description string `json:"description"`
-
-	// Id The ID of the benefit.
-	Id string `json:"id"`
-
-	// IsDeleted Whether the benefit is deleted.
-	IsDeleted bool               `json:"is_deleted"`
-	Metadata  MetadataOutputType `json:"metadata"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrganizationId The ID of the organization owning the benefit.
-	OrganizationId string                              `json:"organization_id"`
-	Properties     BenefitSlackSharedChannelProperties `json:"properties"`
-
-	// Selectable Whether the benefit is selectable when creating a product.
-	Selectable bool                          `json:"selectable"`
-	Type       BenefitSlackSharedChannelType `json:"type"`
-
-	// Visibility The visibility of the benefit in the customer portal.
-	Visibility             BenefitVisibility `json:"visibility"`
-	VisibilityConfigurable *bool             `json:"visibility_configurable,omitempty"`
-}
-
-// BenefitSlackSharedChannelType defines model for BenefitSlackSharedChannel.Type.
-type BenefitSlackSharedChannelType string
-
-// BenefitSlackSharedChannelCreate defines model for BenefitSlackSharedChannelCreate.
-type BenefitSlackSharedChannelCreate struct {
-	// Description The description of the benefit. Will be displayed on products having this benefit.
-	Description string `json:"description"`
-
-	// Metadata Key-value object allowing you to store additional information.
-	//
-	// The key must be a string with a maximum length of **40 characters**.
-	// The value must be either:
-	//
-	// * A string with a maximum length of **500 characters**
-	// * An integer
-	// * A floating-point number
-	// * A boolean
-	//
-	// You can store up to **50 key-value pairs**.
-	Metadata *map[string]BenefitSlackSharedChannelCreate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
-
-	// OrganizationId The ID of the organization owning the benefit. **Required unless you use an organization token.**
-	OrganizationId *string                                   `json:"organization_id,omitempty"`
-	Properties     BenefitSlackSharedChannelCreateProperties `json:"properties"`
-	Type           BenefitSlackSharedChannelCreateType       `json:"type"`
-
-	// Visibility The visibility of the benefit in the customer portal.
-	Visibility *BenefitVisibility `json:"visibility,omitempty"`
-}
-
-// BenefitSlackSharedChannelCreateMetadata0 defines model for BenefitSlackSharedChannelCreate.Metadata.0.
-type BenefitSlackSharedChannelCreateMetadata0 = string
-
-// BenefitSlackSharedChannelCreateMetadata1 defines model for BenefitSlackSharedChannelCreate.Metadata.1.
-type BenefitSlackSharedChannelCreateMetadata1 = int
-
-// BenefitSlackSharedChannelCreateMetadata2 defines model for BenefitSlackSharedChannelCreate.Metadata.2.
-type BenefitSlackSharedChannelCreateMetadata2 = float64
-
-// BenefitSlackSharedChannelCreateMetadata3 defines model for BenefitSlackSharedChannelCreate.Metadata.3.
-type BenefitSlackSharedChannelCreateMetadata3 = bool
-
-// BenefitSlackSharedChannelCreate_Metadata_AdditionalProperties defines model for BenefitSlackSharedChannelCreate.metadata.AdditionalProperties.
-type BenefitSlackSharedChannelCreate_Metadata_AdditionalProperties struct {
-	union json.RawMessage
-}
-
-// BenefitSlackSharedChannelCreateType defines model for BenefitSlackSharedChannelCreate.Type.
-type BenefitSlackSharedChannelCreateType string
-
-// BenefitSlackSharedChannelCreateProperties defines model for BenefitSlackSharedChannelCreateProperties.
-type BenefitSlackSharedChannelCreateProperties struct {
-	ArchiveOnRevoke     *bool  `json:"archive_on_revoke,omitempty"`
-	ChannelNameTemplate string `json:"channel_name_template"`
-	Private             *bool  `json:"private,omitempty"`
-
-	// SlackIntegrationId Polar Slack integration to use for this benefit.
-	SlackIntegrationId string    `json:"slack_integration_id"`
-	TeamInvitees       *[]string `json:"team_invitees,omitempty"`
-	WelcomeMessage     *string   `json:"welcome_message,omitempty"`
-}
-
-// BenefitSlackSharedChannelProperties defines model for BenefitSlackSharedChannelProperties.
-type BenefitSlackSharedChannelProperties struct {
-	// ArchiveOnRevoke Archive the channel when the benefit is revoked.
-	ArchiveOnRevoke *bool `json:"archive_on_revoke,omitempty"`
-
-	// ChannelNameTemplate Template for the channel name. Supports placeholders: {customer_name}, {customer_email_local}, and {metadata.<key>} for any value stored in customer user metadata.
-	ChannelNameTemplate string `json:"channel_name_template"`
-
-	// Private Create the channel as private (recommended).
-	Private *bool `json:"private,omitempty"`
-
-	// SlackIntegrationId Polar Slack integration linked to this benefit.
-	SlackIntegrationId string `json:"slack_integration_id"`
-
-	// TeamInvitees Slack user IDs from the merchant workspace to invite to every channel created for this benefit.
-	TeamInvitees *[]string `json:"team_invitees,omitempty"`
-
-	// WelcomeMessage Optional message posted to the channel right after creation.
-	WelcomeMessage *string `json:"welcome_message,omitempty"`
-}
-
-// BenefitSlackSharedChannelPublic defines model for BenefitSlackSharedChannelPublic.
-type BenefitSlackSharedChannelPublic struct {
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-
-	// Deletable Whether the benefit is deletable.
-	Deletable bool `json:"deletable"`
-
-	// Description The description of the benefit.
-	Description string `json:"description"`
-
-	// Id The ID of the benefit.
-	Id string `json:"id"`
-
-	// IsDeleted Whether the benefit is deleted.
-	IsDeleted bool `json:"is_deleted"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// OrganizationId The ID of the organization owning the benefit.
-	OrganizationId string `json:"organization_id"`
-
-	// Selectable Whether the benefit is selectable when creating a product.
-	Selectable bool                                `json:"selectable"`
-	Type       BenefitSlackSharedChannelPublicType `json:"type"`
-}
-
-// BenefitSlackSharedChannelPublicType defines model for BenefitSlackSharedChannelPublic.Type.
-type BenefitSlackSharedChannelPublicType string
-
-// BenefitSlackSharedChannelSubscriber defines model for BenefitSlackSharedChannelSubscriber.
-type BenefitSlackSharedChannelSubscriber struct {
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-
-	// Deletable Whether the benefit is deletable.
-	Deletable bool `json:"deletable"`
-
-	// Description The description of the benefit.
-	Description string `json:"description"`
-
-	// Id The ID of the benefit.
-	Id string `json:"id"`
-
-	// IsDeleted Whether the benefit is deleted.
-	IsDeleted bool `json:"is_deleted"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt   *time.Time                    `json:"modified_at"`
-	Organization BenefitSubscriberOrganization `json:"organization"`
-
-	// OrganizationId The ID of the organization owning the benefit.
-	OrganizationId string                                        `json:"organization_id"`
-	Properties     BenefitSlackSharedChannelSubscriberProperties `json:"properties"`
-
-	// Selectable Whether the benefit is selectable when creating a product.
-	Selectable bool                                    `json:"selectable"`
-	Type       BenefitSlackSharedChannelSubscriberType `json:"type"`
-}
-
-// BenefitSlackSharedChannelSubscriberType defines model for BenefitSlackSharedChannelSubscriber.Type.
-type BenefitSlackSharedChannelSubscriberType string
-
-// BenefitSlackSharedChannelSubscriberProperties defines model for BenefitSlackSharedChannelSubscriberProperties.
-type BenefitSlackSharedChannelSubscriberProperties = map[string]interface{}
-
-// BenefitSlackSharedChannelUpdate defines model for BenefitSlackSharedChannelUpdate.
-type BenefitSlackSharedChannelUpdate struct {
-	// Description The description of the benefit. Will be displayed on products having this benefit.
-	Description *string `json:"description,omitempty"`
-
-	// Metadata Key-value object allowing you to store additional information.
-	//
-	// The key must be a string with a maximum length of **40 characters**.
-	// The value must be either:
-	//
-	// * A string with a maximum length of **500 characters**
-	// * An integer
-	// * A floating-point number
-	// * A boolean
-	//
-	// You can store up to **50 key-value pairs**.
-	Metadata   *map[string]BenefitSlackSharedChannelUpdate_Metadata_AdditionalProperties `json:"metadata,omitempty"`
-	Properties *BenefitSlackSharedChannelCreateProperties                                `json:"properties,omitempty"`
-	Type       BenefitSlackSharedChannelUpdateType                                       `json:"type"`
-}
-
-// BenefitSlackSharedChannelUpdateMetadata0 defines model for BenefitSlackSharedChannelUpdate.Metadata.0.
-type BenefitSlackSharedChannelUpdateMetadata0 = string
-
-// BenefitSlackSharedChannelUpdateMetadata1 defines model for BenefitSlackSharedChannelUpdate.Metadata.1.
-type BenefitSlackSharedChannelUpdateMetadata1 = int
-
-// BenefitSlackSharedChannelUpdateMetadata2 defines model for BenefitSlackSharedChannelUpdate.Metadata.2.
-type BenefitSlackSharedChannelUpdateMetadata2 = float64
-
-// BenefitSlackSharedChannelUpdateMetadata3 defines model for BenefitSlackSharedChannelUpdate.Metadata.3.
-type BenefitSlackSharedChannelUpdateMetadata3 = bool
-
-// BenefitSlackSharedChannelUpdate_Metadata_AdditionalProperties defines model for BenefitSlackSharedChannelUpdate.metadata.AdditionalProperties.
-type BenefitSlackSharedChannelUpdate_Metadata_AdditionalProperties struct {
-	union json.RawMessage
-}
-
-// BenefitSlackSharedChannelUpdateType defines model for BenefitSlackSharedChannelUpdate.Type.
-type BenefitSlackSharedChannelUpdateType string
-
-// BenefitSortProperty defines model for BenefitSortProperty.
-type BenefitSortProperty string
-
-// BenefitSubscriberOrganization defines model for BenefitSubscriberOrganization.
-type BenefitSubscriberOrganization struct {
-	// AllowCustomerUpdates Whether customers can update their subscriptions from the customer portal.
-	AllowCustomerUpdates bool `json:"allow_customer_updates"`
-
-	// AvatarUrl Avatar URL shown in checkout, customer portal, emails etc.
-	AvatarUrl *string `json:"avatar_url"`
-
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-
-	// Id The ID of the object.
-	Id string `json:"id"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// Name Organization name shown in checkout, customer portal, emails etc.
-	Name string `json:"name"`
-
-	// ProrationBehavior Proration behavior applied when customer updates their subscription from the portal.
-	ProrationBehavior SubscriptionProrationBehavior `json:"proration_behavior"`
-
-	// Slug Unique organization slug in checkout, customer portal and credit card statements.
-	Slug string `json:"slug"`
-}
-
-// BenefitType defines model for BenefitType.
-type BenefitType string
-
-// BenefitUpdatedEvent An event created by Polar when a benefit is updated.
-type BenefitUpdatedEvent struct {
-	// ChildCount Number of direct child events linked to this event.
-	ChildCount *int `json:"child_count,omitempty"`
-
-	// Customer The customer associated with the event.
-	Customer *Customer `json:"customer"`
-
-	// CustomerId ID of the customer in your Polar organization associated with the event.
-	CustomerId *string `json:"customer_id"`
-
-	// ExternalCustomerId ID of the customer in your system associated with the event.
-	ExternalCustomerId *string `json:"external_customer_id"`
-
-	// ExternalMemberId ID of the member in your system within the customer's organization who performed the action inside B2B.
-	ExternalMemberId *string `json:"external_member_id,omitempty"`
-
-	// Id The ID of the object.
-	Id string `json:"id"`
-
-	// Label Human readable label of the event type.
-	Label string `json:"label"`
-
-	// MemberId ID of the member within the customer's organization who performed the action inside B2B.
-	MemberId *string              `json:"member_id,omitempty"`
-	Metadata BenefitGrantMetadata `json:"metadata"`
-
-	// Name The name of the event.
-	Name BenefitUpdatedEventName `json:"name"`
-
-	// OrganizationId The ID of the organization owning the event.
-	//
-	// Examples: 1dbfc517-0bbf-4301-9ba8-555ca42b9737
-	OrganizationId string `json:"organization_id"`
-
-	// ParentId The ID of the parent event.
-	ParentId *string `json:"parent_id,omitempty"`
-
-	// Source The source of the event. `system` events are created by Polar. `user` events are the one you create through our ingestion API.
-	Source BenefitUpdatedEventSource `json:"source"`
-
-	// Timestamp The timestamp of the event.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	Timestamp time.Time `json:"timestamp"`
-}
-
 // BenefitUpdatedEventName The name of the event.
 type BenefitUpdatedEventName string
 
@@ -5665,43 +3722,10 @@ type CustomerOrder struct {
 	Units *int `json:"units"`
 }
 
-// CustomerOrderConfirmPayment Schema to confirm a retry payment using either a saved payment method or a new confirmation token.
-type CustomerOrderConfirmPayment struct {
-	// ConfirmationTokenId ID of the Stripe confirmation token for new payment methods.
-	ConfirmationTokenId *string `json:"confirmation_token_id,omitempty"`
-
-	// PaymentMethodId ID of an existing saved payment method.
-	PaymentMethodId *string `json:"payment_method_id,omitempty"`
-
-	// PaymentProcessor Payment processor used.
-	PaymentProcessor *PaymentProcessor `json:"payment_processor,omitempty"`
-}
-
 // CustomerOrderInvoice Order's invoice data.
 type CustomerOrderInvoice struct {
 	// Url The URL to the invoice.
 	Url string `json:"url"`
-}
-
-// CustomerOrderPaymentConfirmation Response after confirming a retry payment.
-type CustomerOrderPaymentConfirmation struct {
-	// ClientSecret Client secret for handling additional actions.
-	ClientSecret *string `json:"client_secret,omitempty"`
-
-	// Error Error message if confirmation failed.
-	Error *string `json:"error,omitempty"`
-
-	// Status Payment status after confirmation.
-	Status string `json:"status"`
-}
-
-// CustomerOrderPaymentStatus Payment status for an order.
-type CustomerOrderPaymentStatus struct {
-	// Error Error message if payment failed.
-	Error *string `json:"error,omitempty"`
-
-	// Status Current payment status.
-	Status string `json:"status"`
 }
 
 // CustomerOrderProduct defines model for CustomerOrderProduct.
@@ -7406,40 +5430,6 @@ type CustomerUpdatedMetadata struct {
 	CustomerName       *string               `json:"customer_name"`
 	UpdatedFields      CustomerUpdatedFields `json:"updated_fields"`
 }
-
-// CustomerWallet A wallet represents your balance with an organization.
-//
-// You can top-up your wallet and use the balance to pay for usage.
-type CustomerWallet struct {
-	// Balance The current balance of the wallet, in cents.
-	//
-	// Examples: 5000
-	Balance int `json:"balance"`
-
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-
-	// Currency The currency of the wallet.
-	//
-	// Examples: usd
-	Currency string `json:"currency"`
-
-	// CustomerId The ID of the customer that owns the wallet.
-	//
-	// Examples: 992fae2a-2a17-4b7a-8d9e-e287cf90131b
-	CustomerId string `json:"customer_id"`
-
-	// Id The ID of the object.
-	Id string `json:"id"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-}
-
-// CustomerWalletSortProperty defines model for CustomerWalletSortProperty.
-type CustomerWalletSortProperty string
 
 // Discount defines model for Discount.
 type Discount struct {
@@ -9617,12 +7607,6 @@ type ListResourceCustomerSubscription struct {
 	Pagination Pagination             `json:"pagination"`
 }
 
-// ListResourceCustomerWallet defines model for ListResource_CustomerWallet_.
-type ListResourceCustomerWallet struct {
-	Items      []CustomerWallet `json:"items"`
-	Pagination Pagination       `json:"pagination"`
-}
-
 // ListResourceCustomer defines model for ListResource_Customer_.
 type ListResourceCustomer struct {
 	Items      []Customer `json:"items"`
@@ -9742,17 +7726,6 @@ type ListResourceWebhookEndpoint struct {
 	Items      []WebhookEndpoint `json:"items"`
 	Pagination Pagination        `json:"pagination"`
 }
-
-// ManualRetryLimitExceeded defines model for ManualRetryLimitExceeded.
-type ManualRetryLimitExceeded struct {
-	Detail string `json:"detail"`
-
-	// Error Examples: ManualRetryLimitExceeded
-	Error ManualRetryLimitExceededError `json:"error"`
-}
-
-// ManualRetryLimitExceededError Examples: ManualRetryLimitExceeded
-type ManualRetryLimitExceededError string
 
 // Member A member of a customer.
 type Member struct {
@@ -10210,50 +8183,6 @@ type Metric struct {
 
 	// Type Type of the metric, useful to know the unit or format of the value.
 	Type MetricType `json:"type"`
-}
-
-// MetricDashboardCreate Schema for creating a metrics dashboard.
-type MetricDashboardCreate struct {
-	// Metrics List of metric slugs to display in this dashboard.
-	Metrics *[]string `json:"metrics,omitempty"`
-
-	// Name Display name for the dashboard.
-	Name string `json:"name"`
-
-	// OrganizationId The ID of the organization owning this dashboard. **Required unless you use an organization token.**
-	OrganizationId *string `json:"organization_id,omitempty"`
-}
-
-// MetricDashboardSchema A user-defined metrics dashboard.
-type MetricDashboardSchema struct {
-	// CreatedAt Creation timestamp of the object.
-	//
-	// Examples: 2026-01-01T00:00:00.000000Z
-	CreatedAt time.Time `json:"created_at"`
-
-	// Id The ID of the object.
-	Id string `json:"id"`
-
-	// Metrics List of metric slugs displayed in this dashboard.
-	Metrics []string `json:"metrics"`
-
-	// ModifiedAt Last modification timestamp of the object.
-	ModifiedAt *time.Time `json:"modified_at"`
-
-	// Name Display name for the dashboard.
-	Name string `json:"name"`
-
-	// OrganizationId The ID of the organization owning this dashboard.
-	OrganizationId string `json:"organization_id"`
-}
-
-// MetricDashboardUpdate Schema for updating a metrics dashboard.
-type MetricDashboardUpdate struct {
-	// Metrics List of metric slugs to display in this dashboard.
-	Metrics *[]string `json:"metrics,omitempty"`
-
-	// Name Display name for the dashboard.
-	Name *string `json:"name,omitempty"`
 }
 
 // MetricPeriod defines model for MetricPeriod.
@@ -12190,17 +10119,6 @@ type OrderNotEligibleForInvoice struct {
 // OrderNotEligibleForInvoiceError Examples: OrderNotEligibleForInvoice
 type OrderNotEligibleForInvoiceError string
 
-// OrderNotEligibleForRetry defines model for OrderNotEligibleForRetry.
-type OrderNotEligibleForRetry struct {
-	Detail string `json:"detail"`
-
-	// Error Examples: OrderNotEligibleForRetry
-	Error OrderNotEligibleForRetryError `json:"error"`
-}
-
-// OrderNotEligibleForRetryError Examples: OrderNotEligibleForRetry
-type OrderNotEligibleForRetryError string
-
 // OrderPaidEvent An event created by Polar when an order is paid.
 type OrderPaidEvent struct {
 	// ChildCount Number of direct child events linked to this event.
@@ -13110,17 +11028,6 @@ type PaymentActionRequired struct {
 
 // PaymentActionRequiredError Examples: PaymentActionRequired
 type PaymentActionRequiredError string
-
-// PaymentAlreadyInProgress defines model for PaymentAlreadyInProgress.
-type PaymentAlreadyInProgress struct {
-	Detail string `json:"detail"`
-
-	// Error Examples: PaymentAlreadyInProgress
-	Error PaymentAlreadyInProgressError `json:"error"`
-}
-
-// PaymentAlreadyInProgressError Examples: PaymentAlreadyInProgress
-type PaymentAlreadyInProgressError string
 
 // PaymentError defines model for PaymentError.
 type PaymentError struct {
@@ -15556,9 +13463,6 @@ type SubscriptionCycledMetadata struct {
 	RecurringIntervalCount *int    `json:"recurring_interval_count,omitempty"`
 	SubscriptionId         string  `json:"subscription_id"`
 }
-
-// SubscriptionExportColumn defines model for SubscriptionExportColumn.
-type SubscriptionExportColumn string
 
 // SubscriptionLocked defines model for SubscriptionLocked.
 type SubscriptionLocked struct {
@@ -18291,18 +16195,6 @@ type CustomerPortalSubscriptionsUpdate409JSONResponseBody struct {
 	union json.RawMessage
 }
 
-// CustomerPortalWalletsListParams defines parameters for CustomerPortalWalletsList.
-type CustomerPortalWalletsListParams struct {
-	// Page Page number, defaults to 1.
-	Page *int `form:"page,omitempty" json:"page,omitempty"`
-
-	// Limit Size of a page, defaults to 10. Maximum is 100.
-	Limit *int `form:"limit,omitempty" json:"limit,omitempty"`
-
-	// Sorting Sorting criterion. Several criteria can be used simultaneously and will be applied in order. Add a minus sign `-` before the criteria name to sort by descending order.
-	Sorting *[]CustomerWalletSortProperty `form:"sorting,omitempty" json:"sorting,omitempty"`
-}
-
 // CustomerSeatsListSeatsParams defines parameters for CustomerSeatsListSeats.
 type CustomerSeatsListSeatsParams struct {
 	SubscriptionId *string `form:"subscription_id,omitempty" json:"subscription_id,omitempty"`
@@ -18339,12 +16231,6 @@ type CustomersListParams struct {
 
 	// Metadata Filter by metadata key-value pairs. It uses the `deepObject` style, e.g. `?metadata[key]=value`.
 	Metadata *MetadataQuery `json:"metadata,omitempty"`
-}
-
-// CustomersExportParams defines parameters for CustomersExport.
-type CustomersExportParams struct {
-	// OrganizationId Filter by organization ID.
-	OrganizationId *[]string `form:"organization_id,omitempty" json:"organization_id,omitempty"`
 }
 
 // CustomersDeleteExternalParams defines parameters for CustomersDeleteExternal.
@@ -18682,45 +16568,6 @@ type MetricsGetParams struct {
 // MetricsGetParamsTimezone defines parameters for MetricsGet.
 type MetricsGetParamsTimezone string
 
-// MetricsListDashboardsParams defines parameters for MetricsListDashboards.
-type MetricsListDashboardsParams struct {
-	// OrganizationId Filter by organization ID.
-	OrganizationId *[]string `form:"organization_id,omitempty" json:"organization_id,omitempty"`
-}
-
-// MetricsExportParams defines parameters for MetricsExport.
-type MetricsExportParams struct {
-	// StartDate Start date.
-	StartDate openapi_types.Date `form:"start_date" json:"start_date"`
-
-	// EndDate End date.
-	EndDate openapi_types.Date `form:"end_date" json:"end_date"`
-
-	// Timezone Timezone to use for the timestamps. Default is UTC.
-	Timezone *MetricsExportParamsTimezone `form:"timezone,omitempty" json:"timezone,omitempty"`
-
-	// Interval Interval between two timestamps.
-	Interval TimeInterval `form:"interval" json:"interval"`
-
-	// OrganizationId Filter by organization ID.
-	OrganizationId *[]string `form:"organization_id,omitempty" json:"organization_id,omitempty"`
-
-	// ProductId Filter by product ID.
-	ProductId *[]string `form:"product_id,omitempty" json:"product_id,omitempty"`
-
-	// BillingType Filter by billing type. `recurring` will filter data corresponding to subscriptions creations or renewals. `one_time` will filter data corresponding to one-time purchases.
-	BillingType *[]ProductBillingType `form:"billing_type,omitempty" json:"billing_type,omitempty"`
-
-	// CustomerId Filter by customer ID.
-	CustomerId *[]string `form:"customer_id,omitempty" json:"customer_id,omitempty"`
-
-	// Metrics List of metric slugs to include in the export. If not provided, all metrics are exported.
-	Metrics *[]string `form:"metrics,omitempty" json:"metrics,omitempty"`
-}
-
-// MetricsExportParamsTimezone defines parameters for MetricsExport.
-type MetricsExportParamsTimezone string
-
 // Oauth2Authorize200JSONResponseBody defines parameters for Oauth2Authorize.
 type Oauth2Authorize200JSONResponseBody struct {
 	union json.RawMessage
@@ -19000,33 +16847,6 @@ type SubscriptionsCreateJSONBody struct {
 	union json.RawMessage
 }
 
-// SubscriptionsExportParams defines parameters for SubscriptionsExport.
-type SubscriptionsExportParams struct {
-	// OrganizationId Filter by organization ID.
-	OrganizationId *[]string `form:"organization_id,omitempty" json:"organization_id,omitempty"`
-
-	// ProductId Filter by product ID.
-	ProductId *[]string `form:"product_id,omitempty" json:"product_id,omitempty"`
-
-	// Status Filter by subscription status.
-	Status *[]SubscriptionStatus `form:"status,omitempty" json:"status,omitempty"`
-
-	// CancelAtPeriodEnd Filter by subscriptions that are set to cancel at period end.
-	CancelAtPeriodEnd *bool `form:"cancel_at_period_end,omitempty" json:"cancel_at_period_end,omitempty"`
-
-	// StartedAfter Only include subscriptions started after this date. Must include a UTC offset.
-	StartedAfter *time.Time `form:"started_after,omitempty" json:"started_after,omitempty"`
-
-	// StartedBefore Only include subscriptions started before this date. Must include a UTC offset.
-	StartedBefore *time.Time `form:"started_before,omitempty" json:"started_before,omitempty"`
-
-	// Timezone Time zone used to render dates in the CSV.
-	Timezone *string `form:"timezone,omitempty" json:"timezone,omitempty"`
-
-	// Columns Columns to include in the CSV, in order. Defaults to email, started_at, product, amount, currency, status and recurring_interval.
-	Columns *[]SubscriptionExportColumn `form:"columns,omitempty" json:"columns,omitempty"`
-}
-
 // SubscriptionsUpdate402JSONResponseBody defines parameters for SubscriptionsUpdate.
 type SubscriptionsUpdate402JSONResponseBody struct {
 	union json.RawMessage
@@ -19153,9 +16973,6 @@ type CustomerPortalMembersUpdateMemberJSONRequestBody = CustomerPortalMemberUpda
 // CustomerPortalOrdersUpdateJSONRequestBody defines body for CustomerPortalOrdersUpdate for application/json ContentType.
 type CustomerPortalOrdersUpdateJSONRequestBody = CustomerOrderUpdate
 
-// CustomerPortalOrdersConfirmRetryPaymentJSONRequestBody defines body for CustomerPortalOrdersConfirmRetryPayment for application/json ContentType.
-type CustomerPortalOrdersConfirmRetryPaymentJSONRequestBody = CustomerOrderConfirmPayment
-
 // CustomerPortalSeatsAssignSeatJSONRequestBody defines body for CustomerPortalSeatsAssignSeat for application/json ContentType.
 type CustomerPortalSeatsAssignSeatJSONRequestBody = CustomerSeatAssign
 
@@ -19230,12 +17047,6 @@ type MetersCreateJSONRequestBody = MeterCreate
 
 // MetersUpdateJSONRequestBody defines body for MetersUpdate for application/json ContentType.
 type MetersUpdateJSONRequestBody = MeterUpdate
-
-// MetricsCreateDashboardJSONRequestBody defines body for MetricsCreateDashboard for application/json ContentType.
-type MetricsCreateDashboardJSONRequestBody = MetricDashboardCreate
-
-// MetricsUpdateDashboardJSONRequestBody defines body for MetricsUpdateDashboard for application/json ContentType.
-type MetricsUpdateDashboardJSONRequestBody = MetricDashboardUpdate
 
 // Oauth2IntrospectTokenFormdataRequestBody defines body for Oauth2IntrospectToken for application/x-www-form-urlencoded ContentType.
 type Oauth2IntrospectTokenFormdataRequestBody = IntrospectTokenRequest
@@ -20017,5 +17828,2198 @@ func (t *BenefitCreate) FromBenefitDownloadablesCreate(v BenefitDownloadablesCre
 	}
 	b, err = runtime.JSONMerge(b, []byte(`{"type":"downloadables"}`))
 	t.union = b
+	return err
+}
+
+// MergeBenefitDownloadablesCreate performs a merge with any union data inside the BenefitCreate, using the provided BenefitDownloadablesCreate
+func (t *BenefitCreate) MergeBenefitDownloadablesCreate(v BenefitDownloadablesCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"downloadables"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitLicenseKeysCreate returns the union data inside the BenefitCreate as a BenefitLicenseKeysCreate
+func (t BenefitCreate) AsBenefitLicenseKeysCreate() (BenefitLicenseKeysCreate, error) {
+	var body BenefitLicenseKeysCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitLicenseKeysCreate overwrites any union data inside the BenefitCreate as the provided BenefitLicenseKeysCreate
+func (t *BenefitCreate) FromBenefitLicenseKeysCreate(v BenefitLicenseKeysCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"license_keys"}`))
+	t.union = b
+	return err
+}
+
+// MergeBenefitLicenseKeysCreate performs a merge with any union data inside the BenefitCreate, using the provided BenefitLicenseKeysCreate
+func (t *BenefitCreate) MergeBenefitLicenseKeysCreate(v BenefitLicenseKeysCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"license_keys"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitMeterCreditCreate returns the union data inside the BenefitCreate as a BenefitMeterCreditCreate
+func (t BenefitCreate) AsBenefitMeterCreditCreate() (BenefitMeterCreditCreate, error) {
+	var body BenefitMeterCreditCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitMeterCreditCreate overwrites any union data inside the BenefitCreate as the provided BenefitMeterCreditCreate
+func (t *BenefitCreate) FromBenefitMeterCreditCreate(v BenefitMeterCreditCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"meter_credit"}`))
+	t.union = b
+	return err
+}
+
+// MergeBenefitMeterCreditCreate performs a merge with any union data inside the BenefitCreate, using the provided BenefitMeterCreditCreate
+func (t *BenefitCreate) MergeBenefitMeterCreditCreate(v BenefitMeterCreditCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"meter_credit"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitFeatureFlagCreate returns the union data inside the BenefitCreate as a BenefitFeatureFlagCreate
+func (t BenefitCreate) AsBenefitFeatureFlagCreate() (BenefitFeatureFlagCreate, error) {
+	var body BenefitFeatureFlagCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitFeatureFlagCreate overwrites any union data inside the BenefitCreate as the provided BenefitFeatureFlagCreate
+func (t *BenefitCreate) FromBenefitFeatureFlagCreate(v BenefitFeatureFlagCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"feature_flag"}`))
+	t.union = b
+	return err
+}
+
+// MergeBenefitFeatureFlagCreate performs a merge with any union data inside the BenefitCreate, using the provided BenefitFeatureFlagCreate
+func (t *BenefitCreate) MergeBenefitFeatureFlagCreate(v BenefitFeatureFlagCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"feature_flag"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitSlackSharedChannelCreate returns the union data inside the BenefitCreate as a BenefitSlackSharedChannelCreate
+func (t BenefitCreate) AsBenefitSlackSharedChannelCreate() (BenefitSlackSharedChannelCreate, error) {
+	var body BenefitSlackSharedChannelCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitSlackSharedChannelCreate overwrites any union data inside the BenefitCreate as the provided BenefitSlackSharedChannelCreate
+func (t *BenefitCreate) FromBenefitSlackSharedChannelCreate(v BenefitSlackSharedChannelCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"slack_shared_channel"}`))
+	t.union = b
+	return err
+}
+
+// MergeBenefitSlackSharedChannelCreate performs a merge with any union data inside the BenefitCreate, using the provided BenefitSlackSharedChannelCreate
+func (t *BenefitCreate) MergeBenefitSlackSharedChannelCreate(v BenefitSlackSharedChannelCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"slack_shared_channel"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t BenefitCreate) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t BenefitCreate) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "custom":
+		return t.AsBenefitCustomCreate()
+	case "discord":
+		return t.AsBenefitDiscordCreate()
+	case "downloadables":
+		return t.AsBenefitDownloadablesCreate()
+	case "feature_flag":
+		return t.AsBenefitFeatureFlagCreate()
+	case "github_repository":
+		return t.AsBenefitGitHubRepositoryCreate()
+	case "license_keys":
+		return t.AsBenefitLicenseKeysCreate()
+	case "meter_credit":
+		return t.AsBenefitMeterCreditCreate()
+	case "slack_shared_channel":
+		return t.AsBenefitSlackSharedChannelCreate()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t BenefitCreate) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *BenefitCreate) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsBenefitCustomCreateMetadata0 returns the union data inside the BenefitCustomCreate_Metadata_AdditionalProperties as a BenefitCustomCreateMetadata0
+func (t BenefitCustomCreate_Metadata_AdditionalProperties) AsBenefitCustomCreateMetadata0() (BenefitCustomCreateMetadata0, error) {
+	var body BenefitCustomCreateMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitCustomCreateMetadata0 overwrites any union data inside the BenefitCustomCreate_Metadata_AdditionalProperties as the provided BenefitCustomCreateMetadata0
+func (t *BenefitCustomCreate_Metadata_AdditionalProperties) FromBenefitCustomCreateMetadata0(v BenefitCustomCreateMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitCustomCreateMetadata0 performs a merge with any union data inside the BenefitCustomCreate_Metadata_AdditionalProperties, using the provided BenefitCustomCreateMetadata0
+func (t *BenefitCustomCreate_Metadata_AdditionalProperties) MergeBenefitCustomCreateMetadata0(v BenefitCustomCreateMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitCustomCreateMetadata1 returns the union data inside the BenefitCustomCreate_Metadata_AdditionalProperties as a BenefitCustomCreateMetadata1
+func (t BenefitCustomCreate_Metadata_AdditionalProperties) AsBenefitCustomCreateMetadata1() (BenefitCustomCreateMetadata1, error) {
+	var body BenefitCustomCreateMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitCustomCreateMetadata1 overwrites any union data inside the BenefitCustomCreate_Metadata_AdditionalProperties as the provided BenefitCustomCreateMetadata1
+func (t *BenefitCustomCreate_Metadata_AdditionalProperties) FromBenefitCustomCreateMetadata1(v BenefitCustomCreateMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitCustomCreateMetadata1 performs a merge with any union data inside the BenefitCustomCreate_Metadata_AdditionalProperties, using the provided BenefitCustomCreateMetadata1
+func (t *BenefitCustomCreate_Metadata_AdditionalProperties) MergeBenefitCustomCreateMetadata1(v BenefitCustomCreateMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitCustomCreateMetadata2 returns the union data inside the BenefitCustomCreate_Metadata_AdditionalProperties as a BenefitCustomCreateMetadata2
+func (t BenefitCustomCreate_Metadata_AdditionalProperties) AsBenefitCustomCreateMetadata2() (BenefitCustomCreateMetadata2, error) {
+	var body BenefitCustomCreateMetadata2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitCustomCreateMetadata2 overwrites any union data inside the BenefitCustomCreate_Metadata_AdditionalProperties as the provided BenefitCustomCreateMetadata2
+func (t *BenefitCustomCreate_Metadata_AdditionalProperties) FromBenefitCustomCreateMetadata2(v BenefitCustomCreateMetadata2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitCustomCreateMetadata2 performs a merge with any union data inside the BenefitCustomCreate_Metadata_AdditionalProperties, using the provided BenefitCustomCreateMetadata2
+func (t *BenefitCustomCreate_Metadata_AdditionalProperties) MergeBenefitCustomCreateMetadata2(v BenefitCustomCreateMetadata2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitCustomCreateMetadata3 returns the union data inside the BenefitCustomCreate_Metadata_AdditionalProperties as a BenefitCustomCreateMetadata3
+func (t BenefitCustomCreate_Metadata_AdditionalProperties) AsBenefitCustomCreateMetadata3() (BenefitCustomCreateMetadata3, error) {
+	var body BenefitCustomCreateMetadata3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitCustomCreateMetadata3 overwrites any union data inside the BenefitCustomCreate_Metadata_AdditionalProperties as the provided BenefitCustomCreateMetadata3
+func (t *BenefitCustomCreate_Metadata_AdditionalProperties) FromBenefitCustomCreateMetadata3(v BenefitCustomCreateMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitCustomCreateMetadata3 performs a merge with any union data inside the BenefitCustomCreate_Metadata_AdditionalProperties, using the provided BenefitCustomCreateMetadata3
+func (t *BenefitCustomCreate_Metadata_AdditionalProperties) MergeBenefitCustomCreateMetadata3(v BenefitCustomCreateMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t BenefitCustomCreate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *BenefitCustomCreate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsBenefitCustomUpdateMetadata0 returns the union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties as a BenefitCustomUpdateMetadata0
+func (t BenefitCustomUpdate_Metadata_AdditionalProperties) AsBenefitCustomUpdateMetadata0() (BenefitCustomUpdateMetadata0, error) {
+	var body BenefitCustomUpdateMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitCustomUpdateMetadata0 overwrites any union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties as the provided BenefitCustomUpdateMetadata0
+func (t *BenefitCustomUpdate_Metadata_AdditionalProperties) FromBenefitCustomUpdateMetadata0(v BenefitCustomUpdateMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitCustomUpdateMetadata0 performs a merge with any union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties, using the provided BenefitCustomUpdateMetadata0
+func (t *BenefitCustomUpdate_Metadata_AdditionalProperties) MergeBenefitCustomUpdateMetadata0(v BenefitCustomUpdateMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitCustomUpdateMetadata1 returns the union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties as a BenefitCustomUpdateMetadata1
+func (t BenefitCustomUpdate_Metadata_AdditionalProperties) AsBenefitCustomUpdateMetadata1() (BenefitCustomUpdateMetadata1, error) {
+	var body BenefitCustomUpdateMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitCustomUpdateMetadata1 overwrites any union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties as the provided BenefitCustomUpdateMetadata1
+func (t *BenefitCustomUpdate_Metadata_AdditionalProperties) FromBenefitCustomUpdateMetadata1(v BenefitCustomUpdateMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitCustomUpdateMetadata1 performs a merge with any union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties, using the provided BenefitCustomUpdateMetadata1
+func (t *BenefitCustomUpdate_Metadata_AdditionalProperties) MergeBenefitCustomUpdateMetadata1(v BenefitCustomUpdateMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitCustomUpdateMetadata2 returns the union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties as a BenefitCustomUpdateMetadata2
+func (t BenefitCustomUpdate_Metadata_AdditionalProperties) AsBenefitCustomUpdateMetadata2() (BenefitCustomUpdateMetadata2, error) {
+	var body BenefitCustomUpdateMetadata2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitCustomUpdateMetadata2 overwrites any union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties as the provided BenefitCustomUpdateMetadata2
+func (t *BenefitCustomUpdate_Metadata_AdditionalProperties) FromBenefitCustomUpdateMetadata2(v BenefitCustomUpdateMetadata2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitCustomUpdateMetadata2 performs a merge with any union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties, using the provided BenefitCustomUpdateMetadata2
+func (t *BenefitCustomUpdate_Metadata_AdditionalProperties) MergeBenefitCustomUpdateMetadata2(v BenefitCustomUpdateMetadata2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitCustomUpdateMetadata3 returns the union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties as a BenefitCustomUpdateMetadata3
+func (t BenefitCustomUpdate_Metadata_AdditionalProperties) AsBenefitCustomUpdateMetadata3() (BenefitCustomUpdateMetadata3, error) {
+	var body BenefitCustomUpdateMetadata3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitCustomUpdateMetadata3 overwrites any union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties as the provided BenefitCustomUpdateMetadata3
+func (t *BenefitCustomUpdate_Metadata_AdditionalProperties) FromBenefitCustomUpdateMetadata3(v BenefitCustomUpdateMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitCustomUpdateMetadata3 performs a merge with any union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties, using the provided BenefitCustomUpdateMetadata3
+func (t *BenefitCustomUpdate_Metadata_AdditionalProperties) MergeBenefitCustomUpdateMetadata3(v BenefitCustomUpdateMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t BenefitCustomUpdate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *BenefitCustomUpdate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsBenefitDiscordCreateMetadata0 returns the union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties as a BenefitDiscordCreateMetadata0
+func (t BenefitDiscordCreate_Metadata_AdditionalProperties) AsBenefitDiscordCreateMetadata0() (BenefitDiscordCreateMetadata0, error) {
+	var body BenefitDiscordCreateMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitDiscordCreateMetadata0 overwrites any union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties as the provided BenefitDiscordCreateMetadata0
+func (t *BenefitDiscordCreate_Metadata_AdditionalProperties) FromBenefitDiscordCreateMetadata0(v BenefitDiscordCreateMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitDiscordCreateMetadata0 performs a merge with any union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties, using the provided BenefitDiscordCreateMetadata0
+func (t *BenefitDiscordCreate_Metadata_AdditionalProperties) MergeBenefitDiscordCreateMetadata0(v BenefitDiscordCreateMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitDiscordCreateMetadata1 returns the union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties as a BenefitDiscordCreateMetadata1
+func (t BenefitDiscordCreate_Metadata_AdditionalProperties) AsBenefitDiscordCreateMetadata1() (BenefitDiscordCreateMetadata1, error) {
+	var body BenefitDiscordCreateMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitDiscordCreateMetadata1 overwrites any union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties as the provided BenefitDiscordCreateMetadata1
+func (t *BenefitDiscordCreate_Metadata_AdditionalProperties) FromBenefitDiscordCreateMetadata1(v BenefitDiscordCreateMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitDiscordCreateMetadata1 performs a merge with any union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties, using the provided BenefitDiscordCreateMetadata1
+func (t *BenefitDiscordCreate_Metadata_AdditionalProperties) MergeBenefitDiscordCreateMetadata1(v BenefitDiscordCreateMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitDiscordCreateMetadata2 returns the union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties as a BenefitDiscordCreateMetadata2
+func (t BenefitDiscordCreate_Metadata_AdditionalProperties) AsBenefitDiscordCreateMetadata2() (BenefitDiscordCreateMetadata2, error) {
+	var body BenefitDiscordCreateMetadata2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitDiscordCreateMetadata2 overwrites any union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties as the provided BenefitDiscordCreateMetadata2
+func (t *BenefitDiscordCreate_Metadata_AdditionalProperties) FromBenefitDiscordCreateMetadata2(v BenefitDiscordCreateMetadata2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitDiscordCreateMetadata2 performs a merge with any union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties, using the provided BenefitDiscordCreateMetadata2
+func (t *BenefitDiscordCreate_Metadata_AdditionalProperties) MergeBenefitDiscordCreateMetadata2(v BenefitDiscordCreateMetadata2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitDiscordCreateMetadata3 returns the union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties as a BenefitDiscordCreateMetadata3
+func (t BenefitDiscordCreate_Metadata_AdditionalProperties) AsBenefitDiscordCreateMetadata3() (BenefitDiscordCreateMetadata3, error) {
+	var body BenefitDiscordCreateMetadata3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitDiscordCreateMetadata3 overwrites any union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties as the provided BenefitDiscordCreateMetadata3
+func (t *BenefitDiscordCreate_Metadata_AdditionalProperties) FromBenefitDiscordCreateMetadata3(v BenefitDiscordCreateMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitDiscordCreateMetadata3 performs a merge with any union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties, using the provided BenefitDiscordCreateMetadata3
+func (t *BenefitDiscordCreate_Metadata_AdditionalProperties) MergeBenefitDiscordCreateMetadata3(v BenefitDiscordCreateMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t BenefitDiscordCreate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *BenefitDiscordCreate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsBenefitDiscordUpdateMetadata0 returns the union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties as a BenefitDiscordUpdateMetadata0
+func (t BenefitDiscordUpdate_Metadata_AdditionalProperties) AsBenefitDiscordUpdateMetadata0() (BenefitDiscordUpdateMetadata0, error) {
+	var body BenefitDiscordUpdateMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitDiscordUpdateMetadata0 overwrites any union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties as the provided BenefitDiscordUpdateMetadata0
+func (t *BenefitDiscordUpdate_Metadata_AdditionalProperties) FromBenefitDiscordUpdateMetadata0(v BenefitDiscordUpdateMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitDiscordUpdateMetadata0 performs a merge with any union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties, using the provided BenefitDiscordUpdateMetadata0
+func (t *BenefitDiscordUpdate_Metadata_AdditionalProperties) MergeBenefitDiscordUpdateMetadata0(v BenefitDiscordUpdateMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitDiscordUpdateMetadata1 returns the union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties as a BenefitDiscordUpdateMetadata1
+func (t BenefitDiscordUpdate_Metadata_AdditionalProperties) AsBenefitDiscordUpdateMetadata1() (BenefitDiscordUpdateMetadata1, error) {
+	var body BenefitDiscordUpdateMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitDiscordUpdateMetadata1 overwrites any union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties as the provided BenefitDiscordUpdateMetadata1
+func (t *BenefitDiscordUpdate_Metadata_AdditionalProperties) FromBenefitDiscordUpdateMetadata1(v BenefitDiscordUpdateMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitDiscordUpdateMetadata1 performs a merge with any union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties, using the provided BenefitDiscordUpdateMetadata1
+func (t *BenefitDiscordUpdate_Metadata_AdditionalProperties) MergeBenefitDiscordUpdateMetadata1(v BenefitDiscordUpdateMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitDiscordUpdateMetadata2 returns the union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties as a BenefitDiscordUpdateMetadata2
+func (t BenefitDiscordUpdate_Metadata_AdditionalProperties) AsBenefitDiscordUpdateMetadata2() (BenefitDiscordUpdateMetadata2, error) {
+	var body BenefitDiscordUpdateMetadata2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitDiscordUpdateMetadata2 overwrites any union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties as the provided BenefitDiscordUpdateMetadata2
+func (t *BenefitDiscordUpdate_Metadata_AdditionalProperties) FromBenefitDiscordUpdateMetadata2(v BenefitDiscordUpdateMetadata2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitDiscordUpdateMetadata2 performs a merge with any union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties, using the provided BenefitDiscordUpdateMetadata2
+func (t *BenefitDiscordUpdate_Metadata_AdditionalProperties) MergeBenefitDiscordUpdateMetadata2(v BenefitDiscordUpdateMetadata2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitDiscordUpdateMetadata3 returns the union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties as a BenefitDiscordUpdateMetadata3
+func (t BenefitDiscordUpdate_Metadata_AdditionalProperties) AsBenefitDiscordUpdateMetadata3() (BenefitDiscordUpdateMetadata3, error) {
+	var body BenefitDiscordUpdateMetadata3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitDiscordUpdateMetadata3 overwrites any union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties as the provided BenefitDiscordUpdateMetadata3
+func (t *BenefitDiscordUpdate_Metadata_AdditionalProperties) FromBenefitDiscordUpdateMetadata3(v BenefitDiscordUpdateMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitDiscordUpdateMetadata3 performs a merge with any union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties, using the provided BenefitDiscordUpdateMetadata3
+func (t *BenefitDiscordUpdate_Metadata_AdditionalProperties) MergeBenefitDiscordUpdateMetadata3(v BenefitDiscordUpdateMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t BenefitDiscordUpdate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *BenefitDiscordUpdate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsBenefitDownloadablesCreateMetadata0 returns the union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties as a BenefitDownloadablesCreateMetadata0
+func (t BenefitDownloadablesCreate_Metadata_AdditionalProperties) AsBenefitDownloadablesCreateMetadata0() (BenefitDownloadablesCreateMetadata0, error) {
+	var body BenefitDownloadablesCreateMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitDownloadablesCreateMetadata0 overwrites any union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties as the provided BenefitDownloadablesCreateMetadata0
+func (t *BenefitDownloadablesCreate_Metadata_AdditionalProperties) FromBenefitDownloadablesCreateMetadata0(v BenefitDownloadablesCreateMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitDownloadablesCreateMetadata0 performs a merge with any union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties, using the provided BenefitDownloadablesCreateMetadata0
+func (t *BenefitDownloadablesCreate_Metadata_AdditionalProperties) MergeBenefitDownloadablesCreateMetadata0(v BenefitDownloadablesCreateMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitDownloadablesCreateMetadata1 returns the union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties as a BenefitDownloadablesCreateMetadata1
+func (t BenefitDownloadablesCreate_Metadata_AdditionalProperties) AsBenefitDownloadablesCreateMetadata1() (BenefitDownloadablesCreateMetadata1, error) {
+	var body BenefitDownloadablesCreateMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitDownloadablesCreateMetadata1 overwrites any union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties as the provided BenefitDownloadablesCreateMetadata1
+func (t *BenefitDownloadablesCreate_Metadata_AdditionalProperties) FromBenefitDownloadablesCreateMetadata1(v BenefitDownloadablesCreateMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitDownloadablesCreateMetadata1 performs a merge with any union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties, using the provided BenefitDownloadablesCreateMetadata1
+func (t *BenefitDownloadablesCreate_Metadata_AdditionalProperties) MergeBenefitDownloadablesCreateMetadata1(v BenefitDownloadablesCreateMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitDownloadablesCreateMetadata2 returns the union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties as a BenefitDownloadablesCreateMetadata2
+func (t BenefitDownloadablesCreate_Metadata_AdditionalProperties) AsBenefitDownloadablesCreateMetadata2() (BenefitDownloadablesCreateMetadata2, error) {
+	var body BenefitDownloadablesCreateMetadata2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitDownloadablesCreateMetadata2 overwrites any union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties as the provided BenefitDownloadablesCreateMetadata2
+func (t *BenefitDownloadablesCreate_Metadata_AdditionalProperties) FromBenefitDownloadablesCreateMetadata2(v BenefitDownloadablesCreateMetadata2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitDownloadablesCreateMetadata2 performs a merge with any union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties, using the provided BenefitDownloadablesCreateMetadata2
+func (t *BenefitDownloadablesCreate_Metadata_AdditionalProperties) MergeBenefitDownloadablesCreateMetadata2(v BenefitDownloadablesCreateMetadata2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitDownloadablesCreateMetadata3 returns the union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties as a BenefitDownloadablesCreateMetadata3
+func (t BenefitDownloadablesCreate_Metadata_AdditionalProperties) AsBenefitDownloadablesCreateMetadata3() (BenefitDownloadablesCreateMetadata3, error) {
+	var body BenefitDownloadablesCreateMetadata3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitDownloadablesCreateMetadata3 overwrites any union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties as the provided BenefitDownloadablesCreateMetadata3
+func (t *BenefitDownloadablesCreate_Metadata_AdditionalProperties) FromBenefitDownloadablesCreateMetadata3(v BenefitDownloadablesCreateMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitDownloadablesCreateMetadata3 performs a merge with any union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties, using the provided BenefitDownloadablesCreateMetadata3
+func (t *BenefitDownloadablesCreate_Metadata_AdditionalProperties) MergeBenefitDownloadablesCreateMetadata3(v BenefitDownloadablesCreateMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t BenefitDownloadablesCreate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *BenefitDownloadablesCreate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsBenefitDownloadablesUpdateMetadata0 returns the union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties as a BenefitDownloadablesUpdateMetadata0
+func (t BenefitDownloadablesUpdate_Metadata_AdditionalProperties) AsBenefitDownloadablesUpdateMetadata0() (BenefitDownloadablesUpdateMetadata0, error) {
+	var body BenefitDownloadablesUpdateMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitDownloadablesUpdateMetadata0 overwrites any union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties as the provided BenefitDownloadablesUpdateMetadata0
+func (t *BenefitDownloadablesUpdate_Metadata_AdditionalProperties) FromBenefitDownloadablesUpdateMetadata0(v BenefitDownloadablesUpdateMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitDownloadablesUpdateMetadata0 performs a merge with any union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties, using the provided BenefitDownloadablesUpdateMetadata0
+func (t *BenefitDownloadablesUpdate_Metadata_AdditionalProperties) MergeBenefitDownloadablesUpdateMetadata0(v BenefitDownloadablesUpdateMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitDownloadablesUpdateMetadata1 returns the union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties as a BenefitDownloadablesUpdateMetadata1
+func (t BenefitDownloadablesUpdate_Metadata_AdditionalProperties) AsBenefitDownloadablesUpdateMetadata1() (BenefitDownloadablesUpdateMetadata1, error) {
+	var body BenefitDownloadablesUpdateMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitDownloadablesUpdateMetadata1 overwrites any union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties as the provided BenefitDownloadablesUpdateMetadata1
+func (t *BenefitDownloadablesUpdate_Metadata_AdditionalProperties) FromBenefitDownloadablesUpdateMetadata1(v BenefitDownloadablesUpdateMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitDownloadablesUpdateMetadata1 performs a merge with any union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties, using the provided BenefitDownloadablesUpdateMetadata1
+func (t *BenefitDownloadablesUpdate_Metadata_AdditionalProperties) MergeBenefitDownloadablesUpdateMetadata1(v BenefitDownloadablesUpdateMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitDownloadablesUpdateMetadata2 returns the union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties as a BenefitDownloadablesUpdateMetadata2
+func (t BenefitDownloadablesUpdate_Metadata_AdditionalProperties) AsBenefitDownloadablesUpdateMetadata2() (BenefitDownloadablesUpdateMetadata2, error) {
+	var body BenefitDownloadablesUpdateMetadata2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitDownloadablesUpdateMetadata2 overwrites any union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties as the provided BenefitDownloadablesUpdateMetadata2
+func (t *BenefitDownloadablesUpdate_Metadata_AdditionalProperties) FromBenefitDownloadablesUpdateMetadata2(v BenefitDownloadablesUpdateMetadata2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitDownloadablesUpdateMetadata2 performs a merge with any union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties, using the provided BenefitDownloadablesUpdateMetadata2
+func (t *BenefitDownloadablesUpdate_Metadata_AdditionalProperties) MergeBenefitDownloadablesUpdateMetadata2(v BenefitDownloadablesUpdateMetadata2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitDownloadablesUpdateMetadata3 returns the union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties as a BenefitDownloadablesUpdateMetadata3
+func (t BenefitDownloadablesUpdate_Metadata_AdditionalProperties) AsBenefitDownloadablesUpdateMetadata3() (BenefitDownloadablesUpdateMetadata3, error) {
+	var body BenefitDownloadablesUpdateMetadata3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitDownloadablesUpdateMetadata3 overwrites any union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties as the provided BenefitDownloadablesUpdateMetadata3
+func (t *BenefitDownloadablesUpdate_Metadata_AdditionalProperties) FromBenefitDownloadablesUpdateMetadata3(v BenefitDownloadablesUpdateMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitDownloadablesUpdateMetadata3 performs a merge with any union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties, using the provided BenefitDownloadablesUpdateMetadata3
+func (t *BenefitDownloadablesUpdate_Metadata_AdditionalProperties) MergeBenefitDownloadablesUpdateMetadata3(v BenefitDownloadablesUpdateMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t BenefitDownloadablesUpdate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *BenefitDownloadablesUpdate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsBenefitFeatureFlagCreateMetadata0 returns the union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties as a BenefitFeatureFlagCreateMetadata0
+func (t BenefitFeatureFlagCreate_Metadata_AdditionalProperties) AsBenefitFeatureFlagCreateMetadata0() (BenefitFeatureFlagCreateMetadata0, error) {
+	var body BenefitFeatureFlagCreateMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitFeatureFlagCreateMetadata0 overwrites any union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties as the provided BenefitFeatureFlagCreateMetadata0
+func (t *BenefitFeatureFlagCreate_Metadata_AdditionalProperties) FromBenefitFeatureFlagCreateMetadata0(v BenefitFeatureFlagCreateMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitFeatureFlagCreateMetadata0 performs a merge with any union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties, using the provided BenefitFeatureFlagCreateMetadata0
+func (t *BenefitFeatureFlagCreate_Metadata_AdditionalProperties) MergeBenefitFeatureFlagCreateMetadata0(v BenefitFeatureFlagCreateMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitFeatureFlagCreateMetadata1 returns the union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties as a BenefitFeatureFlagCreateMetadata1
+func (t BenefitFeatureFlagCreate_Metadata_AdditionalProperties) AsBenefitFeatureFlagCreateMetadata1() (BenefitFeatureFlagCreateMetadata1, error) {
+	var body BenefitFeatureFlagCreateMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitFeatureFlagCreateMetadata1 overwrites any union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties as the provided BenefitFeatureFlagCreateMetadata1
+func (t *BenefitFeatureFlagCreate_Metadata_AdditionalProperties) FromBenefitFeatureFlagCreateMetadata1(v BenefitFeatureFlagCreateMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitFeatureFlagCreateMetadata1 performs a merge with any union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties, using the provided BenefitFeatureFlagCreateMetadata1
+func (t *BenefitFeatureFlagCreate_Metadata_AdditionalProperties) MergeBenefitFeatureFlagCreateMetadata1(v BenefitFeatureFlagCreateMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitFeatureFlagCreateMetadata2 returns the union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties as a BenefitFeatureFlagCreateMetadata2
+func (t BenefitFeatureFlagCreate_Metadata_AdditionalProperties) AsBenefitFeatureFlagCreateMetadata2() (BenefitFeatureFlagCreateMetadata2, error) {
+	var body BenefitFeatureFlagCreateMetadata2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitFeatureFlagCreateMetadata2 overwrites any union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties as the provided BenefitFeatureFlagCreateMetadata2
+func (t *BenefitFeatureFlagCreate_Metadata_AdditionalProperties) FromBenefitFeatureFlagCreateMetadata2(v BenefitFeatureFlagCreateMetadata2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitFeatureFlagCreateMetadata2 performs a merge with any union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties, using the provided BenefitFeatureFlagCreateMetadata2
+func (t *BenefitFeatureFlagCreate_Metadata_AdditionalProperties) MergeBenefitFeatureFlagCreateMetadata2(v BenefitFeatureFlagCreateMetadata2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitFeatureFlagCreateMetadata3 returns the union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties as a BenefitFeatureFlagCreateMetadata3
+func (t BenefitFeatureFlagCreate_Metadata_AdditionalProperties) AsBenefitFeatureFlagCreateMetadata3() (BenefitFeatureFlagCreateMetadata3, error) {
+	var body BenefitFeatureFlagCreateMetadata3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitFeatureFlagCreateMetadata3 overwrites any union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties as the provided BenefitFeatureFlagCreateMetadata3
+func (t *BenefitFeatureFlagCreate_Metadata_AdditionalProperties) FromBenefitFeatureFlagCreateMetadata3(v BenefitFeatureFlagCreateMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitFeatureFlagCreateMetadata3 performs a merge with any union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties, using the provided BenefitFeatureFlagCreateMetadata3
+func (t *BenefitFeatureFlagCreate_Metadata_AdditionalProperties) MergeBenefitFeatureFlagCreateMetadata3(v BenefitFeatureFlagCreateMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t BenefitFeatureFlagCreate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *BenefitFeatureFlagCreate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsBenefitFeatureFlagUpdateMetadata0 returns the union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties as a BenefitFeatureFlagUpdateMetadata0
+func (t BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) AsBenefitFeatureFlagUpdateMetadata0() (BenefitFeatureFlagUpdateMetadata0, error) {
+	var body BenefitFeatureFlagUpdateMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitFeatureFlagUpdateMetadata0 overwrites any union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties as the provided BenefitFeatureFlagUpdateMetadata0
+func (t *BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) FromBenefitFeatureFlagUpdateMetadata0(v BenefitFeatureFlagUpdateMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitFeatureFlagUpdateMetadata0 performs a merge with any union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties, using the provided BenefitFeatureFlagUpdateMetadata0
+func (t *BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) MergeBenefitFeatureFlagUpdateMetadata0(v BenefitFeatureFlagUpdateMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitFeatureFlagUpdateMetadata1 returns the union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties as a BenefitFeatureFlagUpdateMetadata1
+func (t BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) AsBenefitFeatureFlagUpdateMetadata1() (BenefitFeatureFlagUpdateMetadata1, error) {
+	var body BenefitFeatureFlagUpdateMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitFeatureFlagUpdateMetadata1 overwrites any union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties as the provided BenefitFeatureFlagUpdateMetadata1
+func (t *BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) FromBenefitFeatureFlagUpdateMetadata1(v BenefitFeatureFlagUpdateMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitFeatureFlagUpdateMetadata1 performs a merge with any union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties, using the provided BenefitFeatureFlagUpdateMetadata1
+func (t *BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) MergeBenefitFeatureFlagUpdateMetadata1(v BenefitFeatureFlagUpdateMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitFeatureFlagUpdateMetadata2 returns the union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties as a BenefitFeatureFlagUpdateMetadata2
+func (t BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) AsBenefitFeatureFlagUpdateMetadata2() (BenefitFeatureFlagUpdateMetadata2, error) {
+	var body BenefitFeatureFlagUpdateMetadata2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitFeatureFlagUpdateMetadata2 overwrites any union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties as the provided BenefitFeatureFlagUpdateMetadata2
+func (t *BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) FromBenefitFeatureFlagUpdateMetadata2(v BenefitFeatureFlagUpdateMetadata2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitFeatureFlagUpdateMetadata2 performs a merge with any union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties, using the provided BenefitFeatureFlagUpdateMetadata2
+func (t *BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) MergeBenefitFeatureFlagUpdateMetadata2(v BenefitFeatureFlagUpdateMetadata2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitFeatureFlagUpdateMetadata3 returns the union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties as a BenefitFeatureFlagUpdateMetadata3
+func (t BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) AsBenefitFeatureFlagUpdateMetadata3() (BenefitFeatureFlagUpdateMetadata3, error) {
+	var body BenefitFeatureFlagUpdateMetadata3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitFeatureFlagUpdateMetadata3 overwrites any union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties as the provided BenefitFeatureFlagUpdateMetadata3
+func (t *BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) FromBenefitFeatureFlagUpdateMetadata3(v BenefitFeatureFlagUpdateMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitFeatureFlagUpdateMetadata3 performs a merge with any union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties, using the provided BenefitFeatureFlagUpdateMetadata3
+func (t *BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) MergeBenefitFeatureFlagUpdateMetadata3(v BenefitFeatureFlagUpdateMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsBenefitGitHubRepositoryCreateMetadata0 returns the union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties as a BenefitGitHubRepositoryCreateMetadata0
+func (t BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) AsBenefitGitHubRepositoryCreateMetadata0() (BenefitGitHubRepositoryCreateMetadata0, error) {
+	var body BenefitGitHubRepositoryCreateMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGitHubRepositoryCreateMetadata0 overwrites any union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties as the provided BenefitGitHubRepositoryCreateMetadata0
+func (t *BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) FromBenefitGitHubRepositoryCreateMetadata0(v BenefitGitHubRepositoryCreateMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGitHubRepositoryCreateMetadata0 performs a merge with any union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties, using the provided BenefitGitHubRepositoryCreateMetadata0
+func (t *BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) MergeBenefitGitHubRepositoryCreateMetadata0(v BenefitGitHubRepositoryCreateMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitGitHubRepositoryCreateMetadata1 returns the union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties as a BenefitGitHubRepositoryCreateMetadata1
+func (t BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) AsBenefitGitHubRepositoryCreateMetadata1() (BenefitGitHubRepositoryCreateMetadata1, error) {
+	var body BenefitGitHubRepositoryCreateMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGitHubRepositoryCreateMetadata1 overwrites any union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties as the provided BenefitGitHubRepositoryCreateMetadata1
+func (t *BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) FromBenefitGitHubRepositoryCreateMetadata1(v BenefitGitHubRepositoryCreateMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGitHubRepositoryCreateMetadata1 performs a merge with any union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties, using the provided BenefitGitHubRepositoryCreateMetadata1
+func (t *BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) MergeBenefitGitHubRepositoryCreateMetadata1(v BenefitGitHubRepositoryCreateMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitGitHubRepositoryCreateMetadata2 returns the union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties as a BenefitGitHubRepositoryCreateMetadata2
+func (t BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) AsBenefitGitHubRepositoryCreateMetadata2() (BenefitGitHubRepositoryCreateMetadata2, error) {
+	var body BenefitGitHubRepositoryCreateMetadata2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGitHubRepositoryCreateMetadata2 overwrites any union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties as the provided BenefitGitHubRepositoryCreateMetadata2
+func (t *BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) FromBenefitGitHubRepositoryCreateMetadata2(v BenefitGitHubRepositoryCreateMetadata2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGitHubRepositoryCreateMetadata2 performs a merge with any union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties, using the provided BenefitGitHubRepositoryCreateMetadata2
+func (t *BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) MergeBenefitGitHubRepositoryCreateMetadata2(v BenefitGitHubRepositoryCreateMetadata2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitGitHubRepositoryCreateMetadata3 returns the union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties as a BenefitGitHubRepositoryCreateMetadata3
+func (t BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) AsBenefitGitHubRepositoryCreateMetadata3() (BenefitGitHubRepositoryCreateMetadata3, error) {
+	var body BenefitGitHubRepositoryCreateMetadata3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGitHubRepositoryCreateMetadata3 overwrites any union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties as the provided BenefitGitHubRepositoryCreateMetadata3
+func (t *BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) FromBenefitGitHubRepositoryCreateMetadata3(v BenefitGitHubRepositoryCreateMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGitHubRepositoryCreateMetadata3 performs a merge with any union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties, using the provided BenefitGitHubRepositoryCreateMetadata3
+func (t *BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) MergeBenefitGitHubRepositoryCreateMetadata3(v BenefitGitHubRepositoryCreateMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsBenefitGitHubRepositoryUpdateMetadata0 returns the union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties as a BenefitGitHubRepositoryUpdateMetadata0
+func (t BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) AsBenefitGitHubRepositoryUpdateMetadata0() (BenefitGitHubRepositoryUpdateMetadata0, error) {
+	var body BenefitGitHubRepositoryUpdateMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGitHubRepositoryUpdateMetadata0 overwrites any union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties as the provided BenefitGitHubRepositoryUpdateMetadata0
+func (t *BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) FromBenefitGitHubRepositoryUpdateMetadata0(v BenefitGitHubRepositoryUpdateMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGitHubRepositoryUpdateMetadata0 performs a merge with any union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties, using the provided BenefitGitHubRepositoryUpdateMetadata0
+func (t *BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) MergeBenefitGitHubRepositoryUpdateMetadata0(v BenefitGitHubRepositoryUpdateMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitGitHubRepositoryUpdateMetadata1 returns the union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties as a BenefitGitHubRepositoryUpdateMetadata1
+func (t BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) AsBenefitGitHubRepositoryUpdateMetadata1() (BenefitGitHubRepositoryUpdateMetadata1, error) {
+	var body BenefitGitHubRepositoryUpdateMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGitHubRepositoryUpdateMetadata1 overwrites any union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties as the provided BenefitGitHubRepositoryUpdateMetadata1
+func (t *BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) FromBenefitGitHubRepositoryUpdateMetadata1(v BenefitGitHubRepositoryUpdateMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGitHubRepositoryUpdateMetadata1 performs a merge with any union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties, using the provided BenefitGitHubRepositoryUpdateMetadata1
+func (t *BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) MergeBenefitGitHubRepositoryUpdateMetadata1(v BenefitGitHubRepositoryUpdateMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitGitHubRepositoryUpdateMetadata2 returns the union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties as a BenefitGitHubRepositoryUpdateMetadata2
+func (t BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) AsBenefitGitHubRepositoryUpdateMetadata2() (BenefitGitHubRepositoryUpdateMetadata2, error) {
+	var body BenefitGitHubRepositoryUpdateMetadata2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGitHubRepositoryUpdateMetadata2 overwrites any union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties as the provided BenefitGitHubRepositoryUpdateMetadata2
+func (t *BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) FromBenefitGitHubRepositoryUpdateMetadata2(v BenefitGitHubRepositoryUpdateMetadata2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGitHubRepositoryUpdateMetadata2 performs a merge with any union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties, using the provided BenefitGitHubRepositoryUpdateMetadata2
+func (t *BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) MergeBenefitGitHubRepositoryUpdateMetadata2(v BenefitGitHubRepositoryUpdateMetadata2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitGitHubRepositoryUpdateMetadata3 returns the union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties as a BenefitGitHubRepositoryUpdateMetadata3
+func (t BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) AsBenefitGitHubRepositoryUpdateMetadata3() (BenefitGitHubRepositoryUpdateMetadata3, error) {
+	var body BenefitGitHubRepositoryUpdateMetadata3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGitHubRepositoryUpdateMetadata3 overwrites any union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties as the provided BenefitGitHubRepositoryUpdateMetadata3
+func (t *BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) FromBenefitGitHubRepositoryUpdateMetadata3(v BenefitGitHubRepositoryUpdateMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGitHubRepositoryUpdateMetadata3 performs a merge with any union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties, using the provided BenefitGitHubRepositoryUpdateMetadata3
+func (t *BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) MergeBenefitGitHubRepositoryUpdateMetadata3(v BenefitGitHubRepositoryUpdateMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsBenefitGrantDiscordProperties returns the union data inside the BenefitGrant_Properties as a BenefitGrantDiscordProperties
+func (t BenefitGrant_Properties) AsBenefitGrantDiscordProperties() (BenefitGrantDiscordProperties, error) {
+	var body BenefitGrantDiscordProperties
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGrantDiscordProperties overwrites any union data inside the BenefitGrant_Properties as the provided BenefitGrantDiscordProperties
+func (t *BenefitGrant_Properties) FromBenefitGrantDiscordProperties(v BenefitGrantDiscordProperties) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGrantDiscordProperties performs a merge with any union data inside the BenefitGrant_Properties, using the provided BenefitGrantDiscordProperties
+func (t *BenefitGrant_Properties) MergeBenefitGrantDiscordProperties(v BenefitGrantDiscordProperties) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitGrantGitHubRepositoryProperties returns the union data inside the BenefitGrant_Properties as a BenefitGrantGitHubRepositoryProperties
+func (t BenefitGrant_Properties) AsBenefitGrantGitHubRepositoryProperties() (BenefitGrantGitHubRepositoryProperties, error) {
+	var body BenefitGrantGitHubRepositoryProperties
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGrantGitHubRepositoryProperties overwrites any union data inside the BenefitGrant_Properties as the provided BenefitGrantGitHubRepositoryProperties
+func (t *BenefitGrant_Properties) FromBenefitGrantGitHubRepositoryProperties(v BenefitGrantGitHubRepositoryProperties) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGrantGitHubRepositoryProperties performs a merge with any union data inside the BenefitGrant_Properties, using the provided BenefitGrantGitHubRepositoryProperties
+func (t *BenefitGrant_Properties) MergeBenefitGrantGitHubRepositoryProperties(v BenefitGrantGitHubRepositoryProperties) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitGrantDownloadablesProperties returns the union data inside the BenefitGrant_Properties as a BenefitGrantDownloadablesProperties
+func (t BenefitGrant_Properties) AsBenefitGrantDownloadablesProperties() (BenefitGrantDownloadablesProperties, error) {
+	var body BenefitGrantDownloadablesProperties
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGrantDownloadablesProperties overwrites any union data inside the BenefitGrant_Properties as the provided BenefitGrantDownloadablesProperties
+func (t *BenefitGrant_Properties) FromBenefitGrantDownloadablesProperties(v BenefitGrantDownloadablesProperties) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGrantDownloadablesProperties performs a merge with any union data inside the BenefitGrant_Properties, using the provided BenefitGrantDownloadablesProperties
+func (t *BenefitGrant_Properties) MergeBenefitGrantDownloadablesProperties(v BenefitGrantDownloadablesProperties) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitGrantLicenseKeysProperties returns the union data inside the BenefitGrant_Properties as a BenefitGrantLicenseKeysProperties
+func (t BenefitGrant_Properties) AsBenefitGrantLicenseKeysProperties() (BenefitGrantLicenseKeysProperties, error) {
+	var body BenefitGrantLicenseKeysProperties
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGrantLicenseKeysProperties overwrites any union data inside the BenefitGrant_Properties as the provided BenefitGrantLicenseKeysProperties
+func (t *BenefitGrant_Properties) FromBenefitGrantLicenseKeysProperties(v BenefitGrantLicenseKeysProperties) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGrantLicenseKeysProperties performs a merge with any union data inside the BenefitGrant_Properties, using the provided BenefitGrantLicenseKeysProperties
+func (t *BenefitGrant_Properties) MergeBenefitGrantLicenseKeysProperties(v BenefitGrantLicenseKeysProperties) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitGrantCustomProperties returns the union data inside the BenefitGrant_Properties as a BenefitGrantCustomProperties
+func (t BenefitGrant_Properties) AsBenefitGrantCustomProperties() (BenefitGrantCustomProperties, error) {
+	var body BenefitGrantCustomProperties
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGrantCustomProperties overwrites any union data inside the BenefitGrant_Properties as the provided BenefitGrantCustomProperties
+func (t *BenefitGrant_Properties) FromBenefitGrantCustomProperties(v BenefitGrantCustomProperties) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGrantCustomProperties performs a merge with any union data inside the BenefitGrant_Properties, using the provided BenefitGrantCustomProperties
+func (t *BenefitGrant_Properties) MergeBenefitGrantCustomProperties(v BenefitGrantCustomProperties) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitGrantFeatureFlagProperties returns the union data inside the BenefitGrant_Properties as a BenefitGrantFeatureFlagProperties
+func (t BenefitGrant_Properties) AsBenefitGrantFeatureFlagProperties() (BenefitGrantFeatureFlagProperties, error) {
+	var body BenefitGrantFeatureFlagProperties
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGrantFeatureFlagProperties overwrites any union data inside the BenefitGrant_Properties as the provided BenefitGrantFeatureFlagProperties
+func (t *BenefitGrant_Properties) FromBenefitGrantFeatureFlagProperties(v BenefitGrantFeatureFlagProperties) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGrantFeatureFlagProperties performs a merge with any union data inside the BenefitGrant_Properties, using the provided BenefitGrantFeatureFlagProperties
+func (t *BenefitGrant_Properties) MergeBenefitGrantFeatureFlagProperties(v BenefitGrantFeatureFlagProperties) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitGrantSlackSharedChannelProperties returns the union data inside the BenefitGrant_Properties as a BenefitGrantSlackSharedChannelProperties
+func (t BenefitGrant_Properties) AsBenefitGrantSlackSharedChannelProperties() (BenefitGrantSlackSharedChannelProperties, error) {
+	var body BenefitGrantSlackSharedChannelProperties
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGrantSlackSharedChannelProperties overwrites any union data inside the BenefitGrant_Properties as the provided BenefitGrantSlackSharedChannelProperties
+func (t *BenefitGrant_Properties) FromBenefitGrantSlackSharedChannelProperties(v BenefitGrantSlackSharedChannelProperties) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGrantSlackSharedChannelProperties performs a merge with any union data inside the BenefitGrant_Properties, using the provided BenefitGrantSlackSharedChannelProperties
+func (t *BenefitGrant_Properties) MergeBenefitGrantSlackSharedChannelProperties(v BenefitGrantSlackSharedChannelProperties) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t BenefitGrant_Properties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *BenefitGrant_Properties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsBenefitGrantDiscordWebhook returns the union data inside the BenefitGrantWebhook as a BenefitGrantDiscordWebhook
+func (t BenefitGrantWebhook) AsBenefitGrantDiscordWebhook() (BenefitGrantDiscordWebhook, error) {
+	var body BenefitGrantDiscordWebhook
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGrantDiscordWebhook overwrites any union data inside the BenefitGrantWebhook as the provided BenefitGrantDiscordWebhook
+func (t *BenefitGrantWebhook) FromBenefitGrantDiscordWebhook(v BenefitGrantDiscordWebhook) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGrantDiscordWebhook performs a merge with any union data inside the BenefitGrantWebhook, using the provided BenefitGrantDiscordWebhook
+func (t *BenefitGrantWebhook) MergeBenefitGrantDiscordWebhook(v BenefitGrantDiscordWebhook) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitGrantCustomWebhook returns the union data inside the BenefitGrantWebhook as a BenefitGrantCustomWebhook
+func (t BenefitGrantWebhook) AsBenefitGrantCustomWebhook() (BenefitGrantCustomWebhook, error) {
+	var body BenefitGrantCustomWebhook
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGrantCustomWebhook overwrites any union data inside the BenefitGrantWebhook as the provided BenefitGrantCustomWebhook
+func (t *BenefitGrantWebhook) FromBenefitGrantCustomWebhook(v BenefitGrantCustomWebhook) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGrantCustomWebhook performs a merge with any union data inside the BenefitGrantWebhook, using the provided BenefitGrantCustomWebhook
+func (t *BenefitGrantWebhook) MergeBenefitGrantCustomWebhook(v BenefitGrantCustomWebhook) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitGrantGitHubRepositoryWebhook returns the union data inside the BenefitGrantWebhook as a BenefitGrantGitHubRepositoryWebhook
+func (t BenefitGrantWebhook) AsBenefitGrantGitHubRepositoryWebhook() (BenefitGrantGitHubRepositoryWebhook, error) {
+	var body BenefitGrantGitHubRepositoryWebhook
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGrantGitHubRepositoryWebhook overwrites any union data inside the BenefitGrantWebhook as the provided BenefitGrantGitHubRepositoryWebhook
+func (t *BenefitGrantWebhook) FromBenefitGrantGitHubRepositoryWebhook(v BenefitGrantGitHubRepositoryWebhook) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGrantGitHubRepositoryWebhook performs a merge with any union data inside the BenefitGrantWebhook, using the provided BenefitGrantGitHubRepositoryWebhook
+func (t *BenefitGrantWebhook) MergeBenefitGrantGitHubRepositoryWebhook(v BenefitGrantGitHubRepositoryWebhook) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitGrantDownloadablesWebhook returns the union data inside the BenefitGrantWebhook as a BenefitGrantDownloadablesWebhook
+func (t BenefitGrantWebhook) AsBenefitGrantDownloadablesWebhook() (BenefitGrantDownloadablesWebhook, error) {
+	var body BenefitGrantDownloadablesWebhook
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGrantDownloadablesWebhook overwrites any union data inside the BenefitGrantWebhook as the provided BenefitGrantDownloadablesWebhook
+func (t *BenefitGrantWebhook) FromBenefitGrantDownloadablesWebhook(v BenefitGrantDownloadablesWebhook) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGrantDownloadablesWebhook performs a merge with any union data inside the BenefitGrantWebhook, using the provided BenefitGrantDownloadablesWebhook
+func (t *BenefitGrantWebhook) MergeBenefitGrantDownloadablesWebhook(v BenefitGrantDownloadablesWebhook) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitGrantLicenseKeysWebhook returns the union data inside the BenefitGrantWebhook as a BenefitGrantLicenseKeysWebhook
+func (t BenefitGrantWebhook) AsBenefitGrantLicenseKeysWebhook() (BenefitGrantLicenseKeysWebhook, error) {
+	var body BenefitGrantLicenseKeysWebhook
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGrantLicenseKeysWebhook overwrites any union data inside the BenefitGrantWebhook as the provided BenefitGrantLicenseKeysWebhook
+func (t *BenefitGrantWebhook) FromBenefitGrantLicenseKeysWebhook(v BenefitGrantLicenseKeysWebhook) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGrantLicenseKeysWebhook performs a merge with any union data inside the BenefitGrantWebhook, using the provided BenefitGrantLicenseKeysWebhook
+func (t *BenefitGrantWebhook) MergeBenefitGrantLicenseKeysWebhook(v BenefitGrantLicenseKeysWebhook) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitGrantMeterCreditWebhook returns the union data inside the BenefitGrantWebhook as a BenefitGrantMeterCreditWebhook
+func (t BenefitGrantWebhook) AsBenefitGrantMeterCreditWebhook() (BenefitGrantMeterCreditWebhook, error) {
+	var body BenefitGrantMeterCreditWebhook
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGrantMeterCreditWebhook overwrites any union data inside the BenefitGrantWebhook as the provided BenefitGrantMeterCreditWebhook
+func (t *BenefitGrantWebhook) FromBenefitGrantMeterCreditWebhook(v BenefitGrantMeterCreditWebhook) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGrantMeterCreditWebhook performs a merge with any union data inside the BenefitGrantWebhook, using the provided BenefitGrantMeterCreditWebhook
+func (t *BenefitGrantWebhook) MergeBenefitGrantMeterCreditWebhook(v BenefitGrantMeterCreditWebhook) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitGrantFeatureFlagWebhook returns the union data inside the BenefitGrantWebhook as a BenefitGrantFeatureFlagWebhook
+func (t BenefitGrantWebhook) AsBenefitGrantFeatureFlagWebhook() (BenefitGrantFeatureFlagWebhook, error) {
+	var body BenefitGrantFeatureFlagWebhook
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGrantFeatureFlagWebhook overwrites any union data inside the BenefitGrantWebhook as the provided BenefitGrantFeatureFlagWebhook
+func (t *BenefitGrantWebhook) FromBenefitGrantFeatureFlagWebhook(v BenefitGrantFeatureFlagWebhook) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGrantFeatureFlagWebhook performs a merge with any union data inside the BenefitGrantWebhook, using the provided BenefitGrantFeatureFlagWebhook
+func (t *BenefitGrantWebhook) MergeBenefitGrantFeatureFlagWebhook(v BenefitGrantFeatureFlagWebhook) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitGrantSlackSharedChannelWebhook returns the union data inside the BenefitGrantWebhook as a BenefitGrantSlackSharedChannelWebhook
+func (t BenefitGrantWebhook) AsBenefitGrantSlackSharedChannelWebhook() (BenefitGrantSlackSharedChannelWebhook, error) {
+	var body BenefitGrantSlackSharedChannelWebhook
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitGrantSlackSharedChannelWebhook overwrites any union data inside the BenefitGrantWebhook as the provided BenefitGrantSlackSharedChannelWebhook
+func (t *BenefitGrantWebhook) FromBenefitGrantSlackSharedChannelWebhook(v BenefitGrantSlackSharedChannelWebhook) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitGrantSlackSharedChannelWebhook performs a merge with any union data inside the BenefitGrantWebhook, using the provided BenefitGrantSlackSharedChannelWebhook
+func (t *BenefitGrantWebhook) MergeBenefitGrantSlackSharedChannelWebhook(v BenefitGrantSlackSharedChannelWebhook) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t BenefitGrantWebhook) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *BenefitGrantWebhook) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsBenefitLicenseKeysCreateMetadata0 returns the union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties as a BenefitLicenseKeysCreateMetadata0
+func (t BenefitLicenseKeysCreate_Metadata_AdditionalProperties) AsBenefitLicenseKeysCreateMetadata0() (BenefitLicenseKeysCreateMetadata0, error) {
+	var body BenefitLicenseKeysCreateMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitLicenseKeysCreateMetadata0 overwrites any union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties as the provided BenefitLicenseKeysCreateMetadata0
+func (t *BenefitLicenseKeysCreate_Metadata_AdditionalProperties) FromBenefitLicenseKeysCreateMetadata0(v BenefitLicenseKeysCreateMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitLicenseKeysCreateMetadata0 performs a merge with any union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties, using the provided BenefitLicenseKeysCreateMetadata0
+func (t *BenefitLicenseKeysCreate_Metadata_AdditionalProperties) MergeBenefitLicenseKeysCreateMetadata0(v BenefitLicenseKeysCreateMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitLicenseKeysCreateMetadata1 returns the union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties as a BenefitLicenseKeysCreateMetadata1
+func (t BenefitLicenseKeysCreate_Metadata_AdditionalProperties) AsBenefitLicenseKeysCreateMetadata1() (BenefitLicenseKeysCreateMetadata1, error) {
+	var body BenefitLicenseKeysCreateMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitLicenseKeysCreateMetadata1 overwrites any union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties as the provided BenefitLicenseKeysCreateMetadata1
+func (t *BenefitLicenseKeysCreate_Metadata_AdditionalProperties) FromBenefitLicenseKeysCreateMetadata1(v BenefitLicenseKeysCreateMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitLicenseKeysCreateMetadata1 performs a merge with any union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties, using the provided BenefitLicenseKeysCreateMetadata1
+func (t *BenefitLicenseKeysCreate_Metadata_AdditionalProperties) MergeBenefitLicenseKeysCreateMetadata1(v BenefitLicenseKeysCreateMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitLicenseKeysCreateMetadata2 returns the union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties as a BenefitLicenseKeysCreateMetadata2
+func (t BenefitLicenseKeysCreate_Metadata_AdditionalProperties) AsBenefitLicenseKeysCreateMetadata2() (BenefitLicenseKeysCreateMetadata2, error) {
+	var body BenefitLicenseKeysCreateMetadata2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitLicenseKeysCreateMetadata2 overwrites any union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties as the provided BenefitLicenseKeysCreateMetadata2
+func (t *BenefitLicenseKeysCreate_Metadata_AdditionalProperties) FromBenefitLicenseKeysCreateMetadata2(v BenefitLicenseKeysCreateMetadata2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitLicenseKeysCreateMetadata2 performs a merge with any union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties, using the provided BenefitLicenseKeysCreateMetadata2
+func (t *BenefitLicenseKeysCreate_Metadata_AdditionalProperties) MergeBenefitLicenseKeysCreateMetadata2(v BenefitLicenseKeysCreateMetadata2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitLicenseKeysCreateMetadata3 returns the union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties as a BenefitLicenseKeysCreateMetadata3
+func (t BenefitLicenseKeysCreate_Metadata_AdditionalProperties) AsBenefitLicenseKeysCreateMetadata3() (BenefitLicenseKeysCreateMetadata3, error) {
+	var body BenefitLicenseKeysCreateMetadata3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitLicenseKeysCreateMetadata3 overwrites any union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties as the provided BenefitLicenseKeysCreateMetadata3
+func (t *BenefitLicenseKeysCreate_Metadata_AdditionalProperties) FromBenefitLicenseKeysCreateMetadata3(v BenefitLicenseKeysCreateMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitLicenseKeysCreateMetadata3 performs a merge with any union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties, using the provided BenefitLicenseKeysCreateMetadata3
+func (t *BenefitLicenseKeysCreate_Metadata_AdditionalProperties) MergeBenefitLicenseKeysCreateMetadata3(v BenefitLicenseKeysCreateMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t BenefitLicenseKeysCreate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *BenefitLicenseKeysCreate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsBenefitLicenseKeysUpdateMetadata0 returns the union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties as a BenefitLicenseKeysUpdateMetadata0
+func (t BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) AsBenefitLicenseKeysUpdateMetadata0() (BenefitLicenseKeysUpdateMetadata0, error) {
+	var body BenefitLicenseKeysUpdateMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitLicenseKeysUpdateMetadata0 overwrites any union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties as the provided BenefitLicenseKeysUpdateMetadata0
+func (t *BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) FromBenefitLicenseKeysUpdateMetadata0(v BenefitLicenseKeysUpdateMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitLicenseKeysUpdateMetadata0 performs a merge with any union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties, using the provided BenefitLicenseKeysUpdateMetadata0
+func (t *BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) MergeBenefitLicenseKeysUpdateMetadata0(v BenefitLicenseKeysUpdateMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitLicenseKeysUpdateMetadata1 returns the union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties as a BenefitLicenseKeysUpdateMetadata1
+func (t BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) AsBenefitLicenseKeysUpdateMetadata1() (BenefitLicenseKeysUpdateMetadata1, error) {
+	var body BenefitLicenseKeysUpdateMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitLicenseKeysUpdateMetadata1 overwrites any union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties as the provided BenefitLicenseKeysUpdateMetadata1
+func (t *BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) FromBenefitLicenseKeysUpdateMetadata1(v BenefitLicenseKeysUpdateMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitLicenseKeysUpdateMetadata1 performs a merge with any union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties, using the provided BenefitLicenseKeysUpdateMetadata1
+func (t *BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) MergeBenefitLicenseKeysUpdateMetadata1(v BenefitLicenseKeysUpdateMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitLicenseKeysUpdateMetadata2 returns the union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties as a BenefitLicenseKeysUpdateMetadata2
+func (t BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) AsBenefitLicenseKeysUpdateMetadata2() (BenefitLicenseKeysUpdateMetadata2, error) {
+	var body BenefitLicenseKeysUpdateMetadata2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitLicenseKeysUpdateMetadata2 overwrites any union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties as the provided BenefitLicenseKeysUpdateMetadata2
+func (t *BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) FromBenefitLicenseKeysUpdateMetadata2(v BenefitLicenseKeysUpdateMetadata2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitLicenseKeysUpdateMetadata2 performs a merge with any union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties, using the provided BenefitLicenseKeysUpdateMetadata2
+func (t *BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) MergeBenefitLicenseKeysUpdateMetadata2(v BenefitLicenseKeysUpdateMetadata2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitLicenseKeysUpdateMetadata3 returns the union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties as a BenefitLicenseKeysUpdateMetadata3
+func (t BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) AsBenefitLicenseKeysUpdateMetadata3() (BenefitLicenseKeysUpdateMetadata3, error) {
+	var body BenefitLicenseKeysUpdateMetadata3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitLicenseKeysUpdateMetadata3 overwrites any union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties as the provided BenefitLicenseKeysUpdateMetadata3
+func (t *BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) FromBenefitLicenseKeysUpdateMetadata3(v BenefitLicenseKeysUpdateMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitLicenseKeysUpdateMetadata3 performs a merge with any union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties, using the provided BenefitLicenseKeysUpdateMetadata3
+func (t *BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) MergeBenefitLicenseKeysUpdateMetadata3(v BenefitLicenseKeysUpdateMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsBenefitMeterCreditCreateMetadata0 returns the union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties as a BenefitMeterCreditCreateMetadata0
+func (t BenefitMeterCreditCreate_Metadata_AdditionalProperties) AsBenefitMeterCreditCreateMetadata0() (BenefitMeterCreditCreateMetadata0, error) {
+	var body BenefitMeterCreditCreateMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitMeterCreditCreateMetadata0 overwrites any union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties as the provided BenefitMeterCreditCreateMetadata0
+func (t *BenefitMeterCreditCreate_Metadata_AdditionalProperties) FromBenefitMeterCreditCreateMetadata0(v BenefitMeterCreditCreateMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitMeterCreditCreateMetadata0 performs a merge with any union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties, using the provided BenefitMeterCreditCreateMetadata0
+func (t *BenefitMeterCreditCreate_Metadata_AdditionalProperties) MergeBenefitMeterCreditCreateMetadata0(v BenefitMeterCreditCreateMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitMeterCreditCreateMetadata1 returns the union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties as a BenefitMeterCreditCreateMetadata1
+func (t BenefitMeterCreditCreate_Metadata_AdditionalProperties) AsBenefitMeterCreditCreateMetadata1() (BenefitMeterCreditCreateMetadata1, error) {
+	var body BenefitMeterCreditCreateMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitMeterCreditCreateMetadata1 overwrites any union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties as the provided BenefitMeterCreditCreateMetadata1
+func (t *BenefitMeterCreditCreate_Metadata_AdditionalProperties) FromBenefitMeterCreditCreateMetadata1(v BenefitMeterCreditCreateMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitMeterCreditCreateMetadata1 performs a merge with any union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties, using the provided BenefitMeterCreditCreateMetadata1
+func (t *BenefitMeterCreditCreate_Metadata_AdditionalProperties) MergeBenefitMeterCreditCreateMetadata1(v BenefitMeterCreditCreateMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitMeterCreditCreateMetadata2 returns the union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties as a BenefitMeterCreditCreateMetadata2
+func (t BenefitMeterCreditCreate_Metadata_AdditionalProperties) AsBenefitMeterCreditCreateMetadata2() (BenefitMeterCreditCreateMetadata2, error) {
+	var body BenefitMeterCreditCreateMetadata2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitMeterCreditCreateMetadata2 overwrites any union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties as the provided BenefitMeterCreditCreateMetadata2
+func (t *BenefitMeterCreditCreate_Metadata_AdditionalProperties) FromBenefitMeterCreditCreateMetadata2(v BenefitMeterCreditCreateMetadata2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitMeterCreditCreateMetadata2 performs a merge with any union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties, using the provided BenefitMeterCreditCreateMetadata2
+func (t *BenefitMeterCreditCreate_Metadata_AdditionalProperties) MergeBenefitMeterCreditCreateMetadata2(v BenefitMeterCreditCreateMetadata2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitMeterCreditCreateMetadata3 returns the union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties as a BenefitMeterCreditCreateMetadata3
+func (t BenefitMeterCreditCreate_Metadata_AdditionalProperties) AsBenefitMeterCreditCreateMetadata3() (BenefitMeterCreditCreateMetadata3, error) {
+	var body BenefitMeterCreditCreateMetadata3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitMeterCreditCreateMetadata3 overwrites any union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties as the provided BenefitMeterCreditCreateMetadata3
+func (t *BenefitMeterCreditCreate_Metadata_AdditionalProperties) FromBenefitMeterCreditCreateMetadata3(v BenefitMeterCreditCreateMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitMeterCreditCreateMetadata3 performs a merge with any union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties, using the provided BenefitMeterCreditCreateMetadata3
+func (t *BenefitMeterCreditCreate_Metadata_AdditionalProperties) MergeBenefitMeterCreditCreateMetadata3(v BenefitMeterCreditCreateMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t BenefitMeterCreditCreate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *BenefitMeterCreditCreate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsBenefitMeterCreditUpdateMetadata0 returns the union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties as a BenefitMeterCreditUpdateMetadata0
+func (t BenefitMeterCreditUpdate_Metadata_AdditionalProperties) AsBenefitMeterCreditUpdateMetadata0() (BenefitMeterCreditUpdateMetadata0, error) {
+	var body BenefitMeterCreditUpdateMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitMeterCreditUpdateMetadata0 overwrites any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties as the provided BenefitMeterCreditUpdateMetadata0
+func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) FromBenefitMeterCreditUpdateMetadata0(v BenefitMeterCreditUpdateMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitMeterCreditUpdateMetadata0 performs a merge with any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties, using the provided BenefitMeterCreditUpdateMetadata0
+func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) MergeBenefitMeterCreditUpdateMetadata0(v BenefitMeterCreditUpdateMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitMeterCreditUpdateMetadata1 returns the union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties as a BenefitMeterCreditUpdateMetadata1
+func (t BenefitMeterCreditUpdate_Metadata_AdditionalProperties) AsBenefitMeterCreditUpdateMetadata1() (BenefitMeterCreditUpdateMetadata1, error) {
+	var body BenefitMeterCreditUpdateMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitMeterCreditUpdateMetadata1 overwrites any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties as the provided BenefitMeterCreditUpdateMetadata1
+func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) FromBenefitMeterCreditUpdateMetadata1(v BenefitMeterCreditUpdateMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitMeterCreditUpdateMetadata1 performs a merge with any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties, using the provided BenefitMeterCreditUpdateMetadata1
+func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) MergeBenefitMeterCreditUpdateMetadata1(v BenefitMeterCreditUpdateMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitMeterCreditUpdateMetadata2 returns the union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties as a BenefitMeterCreditUpdateMetadata2
+func (t BenefitMeterCreditUpdate_Metadata_AdditionalProperties) AsBenefitMeterCreditUpdateMetadata2() (BenefitMeterCreditUpdateMetadata2, error) {
+	var body BenefitMeterCreditUpdateMetadata2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitMeterCreditUpdateMetadata2 overwrites any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties as the provided BenefitMeterCreditUpdateMetadata2
+func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) FromBenefitMeterCreditUpdateMetadata2(v BenefitMeterCreditUpdateMetadata2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitMeterCreditUpdateMetadata2 performs a merge with any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties, using the provided BenefitMeterCreditUpdateMetadata2
+func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) MergeBenefitMeterCreditUpdateMetadata2(v BenefitMeterCreditUpdateMetadata2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBenefitMeterCreditUpdateMetadata3 returns the union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties as a BenefitMeterCreditUpdateMetadata3
+func (t BenefitMeterCreditUpdate_Metadata_AdditionalProperties) AsBenefitMeterCreditUpdateMetadata3() (BenefitMeterCreditUpdateMetadata3, error) {
+	var body BenefitMeterCreditUpdateMetadata3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBenefitMeterCreditUpdateMetadata3 overwrites any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties as the provided BenefitMeterCreditUpdateMetadata3
+func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) FromBenefitMeterCreditUpdateMetadata3(v BenefitMeterCreditUpdateMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitMeterCreditUpdateMetadata3 performs a merge with any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties, using the provided BenefitMeterCreditUpdateMetadata3
+func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) MergeBenefitMeterCreditUpdateMetadata3(v BenefitMeterCreditUpdateMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
 	return err
 }

@@ -2,6 +2,16 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.3.0, 2026-11-14
+
+- Breaking: the 2026-10 spec no longer has several operations, so the client lost their methods. Callers of these must remove the calls.
+- Removed `Client` and `ClientWithResponses` methods (with their `WithBody` and `WithResponse` variants and the matching `ClientInterface` and `ClientWithResponsesInterface` entries) for metrics dashboards: `MetricsCreateDashboard`, `MetricsGetDashboard`, `MetricsListDashboards`, `MetricsUpdateDashboard` and `MetricsDeleteDashboard`.
+- Removed the export methods `MetricsExport`, `CustomersExport` and `SubscriptionsExport`, with `MetricsExportParams`, `MetricsExportParamsTimezone` and its timezone constants, `CustomersExportParams` and the matching response types.
+- Removed the customer portal wallet methods `CustomerPortalWalletsList` and `CustomerPortalWalletsGet`, with `CustomerWallet`, `CustomerWalletSortProperty`, `ListResourceCustomerWallet` and `CustomerPortalWalletsListParams`.
+- Removed the customer portal order payment methods `CustomerPortalOrdersConfirmRetryPayment` and `CustomerPortalOrdersGetPaymentStatus`, with `CustomerOrderConfirmPayment`, `CustomerOrderPaymentConfirmation`, `CustomerOrderPaymentStatus`, `ManualRetryLimitExceeded` and `CustomerPortalOrdersConfirmRetryPaymentJSONRequestBody`.
+- Removed the dashboard types `MetricDashboardCreate`, `MetricDashboardSchema`, `MetricDashboardUpdate` and `MetricsCreateDashboardJSONRequestBody`.
+- The generator rewrote and moved much of the generated code across `client_*.gen.go`, including the benefit grant webhook types. The apidiff report lists no other removed or changed exported names.
+
 ## v0.2.0, 2026-11-13
 
 - Breaking: `WebhookEndpointCreate.Format` now has the new type `WebhookEndpointCreateFormat` instead of `WebhookFormat`, and `WebhookEndpointUpdate.Format` is now `*WebhookEndpointUpdateFormat` instead of `*WebhookFormat`. Code that assigns a `WebhookFormat` value to either field must convert it, for example `WebhookEndpointCreateFormat(f)`. Untyped constants and the new constants below still work.

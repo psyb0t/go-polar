@@ -10,2199 +10,6 @@ import (
 	"github.com/oapi-codegen/runtime"
 )
 
-// MergeBenefitDownloadablesCreate performs a merge with any union data inside the BenefitCreate, using the provided BenefitDownloadablesCreate
-func (t *BenefitCreate) MergeBenefitDownloadablesCreate(v BenefitDownloadablesCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"type":"downloadables"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitLicenseKeysCreate returns the union data inside the BenefitCreate as a BenefitLicenseKeysCreate
-func (t BenefitCreate) AsBenefitLicenseKeysCreate() (BenefitLicenseKeysCreate, error) {
-	var body BenefitLicenseKeysCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitLicenseKeysCreate overwrites any union data inside the BenefitCreate as the provided BenefitLicenseKeysCreate
-func (t *BenefitCreate) FromBenefitLicenseKeysCreate(v BenefitLicenseKeysCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"type":"license_keys"}`))
-	t.union = b
-	return err
-}
-
-// MergeBenefitLicenseKeysCreate performs a merge with any union data inside the BenefitCreate, using the provided BenefitLicenseKeysCreate
-func (t *BenefitCreate) MergeBenefitLicenseKeysCreate(v BenefitLicenseKeysCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"type":"license_keys"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitMeterCreditCreate returns the union data inside the BenefitCreate as a BenefitMeterCreditCreate
-func (t BenefitCreate) AsBenefitMeterCreditCreate() (BenefitMeterCreditCreate, error) {
-	var body BenefitMeterCreditCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitMeterCreditCreate overwrites any union data inside the BenefitCreate as the provided BenefitMeterCreditCreate
-func (t *BenefitCreate) FromBenefitMeterCreditCreate(v BenefitMeterCreditCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"type":"meter_credit"}`))
-	t.union = b
-	return err
-}
-
-// MergeBenefitMeterCreditCreate performs a merge with any union data inside the BenefitCreate, using the provided BenefitMeterCreditCreate
-func (t *BenefitCreate) MergeBenefitMeterCreditCreate(v BenefitMeterCreditCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"type":"meter_credit"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitFeatureFlagCreate returns the union data inside the BenefitCreate as a BenefitFeatureFlagCreate
-func (t BenefitCreate) AsBenefitFeatureFlagCreate() (BenefitFeatureFlagCreate, error) {
-	var body BenefitFeatureFlagCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitFeatureFlagCreate overwrites any union data inside the BenefitCreate as the provided BenefitFeatureFlagCreate
-func (t *BenefitCreate) FromBenefitFeatureFlagCreate(v BenefitFeatureFlagCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"type":"feature_flag"}`))
-	t.union = b
-	return err
-}
-
-// MergeBenefitFeatureFlagCreate performs a merge with any union data inside the BenefitCreate, using the provided BenefitFeatureFlagCreate
-func (t *BenefitCreate) MergeBenefitFeatureFlagCreate(v BenefitFeatureFlagCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"type":"feature_flag"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitSlackSharedChannelCreate returns the union data inside the BenefitCreate as a BenefitSlackSharedChannelCreate
-func (t BenefitCreate) AsBenefitSlackSharedChannelCreate() (BenefitSlackSharedChannelCreate, error) {
-	var body BenefitSlackSharedChannelCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitSlackSharedChannelCreate overwrites any union data inside the BenefitCreate as the provided BenefitSlackSharedChannelCreate
-func (t *BenefitCreate) FromBenefitSlackSharedChannelCreate(v BenefitSlackSharedChannelCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"type":"slack_shared_channel"}`))
-	t.union = b
-	return err
-}
-
-// MergeBenefitSlackSharedChannelCreate performs a merge with any union data inside the BenefitCreate, using the provided BenefitSlackSharedChannelCreate
-func (t *BenefitCreate) MergeBenefitSlackSharedChannelCreate(v BenefitSlackSharedChannelCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	b, err = runtime.JSONMerge(b, []byte(`{"type":"slack_shared_channel"}`))
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BenefitCreate) Discriminator() (string, error) {
-	var discriminator struct {
-		Discriminator string `json:"type"`
-	}
-	err := json.Unmarshal(t.union, &discriminator)
-	return discriminator.Discriminator, err
-}
-
-func (t BenefitCreate) ValueByDiscriminator() (interface{}, error) {
-	discriminator, err := t.Discriminator()
-	if err != nil {
-		return nil, err
-	}
-	switch discriminator {
-	case "custom":
-		return t.AsBenefitCustomCreate()
-	case "discord":
-		return t.AsBenefitDiscordCreate()
-	case "downloadables":
-		return t.AsBenefitDownloadablesCreate()
-	case "feature_flag":
-		return t.AsBenefitFeatureFlagCreate()
-	case "github_repository":
-		return t.AsBenefitGitHubRepositoryCreate()
-	case "license_keys":
-		return t.AsBenefitLicenseKeysCreate()
-	case "meter_credit":
-		return t.AsBenefitMeterCreditCreate()
-	case "slack_shared_channel":
-		return t.AsBenefitSlackSharedChannelCreate()
-	default:
-		return nil, errors.New("unknown discriminator value: " + discriminator)
-	}
-}
-
-func (t BenefitCreate) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BenefitCreate) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsBenefitCustomCreateMetadata0 returns the union data inside the BenefitCustomCreate_Metadata_AdditionalProperties as a BenefitCustomCreateMetadata0
-func (t BenefitCustomCreate_Metadata_AdditionalProperties) AsBenefitCustomCreateMetadata0() (BenefitCustomCreateMetadata0, error) {
-	var body BenefitCustomCreateMetadata0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitCustomCreateMetadata0 overwrites any union data inside the BenefitCustomCreate_Metadata_AdditionalProperties as the provided BenefitCustomCreateMetadata0
-func (t *BenefitCustomCreate_Metadata_AdditionalProperties) FromBenefitCustomCreateMetadata0(v BenefitCustomCreateMetadata0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitCustomCreateMetadata0 performs a merge with any union data inside the BenefitCustomCreate_Metadata_AdditionalProperties, using the provided BenefitCustomCreateMetadata0
-func (t *BenefitCustomCreate_Metadata_AdditionalProperties) MergeBenefitCustomCreateMetadata0(v BenefitCustomCreateMetadata0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitCustomCreateMetadata1 returns the union data inside the BenefitCustomCreate_Metadata_AdditionalProperties as a BenefitCustomCreateMetadata1
-func (t BenefitCustomCreate_Metadata_AdditionalProperties) AsBenefitCustomCreateMetadata1() (BenefitCustomCreateMetadata1, error) {
-	var body BenefitCustomCreateMetadata1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitCustomCreateMetadata1 overwrites any union data inside the BenefitCustomCreate_Metadata_AdditionalProperties as the provided BenefitCustomCreateMetadata1
-func (t *BenefitCustomCreate_Metadata_AdditionalProperties) FromBenefitCustomCreateMetadata1(v BenefitCustomCreateMetadata1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitCustomCreateMetadata1 performs a merge with any union data inside the BenefitCustomCreate_Metadata_AdditionalProperties, using the provided BenefitCustomCreateMetadata1
-func (t *BenefitCustomCreate_Metadata_AdditionalProperties) MergeBenefitCustomCreateMetadata1(v BenefitCustomCreateMetadata1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitCustomCreateMetadata2 returns the union data inside the BenefitCustomCreate_Metadata_AdditionalProperties as a BenefitCustomCreateMetadata2
-func (t BenefitCustomCreate_Metadata_AdditionalProperties) AsBenefitCustomCreateMetadata2() (BenefitCustomCreateMetadata2, error) {
-	var body BenefitCustomCreateMetadata2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitCustomCreateMetadata2 overwrites any union data inside the BenefitCustomCreate_Metadata_AdditionalProperties as the provided BenefitCustomCreateMetadata2
-func (t *BenefitCustomCreate_Metadata_AdditionalProperties) FromBenefitCustomCreateMetadata2(v BenefitCustomCreateMetadata2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitCustomCreateMetadata2 performs a merge with any union data inside the BenefitCustomCreate_Metadata_AdditionalProperties, using the provided BenefitCustomCreateMetadata2
-func (t *BenefitCustomCreate_Metadata_AdditionalProperties) MergeBenefitCustomCreateMetadata2(v BenefitCustomCreateMetadata2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitCustomCreateMetadata3 returns the union data inside the BenefitCustomCreate_Metadata_AdditionalProperties as a BenefitCustomCreateMetadata3
-func (t BenefitCustomCreate_Metadata_AdditionalProperties) AsBenefitCustomCreateMetadata3() (BenefitCustomCreateMetadata3, error) {
-	var body BenefitCustomCreateMetadata3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitCustomCreateMetadata3 overwrites any union data inside the BenefitCustomCreate_Metadata_AdditionalProperties as the provided BenefitCustomCreateMetadata3
-func (t *BenefitCustomCreate_Metadata_AdditionalProperties) FromBenefitCustomCreateMetadata3(v BenefitCustomCreateMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitCustomCreateMetadata3 performs a merge with any union data inside the BenefitCustomCreate_Metadata_AdditionalProperties, using the provided BenefitCustomCreateMetadata3
-func (t *BenefitCustomCreate_Metadata_AdditionalProperties) MergeBenefitCustomCreateMetadata3(v BenefitCustomCreateMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BenefitCustomCreate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BenefitCustomCreate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsBenefitCustomUpdateMetadata0 returns the union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties as a BenefitCustomUpdateMetadata0
-func (t BenefitCustomUpdate_Metadata_AdditionalProperties) AsBenefitCustomUpdateMetadata0() (BenefitCustomUpdateMetadata0, error) {
-	var body BenefitCustomUpdateMetadata0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitCustomUpdateMetadata0 overwrites any union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties as the provided BenefitCustomUpdateMetadata0
-func (t *BenefitCustomUpdate_Metadata_AdditionalProperties) FromBenefitCustomUpdateMetadata0(v BenefitCustomUpdateMetadata0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitCustomUpdateMetadata0 performs a merge with any union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties, using the provided BenefitCustomUpdateMetadata0
-func (t *BenefitCustomUpdate_Metadata_AdditionalProperties) MergeBenefitCustomUpdateMetadata0(v BenefitCustomUpdateMetadata0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitCustomUpdateMetadata1 returns the union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties as a BenefitCustomUpdateMetadata1
-func (t BenefitCustomUpdate_Metadata_AdditionalProperties) AsBenefitCustomUpdateMetadata1() (BenefitCustomUpdateMetadata1, error) {
-	var body BenefitCustomUpdateMetadata1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitCustomUpdateMetadata1 overwrites any union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties as the provided BenefitCustomUpdateMetadata1
-func (t *BenefitCustomUpdate_Metadata_AdditionalProperties) FromBenefitCustomUpdateMetadata1(v BenefitCustomUpdateMetadata1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitCustomUpdateMetadata1 performs a merge with any union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties, using the provided BenefitCustomUpdateMetadata1
-func (t *BenefitCustomUpdate_Metadata_AdditionalProperties) MergeBenefitCustomUpdateMetadata1(v BenefitCustomUpdateMetadata1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitCustomUpdateMetadata2 returns the union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties as a BenefitCustomUpdateMetadata2
-func (t BenefitCustomUpdate_Metadata_AdditionalProperties) AsBenefitCustomUpdateMetadata2() (BenefitCustomUpdateMetadata2, error) {
-	var body BenefitCustomUpdateMetadata2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitCustomUpdateMetadata2 overwrites any union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties as the provided BenefitCustomUpdateMetadata2
-func (t *BenefitCustomUpdate_Metadata_AdditionalProperties) FromBenefitCustomUpdateMetadata2(v BenefitCustomUpdateMetadata2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitCustomUpdateMetadata2 performs a merge with any union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties, using the provided BenefitCustomUpdateMetadata2
-func (t *BenefitCustomUpdate_Metadata_AdditionalProperties) MergeBenefitCustomUpdateMetadata2(v BenefitCustomUpdateMetadata2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitCustomUpdateMetadata3 returns the union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties as a BenefitCustomUpdateMetadata3
-func (t BenefitCustomUpdate_Metadata_AdditionalProperties) AsBenefitCustomUpdateMetadata3() (BenefitCustomUpdateMetadata3, error) {
-	var body BenefitCustomUpdateMetadata3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitCustomUpdateMetadata3 overwrites any union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties as the provided BenefitCustomUpdateMetadata3
-func (t *BenefitCustomUpdate_Metadata_AdditionalProperties) FromBenefitCustomUpdateMetadata3(v BenefitCustomUpdateMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitCustomUpdateMetadata3 performs a merge with any union data inside the BenefitCustomUpdate_Metadata_AdditionalProperties, using the provided BenefitCustomUpdateMetadata3
-func (t *BenefitCustomUpdate_Metadata_AdditionalProperties) MergeBenefitCustomUpdateMetadata3(v BenefitCustomUpdateMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BenefitCustomUpdate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BenefitCustomUpdate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsBenefitDiscordCreateMetadata0 returns the union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties as a BenefitDiscordCreateMetadata0
-func (t BenefitDiscordCreate_Metadata_AdditionalProperties) AsBenefitDiscordCreateMetadata0() (BenefitDiscordCreateMetadata0, error) {
-	var body BenefitDiscordCreateMetadata0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitDiscordCreateMetadata0 overwrites any union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties as the provided BenefitDiscordCreateMetadata0
-func (t *BenefitDiscordCreate_Metadata_AdditionalProperties) FromBenefitDiscordCreateMetadata0(v BenefitDiscordCreateMetadata0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitDiscordCreateMetadata0 performs a merge with any union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties, using the provided BenefitDiscordCreateMetadata0
-func (t *BenefitDiscordCreate_Metadata_AdditionalProperties) MergeBenefitDiscordCreateMetadata0(v BenefitDiscordCreateMetadata0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitDiscordCreateMetadata1 returns the union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties as a BenefitDiscordCreateMetadata1
-func (t BenefitDiscordCreate_Metadata_AdditionalProperties) AsBenefitDiscordCreateMetadata1() (BenefitDiscordCreateMetadata1, error) {
-	var body BenefitDiscordCreateMetadata1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitDiscordCreateMetadata1 overwrites any union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties as the provided BenefitDiscordCreateMetadata1
-func (t *BenefitDiscordCreate_Metadata_AdditionalProperties) FromBenefitDiscordCreateMetadata1(v BenefitDiscordCreateMetadata1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitDiscordCreateMetadata1 performs a merge with any union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties, using the provided BenefitDiscordCreateMetadata1
-func (t *BenefitDiscordCreate_Metadata_AdditionalProperties) MergeBenefitDiscordCreateMetadata1(v BenefitDiscordCreateMetadata1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitDiscordCreateMetadata2 returns the union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties as a BenefitDiscordCreateMetadata2
-func (t BenefitDiscordCreate_Metadata_AdditionalProperties) AsBenefitDiscordCreateMetadata2() (BenefitDiscordCreateMetadata2, error) {
-	var body BenefitDiscordCreateMetadata2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitDiscordCreateMetadata2 overwrites any union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties as the provided BenefitDiscordCreateMetadata2
-func (t *BenefitDiscordCreate_Metadata_AdditionalProperties) FromBenefitDiscordCreateMetadata2(v BenefitDiscordCreateMetadata2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitDiscordCreateMetadata2 performs a merge with any union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties, using the provided BenefitDiscordCreateMetadata2
-func (t *BenefitDiscordCreate_Metadata_AdditionalProperties) MergeBenefitDiscordCreateMetadata2(v BenefitDiscordCreateMetadata2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitDiscordCreateMetadata3 returns the union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties as a BenefitDiscordCreateMetadata3
-func (t BenefitDiscordCreate_Metadata_AdditionalProperties) AsBenefitDiscordCreateMetadata3() (BenefitDiscordCreateMetadata3, error) {
-	var body BenefitDiscordCreateMetadata3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitDiscordCreateMetadata3 overwrites any union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties as the provided BenefitDiscordCreateMetadata3
-func (t *BenefitDiscordCreate_Metadata_AdditionalProperties) FromBenefitDiscordCreateMetadata3(v BenefitDiscordCreateMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitDiscordCreateMetadata3 performs a merge with any union data inside the BenefitDiscordCreate_Metadata_AdditionalProperties, using the provided BenefitDiscordCreateMetadata3
-func (t *BenefitDiscordCreate_Metadata_AdditionalProperties) MergeBenefitDiscordCreateMetadata3(v BenefitDiscordCreateMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BenefitDiscordCreate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BenefitDiscordCreate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsBenefitDiscordUpdateMetadata0 returns the union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties as a BenefitDiscordUpdateMetadata0
-func (t BenefitDiscordUpdate_Metadata_AdditionalProperties) AsBenefitDiscordUpdateMetadata0() (BenefitDiscordUpdateMetadata0, error) {
-	var body BenefitDiscordUpdateMetadata0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitDiscordUpdateMetadata0 overwrites any union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties as the provided BenefitDiscordUpdateMetadata0
-func (t *BenefitDiscordUpdate_Metadata_AdditionalProperties) FromBenefitDiscordUpdateMetadata0(v BenefitDiscordUpdateMetadata0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitDiscordUpdateMetadata0 performs a merge with any union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties, using the provided BenefitDiscordUpdateMetadata0
-func (t *BenefitDiscordUpdate_Metadata_AdditionalProperties) MergeBenefitDiscordUpdateMetadata0(v BenefitDiscordUpdateMetadata0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitDiscordUpdateMetadata1 returns the union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties as a BenefitDiscordUpdateMetadata1
-func (t BenefitDiscordUpdate_Metadata_AdditionalProperties) AsBenefitDiscordUpdateMetadata1() (BenefitDiscordUpdateMetadata1, error) {
-	var body BenefitDiscordUpdateMetadata1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitDiscordUpdateMetadata1 overwrites any union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties as the provided BenefitDiscordUpdateMetadata1
-func (t *BenefitDiscordUpdate_Metadata_AdditionalProperties) FromBenefitDiscordUpdateMetadata1(v BenefitDiscordUpdateMetadata1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitDiscordUpdateMetadata1 performs a merge with any union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties, using the provided BenefitDiscordUpdateMetadata1
-func (t *BenefitDiscordUpdate_Metadata_AdditionalProperties) MergeBenefitDiscordUpdateMetadata1(v BenefitDiscordUpdateMetadata1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitDiscordUpdateMetadata2 returns the union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties as a BenefitDiscordUpdateMetadata2
-func (t BenefitDiscordUpdate_Metadata_AdditionalProperties) AsBenefitDiscordUpdateMetadata2() (BenefitDiscordUpdateMetadata2, error) {
-	var body BenefitDiscordUpdateMetadata2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitDiscordUpdateMetadata2 overwrites any union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties as the provided BenefitDiscordUpdateMetadata2
-func (t *BenefitDiscordUpdate_Metadata_AdditionalProperties) FromBenefitDiscordUpdateMetadata2(v BenefitDiscordUpdateMetadata2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitDiscordUpdateMetadata2 performs a merge with any union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties, using the provided BenefitDiscordUpdateMetadata2
-func (t *BenefitDiscordUpdate_Metadata_AdditionalProperties) MergeBenefitDiscordUpdateMetadata2(v BenefitDiscordUpdateMetadata2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitDiscordUpdateMetadata3 returns the union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties as a BenefitDiscordUpdateMetadata3
-func (t BenefitDiscordUpdate_Metadata_AdditionalProperties) AsBenefitDiscordUpdateMetadata3() (BenefitDiscordUpdateMetadata3, error) {
-	var body BenefitDiscordUpdateMetadata3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitDiscordUpdateMetadata3 overwrites any union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties as the provided BenefitDiscordUpdateMetadata3
-func (t *BenefitDiscordUpdate_Metadata_AdditionalProperties) FromBenefitDiscordUpdateMetadata3(v BenefitDiscordUpdateMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitDiscordUpdateMetadata3 performs a merge with any union data inside the BenefitDiscordUpdate_Metadata_AdditionalProperties, using the provided BenefitDiscordUpdateMetadata3
-func (t *BenefitDiscordUpdate_Metadata_AdditionalProperties) MergeBenefitDiscordUpdateMetadata3(v BenefitDiscordUpdateMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BenefitDiscordUpdate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BenefitDiscordUpdate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsBenefitDownloadablesCreateMetadata0 returns the union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties as a BenefitDownloadablesCreateMetadata0
-func (t BenefitDownloadablesCreate_Metadata_AdditionalProperties) AsBenefitDownloadablesCreateMetadata0() (BenefitDownloadablesCreateMetadata0, error) {
-	var body BenefitDownloadablesCreateMetadata0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitDownloadablesCreateMetadata0 overwrites any union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties as the provided BenefitDownloadablesCreateMetadata0
-func (t *BenefitDownloadablesCreate_Metadata_AdditionalProperties) FromBenefitDownloadablesCreateMetadata0(v BenefitDownloadablesCreateMetadata0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitDownloadablesCreateMetadata0 performs a merge with any union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties, using the provided BenefitDownloadablesCreateMetadata0
-func (t *BenefitDownloadablesCreate_Metadata_AdditionalProperties) MergeBenefitDownloadablesCreateMetadata0(v BenefitDownloadablesCreateMetadata0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitDownloadablesCreateMetadata1 returns the union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties as a BenefitDownloadablesCreateMetadata1
-func (t BenefitDownloadablesCreate_Metadata_AdditionalProperties) AsBenefitDownloadablesCreateMetadata1() (BenefitDownloadablesCreateMetadata1, error) {
-	var body BenefitDownloadablesCreateMetadata1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitDownloadablesCreateMetadata1 overwrites any union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties as the provided BenefitDownloadablesCreateMetadata1
-func (t *BenefitDownloadablesCreate_Metadata_AdditionalProperties) FromBenefitDownloadablesCreateMetadata1(v BenefitDownloadablesCreateMetadata1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitDownloadablesCreateMetadata1 performs a merge with any union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties, using the provided BenefitDownloadablesCreateMetadata1
-func (t *BenefitDownloadablesCreate_Metadata_AdditionalProperties) MergeBenefitDownloadablesCreateMetadata1(v BenefitDownloadablesCreateMetadata1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitDownloadablesCreateMetadata2 returns the union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties as a BenefitDownloadablesCreateMetadata2
-func (t BenefitDownloadablesCreate_Metadata_AdditionalProperties) AsBenefitDownloadablesCreateMetadata2() (BenefitDownloadablesCreateMetadata2, error) {
-	var body BenefitDownloadablesCreateMetadata2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitDownloadablesCreateMetadata2 overwrites any union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties as the provided BenefitDownloadablesCreateMetadata2
-func (t *BenefitDownloadablesCreate_Metadata_AdditionalProperties) FromBenefitDownloadablesCreateMetadata2(v BenefitDownloadablesCreateMetadata2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitDownloadablesCreateMetadata2 performs a merge with any union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties, using the provided BenefitDownloadablesCreateMetadata2
-func (t *BenefitDownloadablesCreate_Metadata_AdditionalProperties) MergeBenefitDownloadablesCreateMetadata2(v BenefitDownloadablesCreateMetadata2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitDownloadablesCreateMetadata3 returns the union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties as a BenefitDownloadablesCreateMetadata3
-func (t BenefitDownloadablesCreate_Metadata_AdditionalProperties) AsBenefitDownloadablesCreateMetadata3() (BenefitDownloadablesCreateMetadata3, error) {
-	var body BenefitDownloadablesCreateMetadata3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitDownloadablesCreateMetadata3 overwrites any union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties as the provided BenefitDownloadablesCreateMetadata3
-func (t *BenefitDownloadablesCreate_Metadata_AdditionalProperties) FromBenefitDownloadablesCreateMetadata3(v BenefitDownloadablesCreateMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitDownloadablesCreateMetadata3 performs a merge with any union data inside the BenefitDownloadablesCreate_Metadata_AdditionalProperties, using the provided BenefitDownloadablesCreateMetadata3
-func (t *BenefitDownloadablesCreate_Metadata_AdditionalProperties) MergeBenefitDownloadablesCreateMetadata3(v BenefitDownloadablesCreateMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BenefitDownloadablesCreate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BenefitDownloadablesCreate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsBenefitDownloadablesUpdateMetadata0 returns the union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties as a BenefitDownloadablesUpdateMetadata0
-func (t BenefitDownloadablesUpdate_Metadata_AdditionalProperties) AsBenefitDownloadablesUpdateMetadata0() (BenefitDownloadablesUpdateMetadata0, error) {
-	var body BenefitDownloadablesUpdateMetadata0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitDownloadablesUpdateMetadata0 overwrites any union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties as the provided BenefitDownloadablesUpdateMetadata0
-func (t *BenefitDownloadablesUpdate_Metadata_AdditionalProperties) FromBenefitDownloadablesUpdateMetadata0(v BenefitDownloadablesUpdateMetadata0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitDownloadablesUpdateMetadata0 performs a merge with any union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties, using the provided BenefitDownloadablesUpdateMetadata0
-func (t *BenefitDownloadablesUpdate_Metadata_AdditionalProperties) MergeBenefitDownloadablesUpdateMetadata0(v BenefitDownloadablesUpdateMetadata0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitDownloadablesUpdateMetadata1 returns the union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties as a BenefitDownloadablesUpdateMetadata1
-func (t BenefitDownloadablesUpdate_Metadata_AdditionalProperties) AsBenefitDownloadablesUpdateMetadata1() (BenefitDownloadablesUpdateMetadata1, error) {
-	var body BenefitDownloadablesUpdateMetadata1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitDownloadablesUpdateMetadata1 overwrites any union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties as the provided BenefitDownloadablesUpdateMetadata1
-func (t *BenefitDownloadablesUpdate_Metadata_AdditionalProperties) FromBenefitDownloadablesUpdateMetadata1(v BenefitDownloadablesUpdateMetadata1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitDownloadablesUpdateMetadata1 performs a merge with any union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties, using the provided BenefitDownloadablesUpdateMetadata1
-func (t *BenefitDownloadablesUpdate_Metadata_AdditionalProperties) MergeBenefitDownloadablesUpdateMetadata1(v BenefitDownloadablesUpdateMetadata1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitDownloadablesUpdateMetadata2 returns the union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties as a BenefitDownloadablesUpdateMetadata2
-func (t BenefitDownloadablesUpdate_Metadata_AdditionalProperties) AsBenefitDownloadablesUpdateMetadata2() (BenefitDownloadablesUpdateMetadata2, error) {
-	var body BenefitDownloadablesUpdateMetadata2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitDownloadablesUpdateMetadata2 overwrites any union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties as the provided BenefitDownloadablesUpdateMetadata2
-func (t *BenefitDownloadablesUpdate_Metadata_AdditionalProperties) FromBenefitDownloadablesUpdateMetadata2(v BenefitDownloadablesUpdateMetadata2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitDownloadablesUpdateMetadata2 performs a merge with any union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties, using the provided BenefitDownloadablesUpdateMetadata2
-func (t *BenefitDownloadablesUpdate_Metadata_AdditionalProperties) MergeBenefitDownloadablesUpdateMetadata2(v BenefitDownloadablesUpdateMetadata2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitDownloadablesUpdateMetadata3 returns the union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties as a BenefitDownloadablesUpdateMetadata3
-func (t BenefitDownloadablesUpdate_Metadata_AdditionalProperties) AsBenefitDownloadablesUpdateMetadata3() (BenefitDownloadablesUpdateMetadata3, error) {
-	var body BenefitDownloadablesUpdateMetadata3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitDownloadablesUpdateMetadata3 overwrites any union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties as the provided BenefitDownloadablesUpdateMetadata3
-func (t *BenefitDownloadablesUpdate_Metadata_AdditionalProperties) FromBenefitDownloadablesUpdateMetadata3(v BenefitDownloadablesUpdateMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitDownloadablesUpdateMetadata3 performs a merge with any union data inside the BenefitDownloadablesUpdate_Metadata_AdditionalProperties, using the provided BenefitDownloadablesUpdateMetadata3
-func (t *BenefitDownloadablesUpdate_Metadata_AdditionalProperties) MergeBenefitDownloadablesUpdateMetadata3(v BenefitDownloadablesUpdateMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BenefitDownloadablesUpdate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BenefitDownloadablesUpdate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsBenefitFeatureFlagCreateMetadata0 returns the union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties as a BenefitFeatureFlagCreateMetadata0
-func (t BenefitFeatureFlagCreate_Metadata_AdditionalProperties) AsBenefitFeatureFlagCreateMetadata0() (BenefitFeatureFlagCreateMetadata0, error) {
-	var body BenefitFeatureFlagCreateMetadata0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitFeatureFlagCreateMetadata0 overwrites any union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties as the provided BenefitFeatureFlagCreateMetadata0
-func (t *BenefitFeatureFlagCreate_Metadata_AdditionalProperties) FromBenefitFeatureFlagCreateMetadata0(v BenefitFeatureFlagCreateMetadata0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitFeatureFlagCreateMetadata0 performs a merge with any union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties, using the provided BenefitFeatureFlagCreateMetadata0
-func (t *BenefitFeatureFlagCreate_Metadata_AdditionalProperties) MergeBenefitFeatureFlagCreateMetadata0(v BenefitFeatureFlagCreateMetadata0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitFeatureFlagCreateMetadata1 returns the union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties as a BenefitFeatureFlagCreateMetadata1
-func (t BenefitFeatureFlagCreate_Metadata_AdditionalProperties) AsBenefitFeatureFlagCreateMetadata1() (BenefitFeatureFlagCreateMetadata1, error) {
-	var body BenefitFeatureFlagCreateMetadata1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitFeatureFlagCreateMetadata1 overwrites any union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties as the provided BenefitFeatureFlagCreateMetadata1
-func (t *BenefitFeatureFlagCreate_Metadata_AdditionalProperties) FromBenefitFeatureFlagCreateMetadata1(v BenefitFeatureFlagCreateMetadata1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitFeatureFlagCreateMetadata1 performs a merge with any union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties, using the provided BenefitFeatureFlagCreateMetadata1
-func (t *BenefitFeatureFlagCreate_Metadata_AdditionalProperties) MergeBenefitFeatureFlagCreateMetadata1(v BenefitFeatureFlagCreateMetadata1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitFeatureFlagCreateMetadata2 returns the union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties as a BenefitFeatureFlagCreateMetadata2
-func (t BenefitFeatureFlagCreate_Metadata_AdditionalProperties) AsBenefitFeatureFlagCreateMetadata2() (BenefitFeatureFlagCreateMetadata2, error) {
-	var body BenefitFeatureFlagCreateMetadata2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitFeatureFlagCreateMetadata2 overwrites any union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties as the provided BenefitFeatureFlagCreateMetadata2
-func (t *BenefitFeatureFlagCreate_Metadata_AdditionalProperties) FromBenefitFeatureFlagCreateMetadata2(v BenefitFeatureFlagCreateMetadata2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitFeatureFlagCreateMetadata2 performs a merge with any union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties, using the provided BenefitFeatureFlagCreateMetadata2
-func (t *BenefitFeatureFlagCreate_Metadata_AdditionalProperties) MergeBenefitFeatureFlagCreateMetadata2(v BenefitFeatureFlagCreateMetadata2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitFeatureFlagCreateMetadata3 returns the union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties as a BenefitFeatureFlagCreateMetadata3
-func (t BenefitFeatureFlagCreate_Metadata_AdditionalProperties) AsBenefitFeatureFlagCreateMetadata3() (BenefitFeatureFlagCreateMetadata3, error) {
-	var body BenefitFeatureFlagCreateMetadata3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitFeatureFlagCreateMetadata3 overwrites any union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties as the provided BenefitFeatureFlagCreateMetadata3
-func (t *BenefitFeatureFlagCreate_Metadata_AdditionalProperties) FromBenefitFeatureFlagCreateMetadata3(v BenefitFeatureFlagCreateMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitFeatureFlagCreateMetadata3 performs a merge with any union data inside the BenefitFeatureFlagCreate_Metadata_AdditionalProperties, using the provided BenefitFeatureFlagCreateMetadata3
-func (t *BenefitFeatureFlagCreate_Metadata_AdditionalProperties) MergeBenefitFeatureFlagCreateMetadata3(v BenefitFeatureFlagCreateMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BenefitFeatureFlagCreate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BenefitFeatureFlagCreate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsBenefitFeatureFlagUpdateMetadata0 returns the union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties as a BenefitFeatureFlagUpdateMetadata0
-func (t BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) AsBenefitFeatureFlagUpdateMetadata0() (BenefitFeatureFlagUpdateMetadata0, error) {
-	var body BenefitFeatureFlagUpdateMetadata0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitFeatureFlagUpdateMetadata0 overwrites any union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties as the provided BenefitFeatureFlagUpdateMetadata0
-func (t *BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) FromBenefitFeatureFlagUpdateMetadata0(v BenefitFeatureFlagUpdateMetadata0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitFeatureFlagUpdateMetadata0 performs a merge with any union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties, using the provided BenefitFeatureFlagUpdateMetadata0
-func (t *BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) MergeBenefitFeatureFlagUpdateMetadata0(v BenefitFeatureFlagUpdateMetadata0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitFeatureFlagUpdateMetadata1 returns the union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties as a BenefitFeatureFlagUpdateMetadata1
-func (t BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) AsBenefitFeatureFlagUpdateMetadata1() (BenefitFeatureFlagUpdateMetadata1, error) {
-	var body BenefitFeatureFlagUpdateMetadata1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitFeatureFlagUpdateMetadata1 overwrites any union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties as the provided BenefitFeatureFlagUpdateMetadata1
-func (t *BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) FromBenefitFeatureFlagUpdateMetadata1(v BenefitFeatureFlagUpdateMetadata1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitFeatureFlagUpdateMetadata1 performs a merge with any union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties, using the provided BenefitFeatureFlagUpdateMetadata1
-func (t *BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) MergeBenefitFeatureFlagUpdateMetadata1(v BenefitFeatureFlagUpdateMetadata1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitFeatureFlagUpdateMetadata2 returns the union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties as a BenefitFeatureFlagUpdateMetadata2
-func (t BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) AsBenefitFeatureFlagUpdateMetadata2() (BenefitFeatureFlagUpdateMetadata2, error) {
-	var body BenefitFeatureFlagUpdateMetadata2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitFeatureFlagUpdateMetadata2 overwrites any union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties as the provided BenefitFeatureFlagUpdateMetadata2
-func (t *BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) FromBenefitFeatureFlagUpdateMetadata2(v BenefitFeatureFlagUpdateMetadata2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitFeatureFlagUpdateMetadata2 performs a merge with any union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties, using the provided BenefitFeatureFlagUpdateMetadata2
-func (t *BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) MergeBenefitFeatureFlagUpdateMetadata2(v BenefitFeatureFlagUpdateMetadata2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitFeatureFlagUpdateMetadata3 returns the union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties as a BenefitFeatureFlagUpdateMetadata3
-func (t BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) AsBenefitFeatureFlagUpdateMetadata3() (BenefitFeatureFlagUpdateMetadata3, error) {
-	var body BenefitFeatureFlagUpdateMetadata3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitFeatureFlagUpdateMetadata3 overwrites any union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties as the provided BenefitFeatureFlagUpdateMetadata3
-func (t *BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) FromBenefitFeatureFlagUpdateMetadata3(v BenefitFeatureFlagUpdateMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitFeatureFlagUpdateMetadata3 performs a merge with any union data inside the BenefitFeatureFlagUpdate_Metadata_AdditionalProperties, using the provided BenefitFeatureFlagUpdateMetadata3
-func (t *BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) MergeBenefitFeatureFlagUpdateMetadata3(v BenefitFeatureFlagUpdateMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BenefitFeatureFlagUpdate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsBenefitGitHubRepositoryCreateMetadata0 returns the union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties as a BenefitGitHubRepositoryCreateMetadata0
-func (t BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) AsBenefitGitHubRepositoryCreateMetadata0() (BenefitGitHubRepositoryCreateMetadata0, error) {
-	var body BenefitGitHubRepositoryCreateMetadata0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGitHubRepositoryCreateMetadata0 overwrites any union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties as the provided BenefitGitHubRepositoryCreateMetadata0
-func (t *BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) FromBenefitGitHubRepositoryCreateMetadata0(v BenefitGitHubRepositoryCreateMetadata0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGitHubRepositoryCreateMetadata0 performs a merge with any union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties, using the provided BenefitGitHubRepositoryCreateMetadata0
-func (t *BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) MergeBenefitGitHubRepositoryCreateMetadata0(v BenefitGitHubRepositoryCreateMetadata0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitGitHubRepositoryCreateMetadata1 returns the union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties as a BenefitGitHubRepositoryCreateMetadata1
-func (t BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) AsBenefitGitHubRepositoryCreateMetadata1() (BenefitGitHubRepositoryCreateMetadata1, error) {
-	var body BenefitGitHubRepositoryCreateMetadata1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGitHubRepositoryCreateMetadata1 overwrites any union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties as the provided BenefitGitHubRepositoryCreateMetadata1
-func (t *BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) FromBenefitGitHubRepositoryCreateMetadata1(v BenefitGitHubRepositoryCreateMetadata1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGitHubRepositoryCreateMetadata1 performs a merge with any union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties, using the provided BenefitGitHubRepositoryCreateMetadata1
-func (t *BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) MergeBenefitGitHubRepositoryCreateMetadata1(v BenefitGitHubRepositoryCreateMetadata1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitGitHubRepositoryCreateMetadata2 returns the union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties as a BenefitGitHubRepositoryCreateMetadata2
-func (t BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) AsBenefitGitHubRepositoryCreateMetadata2() (BenefitGitHubRepositoryCreateMetadata2, error) {
-	var body BenefitGitHubRepositoryCreateMetadata2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGitHubRepositoryCreateMetadata2 overwrites any union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties as the provided BenefitGitHubRepositoryCreateMetadata2
-func (t *BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) FromBenefitGitHubRepositoryCreateMetadata2(v BenefitGitHubRepositoryCreateMetadata2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGitHubRepositoryCreateMetadata2 performs a merge with any union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties, using the provided BenefitGitHubRepositoryCreateMetadata2
-func (t *BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) MergeBenefitGitHubRepositoryCreateMetadata2(v BenefitGitHubRepositoryCreateMetadata2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitGitHubRepositoryCreateMetadata3 returns the union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties as a BenefitGitHubRepositoryCreateMetadata3
-func (t BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) AsBenefitGitHubRepositoryCreateMetadata3() (BenefitGitHubRepositoryCreateMetadata3, error) {
-	var body BenefitGitHubRepositoryCreateMetadata3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGitHubRepositoryCreateMetadata3 overwrites any union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties as the provided BenefitGitHubRepositoryCreateMetadata3
-func (t *BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) FromBenefitGitHubRepositoryCreateMetadata3(v BenefitGitHubRepositoryCreateMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGitHubRepositoryCreateMetadata3 performs a merge with any union data inside the BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties, using the provided BenefitGitHubRepositoryCreateMetadata3
-func (t *BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) MergeBenefitGitHubRepositoryCreateMetadata3(v BenefitGitHubRepositoryCreateMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BenefitGitHubRepositoryCreate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsBenefitGitHubRepositoryUpdateMetadata0 returns the union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties as a BenefitGitHubRepositoryUpdateMetadata0
-func (t BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) AsBenefitGitHubRepositoryUpdateMetadata0() (BenefitGitHubRepositoryUpdateMetadata0, error) {
-	var body BenefitGitHubRepositoryUpdateMetadata0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGitHubRepositoryUpdateMetadata0 overwrites any union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties as the provided BenefitGitHubRepositoryUpdateMetadata0
-func (t *BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) FromBenefitGitHubRepositoryUpdateMetadata0(v BenefitGitHubRepositoryUpdateMetadata0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGitHubRepositoryUpdateMetadata0 performs a merge with any union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties, using the provided BenefitGitHubRepositoryUpdateMetadata0
-func (t *BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) MergeBenefitGitHubRepositoryUpdateMetadata0(v BenefitGitHubRepositoryUpdateMetadata0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitGitHubRepositoryUpdateMetadata1 returns the union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties as a BenefitGitHubRepositoryUpdateMetadata1
-func (t BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) AsBenefitGitHubRepositoryUpdateMetadata1() (BenefitGitHubRepositoryUpdateMetadata1, error) {
-	var body BenefitGitHubRepositoryUpdateMetadata1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGitHubRepositoryUpdateMetadata1 overwrites any union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties as the provided BenefitGitHubRepositoryUpdateMetadata1
-func (t *BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) FromBenefitGitHubRepositoryUpdateMetadata1(v BenefitGitHubRepositoryUpdateMetadata1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGitHubRepositoryUpdateMetadata1 performs a merge with any union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties, using the provided BenefitGitHubRepositoryUpdateMetadata1
-func (t *BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) MergeBenefitGitHubRepositoryUpdateMetadata1(v BenefitGitHubRepositoryUpdateMetadata1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitGitHubRepositoryUpdateMetadata2 returns the union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties as a BenefitGitHubRepositoryUpdateMetadata2
-func (t BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) AsBenefitGitHubRepositoryUpdateMetadata2() (BenefitGitHubRepositoryUpdateMetadata2, error) {
-	var body BenefitGitHubRepositoryUpdateMetadata2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGitHubRepositoryUpdateMetadata2 overwrites any union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties as the provided BenefitGitHubRepositoryUpdateMetadata2
-func (t *BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) FromBenefitGitHubRepositoryUpdateMetadata2(v BenefitGitHubRepositoryUpdateMetadata2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGitHubRepositoryUpdateMetadata2 performs a merge with any union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties, using the provided BenefitGitHubRepositoryUpdateMetadata2
-func (t *BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) MergeBenefitGitHubRepositoryUpdateMetadata2(v BenefitGitHubRepositoryUpdateMetadata2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitGitHubRepositoryUpdateMetadata3 returns the union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties as a BenefitGitHubRepositoryUpdateMetadata3
-func (t BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) AsBenefitGitHubRepositoryUpdateMetadata3() (BenefitGitHubRepositoryUpdateMetadata3, error) {
-	var body BenefitGitHubRepositoryUpdateMetadata3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGitHubRepositoryUpdateMetadata3 overwrites any union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties as the provided BenefitGitHubRepositoryUpdateMetadata3
-func (t *BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) FromBenefitGitHubRepositoryUpdateMetadata3(v BenefitGitHubRepositoryUpdateMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGitHubRepositoryUpdateMetadata3 performs a merge with any union data inside the BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties, using the provided BenefitGitHubRepositoryUpdateMetadata3
-func (t *BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) MergeBenefitGitHubRepositoryUpdateMetadata3(v BenefitGitHubRepositoryUpdateMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BenefitGitHubRepositoryUpdate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsBenefitGrantDiscordProperties returns the union data inside the BenefitGrant_Properties as a BenefitGrantDiscordProperties
-func (t BenefitGrant_Properties) AsBenefitGrantDiscordProperties() (BenefitGrantDiscordProperties, error) {
-	var body BenefitGrantDiscordProperties
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGrantDiscordProperties overwrites any union data inside the BenefitGrant_Properties as the provided BenefitGrantDiscordProperties
-func (t *BenefitGrant_Properties) FromBenefitGrantDiscordProperties(v BenefitGrantDiscordProperties) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGrantDiscordProperties performs a merge with any union data inside the BenefitGrant_Properties, using the provided BenefitGrantDiscordProperties
-func (t *BenefitGrant_Properties) MergeBenefitGrantDiscordProperties(v BenefitGrantDiscordProperties) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitGrantGitHubRepositoryProperties returns the union data inside the BenefitGrant_Properties as a BenefitGrantGitHubRepositoryProperties
-func (t BenefitGrant_Properties) AsBenefitGrantGitHubRepositoryProperties() (BenefitGrantGitHubRepositoryProperties, error) {
-	var body BenefitGrantGitHubRepositoryProperties
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGrantGitHubRepositoryProperties overwrites any union data inside the BenefitGrant_Properties as the provided BenefitGrantGitHubRepositoryProperties
-func (t *BenefitGrant_Properties) FromBenefitGrantGitHubRepositoryProperties(v BenefitGrantGitHubRepositoryProperties) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGrantGitHubRepositoryProperties performs a merge with any union data inside the BenefitGrant_Properties, using the provided BenefitGrantGitHubRepositoryProperties
-func (t *BenefitGrant_Properties) MergeBenefitGrantGitHubRepositoryProperties(v BenefitGrantGitHubRepositoryProperties) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitGrantDownloadablesProperties returns the union data inside the BenefitGrant_Properties as a BenefitGrantDownloadablesProperties
-func (t BenefitGrant_Properties) AsBenefitGrantDownloadablesProperties() (BenefitGrantDownloadablesProperties, error) {
-	var body BenefitGrantDownloadablesProperties
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGrantDownloadablesProperties overwrites any union data inside the BenefitGrant_Properties as the provided BenefitGrantDownloadablesProperties
-func (t *BenefitGrant_Properties) FromBenefitGrantDownloadablesProperties(v BenefitGrantDownloadablesProperties) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGrantDownloadablesProperties performs a merge with any union data inside the BenefitGrant_Properties, using the provided BenefitGrantDownloadablesProperties
-func (t *BenefitGrant_Properties) MergeBenefitGrantDownloadablesProperties(v BenefitGrantDownloadablesProperties) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitGrantLicenseKeysProperties returns the union data inside the BenefitGrant_Properties as a BenefitGrantLicenseKeysProperties
-func (t BenefitGrant_Properties) AsBenefitGrantLicenseKeysProperties() (BenefitGrantLicenseKeysProperties, error) {
-	var body BenefitGrantLicenseKeysProperties
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGrantLicenseKeysProperties overwrites any union data inside the BenefitGrant_Properties as the provided BenefitGrantLicenseKeysProperties
-func (t *BenefitGrant_Properties) FromBenefitGrantLicenseKeysProperties(v BenefitGrantLicenseKeysProperties) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGrantLicenseKeysProperties performs a merge with any union data inside the BenefitGrant_Properties, using the provided BenefitGrantLicenseKeysProperties
-func (t *BenefitGrant_Properties) MergeBenefitGrantLicenseKeysProperties(v BenefitGrantLicenseKeysProperties) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitGrantCustomProperties returns the union data inside the BenefitGrant_Properties as a BenefitGrantCustomProperties
-func (t BenefitGrant_Properties) AsBenefitGrantCustomProperties() (BenefitGrantCustomProperties, error) {
-	var body BenefitGrantCustomProperties
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGrantCustomProperties overwrites any union data inside the BenefitGrant_Properties as the provided BenefitGrantCustomProperties
-func (t *BenefitGrant_Properties) FromBenefitGrantCustomProperties(v BenefitGrantCustomProperties) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGrantCustomProperties performs a merge with any union data inside the BenefitGrant_Properties, using the provided BenefitGrantCustomProperties
-func (t *BenefitGrant_Properties) MergeBenefitGrantCustomProperties(v BenefitGrantCustomProperties) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitGrantFeatureFlagProperties returns the union data inside the BenefitGrant_Properties as a BenefitGrantFeatureFlagProperties
-func (t BenefitGrant_Properties) AsBenefitGrantFeatureFlagProperties() (BenefitGrantFeatureFlagProperties, error) {
-	var body BenefitGrantFeatureFlagProperties
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGrantFeatureFlagProperties overwrites any union data inside the BenefitGrant_Properties as the provided BenefitGrantFeatureFlagProperties
-func (t *BenefitGrant_Properties) FromBenefitGrantFeatureFlagProperties(v BenefitGrantFeatureFlagProperties) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGrantFeatureFlagProperties performs a merge with any union data inside the BenefitGrant_Properties, using the provided BenefitGrantFeatureFlagProperties
-func (t *BenefitGrant_Properties) MergeBenefitGrantFeatureFlagProperties(v BenefitGrantFeatureFlagProperties) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitGrantSlackSharedChannelProperties returns the union data inside the BenefitGrant_Properties as a BenefitGrantSlackSharedChannelProperties
-func (t BenefitGrant_Properties) AsBenefitGrantSlackSharedChannelProperties() (BenefitGrantSlackSharedChannelProperties, error) {
-	var body BenefitGrantSlackSharedChannelProperties
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGrantSlackSharedChannelProperties overwrites any union data inside the BenefitGrant_Properties as the provided BenefitGrantSlackSharedChannelProperties
-func (t *BenefitGrant_Properties) FromBenefitGrantSlackSharedChannelProperties(v BenefitGrantSlackSharedChannelProperties) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGrantSlackSharedChannelProperties performs a merge with any union data inside the BenefitGrant_Properties, using the provided BenefitGrantSlackSharedChannelProperties
-func (t *BenefitGrant_Properties) MergeBenefitGrantSlackSharedChannelProperties(v BenefitGrantSlackSharedChannelProperties) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BenefitGrant_Properties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BenefitGrant_Properties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsBenefitGrantDiscordWebhook returns the union data inside the BenefitGrantWebhook as a BenefitGrantDiscordWebhook
-func (t BenefitGrantWebhook) AsBenefitGrantDiscordWebhook() (BenefitGrantDiscordWebhook, error) {
-	var body BenefitGrantDiscordWebhook
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGrantDiscordWebhook overwrites any union data inside the BenefitGrantWebhook as the provided BenefitGrantDiscordWebhook
-func (t *BenefitGrantWebhook) FromBenefitGrantDiscordWebhook(v BenefitGrantDiscordWebhook) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGrantDiscordWebhook performs a merge with any union data inside the BenefitGrantWebhook, using the provided BenefitGrantDiscordWebhook
-func (t *BenefitGrantWebhook) MergeBenefitGrantDiscordWebhook(v BenefitGrantDiscordWebhook) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitGrantCustomWebhook returns the union data inside the BenefitGrantWebhook as a BenefitGrantCustomWebhook
-func (t BenefitGrantWebhook) AsBenefitGrantCustomWebhook() (BenefitGrantCustomWebhook, error) {
-	var body BenefitGrantCustomWebhook
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGrantCustomWebhook overwrites any union data inside the BenefitGrantWebhook as the provided BenefitGrantCustomWebhook
-func (t *BenefitGrantWebhook) FromBenefitGrantCustomWebhook(v BenefitGrantCustomWebhook) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGrantCustomWebhook performs a merge with any union data inside the BenefitGrantWebhook, using the provided BenefitGrantCustomWebhook
-func (t *BenefitGrantWebhook) MergeBenefitGrantCustomWebhook(v BenefitGrantCustomWebhook) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitGrantGitHubRepositoryWebhook returns the union data inside the BenefitGrantWebhook as a BenefitGrantGitHubRepositoryWebhook
-func (t BenefitGrantWebhook) AsBenefitGrantGitHubRepositoryWebhook() (BenefitGrantGitHubRepositoryWebhook, error) {
-	var body BenefitGrantGitHubRepositoryWebhook
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGrantGitHubRepositoryWebhook overwrites any union data inside the BenefitGrantWebhook as the provided BenefitGrantGitHubRepositoryWebhook
-func (t *BenefitGrantWebhook) FromBenefitGrantGitHubRepositoryWebhook(v BenefitGrantGitHubRepositoryWebhook) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGrantGitHubRepositoryWebhook performs a merge with any union data inside the BenefitGrantWebhook, using the provided BenefitGrantGitHubRepositoryWebhook
-func (t *BenefitGrantWebhook) MergeBenefitGrantGitHubRepositoryWebhook(v BenefitGrantGitHubRepositoryWebhook) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitGrantDownloadablesWebhook returns the union data inside the BenefitGrantWebhook as a BenefitGrantDownloadablesWebhook
-func (t BenefitGrantWebhook) AsBenefitGrantDownloadablesWebhook() (BenefitGrantDownloadablesWebhook, error) {
-	var body BenefitGrantDownloadablesWebhook
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGrantDownloadablesWebhook overwrites any union data inside the BenefitGrantWebhook as the provided BenefitGrantDownloadablesWebhook
-func (t *BenefitGrantWebhook) FromBenefitGrantDownloadablesWebhook(v BenefitGrantDownloadablesWebhook) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGrantDownloadablesWebhook performs a merge with any union data inside the BenefitGrantWebhook, using the provided BenefitGrantDownloadablesWebhook
-func (t *BenefitGrantWebhook) MergeBenefitGrantDownloadablesWebhook(v BenefitGrantDownloadablesWebhook) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitGrantLicenseKeysWebhook returns the union data inside the BenefitGrantWebhook as a BenefitGrantLicenseKeysWebhook
-func (t BenefitGrantWebhook) AsBenefitGrantLicenseKeysWebhook() (BenefitGrantLicenseKeysWebhook, error) {
-	var body BenefitGrantLicenseKeysWebhook
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGrantLicenseKeysWebhook overwrites any union data inside the BenefitGrantWebhook as the provided BenefitGrantLicenseKeysWebhook
-func (t *BenefitGrantWebhook) FromBenefitGrantLicenseKeysWebhook(v BenefitGrantLicenseKeysWebhook) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGrantLicenseKeysWebhook performs a merge with any union data inside the BenefitGrantWebhook, using the provided BenefitGrantLicenseKeysWebhook
-func (t *BenefitGrantWebhook) MergeBenefitGrantLicenseKeysWebhook(v BenefitGrantLicenseKeysWebhook) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitGrantMeterCreditWebhook returns the union data inside the BenefitGrantWebhook as a BenefitGrantMeterCreditWebhook
-func (t BenefitGrantWebhook) AsBenefitGrantMeterCreditWebhook() (BenefitGrantMeterCreditWebhook, error) {
-	var body BenefitGrantMeterCreditWebhook
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGrantMeterCreditWebhook overwrites any union data inside the BenefitGrantWebhook as the provided BenefitGrantMeterCreditWebhook
-func (t *BenefitGrantWebhook) FromBenefitGrantMeterCreditWebhook(v BenefitGrantMeterCreditWebhook) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGrantMeterCreditWebhook performs a merge with any union data inside the BenefitGrantWebhook, using the provided BenefitGrantMeterCreditWebhook
-func (t *BenefitGrantWebhook) MergeBenefitGrantMeterCreditWebhook(v BenefitGrantMeterCreditWebhook) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitGrantFeatureFlagWebhook returns the union data inside the BenefitGrantWebhook as a BenefitGrantFeatureFlagWebhook
-func (t BenefitGrantWebhook) AsBenefitGrantFeatureFlagWebhook() (BenefitGrantFeatureFlagWebhook, error) {
-	var body BenefitGrantFeatureFlagWebhook
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGrantFeatureFlagWebhook overwrites any union data inside the BenefitGrantWebhook as the provided BenefitGrantFeatureFlagWebhook
-func (t *BenefitGrantWebhook) FromBenefitGrantFeatureFlagWebhook(v BenefitGrantFeatureFlagWebhook) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGrantFeatureFlagWebhook performs a merge with any union data inside the BenefitGrantWebhook, using the provided BenefitGrantFeatureFlagWebhook
-func (t *BenefitGrantWebhook) MergeBenefitGrantFeatureFlagWebhook(v BenefitGrantFeatureFlagWebhook) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitGrantSlackSharedChannelWebhook returns the union data inside the BenefitGrantWebhook as a BenefitGrantSlackSharedChannelWebhook
-func (t BenefitGrantWebhook) AsBenefitGrantSlackSharedChannelWebhook() (BenefitGrantSlackSharedChannelWebhook, error) {
-	var body BenefitGrantSlackSharedChannelWebhook
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitGrantSlackSharedChannelWebhook overwrites any union data inside the BenefitGrantWebhook as the provided BenefitGrantSlackSharedChannelWebhook
-func (t *BenefitGrantWebhook) FromBenefitGrantSlackSharedChannelWebhook(v BenefitGrantSlackSharedChannelWebhook) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitGrantSlackSharedChannelWebhook performs a merge with any union data inside the BenefitGrantWebhook, using the provided BenefitGrantSlackSharedChannelWebhook
-func (t *BenefitGrantWebhook) MergeBenefitGrantSlackSharedChannelWebhook(v BenefitGrantSlackSharedChannelWebhook) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BenefitGrantWebhook) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BenefitGrantWebhook) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsBenefitLicenseKeysCreateMetadata0 returns the union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties as a BenefitLicenseKeysCreateMetadata0
-func (t BenefitLicenseKeysCreate_Metadata_AdditionalProperties) AsBenefitLicenseKeysCreateMetadata0() (BenefitLicenseKeysCreateMetadata0, error) {
-	var body BenefitLicenseKeysCreateMetadata0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitLicenseKeysCreateMetadata0 overwrites any union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties as the provided BenefitLicenseKeysCreateMetadata0
-func (t *BenefitLicenseKeysCreate_Metadata_AdditionalProperties) FromBenefitLicenseKeysCreateMetadata0(v BenefitLicenseKeysCreateMetadata0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitLicenseKeysCreateMetadata0 performs a merge with any union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties, using the provided BenefitLicenseKeysCreateMetadata0
-func (t *BenefitLicenseKeysCreate_Metadata_AdditionalProperties) MergeBenefitLicenseKeysCreateMetadata0(v BenefitLicenseKeysCreateMetadata0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitLicenseKeysCreateMetadata1 returns the union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties as a BenefitLicenseKeysCreateMetadata1
-func (t BenefitLicenseKeysCreate_Metadata_AdditionalProperties) AsBenefitLicenseKeysCreateMetadata1() (BenefitLicenseKeysCreateMetadata1, error) {
-	var body BenefitLicenseKeysCreateMetadata1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitLicenseKeysCreateMetadata1 overwrites any union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties as the provided BenefitLicenseKeysCreateMetadata1
-func (t *BenefitLicenseKeysCreate_Metadata_AdditionalProperties) FromBenefitLicenseKeysCreateMetadata1(v BenefitLicenseKeysCreateMetadata1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitLicenseKeysCreateMetadata1 performs a merge with any union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties, using the provided BenefitLicenseKeysCreateMetadata1
-func (t *BenefitLicenseKeysCreate_Metadata_AdditionalProperties) MergeBenefitLicenseKeysCreateMetadata1(v BenefitLicenseKeysCreateMetadata1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitLicenseKeysCreateMetadata2 returns the union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties as a BenefitLicenseKeysCreateMetadata2
-func (t BenefitLicenseKeysCreate_Metadata_AdditionalProperties) AsBenefitLicenseKeysCreateMetadata2() (BenefitLicenseKeysCreateMetadata2, error) {
-	var body BenefitLicenseKeysCreateMetadata2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitLicenseKeysCreateMetadata2 overwrites any union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties as the provided BenefitLicenseKeysCreateMetadata2
-func (t *BenefitLicenseKeysCreate_Metadata_AdditionalProperties) FromBenefitLicenseKeysCreateMetadata2(v BenefitLicenseKeysCreateMetadata2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitLicenseKeysCreateMetadata2 performs a merge with any union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties, using the provided BenefitLicenseKeysCreateMetadata2
-func (t *BenefitLicenseKeysCreate_Metadata_AdditionalProperties) MergeBenefitLicenseKeysCreateMetadata2(v BenefitLicenseKeysCreateMetadata2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitLicenseKeysCreateMetadata3 returns the union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties as a BenefitLicenseKeysCreateMetadata3
-func (t BenefitLicenseKeysCreate_Metadata_AdditionalProperties) AsBenefitLicenseKeysCreateMetadata3() (BenefitLicenseKeysCreateMetadata3, error) {
-	var body BenefitLicenseKeysCreateMetadata3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitLicenseKeysCreateMetadata3 overwrites any union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties as the provided BenefitLicenseKeysCreateMetadata3
-func (t *BenefitLicenseKeysCreate_Metadata_AdditionalProperties) FromBenefitLicenseKeysCreateMetadata3(v BenefitLicenseKeysCreateMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitLicenseKeysCreateMetadata3 performs a merge with any union data inside the BenefitLicenseKeysCreate_Metadata_AdditionalProperties, using the provided BenefitLicenseKeysCreateMetadata3
-func (t *BenefitLicenseKeysCreate_Metadata_AdditionalProperties) MergeBenefitLicenseKeysCreateMetadata3(v BenefitLicenseKeysCreateMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BenefitLicenseKeysCreate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BenefitLicenseKeysCreate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsBenefitLicenseKeysUpdateMetadata0 returns the union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties as a BenefitLicenseKeysUpdateMetadata0
-func (t BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) AsBenefitLicenseKeysUpdateMetadata0() (BenefitLicenseKeysUpdateMetadata0, error) {
-	var body BenefitLicenseKeysUpdateMetadata0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitLicenseKeysUpdateMetadata0 overwrites any union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties as the provided BenefitLicenseKeysUpdateMetadata0
-func (t *BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) FromBenefitLicenseKeysUpdateMetadata0(v BenefitLicenseKeysUpdateMetadata0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitLicenseKeysUpdateMetadata0 performs a merge with any union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties, using the provided BenefitLicenseKeysUpdateMetadata0
-func (t *BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) MergeBenefitLicenseKeysUpdateMetadata0(v BenefitLicenseKeysUpdateMetadata0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitLicenseKeysUpdateMetadata1 returns the union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties as a BenefitLicenseKeysUpdateMetadata1
-func (t BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) AsBenefitLicenseKeysUpdateMetadata1() (BenefitLicenseKeysUpdateMetadata1, error) {
-	var body BenefitLicenseKeysUpdateMetadata1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitLicenseKeysUpdateMetadata1 overwrites any union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties as the provided BenefitLicenseKeysUpdateMetadata1
-func (t *BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) FromBenefitLicenseKeysUpdateMetadata1(v BenefitLicenseKeysUpdateMetadata1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitLicenseKeysUpdateMetadata1 performs a merge with any union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties, using the provided BenefitLicenseKeysUpdateMetadata1
-func (t *BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) MergeBenefitLicenseKeysUpdateMetadata1(v BenefitLicenseKeysUpdateMetadata1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitLicenseKeysUpdateMetadata2 returns the union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties as a BenefitLicenseKeysUpdateMetadata2
-func (t BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) AsBenefitLicenseKeysUpdateMetadata2() (BenefitLicenseKeysUpdateMetadata2, error) {
-	var body BenefitLicenseKeysUpdateMetadata2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitLicenseKeysUpdateMetadata2 overwrites any union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties as the provided BenefitLicenseKeysUpdateMetadata2
-func (t *BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) FromBenefitLicenseKeysUpdateMetadata2(v BenefitLicenseKeysUpdateMetadata2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitLicenseKeysUpdateMetadata2 performs a merge with any union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties, using the provided BenefitLicenseKeysUpdateMetadata2
-func (t *BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) MergeBenefitLicenseKeysUpdateMetadata2(v BenefitLicenseKeysUpdateMetadata2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitLicenseKeysUpdateMetadata3 returns the union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties as a BenefitLicenseKeysUpdateMetadata3
-func (t BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) AsBenefitLicenseKeysUpdateMetadata3() (BenefitLicenseKeysUpdateMetadata3, error) {
-	var body BenefitLicenseKeysUpdateMetadata3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitLicenseKeysUpdateMetadata3 overwrites any union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties as the provided BenefitLicenseKeysUpdateMetadata3
-func (t *BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) FromBenefitLicenseKeysUpdateMetadata3(v BenefitLicenseKeysUpdateMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitLicenseKeysUpdateMetadata3 performs a merge with any union data inside the BenefitLicenseKeysUpdate_Metadata_AdditionalProperties, using the provided BenefitLicenseKeysUpdateMetadata3
-func (t *BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) MergeBenefitLicenseKeysUpdateMetadata3(v BenefitLicenseKeysUpdateMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BenefitLicenseKeysUpdate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsBenefitMeterCreditCreateMetadata0 returns the union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties as a BenefitMeterCreditCreateMetadata0
-func (t BenefitMeterCreditCreate_Metadata_AdditionalProperties) AsBenefitMeterCreditCreateMetadata0() (BenefitMeterCreditCreateMetadata0, error) {
-	var body BenefitMeterCreditCreateMetadata0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitMeterCreditCreateMetadata0 overwrites any union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties as the provided BenefitMeterCreditCreateMetadata0
-func (t *BenefitMeterCreditCreate_Metadata_AdditionalProperties) FromBenefitMeterCreditCreateMetadata0(v BenefitMeterCreditCreateMetadata0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitMeterCreditCreateMetadata0 performs a merge with any union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties, using the provided BenefitMeterCreditCreateMetadata0
-func (t *BenefitMeterCreditCreate_Metadata_AdditionalProperties) MergeBenefitMeterCreditCreateMetadata0(v BenefitMeterCreditCreateMetadata0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitMeterCreditCreateMetadata1 returns the union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties as a BenefitMeterCreditCreateMetadata1
-func (t BenefitMeterCreditCreate_Metadata_AdditionalProperties) AsBenefitMeterCreditCreateMetadata1() (BenefitMeterCreditCreateMetadata1, error) {
-	var body BenefitMeterCreditCreateMetadata1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitMeterCreditCreateMetadata1 overwrites any union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties as the provided BenefitMeterCreditCreateMetadata1
-func (t *BenefitMeterCreditCreate_Metadata_AdditionalProperties) FromBenefitMeterCreditCreateMetadata1(v BenefitMeterCreditCreateMetadata1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitMeterCreditCreateMetadata1 performs a merge with any union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties, using the provided BenefitMeterCreditCreateMetadata1
-func (t *BenefitMeterCreditCreate_Metadata_AdditionalProperties) MergeBenefitMeterCreditCreateMetadata1(v BenefitMeterCreditCreateMetadata1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitMeterCreditCreateMetadata2 returns the union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties as a BenefitMeterCreditCreateMetadata2
-func (t BenefitMeterCreditCreate_Metadata_AdditionalProperties) AsBenefitMeterCreditCreateMetadata2() (BenefitMeterCreditCreateMetadata2, error) {
-	var body BenefitMeterCreditCreateMetadata2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitMeterCreditCreateMetadata2 overwrites any union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties as the provided BenefitMeterCreditCreateMetadata2
-func (t *BenefitMeterCreditCreate_Metadata_AdditionalProperties) FromBenefitMeterCreditCreateMetadata2(v BenefitMeterCreditCreateMetadata2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitMeterCreditCreateMetadata2 performs a merge with any union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties, using the provided BenefitMeterCreditCreateMetadata2
-func (t *BenefitMeterCreditCreate_Metadata_AdditionalProperties) MergeBenefitMeterCreditCreateMetadata2(v BenefitMeterCreditCreateMetadata2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitMeterCreditCreateMetadata3 returns the union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties as a BenefitMeterCreditCreateMetadata3
-func (t BenefitMeterCreditCreate_Metadata_AdditionalProperties) AsBenefitMeterCreditCreateMetadata3() (BenefitMeterCreditCreateMetadata3, error) {
-	var body BenefitMeterCreditCreateMetadata3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitMeterCreditCreateMetadata3 overwrites any union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties as the provided BenefitMeterCreditCreateMetadata3
-func (t *BenefitMeterCreditCreate_Metadata_AdditionalProperties) FromBenefitMeterCreditCreateMetadata3(v BenefitMeterCreditCreateMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitMeterCreditCreateMetadata3 performs a merge with any union data inside the BenefitMeterCreditCreate_Metadata_AdditionalProperties, using the provided BenefitMeterCreditCreateMetadata3
-func (t *BenefitMeterCreditCreate_Metadata_AdditionalProperties) MergeBenefitMeterCreditCreateMetadata3(v BenefitMeterCreditCreateMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BenefitMeterCreditCreate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BenefitMeterCreditCreate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsBenefitMeterCreditUpdateMetadata0 returns the union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties as a BenefitMeterCreditUpdateMetadata0
-func (t BenefitMeterCreditUpdate_Metadata_AdditionalProperties) AsBenefitMeterCreditUpdateMetadata0() (BenefitMeterCreditUpdateMetadata0, error) {
-	var body BenefitMeterCreditUpdateMetadata0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitMeterCreditUpdateMetadata0 overwrites any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties as the provided BenefitMeterCreditUpdateMetadata0
-func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) FromBenefitMeterCreditUpdateMetadata0(v BenefitMeterCreditUpdateMetadata0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitMeterCreditUpdateMetadata0 performs a merge with any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties, using the provided BenefitMeterCreditUpdateMetadata0
-func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) MergeBenefitMeterCreditUpdateMetadata0(v BenefitMeterCreditUpdateMetadata0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitMeterCreditUpdateMetadata1 returns the union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties as a BenefitMeterCreditUpdateMetadata1
-func (t BenefitMeterCreditUpdate_Metadata_AdditionalProperties) AsBenefitMeterCreditUpdateMetadata1() (BenefitMeterCreditUpdateMetadata1, error) {
-	var body BenefitMeterCreditUpdateMetadata1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitMeterCreditUpdateMetadata1 overwrites any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties as the provided BenefitMeterCreditUpdateMetadata1
-func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) FromBenefitMeterCreditUpdateMetadata1(v BenefitMeterCreditUpdateMetadata1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitMeterCreditUpdateMetadata1 performs a merge with any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties, using the provided BenefitMeterCreditUpdateMetadata1
-func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) MergeBenefitMeterCreditUpdateMetadata1(v BenefitMeterCreditUpdateMetadata1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitMeterCreditUpdateMetadata2 returns the union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties as a BenefitMeterCreditUpdateMetadata2
-func (t BenefitMeterCreditUpdate_Metadata_AdditionalProperties) AsBenefitMeterCreditUpdateMetadata2() (BenefitMeterCreditUpdateMetadata2, error) {
-	var body BenefitMeterCreditUpdateMetadata2
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitMeterCreditUpdateMetadata2 overwrites any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties as the provided BenefitMeterCreditUpdateMetadata2
-func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) FromBenefitMeterCreditUpdateMetadata2(v BenefitMeterCreditUpdateMetadata2) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitMeterCreditUpdateMetadata2 performs a merge with any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties, using the provided BenefitMeterCreditUpdateMetadata2
-func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) MergeBenefitMeterCreditUpdateMetadata2(v BenefitMeterCreditUpdateMetadata2) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBenefitMeterCreditUpdateMetadata3 returns the union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties as a BenefitMeterCreditUpdateMetadata3
-func (t BenefitMeterCreditUpdate_Metadata_AdditionalProperties) AsBenefitMeterCreditUpdateMetadata3() (BenefitMeterCreditUpdateMetadata3, error) {
-	var body BenefitMeterCreditUpdateMetadata3
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBenefitMeterCreditUpdateMetadata3 overwrites any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties as the provided BenefitMeterCreditUpdateMetadata3
-func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) FromBenefitMeterCreditUpdateMetadata3(v BenefitMeterCreditUpdateMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitMeterCreditUpdateMetadata3 performs a merge with any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties, using the provided BenefitMeterCreditUpdateMetadata3
-func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) MergeBenefitMeterCreditUpdateMetadata3(v BenefitMeterCreditUpdateMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
 func (t BenefitMeterCreditUpdate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
@@ -20008,4 +17815,2199 @@ func (t Order_CustomFieldData_AdditionalProperties) AsOrderCustomFieldData2() (O
 	var body OrderCustomFieldData2
 	err := json.Unmarshal(t.union, &body)
 	return body, err
+}
+
+// FromOrderCustomFieldData2 overwrites any union data inside the Order_CustomFieldData_AdditionalProperties as the provided OrderCustomFieldData2
+func (t *Order_CustomFieldData_AdditionalProperties) FromOrderCustomFieldData2(v OrderCustomFieldData2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrderCustomFieldData2 performs a merge with any union data inside the Order_CustomFieldData_AdditionalProperties, using the provided OrderCustomFieldData2
+func (t *Order_CustomFieldData_AdditionalProperties) MergeOrderCustomFieldData2(v OrderCustomFieldData2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrderCustomFieldData3 returns the union data inside the Order_CustomFieldData_AdditionalProperties as a OrderCustomFieldData3
+func (t Order_CustomFieldData_AdditionalProperties) AsOrderCustomFieldData3() (OrderCustomFieldData3, error) {
+	var body OrderCustomFieldData3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrderCustomFieldData3 overwrites any union data inside the Order_CustomFieldData_AdditionalProperties as the provided OrderCustomFieldData3
+func (t *Order_CustomFieldData_AdditionalProperties) FromOrderCustomFieldData3(v OrderCustomFieldData3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrderCustomFieldData3 performs a merge with any union data inside the Order_CustomFieldData_AdditionalProperties, using the provided OrderCustomFieldData3
+func (t *Order_CustomFieldData_AdditionalProperties) MergeOrderCustomFieldData3(v OrderCustomFieldData3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t Order_CustomFieldData_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *Order_CustomFieldData_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrderCreateCustomFieldData0 returns the union data inside the OrderCreate_CustomFieldData_AdditionalProperties as a OrderCreateCustomFieldData0
+func (t OrderCreate_CustomFieldData_AdditionalProperties) AsOrderCreateCustomFieldData0() (OrderCreateCustomFieldData0, error) {
+	var body OrderCreateCustomFieldData0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrderCreateCustomFieldData0 overwrites any union data inside the OrderCreate_CustomFieldData_AdditionalProperties as the provided OrderCreateCustomFieldData0
+func (t *OrderCreate_CustomFieldData_AdditionalProperties) FromOrderCreateCustomFieldData0(v OrderCreateCustomFieldData0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrderCreateCustomFieldData0 performs a merge with any union data inside the OrderCreate_CustomFieldData_AdditionalProperties, using the provided OrderCreateCustomFieldData0
+func (t *OrderCreate_CustomFieldData_AdditionalProperties) MergeOrderCreateCustomFieldData0(v OrderCreateCustomFieldData0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrderCreateCustomFieldData1 returns the union data inside the OrderCreate_CustomFieldData_AdditionalProperties as a OrderCreateCustomFieldData1
+func (t OrderCreate_CustomFieldData_AdditionalProperties) AsOrderCreateCustomFieldData1() (OrderCreateCustomFieldData1, error) {
+	var body OrderCreateCustomFieldData1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrderCreateCustomFieldData1 overwrites any union data inside the OrderCreate_CustomFieldData_AdditionalProperties as the provided OrderCreateCustomFieldData1
+func (t *OrderCreate_CustomFieldData_AdditionalProperties) FromOrderCreateCustomFieldData1(v OrderCreateCustomFieldData1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrderCreateCustomFieldData1 performs a merge with any union data inside the OrderCreate_CustomFieldData_AdditionalProperties, using the provided OrderCreateCustomFieldData1
+func (t *OrderCreate_CustomFieldData_AdditionalProperties) MergeOrderCreateCustomFieldData1(v OrderCreateCustomFieldData1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrderCreateCustomFieldData2 returns the union data inside the OrderCreate_CustomFieldData_AdditionalProperties as a OrderCreateCustomFieldData2
+func (t OrderCreate_CustomFieldData_AdditionalProperties) AsOrderCreateCustomFieldData2() (OrderCreateCustomFieldData2, error) {
+	var body OrderCreateCustomFieldData2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrderCreateCustomFieldData2 overwrites any union data inside the OrderCreate_CustomFieldData_AdditionalProperties as the provided OrderCreateCustomFieldData2
+func (t *OrderCreate_CustomFieldData_AdditionalProperties) FromOrderCreateCustomFieldData2(v OrderCreateCustomFieldData2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrderCreateCustomFieldData2 performs a merge with any union data inside the OrderCreate_CustomFieldData_AdditionalProperties, using the provided OrderCreateCustomFieldData2
+func (t *OrderCreate_CustomFieldData_AdditionalProperties) MergeOrderCreateCustomFieldData2(v OrderCreateCustomFieldData2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrderCreateCustomFieldData3 returns the union data inside the OrderCreate_CustomFieldData_AdditionalProperties as a OrderCreateCustomFieldData3
+func (t OrderCreate_CustomFieldData_AdditionalProperties) AsOrderCreateCustomFieldData3() (OrderCreateCustomFieldData3, error) {
+	var body OrderCreateCustomFieldData3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrderCreateCustomFieldData3 overwrites any union data inside the OrderCreate_CustomFieldData_AdditionalProperties as the provided OrderCreateCustomFieldData3
+func (t *OrderCreate_CustomFieldData_AdditionalProperties) FromOrderCreateCustomFieldData3(v OrderCreateCustomFieldData3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrderCreateCustomFieldData3 performs a merge with any union data inside the OrderCreate_CustomFieldData_AdditionalProperties, using the provided OrderCreateCustomFieldData3
+func (t *OrderCreate_CustomFieldData_AdditionalProperties) MergeOrderCreateCustomFieldData3(v OrderCreateCustomFieldData3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrderCreate_CustomFieldData_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrderCreate_CustomFieldData_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrderCreateMetadata0 returns the union data inside the OrderCreate_Metadata_AdditionalProperties as a OrderCreateMetadata0
+func (t OrderCreate_Metadata_AdditionalProperties) AsOrderCreateMetadata0() (OrderCreateMetadata0, error) {
+	var body OrderCreateMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrderCreateMetadata0 overwrites any union data inside the OrderCreate_Metadata_AdditionalProperties as the provided OrderCreateMetadata0
+func (t *OrderCreate_Metadata_AdditionalProperties) FromOrderCreateMetadata0(v OrderCreateMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrderCreateMetadata0 performs a merge with any union data inside the OrderCreate_Metadata_AdditionalProperties, using the provided OrderCreateMetadata0
+func (t *OrderCreate_Metadata_AdditionalProperties) MergeOrderCreateMetadata0(v OrderCreateMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrderCreateMetadata1 returns the union data inside the OrderCreate_Metadata_AdditionalProperties as a OrderCreateMetadata1
+func (t OrderCreate_Metadata_AdditionalProperties) AsOrderCreateMetadata1() (OrderCreateMetadata1, error) {
+	var body OrderCreateMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrderCreateMetadata1 overwrites any union data inside the OrderCreate_Metadata_AdditionalProperties as the provided OrderCreateMetadata1
+func (t *OrderCreate_Metadata_AdditionalProperties) FromOrderCreateMetadata1(v OrderCreateMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrderCreateMetadata1 performs a merge with any union data inside the OrderCreate_Metadata_AdditionalProperties, using the provided OrderCreateMetadata1
+func (t *OrderCreate_Metadata_AdditionalProperties) MergeOrderCreateMetadata1(v OrderCreateMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrderCreateMetadata2 returns the union data inside the OrderCreate_Metadata_AdditionalProperties as a OrderCreateMetadata2
+func (t OrderCreate_Metadata_AdditionalProperties) AsOrderCreateMetadata2() (OrderCreateMetadata2, error) {
+	var body OrderCreateMetadata2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrderCreateMetadata2 overwrites any union data inside the OrderCreate_Metadata_AdditionalProperties as the provided OrderCreateMetadata2
+func (t *OrderCreate_Metadata_AdditionalProperties) FromOrderCreateMetadata2(v OrderCreateMetadata2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrderCreateMetadata2 performs a merge with any union data inside the OrderCreate_Metadata_AdditionalProperties, using the provided OrderCreateMetadata2
+func (t *OrderCreate_Metadata_AdditionalProperties) MergeOrderCreateMetadata2(v OrderCreateMetadata2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrderCreateMetadata3 returns the union data inside the OrderCreate_Metadata_AdditionalProperties as a OrderCreateMetadata3
+func (t OrderCreate_Metadata_AdditionalProperties) AsOrderCreateMetadata3() (OrderCreateMetadata3, error) {
+	var body OrderCreateMetadata3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrderCreateMetadata3 overwrites any union data inside the OrderCreate_Metadata_AdditionalProperties as the provided OrderCreateMetadata3
+func (t *OrderCreate_Metadata_AdditionalProperties) FromOrderCreateMetadata3(v OrderCreateMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrderCreateMetadata3 performs a merge with any union data inside the OrderCreate_Metadata_AdditionalProperties, using the provided OrderCreateMetadata3
+func (t *OrderCreate_Metadata_AdditionalProperties) MergeOrderCreateMetadata3(v OrderCreateMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrderCreate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrderCreate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCardPayment returns the union data inside the Payment as a CardPayment
+func (t Payment) AsCardPayment() (CardPayment, error) {
+	var body CardPayment
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCardPayment overwrites any union data inside the Payment as the provided CardPayment
+func (t *Payment) FromCardPayment(v CardPayment) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCardPayment performs a merge with any union data inside the Payment, using the provided CardPayment
+func (t *Payment) MergeCardPayment(v CardPayment) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsKrCardPayment returns the union data inside the Payment as a KrCardPayment
+func (t Payment) AsKrCardPayment() (KrCardPayment, error) {
+	var body KrCardPayment
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromKrCardPayment overwrites any union data inside the Payment as the provided KrCardPayment
+func (t *Payment) FromKrCardPayment(v KrCardPayment) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeKrCardPayment performs a merge with any union data inside the Payment, using the provided KrCardPayment
+func (t *Payment) MergeKrCardPayment(v KrCardPayment) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsGenericPayment returns the union data inside the Payment as a GenericPayment
+func (t Payment) AsGenericPayment() (GenericPayment, error) {
+	var body GenericPayment
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromGenericPayment overwrites any union data inside the Payment as the provided GenericPayment
+func (t *Payment) FromGenericPayment(v GenericPayment) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeGenericPayment performs a merge with any union data inside the Payment, using the provided GenericPayment
+func (t *Payment) MergeGenericPayment(v GenericPayment) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t Payment) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *Payment) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCustomerPaymentMethodCard returns the union data inside the PaymentMethod as a CustomerPaymentMethodCard
+func (t PaymentMethod) AsCustomerPaymentMethodCard() (CustomerPaymentMethodCard, error) {
+	var body CustomerPaymentMethodCard
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomerPaymentMethodCard overwrites any union data inside the PaymentMethod as the provided CustomerPaymentMethodCard
+func (t *PaymentMethod) FromCustomerPaymentMethodCard(v CustomerPaymentMethodCard) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomerPaymentMethodCard performs a merge with any union data inside the PaymentMethod, using the provided CustomerPaymentMethodCard
+func (t *PaymentMethod) MergeCustomerPaymentMethodCard(v CustomerPaymentMethodCard) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomerPaymentMethodKrCard returns the union data inside the PaymentMethod as a CustomerPaymentMethodKrCard
+func (t PaymentMethod) AsCustomerPaymentMethodKrCard() (CustomerPaymentMethodKrCard, error) {
+	var body CustomerPaymentMethodKrCard
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomerPaymentMethodKrCard overwrites any union data inside the PaymentMethod as the provided CustomerPaymentMethodKrCard
+func (t *PaymentMethod) FromCustomerPaymentMethodKrCard(v CustomerPaymentMethodKrCard) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomerPaymentMethodKrCard performs a merge with any union data inside the PaymentMethod, using the provided CustomerPaymentMethodKrCard
+func (t *PaymentMethod) MergeCustomerPaymentMethodKrCard(v CustomerPaymentMethodKrCard) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomerPaymentMethodGeneric returns the union data inside the PaymentMethod as a CustomerPaymentMethodGeneric
+func (t PaymentMethod) AsCustomerPaymentMethodGeneric() (CustomerPaymentMethodGeneric, error) {
+	var body CustomerPaymentMethodGeneric
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomerPaymentMethodGeneric overwrites any union data inside the PaymentMethod as the provided CustomerPaymentMethodGeneric
+func (t *PaymentMethod) FromCustomerPaymentMethodGeneric(v CustomerPaymentMethodGeneric) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomerPaymentMethodGeneric performs a merge with any union data inside the PaymentMethod, using the provided CustomerPaymentMethodGeneric
+func (t *PaymentMethod) MergeCustomerPaymentMethodGeneric(v CustomerPaymentMethodGeneric) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PaymentMethod) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PaymentMethod) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsLegacyRecurringProductPrice returns the union data inside the Product_Prices_Item as a LegacyRecurringProductPrice
+func (t Product_Prices_Item) AsLegacyRecurringProductPrice() (LegacyRecurringProductPrice, error) {
+	var body LegacyRecurringProductPrice
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromLegacyRecurringProductPrice overwrites any union data inside the Product_Prices_Item as the provided LegacyRecurringProductPrice
+func (t *Product_Prices_Item) FromLegacyRecurringProductPrice(v LegacyRecurringProductPrice) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeLegacyRecurringProductPrice performs a merge with any union data inside the Product_Prices_Item, using the provided LegacyRecurringProductPrice
+func (t *Product_Prices_Item) MergeLegacyRecurringProductPrice(v LegacyRecurringProductPrice) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPrice returns the union data inside the Product_Prices_Item as a ProductPrice
+func (t Product_Prices_Item) AsProductPrice() (ProductPrice, error) {
+	var body ProductPrice
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPrice overwrites any union data inside the Product_Prices_Item as the provided ProductPrice
+func (t *Product_Prices_Item) FromProductPrice(v ProductPrice) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeProductPrice performs a merge with any union data inside the Product_Prices_Item, using the provided ProductPrice
+func (t *Product_Prices_Item) MergeProductPrice(v ProductPrice) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t Product_Prices_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *Product_Prices_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsProductCreateRecurring returns the union data inside the ProductCreate as a ProductCreateRecurring
+func (t ProductCreate) AsProductCreateRecurring() (ProductCreateRecurring, error) {
+	var body ProductCreateRecurring
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductCreateRecurring overwrites any union data inside the ProductCreate as the provided ProductCreateRecurring
+func (t *ProductCreate) FromProductCreateRecurring(v ProductCreateRecurring) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeProductCreateRecurring performs a merge with any union data inside the ProductCreate, using the provided ProductCreateRecurring
+func (t *ProductCreate) MergeProductCreateRecurring(v ProductCreateRecurring) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductCreateOneTime returns the union data inside the ProductCreate as a ProductCreateOneTime
+func (t ProductCreate) AsProductCreateOneTime() (ProductCreateOneTime, error) {
+	var body ProductCreateOneTime
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductCreateOneTime overwrites any union data inside the ProductCreate as the provided ProductCreateOneTime
+func (t *ProductCreate) FromProductCreateOneTime(v ProductCreateOneTime) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeProductCreateOneTime performs a merge with any union data inside the ProductCreate, using the provided ProductCreateOneTime
+func (t *ProductCreate) MergeProductCreateOneTime(v ProductCreateOneTime) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ProductCreate) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ProductCreate) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsProductCreateOneTimeMetadata0 returns the union data inside the ProductCreateOneTime_Metadata_AdditionalProperties as a ProductCreateOneTimeMetadata0
+func (t ProductCreateOneTime_Metadata_AdditionalProperties) AsProductCreateOneTimeMetadata0() (ProductCreateOneTimeMetadata0, error) {
+	var body ProductCreateOneTimeMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductCreateOneTimeMetadata0 overwrites any union data inside the ProductCreateOneTime_Metadata_AdditionalProperties as the provided ProductCreateOneTimeMetadata0
+func (t *ProductCreateOneTime_Metadata_AdditionalProperties) FromProductCreateOneTimeMetadata0(v ProductCreateOneTimeMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeProductCreateOneTimeMetadata0 performs a merge with any union data inside the ProductCreateOneTime_Metadata_AdditionalProperties, using the provided ProductCreateOneTimeMetadata0
+func (t *ProductCreateOneTime_Metadata_AdditionalProperties) MergeProductCreateOneTimeMetadata0(v ProductCreateOneTimeMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductCreateOneTimeMetadata1 returns the union data inside the ProductCreateOneTime_Metadata_AdditionalProperties as a ProductCreateOneTimeMetadata1
+func (t ProductCreateOneTime_Metadata_AdditionalProperties) AsProductCreateOneTimeMetadata1() (ProductCreateOneTimeMetadata1, error) {
+	var body ProductCreateOneTimeMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductCreateOneTimeMetadata1 overwrites any union data inside the ProductCreateOneTime_Metadata_AdditionalProperties as the provided ProductCreateOneTimeMetadata1
+func (t *ProductCreateOneTime_Metadata_AdditionalProperties) FromProductCreateOneTimeMetadata1(v ProductCreateOneTimeMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeProductCreateOneTimeMetadata1 performs a merge with any union data inside the ProductCreateOneTime_Metadata_AdditionalProperties, using the provided ProductCreateOneTimeMetadata1
+func (t *ProductCreateOneTime_Metadata_AdditionalProperties) MergeProductCreateOneTimeMetadata1(v ProductCreateOneTimeMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductCreateOneTimeMetadata2 returns the union data inside the ProductCreateOneTime_Metadata_AdditionalProperties as a ProductCreateOneTimeMetadata2
+func (t ProductCreateOneTime_Metadata_AdditionalProperties) AsProductCreateOneTimeMetadata2() (ProductCreateOneTimeMetadata2, error) {
+	var body ProductCreateOneTimeMetadata2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductCreateOneTimeMetadata2 overwrites any union data inside the ProductCreateOneTime_Metadata_AdditionalProperties as the provided ProductCreateOneTimeMetadata2
+func (t *ProductCreateOneTime_Metadata_AdditionalProperties) FromProductCreateOneTimeMetadata2(v ProductCreateOneTimeMetadata2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeProductCreateOneTimeMetadata2 performs a merge with any union data inside the ProductCreateOneTime_Metadata_AdditionalProperties, using the provided ProductCreateOneTimeMetadata2
+func (t *ProductCreateOneTime_Metadata_AdditionalProperties) MergeProductCreateOneTimeMetadata2(v ProductCreateOneTimeMetadata2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductCreateOneTimeMetadata3 returns the union data inside the ProductCreateOneTime_Metadata_AdditionalProperties as a ProductCreateOneTimeMetadata3
+func (t ProductCreateOneTime_Metadata_AdditionalProperties) AsProductCreateOneTimeMetadata3() (ProductCreateOneTimeMetadata3, error) {
+	var body ProductCreateOneTimeMetadata3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductCreateOneTimeMetadata3 overwrites any union data inside the ProductCreateOneTime_Metadata_AdditionalProperties as the provided ProductCreateOneTimeMetadata3
+func (t *ProductCreateOneTime_Metadata_AdditionalProperties) FromProductCreateOneTimeMetadata3(v ProductCreateOneTimeMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeProductCreateOneTimeMetadata3 performs a merge with any union data inside the ProductCreateOneTime_Metadata_AdditionalProperties, using the provided ProductCreateOneTimeMetadata3
+func (t *ProductCreateOneTime_Metadata_AdditionalProperties) MergeProductCreateOneTimeMetadata3(v ProductCreateOneTimeMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ProductCreateOneTime_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ProductCreateOneTime_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsProductPriceFixedCreate returns the union data inside the ProductCreateOneTime_Prices_Item as a ProductPriceFixedCreate
+func (t ProductCreateOneTime_Prices_Item) AsProductPriceFixedCreate() (ProductPriceFixedCreate, error) {
+	var body ProductPriceFixedCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceFixedCreate overwrites any union data inside the ProductCreateOneTime_Prices_Item as the provided ProductPriceFixedCreate
+func (t *ProductCreateOneTime_Prices_Item) FromProductPriceFixedCreate(v ProductPriceFixedCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"fixed"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceFixedCreate performs a merge with any union data inside the ProductCreateOneTime_Prices_Item, using the provided ProductPriceFixedCreate
+func (t *ProductCreateOneTime_Prices_Item) MergeProductPriceFixedCreate(v ProductPriceFixedCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"fixed"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceCustomCreate returns the union data inside the ProductCreateOneTime_Prices_Item as a ProductPriceCustomCreate
+func (t ProductCreateOneTime_Prices_Item) AsProductPriceCustomCreate() (ProductPriceCustomCreate, error) {
+	var body ProductPriceCustomCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceCustomCreate overwrites any union data inside the ProductCreateOneTime_Prices_Item as the provided ProductPriceCustomCreate
+func (t *ProductCreateOneTime_Prices_Item) FromProductPriceCustomCreate(v ProductPriceCustomCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"custom"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceCustomCreate performs a merge with any union data inside the ProductCreateOneTime_Prices_Item, using the provided ProductPriceCustomCreate
+func (t *ProductCreateOneTime_Prices_Item) MergeProductPriceCustomCreate(v ProductPriceCustomCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"custom"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceSeatBasedCreate returns the union data inside the ProductCreateOneTime_Prices_Item as a ProductPriceSeatBasedCreate
+func (t ProductCreateOneTime_Prices_Item) AsProductPriceSeatBasedCreate() (ProductPriceSeatBasedCreate, error) {
+	var body ProductPriceSeatBasedCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceSeatBasedCreate overwrites any union data inside the ProductCreateOneTime_Prices_Item as the provided ProductPriceSeatBasedCreate
+func (t *ProductCreateOneTime_Prices_Item) FromProductPriceSeatBasedCreate(v ProductPriceSeatBasedCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"seat_based"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceSeatBasedCreate performs a merge with any union data inside the ProductCreateOneTime_Prices_Item, using the provided ProductPriceSeatBasedCreate
+func (t *ProductCreateOneTime_Prices_Item) MergeProductPriceSeatBasedCreate(v ProductPriceSeatBasedCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"seat_based"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceUnitBasedCreate returns the union data inside the ProductCreateOneTime_Prices_Item as a ProductPriceUnitBasedCreate
+func (t ProductCreateOneTime_Prices_Item) AsProductPriceUnitBasedCreate() (ProductPriceUnitBasedCreate, error) {
+	var body ProductPriceUnitBasedCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceUnitBasedCreate overwrites any union data inside the ProductCreateOneTime_Prices_Item as the provided ProductPriceUnitBasedCreate
+func (t *ProductCreateOneTime_Prices_Item) FromProductPriceUnitBasedCreate(v ProductPriceUnitBasedCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"unit_based"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceUnitBasedCreate performs a merge with any union data inside the ProductCreateOneTime_Prices_Item, using the provided ProductPriceUnitBasedCreate
+func (t *ProductCreateOneTime_Prices_Item) MergeProductPriceUnitBasedCreate(v ProductPriceUnitBasedCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"unit_based"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceMeteredUnitCreate returns the union data inside the ProductCreateOneTime_Prices_Item as a ProductPriceMeteredUnitCreate
+func (t ProductCreateOneTime_Prices_Item) AsProductPriceMeteredUnitCreate() (ProductPriceMeteredUnitCreate, error) {
+	var body ProductPriceMeteredUnitCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceMeteredUnitCreate overwrites any union data inside the ProductCreateOneTime_Prices_Item as the provided ProductPriceMeteredUnitCreate
+func (t *ProductCreateOneTime_Prices_Item) FromProductPriceMeteredUnitCreate(v ProductPriceMeteredUnitCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_unit"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceMeteredUnitCreate performs a merge with any union data inside the ProductCreateOneTime_Prices_Item, using the provided ProductPriceMeteredUnitCreate
+func (t *ProductCreateOneTime_Prices_Item) MergeProductPriceMeteredUnitCreate(v ProductPriceMeteredUnitCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_unit"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceMeteredTiersCreate returns the union data inside the ProductCreateOneTime_Prices_Item as a ProductPriceMeteredTiersCreate
+func (t ProductCreateOneTime_Prices_Item) AsProductPriceMeteredTiersCreate() (ProductPriceMeteredTiersCreate, error) {
+	var body ProductPriceMeteredTiersCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceMeteredTiersCreate overwrites any union data inside the ProductCreateOneTime_Prices_Item as the provided ProductPriceMeteredTiersCreate
+func (t *ProductCreateOneTime_Prices_Item) FromProductPriceMeteredTiersCreate(v ProductPriceMeteredTiersCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_tiers"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceMeteredTiersCreate performs a merge with any union data inside the ProductCreateOneTime_Prices_Item, using the provided ProductPriceMeteredTiersCreate
+func (t *ProductCreateOneTime_Prices_Item) MergeProductPriceMeteredTiersCreate(v ProductPriceMeteredTiersCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_tiers"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ProductCreateOneTime_Prices_Item) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"amount_type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t ProductCreateOneTime_Prices_Item) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "custom":
+		return t.AsProductPriceCustomCreate()
+	case "fixed":
+		return t.AsProductPriceFixedCreate()
+	case "metered_tiers":
+		return t.AsProductPriceMeteredTiersCreate()
+	case "metered_unit":
+		return t.AsProductPriceMeteredUnitCreate()
+	case "seat_based":
+		return t.AsProductPriceSeatBasedCreate()
+	case "unit_based":
+		return t.AsProductPriceUnitBasedCreate()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t ProductCreateOneTime_Prices_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ProductCreateOneTime_Prices_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsProductCreateRecurringMetadata0 returns the union data inside the ProductCreateRecurring_Metadata_AdditionalProperties as a ProductCreateRecurringMetadata0
+func (t ProductCreateRecurring_Metadata_AdditionalProperties) AsProductCreateRecurringMetadata0() (ProductCreateRecurringMetadata0, error) {
+	var body ProductCreateRecurringMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductCreateRecurringMetadata0 overwrites any union data inside the ProductCreateRecurring_Metadata_AdditionalProperties as the provided ProductCreateRecurringMetadata0
+func (t *ProductCreateRecurring_Metadata_AdditionalProperties) FromProductCreateRecurringMetadata0(v ProductCreateRecurringMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeProductCreateRecurringMetadata0 performs a merge with any union data inside the ProductCreateRecurring_Metadata_AdditionalProperties, using the provided ProductCreateRecurringMetadata0
+func (t *ProductCreateRecurring_Metadata_AdditionalProperties) MergeProductCreateRecurringMetadata0(v ProductCreateRecurringMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductCreateRecurringMetadata1 returns the union data inside the ProductCreateRecurring_Metadata_AdditionalProperties as a ProductCreateRecurringMetadata1
+func (t ProductCreateRecurring_Metadata_AdditionalProperties) AsProductCreateRecurringMetadata1() (ProductCreateRecurringMetadata1, error) {
+	var body ProductCreateRecurringMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductCreateRecurringMetadata1 overwrites any union data inside the ProductCreateRecurring_Metadata_AdditionalProperties as the provided ProductCreateRecurringMetadata1
+func (t *ProductCreateRecurring_Metadata_AdditionalProperties) FromProductCreateRecurringMetadata1(v ProductCreateRecurringMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeProductCreateRecurringMetadata1 performs a merge with any union data inside the ProductCreateRecurring_Metadata_AdditionalProperties, using the provided ProductCreateRecurringMetadata1
+func (t *ProductCreateRecurring_Metadata_AdditionalProperties) MergeProductCreateRecurringMetadata1(v ProductCreateRecurringMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductCreateRecurringMetadata2 returns the union data inside the ProductCreateRecurring_Metadata_AdditionalProperties as a ProductCreateRecurringMetadata2
+func (t ProductCreateRecurring_Metadata_AdditionalProperties) AsProductCreateRecurringMetadata2() (ProductCreateRecurringMetadata2, error) {
+	var body ProductCreateRecurringMetadata2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductCreateRecurringMetadata2 overwrites any union data inside the ProductCreateRecurring_Metadata_AdditionalProperties as the provided ProductCreateRecurringMetadata2
+func (t *ProductCreateRecurring_Metadata_AdditionalProperties) FromProductCreateRecurringMetadata2(v ProductCreateRecurringMetadata2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeProductCreateRecurringMetadata2 performs a merge with any union data inside the ProductCreateRecurring_Metadata_AdditionalProperties, using the provided ProductCreateRecurringMetadata2
+func (t *ProductCreateRecurring_Metadata_AdditionalProperties) MergeProductCreateRecurringMetadata2(v ProductCreateRecurringMetadata2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductCreateRecurringMetadata3 returns the union data inside the ProductCreateRecurring_Metadata_AdditionalProperties as a ProductCreateRecurringMetadata3
+func (t ProductCreateRecurring_Metadata_AdditionalProperties) AsProductCreateRecurringMetadata3() (ProductCreateRecurringMetadata3, error) {
+	var body ProductCreateRecurringMetadata3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductCreateRecurringMetadata3 overwrites any union data inside the ProductCreateRecurring_Metadata_AdditionalProperties as the provided ProductCreateRecurringMetadata3
+func (t *ProductCreateRecurring_Metadata_AdditionalProperties) FromProductCreateRecurringMetadata3(v ProductCreateRecurringMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeProductCreateRecurringMetadata3 performs a merge with any union data inside the ProductCreateRecurring_Metadata_AdditionalProperties, using the provided ProductCreateRecurringMetadata3
+func (t *ProductCreateRecurring_Metadata_AdditionalProperties) MergeProductCreateRecurringMetadata3(v ProductCreateRecurringMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ProductCreateRecurring_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ProductCreateRecurring_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsProductPriceFixedCreate returns the union data inside the ProductCreateRecurring_Prices_Item as a ProductPriceFixedCreate
+func (t ProductCreateRecurring_Prices_Item) AsProductPriceFixedCreate() (ProductPriceFixedCreate, error) {
+	var body ProductPriceFixedCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceFixedCreate overwrites any union data inside the ProductCreateRecurring_Prices_Item as the provided ProductPriceFixedCreate
+func (t *ProductCreateRecurring_Prices_Item) FromProductPriceFixedCreate(v ProductPriceFixedCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"fixed"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceFixedCreate performs a merge with any union data inside the ProductCreateRecurring_Prices_Item, using the provided ProductPriceFixedCreate
+func (t *ProductCreateRecurring_Prices_Item) MergeProductPriceFixedCreate(v ProductPriceFixedCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"fixed"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceCustomCreate returns the union data inside the ProductCreateRecurring_Prices_Item as a ProductPriceCustomCreate
+func (t ProductCreateRecurring_Prices_Item) AsProductPriceCustomCreate() (ProductPriceCustomCreate, error) {
+	var body ProductPriceCustomCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceCustomCreate overwrites any union data inside the ProductCreateRecurring_Prices_Item as the provided ProductPriceCustomCreate
+func (t *ProductCreateRecurring_Prices_Item) FromProductPriceCustomCreate(v ProductPriceCustomCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"custom"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceCustomCreate performs a merge with any union data inside the ProductCreateRecurring_Prices_Item, using the provided ProductPriceCustomCreate
+func (t *ProductCreateRecurring_Prices_Item) MergeProductPriceCustomCreate(v ProductPriceCustomCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"custom"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceSeatBasedCreate returns the union data inside the ProductCreateRecurring_Prices_Item as a ProductPriceSeatBasedCreate
+func (t ProductCreateRecurring_Prices_Item) AsProductPriceSeatBasedCreate() (ProductPriceSeatBasedCreate, error) {
+	var body ProductPriceSeatBasedCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceSeatBasedCreate overwrites any union data inside the ProductCreateRecurring_Prices_Item as the provided ProductPriceSeatBasedCreate
+func (t *ProductCreateRecurring_Prices_Item) FromProductPriceSeatBasedCreate(v ProductPriceSeatBasedCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"seat_based"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceSeatBasedCreate performs a merge with any union data inside the ProductCreateRecurring_Prices_Item, using the provided ProductPriceSeatBasedCreate
+func (t *ProductCreateRecurring_Prices_Item) MergeProductPriceSeatBasedCreate(v ProductPriceSeatBasedCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"seat_based"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceUnitBasedCreate returns the union data inside the ProductCreateRecurring_Prices_Item as a ProductPriceUnitBasedCreate
+func (t ProductCreateRecurring_Prices_Item) AsProductPriceUnitBasedCreate() (ProductPriceUnitBasedCreate, error) {
+	var body ProductPriceUnitBasedCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceUnitBasedCreate overwrites any union data inside the ProductCreateRecurring_Prices_Item as the provided ProductPriceUnitBasedCreate
+func (t *ProductCreateRecurring_Prices_Item) FromProductPriceUnitBasedCreate(v ProductPriceUnitBasedCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"unit_based"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceUnitBasedCreate performs a merge with any union data inside the ProductCreateRecurring_Prices_Item, using the provided ProductPriceUnitBasedCreate
+func (t *ProductCreateRecurring_Prices_Item) MergeProductPriceUnitBasedCreate(v ProductPriceUnitBasedCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"unit_based"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceMeteredUnitCreate returns the union data inside the ProductCreateRecurring_Prices_Item as a ProductPriceMeteredUnitCreate
+func (t ProductCreateRecurring_Prices_Item) AsProductPriceMeteredUnitCreate() (ProductPriceMeteredUnitCreate, error) {
+	var body ProductPriceMeteredUnitCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceMeteredUnitCreate overwrites any union data inside the ProductCreateRecurring_Prices_Item as the provided ProductPriceMeteredUnitCreate
+func (t *ProductCreateRecurring_Prices_Item) FromProductPriceMeteredUnitCreate(v ProductPriceMeteredUnitCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_unit"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceMeteredUnitCreate performs a merge with any union data inside the ProductCreateRecurring_Prices_Item, using the provided ProductPriceMeteredUnitCreate
+func (t *ProductCreateRecurring_Prices_Item) MergeProductPriceMeteredUnitCreate(v ProductPriceMeteredUnitCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_unit"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceMeteredTiersCreate returns the union data inside the ProductCreateRecurring_Prices_Item as a ProductPriceMeteredTiersCreate
+func (t ProductCreateRecurring_Prices_Item) AsProductPriceMeteredTiersCreate() (ProductPriceMeteredTiersCreate, error) {
+	var body ProductPriceMeteredTiersCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceMeteredTiersCreate overwrites any union data inside the ProductCreateRecurring_Prices_Item as the provided ProductPriceMeteredTiersCreate
+func (t *ProductCreateRecurring_Prices_Item) FromProductPriceMeteredTiersCreate(v ProductPriceMeteredTiersCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_tiers"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceMeteredTiersCreate performs a merge with any union data inside the ProductCreateRecurring_Prices_Item, using the provided ProductPriceMeteredTiersCreate
+func (t *ProductCreateRecurring_Prices_Item) MergeProductPriceMeteredTiersCreate(v ProductPriceMeteredTiersCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_tiers"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ProductCreateRecurring_Prices_Item) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"amount_type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t ProductCreateRecurring_Prices_Item) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "custom":
+		return t.AsProductPriceCustomCreate()
+	case "fixed":
+		return t.AsProductPriceFixedCreate()
+	case "metered_tiers":
+		return t.AsProductPriceMeteredTiersCreate()
+	case "metered_unit":
+		return t.AsProductPriceMeteredUnitCreate()
+	case "seat_based":
+		return t.AsProductPriceSeatBasedCreate()
+	case "unit_based":
+		return t.AsProductPriceUnitBasedCreate()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t ProductCreateRecurring_Prices_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ProductCreateRecurring_Prices_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsProductPriceFixed returns the union data inside the ProductPrice as a ProductPriceFixed
+func (t ProductPrice) AsProductPriceFixed() (ProductPriceFixed, error) {
+	var body ProductPriceFixed
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceFixed overwrites any union data inside the ProductPrice as the provided ProductPriceFixed
+func (t *ProductPrice) FromProductPriceFixed(v ProductPriceFixed) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"fixed"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceFixed performs a merge with any union data inside the ProductPrice, using the provided ProductPriceFixed
+func (t *ProductPrice) MergeProductPriceFixed(v ProductPriceFixed) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"fixed"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceCustom returns the union data inside the ProductPrice as a ProductPriceCustom
+func (t ProductPrice) AsProductPriceCustom() (ProductPriceCustom, error) {
+	var body ProductPriceCustom
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceCustom overwrites any union data inside the ProductPrice as the provided ProductPriceCustom
+func (t *ProductPrice) FromProductPriceCustom(v ProductPriceCustom) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"custom"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceCustom performs a merge with any union data inside the ProductPrice, using the provided ProductPriceCustom
+func (t *ProductPrice) MergeProductPriceCustom(v ProductPriceCustom) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"custom"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceSeatBased returns the union data inside the ProductPrice as a ProductPriceSeatBased
+func (t ProductPrice) AsProductPriceSeatBased() (ProductPriceSeatBased, error) {
+	var body ProductPriceSeatBased
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceSeatBased overwrites any union data inside the ProductPrice as the provided ProductPriceSeatBased
+func (t *ProductPrice) FromProductPriceSeatBased(v ProductPriceSeatBased) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"seat_based"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceSeatBased performs a merge with any union data inside the ProductPrice, using the provided ProductPriceSeatBased
+func (t *ProductPrice) MergeProductPriceSeatBased(v ProductPriceSeatBased) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"seat_based"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceUnitBased returns the union data inside the ProductPrice as a ProductPriceUnitBased
+func (t ProductPrice) AsProductPriceUnitBased() (ProductPriceUnitBased, error) {
+	var body ProductPriceUnitBased
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceUnitBased overwrites any union data inside the ProductPrice as the provided ProductPriceUnitBased
+func (t *ProductPrice) FromProductPriceUnitBased(v ProductPriceUnitBased) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"unit_based"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceUnitBased performs a merge with any union data inside the ProductPrice, using the provided ProductPriceUnitBased
+func (t *ProductPrice) MergeProductPriceUnitBased(v ProductPriceUnitBased) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"unit_based"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceMeteredUnit returns the union data inside the ProductPrice as a ProductPriceMeteredUnit
+func (t ProductPrice) AsProductPriceMeteredUnit() (ProductPriceMeteredUnit, error) {
+	var body ProductPriceMeteredUnit
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceMeteredUnit overwrites any union data inside the ProductPrice as the provided ProductPriceMeteredUnit
+func (t *ProductPrice) FromProductPriceMeteredUnit(v ProductPriceMeteredUnit) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_unit"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceMeteredUnit performs a merge with any union data inside the ProductPrice, using the provided ProductPriceMeteredUnit
+func (t *ProductPrice) MergeProductPriceMeteredUnit(v ProductPriceMeteredUnit) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_unit"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceMeteredTiers returns the union data inside the ProductPrice as a ProductPriceMeteredTiers
+func (t ProductPrice) AsProductPriceMeteredTiers() (ProductPriceMeteredTiers, error) {
+	var body ProductPriceMeteredTiers
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceMeteredTiers overwrites any union data inside the ProductPrice as the provided ProductPriceMeteredTiers
+func (t *ProductPrice) FromProductPriceMeteredTiers(v ProductPriceMeteredTiers) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_tiers"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceMeteredTiers performs a merge with any union data inside the ProductPrice, using the provided ProductPriceMeteredTiers
+func (t *ProductPrice) MergeProductPriceMeteredTiers(v ProductPriceMeteredTiers) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_tiers"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ProductPrice) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"amount_type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t ProductPrice) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "custom":
+		return t.AsProductPriceCustom()
+	case "fixed":
+		return t.AsProductPriceFixed()
+	case "metered_tiers":
+		return t.AsProductPriceMeteredTiers()
+	case "metered_unit":
+		return t.AsProductPriceMeteredUnit()
+	case "seat_based":
+		return t.AsProductPriceSeatBased()
+	case "unit_based":
+		return t.AsProductPriceUnitBased()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t ProductPrice) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ProductPrice) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsProductPriceMeteredUnitCreateUnitAmount0 returns the union data inside the ProductPriceMeteredUnitCreate_UnitAmount as a ProductPriceMeteredUnitCreateUnitAmount0
+func (t ProductPriceMeteredUnitCreate_UnitAmount) AsProductPriceMeteredUnitCreateUnitAmount0() (ProductPriceMeteredUnitCreateUnitAmount0, error) {
+	var body ProductPriceMeteredUnitCreateUnitAmount0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceMeteredUnitCreateUnitAmount0 overwrites any union data inside the ProductPriceMeteredUnitCreate_UnitAmount as the provided ProductPriceMeteredUnitCreateUnitAmount0
+func (t *ProductPriceMeteredUnitCreate_UnitAmount) FromProductPriceMeteredUnitCreateUnitAmount0(v ProductPriceMeteredUnitCreateUnitAmount0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeProductPriceMeteredUnitCreateUnitAmount0 performs a merge with any union data inside the ProductPriceMeteredUnitCreate_UnitAmount, using the provided ProductPriceMeteredUnitCreateUnitAmount0
+func (t *ProductPriceMeteredUnitCreate_UnitAmount) MergeProductPriceMeteredUnitCreateUnitAmount0(v ProductPriceMeteredUnitCreateUnitAmount0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceMeteredUnitCreateUnitAmount1 returns the union data inside the ProductPriceMeteredUnitCreate_UnitAmount as a ProductPriceMeteredUnitCreateUnitAmount1
+func (t ProductPriceMeteredUnitCreate_UnitAmount) AsProductPriceMeteredUnitCreateUnitAmount1() (ProductPriceMeteredUnitCreateUnitAmount1, error) {
+	var body ProductPriceMeteredUnitCreateUnitAmount1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceMeteredUnitCreateUnitAmount1 overwrites any union data inside the ProductPriceMeteredUnitCreate_UnitAmount as the provided ProductPriceMeteredUnitCreateUnitAmount1
+func (t *ProductPriceMeteredUnitCreate_UnitAmount) FromProductPriceMeteredUnitCreateUnitAmount1(v ProductPriceMeteredUnitCreateUnitAmount1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeProductPriceMeteredUnitCreateUnitAmount1 performs a merge with any union data inside the ProductPriceMeteredUnitCreate_UnitAmount, using the provided ProductPriceMeteredUnitCreateUnitAmount1
+func (t *ProductPriceMeteredUnitCreate_UnitAmount) MergeProductPriceMeteredUnitCreateUnitAmount1(v ProductPriceMeteredUnitCreateUnitAmount1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ProductPriceMeteredUnitCreate_UnitAmount) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ProductPriceMeteredUnitCreate_UnitAmount) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsProductUpdateMetadata0 returns the union data inside the ProductUpdate_Metadata_AdditionalProperties as a ProductUpdateMetadata0
+func (t ProductUpdate_Metadata_AdditionalProperties) AsProductUpdateMetadata0() (ProductUpdateMetadata0, error) {
+	var body ProductUpdateMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductUpdateMetadata0 overwrites any union data inside the ProductUpdate_Metadata_AdditionalProperties as the provided ProductUpdateMetadata0
+func (t *ProductUpdate_Metadata_AdditionalProperties) FromProductUpdateMetadata0(v ProductUpdateMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeProductUpdateMetadata0 performs a merge with any union data inside the ProductUpdate_Metadata_AdditionalProperties, using the provided ProductUpdateMetadata0
+func (t *ProductUpdate_Metadata_AdditionalProperties) MergeProductUpdateMetadata0(v ProductUpdateMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductUpdateMetadata1 returns the union data inside the ProductUpdate_Metadata_AdditionalProperties as a ProductUpdateMetadata1
+func (t ProductUpdate_Metadata_AdditionalProperties) AsProductUpdateMetadata1() (ProductUpdateMetadata1, error) {
+	var body ProductUpdateMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductUpdateMetadata1 overwrites any union data inside the ProductUpdate_Metadata_AdditionalProperties as the provided ProductUpdateMetadata1
+func (t *ProductUpdate_Metadata_AdditionalProperties) FromProductUpdateMetadata1(v ProductUpdateMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeProductUpdateMetadata1 performs a merge with any union data inside the ProductUpdate_Metadata_AdditionalProperties, using the provided ProductUpdateMetadata1
+func (t *ProductUpdate_Metadata_AdditionalProperties) MergeProductUpdateMetadata1(v ProductUpdateMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductUpdateMetadata2 returns the union data inside the ProductUpdate_Metadata_AdditionalProperties as a ProductUpdateMetadata2
+func (t ProductUpdate_Metadata_AdditionalProperties) AsProductUpdateMetadata2() (ProductUpdateMetadata2, error) {
+	var body ProductUpdateMetadata2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductUpdateMetadata2 overwrites any union data inside the ProductUpdate_Metadata_AdditionalProperties as the provided ProductUpdateMetadata2
+func (t *ProductUpdate_Metadata_AdditionalProperties) FromProductUpdateMetadata2(v ProductUpdateMetadata2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeProductUpdateMetadata2 performs a merge with any union data inside the ProductUpdate_Metadata_AdditionalProperties, using the provided ProductUpdateMetadata2
+func (t *ProductUpdate_Metadata_AdditionalProperties) MergeProductUpdateMetadata2(v ProductUpdateMetadata2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductUpdateMetadata3 returns the union data inside the ProductUpdate_Metadata_AdditionalProperties as a ProductUpdateMetadata3
+func (t ProductUpdate_Metadata_AdditionalProperties) AsProductUpdateMetadata3() (ProductUpdateMetadata3, error) {
+	var body ProductUpdateMetadata3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductUpdateMetadata3 overwrites any union data inside the ProductUpdate_Metadata_AdditionalProperties as the provided ProductUpdateMetadata3
+func (t *ProductUpdate_Metadata_AdditionalProperties) FromProductUpdateMetadata3(v ProductUpdateMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeProductUpdateMetadata3 performs a merge with any union data inside the ProductUpdate_Metadata_AdditionalProperties, using the provided ProductUpdateMetadata3
+func (t *ProductUpdate_Metadata_AdditionalProperties) MergeProductUpdateMetadata3(v ProductUpdateMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ProductUpdate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ProductUpdate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsProductPriceFixedCreate returns the union data inside the ProductUpdatePrices1 as a ProductPriceFixedCreate
+func (t ProductUpdatePrices1) AsProductPriceFixedCreate() (ProductPriceFixedCreate, error) {
+	var body ProductPriceFixedCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceFixedCreate overwrites any union data inside the ProductUpdatePrices1 as the provided ProductPriceFixedCreate
+func (t *ProductUpdatePrices1) FromProductPriceFixedCreate(v ProductPriceFixedCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"fixed"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceFixedCreate performs a merge with any union data inside the ProductUpdatePrices1, using the provided ProductPriceFixedCreate
+func (t *ProductUpdatePrices1) MergeProductPriceFixedCreate(v ProductPriceFixedCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"fixed"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceCustomCreate returns the union data inside the ProductUpdatePrices1 as a ProductPriceCustomCreate
+func (t ProductUpdatePrices1) AsProductPriceCustomCreate() (ProductPriceCustomCreate, error) {
+	var body ProductPriceCustomCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceCustomCreate overwrites any union data inside the ProductUpdatePrices1 as the provided ProductPriceCustomCreate
+func (t *ProductUpdatePrices1) FromProductPriceCustomCreate(v ProductPriceCustomCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"custom"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceCustomCreate performs a merge with any union data inside the ProductUpdatePrices1, using the provided ProductPriceCustomCreate
+func (t *ProductUpdatePrices1) MergeProductPriceCustomCreate(v ProductPriceCustomCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"custom"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceSeatBasedCreate returns the union data inside the ProductUpdatePrices1 as a ProductPriceSeatBasedCreate
+func (t ProductUpdatePrices1) AsProductPriceSeatBasedCreate() (ProductPriceSeatBasedCreate, error) {
+	var body ProductPriceSeatBasedCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceSeatBasedCreate overwrites any union data inside the ProductUpdatePrices1 as the provided ProductPriceSeatBasedCreate
+func (t *ProductUpdatePrices1) FromProductPriceSeatBasedCreate(v ProductPriceSeatBasedCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"seat_based"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceSeatBasedCreate performs a merge with any union data inside the ProductUpdatePrices1, using the provided ProductPriceSeatBasedCreate
+func (t *ProductUpdatePrices1) MergeProductPriceSeatBasedCreate(v ProductPriceSeatBasedCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"seat_based"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceUnitBasedCreate returns the union data inside the ProductUpdatePrices1 as a ProductPriceUnitBasedCreate
+func (t ProductUpdatePrices1) AsProductPriceUnitBasedCreate() (ProductPriceUnitBasedCreate, error) {
+	var body ProductPriceUnitBasedCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceUnitBasedCreate overwrites any union data inside the ProductUpdatePrices1 as the provided ProductPriceUnitBasedCreate
+func (t *ProductUpdatePrices1) FromProductPriceUnitBasedCreate(v ProductPriceUnitBasedCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"unit_based"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceUnitBasedCreate performs a merge with any union data inside the ProductUpdatePrices1, using the provided ProductPriceUnitBasedCreate
+func (t *ProductUpdatePrices1) MergeProductPriceUnitBasedCreate(v ProductPriceUnitBasedCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"unit_based"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceMeteredUnitCreate returns the union data inside the ProductUpdatePrices1 as a ProductPriceMeteredUnitCreate
+func (t ProductUpdatePrices1) AsProductPriceMeteredUnitCreate() (ProductPriceMeteredUnitCreate, error) {
+	var body ProductPriceMeteredUnitCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceMeteredUnitCreate overwrites any union data inside the ProductUpdatePrices1 as the provided ProductPriceMeteredUnitCreate
+func (t *ProductUpdatePrices1) FromProductPriceMeteredUnitCreate(v ProductPriceMeteredUnitCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_unit"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceMeteredUnitCreate performs a merge with any union data inside the ProductUpdatePrices1, using the provided ProductPriceMeteredUnitCreate
+func (t *ProductUpdatePrices1) MergeProductPriceMeteredUnitCreate(v ProductPriceMeteredUnitCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_unit"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductPriceMeteredTiersCreate returns the union data inside the ProductUpdatePrices1 as a ProductPriceMeteredTiersCreate
+func (t ProductUpdatePrices1) AsProductPriceMeteredTiersCreate() (ProductPriceMeteredTiersCreate, error) {
+	var body ProductPriceMeteredTiersCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductPriceMeteredTiersCreate overwrites any union data inside the ProductUpdatePrices1 as the provided ProductPriceMeteredTiersCreate
+func (t *ProductUpdatePrices1) FromProductPriceMeteredTiersCreate(v ProductPriceMeteredTiersCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_tiers"}`))
+	t.union = b
+	return err
+}
+
+// MergeProductPriceMeteredTiersCreate performs a merge with any union data inside the ProductUpdatePrices1, using the provided ProductPriceMeteredTiersCreate
+func (t *ProductUpdatePrices1) MergeProductPriceMeteredTiersCreate(v ProductPriceMeteredTiersCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"amount_type":"metered_tiers"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ProductUpdatePrices1) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"amount_type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t ProductUpdatePrices1) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "custom":
+		return t.AsProductPriceCustomCreate()
+	case "fixed":
+		return t.AsProductPriceFixedCreate()
+	case "metered_tiers":
+		return t.AsProductPriceMeteredTiersCreate()
+	case "metered_unit":
+		return t.AsProductPriceMeteredUnitCreate()
+	case "seat_based":
+		return t.AsProductPriceSeatBasedCreate()
+	case "unit_based":
+		return t.AsProductPriceUnitBasedCreate()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t ProductUpdatePrices1) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ProductUpdatePrices1) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsExistingProductPrice returns the union data inside the ProductUpdate_Prices_Item as a ExistingProductPrice
+func (t ProductUpdate_Prices_Item) AsExistingProductPrice() (ExistingProductPrice, error) {
+	var body ExistingProductPrice
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromExistingProductPrice overwrites any union data inside the ProductUpdate_Prices_Item as the provided ExistingProductPrice
+func (t *ProductUpdate_Prices_Item) FromExistingProductPrice(v ExistingProductPrice) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeExistingProductPrice performs a merge with any union data inside the ProductUpdate_Prices_Item, using the provided ExistingProductPrice
+func (t *ProductUpdate_Prices_Item) MergeExistingProductPrice(v ExistingProductPrice) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsProductUpdatePrices1 returns the union data inside the ProductUpdate_Prices_Item as a ProductUpdatePrices1
+func (t ProductUpdate_Prices_Item) AsProductUpdatePrices1() (ProductUpdatePrices1, error) {
+	var body ProductUpdatePrices1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromProductUpdatePrices1 overwrites any union data inside the ProductUpdate_Prices_Item as the provided ProductUpdatePrices1
+func (t *ProductUpdate_Prices_Item) FromProductUpdatePrices1(v ProductUpdatePrices1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeProductUpdatePrices1 performs a merge with any union data inside the ProductUpdate_Prices_Item, using the provided ProductUpdatePrices1
+func (t *ProductUpdate_Prices_Item) MergeProductUpdatePrices1(v ProductUpdatePrices1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ProductUpdate_Prices_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ProductUpdate_Prices_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsRefundCreateMetadata0 returns the union data inside the RefundCreate_Metadata_AdditionalProperties as a RefundCreateMetadata0
+func (t RefundCreate_Metadata_AdditionalProperties) AsRefundCreateMetadata0() (RefundCreateMetadata0, error) {
+	var body RefundCreateMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRefundCreateMetadata0 overwrites any union data inside the RefundCreate_Metadata_AdditionalProperties as the provided RefundCreateMetadata0
+func (t *RefundCreate_Metadata_AdditionalProperties) FromRefundCreateMetadata0(v RefundCreateMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRefundCreateMetadata0 performs a merge with any union data inside the RefundCreate_Metadata_AdditionalProperties, using the provided RefundCreateMetadata0
+func (t *RefundCreate_Metadata_AdditionalProperties) MergeRefundCreateMetadata0(v RefundCreateMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsRefundCreateMetadata1 returns the union data inside the RefundCreate_Metadata_AdditionalProperties as a RefundCreateMetadata1
+func (t RefundCreate_Metadata_AdditionalProperties) AsRefundCreateMetadata1() (RefundCreateMetadata1, error) {
+	var body RefundCreateMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRefundCreateMetadata1 overwrites any union data inside the RefundCreate_Metadata_AdditionalProperties as the provided RefundCreateMetadata1
+func (t *RefundCreate_Metadata_AdditionalProperties) FromRefundCreateMetadata1(v RefundCreateMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRefundCreateMetadata1 performs a merge with any union data inside the RefundCreate_Metadata_AdditionalProperties, using the provided RefundCreateMetadata1
+func (t *RefundCreate_Metadata_AdditionalProperties) MergeRefundCreateMetadata1(v RefundCreateMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsRefundCreateMetadata2 returns the union data inside the RefundCreate_Metadata_AdditionalProperties as a RefundCreateMetadata2
+func (t RefundCreate_Metadata_AdditionalProperties) AsRefundCreateMetadata2() (RefundCreateMetadata2, error) {
+	var body RefundCreateMetadata2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRefundCreateMetadata2 overwrites any union data inside the RefundCreate_Metadata_AdditionalProperties as the provided RefundCreateMetadata2
+func (t *RefundCreate_Metadata_AdditionalProperties) FromRefundCreateMetadata2(v RefundCreateMetadata2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRefundCreateMetadata2 performs a merge with any union data inside the RefundCreate_Metadata_AdditionalProperties, using the provided RefundCreateMetadata2
+func (t *RefundCreate_Metadata_AdditionalProperties) MergeRefundCreateMetadata2(v RefundCreateMetadata2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsRefundCreateMetadata3 returns the union data inside the RefundCreate_Metadata_AdditionalProperties as a RefundCreateMetadata3
+func (t RefundCreate_Metadata_AdditionalProperties) AsRefundCreateMetadata3() (RefundCreateMetadata3, error) {
+	var body RefundCreateMetadata3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRefundCreateMetadata3 overwrites any union data inside the RefundCreate_Metadata_AdditionalProperties as the provided RefundCreateMetadata3
+func (t *RefundCreate_Metadata_AdditionalProperties) FromRefundCreateMetadata3(v RefundCreateMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRefundCreateMetadata3 performs a merge with any union data inside the RefundCreate_Metadata_AdditionalProperties, using the provided RefundCreateMetadata3
+func (t *RefundCreate_Metadata_AdditionalProperties) MergeRefundCreateMetadata3(v RefundCreateMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t RefundCreate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *RefundCreate_Metadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsSubscriptionCustomFieldData0 returns the union data inside the Subscription_CustomFieldData_AdditionalProperties as a SubscriptionCustomFieldData0
+func (t Subscription_CustomFieldData_AdditionalProperties) AsSubscriptionCustomFieldData0() (SubscriptionCustomFieldData0, error) {
+	var body SubscriptionCustomFieldData0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromSubscriptionCustomFieldData0 overwrites any union data inside the Subscription_CustomFieldData_AdditionalProperties as the provided SubscriptionCustomFieldData0
+func (t *Subscription_CustomFieldData_AdditionalProperties) FromSubscriptionCustomFieldData0(v SubscriptionCustomFieldData0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeSubscriptionCustomFieldData0 performs a merge with any union data inside the Subscription_CustomFieldData_AdditionalProperties, using the provided SubscriptionCustomFieldData0
+func (t *Subscription_CustomFieldData_AdditionalProperties) MergeSubscriptionCustomFieldData0(v SubscriptionCustomFieldData0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsSubscriptionCustomFieldData1 returns the union data inside the Subscription_CustomFieldData_AdditionalProperties as a SubscriptionCustomFieldData1
+func (t Subscription_CustomFieldData_AdditionalProperties) AsSubscriptionCustomFieldData1() (SubscriptionCustomFieldData1, error) {
+	var body SubscriptionCustomFieldData1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromSubscriptionCustomFieldData1 overwrites any union data inside the Subscription_CustomFieldData_AdditionalProperties as the provided SubscriptionCustomFieldData1
+func (t *Subscription_CustomFieldData_AdditionalProperties) FromSubscriptionCustomFieldData1(v SubscriptionCustomFieldData1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeSubscriptionCustomFieldData1 performs a merge with any union data inside the Subscription_CustomFieldData_AdditionalProperties, using the provided SubscriptionCustomFieldData1
+func (t *Subscription_CustomFieldData_AdditionalProperties) MergeSubscriptionCustomFieldData1(v SubscriptionCustomFieldData1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
 }
