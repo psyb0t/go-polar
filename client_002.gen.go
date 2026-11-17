@@ -3908,7 +3908,7 @@ type CustomerOrderSubscription struct {
 
 // CustomerOrderUpdate Schema to update an order.
 type CustomerOrderUpdate struct {
-	// BillingAddress The address of the customer that should appear on the invoice. Country and state fields cannot be updated.
+	// BillingAddress The address of the customer that should appear on the invoice. Address fields used for tax calculation cannot be updated.
 	BillingAddress *AddressInput `json:"billing_address,omitempty"`
 
 	// BillingName The name of the customer that should appear on the invoice.
@@ -10480,7 +10480,7 @@ type OrderUnvoidedMetadata struct {
 
 // OrderUpdate Schema to update an order.
 type OrderUpdate struct {
-	// BillingAddress The address of the customer that should appear on the invoice. Country and state fields cannot be updated.
+	// BillingAddress The address of the customer that should appear on the invoice. Address fields used for tax calculation cannot be updated.
 	BillingAddress *AddressInput `json:"billing_address,omitempty"`
 
 	// BillingName The name of the customer that should appear on the invoice.

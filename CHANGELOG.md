@@ -2,6 +2,10 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.3.1, 2026-11-17
+
+- The doc comments on the `BillingAddress` field of `CustomerOrderUpdate` and `OrderUpdate` now say that address fields used for tax calculation cannot be updated. They used to say country and state fields cannot be updated. No types, fields or signatures changed.
+
 ## v0.3.0, 2026-11-14
 
 - Breaking: the 2026-10 spec no longer has several operations, so the client lost their methods. Callers of these must remove the calls.
