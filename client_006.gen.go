@@ -4100,6 +4100,13 @@ func ParseRefundsCreateResponse(rsp *http.Response) (*RefundsCreateResponse, err
 		}
 		response.JSON403 = &dest
 
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest RefundPaymentAlreadyRefundedByStripe
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
 		var dest HTTPValidationError
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {

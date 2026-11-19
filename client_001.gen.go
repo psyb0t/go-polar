@@ -10549,6 +10549,21 @@ func (e RefundCreateReason) Valid() bool {
 	}
 }
 
+// Defines values for RefundPaymentAlreadyRefundedByStripeError.
+const (
+	RefundPaymentAlreadyRefundedByStripeErrorRefundPaymentAlreadyRefundedByStripe RefundPaymentAlreadyRefundedByStripeError = "RefundPaymentAlreadyRefundedByStripe"
+)
+
+// Valid indicates whether the value is a known member of the RefundPaymentAlreadyRefundedByStripeError enum.
+func (e RefundPaymentAlreadyRefundedByStripeError) Valid() bool {
+	switch e {
+	case RefundPaymentAlreadyRefundedByStripeErrorRefundPaymentAlreadyRefundedByStripe:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for RefundReason.
 const (
 	RefundReasonCustomerRequest            RefundReason = "customer_request"
@@ -11538,6 +11553,7 @@ const (
 	SubscriptionStatusIncompleteExpired SubscriptionStatus = "incomplete_expired"
 	SubscriptionStatusPastDue           SubscriptionStatus = "past_due"
 	SubscriptionStatusPaused            SubscriptionStatus = "paused"
+	SubscriptionStatusTrialEnded        SubscriptionStatus = "trial_ended"
 	SubscriptionStatusTrialing          SubscriptionStatus = "trialing"
 	SubscriptionStatusUnpaid            SubscriptionStatus = "unpaid"
 )
@@ -11556,6 +11572,8 @@ func (e SubscriptionStatus) Valid() bool {
 	case SubscriptionStatusPastDue:
 		return true
 	case SubscriptionStatusPaused:
+		return true
+	case SubscriptionStatusTrialEnded:
 		return true
 	case SubscriptionStatusTrialing:
 		return true

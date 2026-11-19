@@ -12726,6 +12726,8 @@ type RefundsCreateResponse struct {
 	JSON201 *Refund
 	// JSON403 the response for an HTTP 403 `application/json` response
 	JSON403 *RefundedAlready
+	// JSON409 the response for an HTTP 409 `application/json` response
+	JSON409 *RefundPaymentAlreadyRefundedByStripe
 	// JSON422 the response for an HTTP 422 `application/json` response
 	JSON422 *HTTPValidationError
 }
@@ -12738,6 +12740,11 @@ func (r RefundsCreateResponse) GetJSON201() *Refund {
 // GetJSON403 returns the response for an HTTP 403 `application/json` response
 func (r RefundsCreateResponse) GetJSON403() *RefundedAlready {
 	return r.JSON403
+}
+
+// GetJSON409 returns the response for an HTTP 409 `application/json` response
+func (r RefundsCreateResponse) GetJSON409() *RefundPaymentAlreadyRefundedByStripe {
+	return r.JSON409
 }
 
 // GetJSON422 returns the response for an HTTP 422 `application/json` response

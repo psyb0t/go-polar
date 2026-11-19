@@ -2,6 +2,13 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.3.2, 2026-11-19
+
+- Added the `RefundPaymentAlreadyRefundedByStripe` type with the `Detail` and `Error` fields, and the `RefundPaymentAlreadyRefundedByStripeError` string type with its constant `RefundPaymentAlreadyRefundedByStripeErrorRefundPaymentAlreadyRefundedByStripe` and a `Valid` method.
+- Added the `JSON409` field and the `GetJSON409` method to `RefundsCreateResponse`. `ParseRefundsCreateResponse` now decodes an HTTP 409 JSON response into `JSON409`.
+- Added the `SubscriptionStatusTrialEnded` constant (`"trial_ended"`). `SubscriptionStatus.Valid` now returns true for it.
+- Moved the union helpers `FromBenefitMeterCreditUpdateMetadata3`, `MergeBenefitMeterCreditUpdateMetadata3`, `FromSubscriptionCustomFieldData1` and `MergeSubscriptionCustomFieldData1` to other generated files. Their signatures did not change.
+
 ## v0.3.1, 2026-11-17
 
 - The doc comments on the `BillingAddress` field of `CustomerOrderUpdate` and `OrderUpdate` now say that address fields used for tax calculation cannot be updated. They used to say country and state fields cannot be updated. No types, fields or signatures changed.

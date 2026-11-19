@@ -10,6 +10,25 @@ import (
 	"github.com/oapi-codegen/runtime"
 )
 
+// FromBenefitMeterCreditUpdateMetadata3 overwrites any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties as the provided BenefitMeterCreditUpdateMetadata3
+func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) FromBenefitMeterCreditUpdateMetadata3(v BenefitMeterCreditUpdateMetadata3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBenefitMeterCreditUpdateMetadata3 performs a merge with any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties, using the provided BenefitMeterCreditUpdateMetadata3
+func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) MergeBenefitMeterCreditUpdateMetadata3(v BenefitMeterCreditUpdateMetadata3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
 func (t BenefitMeterCreditUpdate_Metadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
@@ -19991,23 +20010,4 @@ func (t Subscription_CustomFieldData_AdditionalProperties) AsSubscriptionCustomF
 	var body SubscriptionCustomFieldData1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
-}
-
-// FromSubscriptionCustomFieldData1 overwrites any union data inside the Subscription_CustomFieldData_AdditionalProperties as the provided SubscriptionCustomFieldData1
-func (t *Subscription_CustomFieldData_AdditionalProperties) FromSubscriptionCustomFieldData1(v SubscriptionCustomFieldData1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSubscriptionCustomFieldData1 performs a merge with any union data inside the Subscription_CustomFieldData_AdditionalProperties, using the provided SubscriptionCustomFieldData1
-func (t *Subscription_CustomFieldData_AdditionalProperties) MergeSubscriptionCustomFieldData1(v SubscriptionCustomFieldData1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
 }

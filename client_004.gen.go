@@ -18,6 +18,25 @@ import (
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
 
+// FromSubscriptionCustomFieldData1 overwrites any union data inside the Subscription_CustomFieldData_AdditionalProperties as the provided SubscriptionCustomFieldData1
+func (t *Subscription_CustomFieldData_AdditionalProperties) FromSubscriptionCustomFieldData1(v SubscriptionCustomFieldData1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeSubscriptionCustomFieldData1 performs a merge with any union data inside the Subscription_CustomFieldData_AdditionalProperties, using the provided SubscriptionCustomFieldData1
+func (t *Subscription_CustomFieldData_AdditionalProperties) MergeSubscriptionCustomFieldData1(v SubscriptionCustomFieldData1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
 // AsSubscriptionCustomFieldData2 returns the union data inside the Subscription_CustomFieldData_AdditionalProperties as a SubscriptionCustomFieldData2
 func (t Subscription_CustomFieldData_AdditionalProperties) AsSubscriptionCustomFieldData2() (SubscriptionCustomFieldData2, error) {
 	var body SubscriptionCustomFieldData2

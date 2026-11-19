@@ -12639,6 +12639,17 @@ type RefundDispute struct {
 	TaxAmount int `json:"tax_amount"`
 }
 
+// RefundPaymentAlreadyRefundedByStripe defines model for RefundPaymentAlreadyRefundedByStripe.
+type RefundPaymentAlreadyRefundedByStripe struct {
+	Detail string `json:"detail"`
+
+	// Error Examples: RefundPaymentAlreadyRefundedByStripe
+	Error RefundPaymentAlreadyRefundedByStripeError `json:"error"`
+}
+
+// RefundPaymentAlreadyRefundedByStripeError Examples: RefundPaymentAlreadyRefundedByStripe
+type RefundPaymentAlreadyRefundedByStripeError string
+
 // RefundReason defines model for RefundReason.
 type RefundReason string
 
@@ -20003,23 +20014,4 @@ func (t BenefitMeterCreditUpdate_Metadata_AdditionalProperties) AsBenefitMeterCr
 	var body BenefitMeterCreditUpdateMetadata3
 	err := json.Unmarshal(t.union, &body)
 	return body, err
-}
-
-// FromBenefitMeterCreditUpdateMetadata3 overwrites any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties as the provided BenefitMeterCreditUpdateMetadata3
-func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) FromBenefitMeterCreditUpdateMetadata3(v BenefitMeterCreditUpdateMetadata3) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBenefitMeterCreditUpdateMetadata3 performs a merge with any union data inside the BenefitMeterCreditUpdate_Metadata_AdditionalProperties, using the provided BenefitMeterCreditUpdateMetadata3
-func (t *BenefitMeterCreditUpdate_Metadata_AdditionalProperties) MergeBenefitMeterCreditUpdateMetadata3(v BenefitMeterCreditUpdateMetadata3) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
 }
