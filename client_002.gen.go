@@ -6566,7 +6566,7 @@ type EventTypeUpdate struct {
 	// Label The label for the event type.
 	Label string `json:"label"`
 
-	// LabelPropertySelector Property path to extract dynamic label from event metadata (e.g., 'subject' or 'metadata.subject').
+	// LabelPropertySelector Property path to extract a dynamic label from event metadata (e.g., 'subject' or 'metadata.subject'). Set to `null` to clear it.
 	LabelPropertySelector *string `json:"label_property_selector,omitempty"`
 }
 
@@ -14325,7 +14325,9 @@ type SubscriptionUpdateBase struct {
 	ProrationBehavior *SubscriptionProrationBehavior `json:"proration_behavior,omitempty"`
 
 	// TrialEnd Set or extend the trial period of the subscription. If set to `now`, the trial will end immediately and the first billing cycle will be charged synchronously. The subscription remains trialing if the payment fails.
-	TrialEnd *SubscriptionUpdateBase_TrialEnd `json:"trial_end,omitempty"`
+	TrialEnd *struct {
+		union json.RawMessage
+	} `json:"trial_end,omitempty"`
 }
 
 // SubscriptionUpdateBaseMetadata0 defines model for SubscriptionUpdateBase.Metadata.0.
@@ -14350,11 +14352,6 @@ type SubscriptionUpdateBaseTrialEnd0 = time.Time
 
 // SubscriptionUpdateBaseTrialEnd1 defines model for SubscriptionUpdateBase.TrialEnd.1.
 type SubscriptionUpdateBaseTrialEnd1 string
-
-// SubscriptionUpdateBase_TrialEnd Set or extend the trial period of the subscription. If set to `now`, the trial will end immediately and the first billing cycle will be charged synchronously. The subscription remains trialing if the payment fails.
-type SubscriptionUpdateBase_TrialEnd struct {
-	union json.RawMessage
-}
 
 // SubscriptionUpdateBillingPeriod defines model for SubscriptionUpdateBillingPeriod.
 type SubscriptionUpdateBillingPeriod struct {
@@ -15322,7 +15319,7 @@ type WebhookEndpointUpdate struct {
 	Events  *[]WebhookEventType          `json:"events,omitempty"`
 	Format  *WebhookEndpointUpdateFormat `json:"format,omitempty"`
 
-	// Name An optional name for the webhook endpoint to help organize and identify it.
+	// Name An optional name for the webhook endpoint. Set to `null` to clear it.
 	Name *string `json:"name,omitempty"`
 	Url  *string `json:"url,omitempty"`
 }

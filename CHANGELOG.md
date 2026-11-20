@@ -2,6 +2,13 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.4.0, 2026-11-20
+
+- Added the `PaymentTriggerRetryPaymentAlert` constant (`"retry_payment_alert"`). `PaymentTrigger.Valid` now returns true for it.
+- Breaking: the `SubscriptionUpdateBase.TrialEnd` field now has the anonymous type `*struct{union json.RawMessage}` instead of `*SubscriptionUpdateBase_TrialEnd`. The generator no longer emits the named type, so `SubscriptionUpdateBase_TrialEnd` is removed.
+- Removed the helper methods of `SubscriptionUpdateBase_TrialEnd`: `AsSubscriptionUpdateBaseTrialEnd0`, `FromSubscriptionUpdateBaseTrialEnd0`, `MergeSubscriptionUpdateBaseTrialEnd0`, `AsSubscriptionUpdateBaseTrialEnd1`, `FromSubscriptionUpdateBaseTrialEnd1`, `MergeSubscriptionUpdateBaseTrialEnd1`, and the matching `UnmarshalJSON` and `MarshalJSON` methods. Callers that set `TrialEnd` through them must change their code.
+- The doc comments on `EventTypeUpdate.LabelPropertySelector` and `WebhookEndpointUpdate.Name` now say that `null` clears the value. No types or signatures changed there.
+
 ## v0.3.2, 2026-11-19
 
 - Added the `RefundPaymentAlreadyRefundedByStripe` type with the `Detail` and `Error` fields, and the `RefundPaymentAlreadyRefundedByStripeError` string type with its constant `RefundPaymentAlreadyRefundedByStripeErrorRefundPaymentAlreadyRefundedByStripe` and a `Valid` method.

@@ -9706,6 +9706,7 @@ const (
 	PaymentTriggerRetryAdmin               PaymentTrigger = "retry_admin"
 	PaymentTriggerRetryCustomer            PaymentTrigger = "retry_customer"
 	PaymentTriggerRetryDunning             PaymentTrigger = "retry_dunning"
+	PaymentTriggerRetryPaymentAlert        PaymentTrigger = "retry_payment_alert"
 	PaymentTriggerRetryPaymentMethodUpdate PaymentTrigger = "retry_payment_method_update"
 	PaymentTriggerSubscriptionCycle        PaymentTrigger = "subscription_cycle"
 )
@@ -9720,6 +9721,8 @@ func (e PaymentTrigger) Valid() bool {
 	case PaymentTriggerRetryCustomer:
 		return true
 	case PaymentTriggerRetryDunning:
+		return true
+	case PaymentTriggerRetryPaymentAlert:
 		return true
 	case PaymentTriggerRetryPaymentMethodUpdate:
 		return true

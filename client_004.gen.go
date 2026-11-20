@@ -747,68 +747,6 @@ func (t *SubscriptionUpdateBase_Metadata_AdditionalProperties) UnmarshalJSON(b [
 	return err
 }
 
-// AsSubscriptionUpdateBaseTrialEnd0 returns the union data inside the SubscriptionUpdateBase_TrialEnd as a SubscriptionUpdateBaseTrialEnd0
-func (t SubscriptionUpdateBase_TrialEnd) AsSubscriptionUpdateBaseTrialEnd0() (SubscriptionUpdateBaseTrialEnd0, error) {
-	var body SubscriptionUpdateBaseTrialEnd0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSubscriptionUpdateBaseTrialEnd0 overwrites any union data inside the SubscriptionUpdateBase_TrialEnd as the provided SubscriptionUpdateBaseTrialEnd0
-func (t *SubscriptionUpdateBase_TrialEnd) FromSubscriptionUpdateBaseTrialEnd0(v SubscriptionUpdateBaseTrialEnd0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSubscriptionUpdateBaseTrialEnd0 performs a merge with any union data inside the SubscriptionUpdateBase_TrialEnd, using the provided SubscriptionUpdateBaseTrialEnd0
-func (t *SubscriptionUpdateBase_TrialEnd) MergeSubscriptionUpdateBaseTrialEnd0(v SubscriptionUpdateBaseTrialEnd0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsSubscriptionUpdateBaseTrialEnd1 returns the union data inside the SubscriptionUpdateBase_TrialEnd as a SubscriptionUpdateBaseTrialEnd1
-func (t SubscriptionUpdateBase_TrialEnd) AsSubscriptionUpdateBaseTrialEnd1() (SubscriptionUpdateBaseTrialEnd1, error) {
-	var body SubscriptionUpdateBaseTrialEnd1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSubscriptionUpdateBaseTrialEnd1 overwrites any union data inside the SubscriptionUpdateBase_TrialEnd as the provided SubscriptionUpdateBaseTrialEnd1
-func (t *SubscriptionUpdateBase_TrialEnd) FromSubscriptionUpdateBaseTrialEnd1(v SubscriptionUpdateBaseTrialEnd1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSubscriptionUpdateBaseTrialEnd1 performs a merge with any union data inside the SubscriptionUpdateBase_TrialEnd, using the provided SubscriptionUpdateBaseTrialEnd1
-func (t *SubscriptionUpdateBase_TrialEnd) MergeSubscriptionUpdateBaseTrialEnd1(v SubscriptionUpdateBaseTrialEnd1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t SubscriptionUpdateBase_TrialEnd) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *SubscriptionUpdateBase_TrialEnd) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
 // AsMeterCreditEvent returns the union data inside the SystemEvent as a MeterCreditEvent
 func (t SystemEvent) AsMeterCreditEvent() (MeterCreditEvent, error) {
 	var body MeterCreditEvent
