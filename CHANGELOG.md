@@ -2,6 +2,10 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.4.1, 2026-11-26
+
+- The doc comments on the `BillingAddress` field of `CustomerOrderUpdate` and `OrderUpdate` now say that address fields used for tax calculation can only be updated on draft orders. They used to say these fields cannot be updated. No types, fields or signatures changed.
+
 ## v0.4.0, 2026-11-20
 
 - Added the `PaymentTriggerRetryPaymentAlert` constant (`"retry_payment_alert"`). `PaymentTrigger.Valid` now returns true for it.
